@@ -15,6 +15,8 @@ _None_
 ## Credits
 ###### References used while making project
 
+Abba, Ihechikara. “Java Enum – Enumeration in Java Example.” _freeCodeCamp.Org_, freeCodeCamp.org, 25 Mar. 2022, www.freecodecamp.org/news/java-enum-enumeration-in-java-example/. Accessed 22 May 2025.
+
 “Java Enums.” _Programiz_, www.programiz.com/java-programming/enums. Accessed 22 May 2025. 
 
 “MLA Works Cited: Electronic Sources (Web Publications).” _MLA Works Cited: Electronic Sources - Purdue OWL® - Purdue University_, owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_works_cited_electronic_sources.html. Accessed 22 May 2025.

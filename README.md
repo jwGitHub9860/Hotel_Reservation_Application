@@ -24,3 +24,5 @@ Abba, Ihechikara. “Java Enum – Enumeration in Java Example.” _freeCodeCamp
 “Online Compiler and Debugger for C/C++.” _GDB Online Debugger_, www.onlinegdb.com/. Accessed 22 May 2025. 
 
 “Udacity Git Commit Message Style Guide.” _Udacity Nanodegree Style Guide_, udacity.github.io/git-styleguide/. Accessed 22 May 2025.
+
+“W3schools.Com.” _W3Schools Online Web Tutorials_, www.w3schools.com/java/ref_string_substring.asp. Accessed 23 May 2025. 

@@ -36,7 +36,7 @@ public class Main {
                     } else if (userInput == 3) {
                         System.out.println("userInput 3 WORKS"); // TESTING CODE
                     } else if (userInput == 4) {
-
+                        AdminMenu.Admin(); // calls "Admin()" method
                     } else if (userInput == 5) {
                         runApplication = false;
                         scanner.close(); // avoid memory leaks

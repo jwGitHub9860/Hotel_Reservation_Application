@@ -28,13 +28,13 @@ public class Main {
                 try {
                     int userInput = Integer.parseInt(scanner.nextLine()); // reads & takes ONLY INTEGER from full line as user input
                     if (userInput == 1) {
-                        //
+                        System.out.println("userInput 1 WORKS"); // TESTING CODE
                     } else if (userInput == 2) {
-                        //
+                        System.out.println("userInput 2 WORKS"); // TESTING CODE
                     } else if (userInput == 3) {
-                        //
+                        System.out.println("userInput 3 WORKS"); // TESTING CODE
                     } else if (userInput == 4) {
-                        //
+                        System.out.println("userInput 4 WORKS"); // TESTING CODE
                     } else if (userInput == 5) {
                         runApplication = false;
                     } else {

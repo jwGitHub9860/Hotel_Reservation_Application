@@ -39,6 +39,7 @@ public class Main {
                         System.out.println("userInput 4 WORKS"); // TESTING CODE
                     } else if (userInput == 5) {
                         runApplication = false;
+                        scanner.close(); // avoid memory leaks
                     } else {
                         System.out.println("Please enter an integer between 1 and 5");
                     }

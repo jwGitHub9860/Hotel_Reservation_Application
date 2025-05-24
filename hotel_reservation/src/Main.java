@@ -11,7 +11,7 @@ public class Main {
         System.out.printf("\n\nTest 2:\n"); // TESTING CODE
         Customer customer2 = new Customer("first", "second", "email"); // TESTING CODE
 
-
+        // Main Menu
         boolean runApplication = true;
         try (Scanner scanner = new Scanner(System.in)) { // allows user input to be read
             while (runApplication) {

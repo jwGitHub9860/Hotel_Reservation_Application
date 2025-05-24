@@ -1,5 +1,7 @@
 import model.Customer;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Customer customer = new Customer("first", "second", "j@domain.com"); // TESTING CODE
@@ -18,5 +20,32 @@ public class Main {
         System.out.println("5. Exit");
         System.out.println("-------------------------------------------------");
         System.out.println("Please select a number for the menu option\n");
+
+        // Takes User Input
+        boolean runApplication = true;
+        try (Scanner scanner = new Scanner(System.in)) { // allows user input to be read
+            while (runApplication) {
+                try {
+                    int userInput = Integer.parseInt(scanner.nextLine()); // reads & takes ONLY INTEGER from full line as user input
+                    if (userInput == 1) {
+                        //
+                    } else if (userInput == 2) {
+                        //
+                    } else if (userInput == 3) {
+                        //
+                    } else if (userInput == 4) {
+                        //
+                    } else if (userInput == 5) {
+                        runApplication = false;
+                    } else {
+                        System.out.println("Please enter an integer between 1 and 5");
+                    }
+                } catch (Exception e) { // if user does NOT ENTER A NUMBER
+                    System.out.println("\nPlease enter a number: ");
+                }
+            }
+        } catch (Exception ex) {
+            ex.getLocalizedMessage(); // prints any messages or exceptions to console
+        }
     }
 }

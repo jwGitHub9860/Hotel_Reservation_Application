@@ -9,7 +9,7 @@ public class CustomerService {
         email = "i"; // ADD CORRECT CODE
     }
 
-    public Customer getCustomer(String customerEmail) { return; } // ADD CORRECT CODE
+    /*public Customer getCustomer(String customerEmail) { return; } // ADD CORRECT CODE
 
-    public Collection<Customer> getAllCustomers() { return; } // ADD CORRECT CODE
+    public Collection<Customer> getAllCustomers() { return; }*/ // ADD CORRECT CODE
 }

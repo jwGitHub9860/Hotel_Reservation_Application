@@ -43,7 +43,7 @@ public class Main {
                         System.out.println("Please enter an integer between 1 and 5");
                     }
                 } catch (Exception e) { // if user does NOT ENTER A NUMBER
-                    System.out.println("\nPlease enter a number: ");
+                    System.out.println("\nPlease enter a number\n");
                 }
             }
         } catch (Exception ex) {

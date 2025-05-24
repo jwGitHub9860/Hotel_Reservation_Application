@@ -11,6 +11,7 @@ public class Main {
         System.out.printf("\n\nTest 2:\n"); // TESTING CODE
         Customer customer2 = new Customer("first", "second", "email"); // TESTING CODE
 
+        // Menu Items
         System.out.println("Welcome to the Hotel Reservation Application");
         System.out.println("-------------------------------------------------");
         System.out.println("1. Find and reserve a room");

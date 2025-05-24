@@ -17,6 +17,8 @@ _None_
 
 Abba, Ihechikara. “Java Enum – Enumeration in Java Example.” _freeCodeCamp.Org_, freeCodeCamp.org, 25 Mar. 2022, www.freecodecamp.org/news/java-enum-enumeration-in-java-example/. Accessed 22 May 2025.
 
+Ha, Truong. “What Is the Difference between Collection and List in Java?” Edited by Cs95, _Stack Overflow_, 23 July 2010, stackoverflow.com/questions/3317381/what-is-the-difference-between-collection-and-list-in-java. Accessed 24 May 2025.
+
 HaakonFlaar. “How to Use ‘Throws Illegalargumentexception’ in Method Declaration.” _Stack Overflow_, 1 June 2018, stackoverflow.com/questions/50640610/how-to-use-throws-illegalargumentexception-in-method-declaration/50640675. Accessed 23 May 2025.
 
 "How to Find the First and Last Character of a String in Java.” _GeeksforGeeks_, 13 Dec. 2022, www.geeksforgeeks.org/how-to-find-the-first-and-last-character-of-a-string-in-java/. Accessed 23 May 2025.

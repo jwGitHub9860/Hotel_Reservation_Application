@@ -6,8 +6,13 @@ import model.Reservation;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ReservationService {
+    // Collections to store & retrieve reservations         DO I NEED MORE?
+    List<String> customerList = new LinkedList<String>();
+
     public void addRoom(IRoom room) {}
 
     public IRoom getARoom(String roomId) { return; }

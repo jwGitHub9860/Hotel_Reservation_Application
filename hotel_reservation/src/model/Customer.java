@@ -14,6 +14,7 @@ public class Customer {
             System.out.println("atSymbolAmount amount: " + atSymbolAmount); // TESTING CODE
             if (Objects.equals(email.charAt(i), "@")){
                 System.out.println("atSymbolAmount amount: " + atSymbolAmount); // TESTING CODE
+                System.out.println("email.charAt(i): " + email.charAt(i)); // TESTING CODE
                 atSymbolAmount++;
             }
         }

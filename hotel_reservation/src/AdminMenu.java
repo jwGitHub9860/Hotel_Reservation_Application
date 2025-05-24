@@ -8,7 +8,7 @@ public class AdminMenu {
             while (runAdmin) {
                 try {
                     // Admin Menu Items
-                    System.out.println("Admin Menu");
+                    System.out.println("\nAdmin Menu");
                     System.out.println("-------------------------------------------------");
                     System.out.println("1. See all Customers");
                     System.out.println("2. See all Rooms");

@@ -12,6 +12,9 @@ import java.util.List;
 public class ReservationService {
     // Collections to store & retrieve reservations         DO I NEED MORE?
     List<String> customerList = new LinkedList<String>();
+    Collection<Customer> customerCollection = new LinkedList<Customer>();
+    Collection<IRoom> roomCollection = new LinkedList<>();
+    Collection<Reservation> reservationCollection = new LinkedList<>();
 
     public void addRoom(IRoom room) {}
 

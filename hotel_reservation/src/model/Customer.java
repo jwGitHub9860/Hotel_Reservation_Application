@@ -12,9 +12,9 @@ public class Customer {
         System.out.println("In Customer constructor"); // TESTING CODE
         for (int i = 0; i < email.length(); i++) { // finds amount of @ in "email"
             System.out.println("atSymbolAmount amount: " + atSymbolAmount); // TESTING CODE
+            System.out.println("email.charAt(i): " + email.charAt(i)); // TESTING CODE
             if (String.valueOf(email.charAt(i)).equals("@")){
                 System.out.println("atSymbolAmount amount: " + atSymbolAmount); // TESTING CODE
-                System.out.println("email.charAt(i): " + email.charAt(i)); // TESTING CODE
                 atSymbolAmount++;
             }
         }

@@ -11,7 +11,7 @@ public class Main {
         System.out.printf("\n\nTest 2:\n"); // TESTING CODE
         Customer customer2 = new Customer("first", "second", "email"); // TESTING CODE
 
-        // Takes User Input
+
         boolean runApplication = true;
         try (Scanner scanner = new Scanner(System.in)) { // allows user input to be read
             while (runApplication) {
@@ -27,6 +27,7 @@ public class Main {
                     System.out.println("-------------------------------------------------");
                     System.out.println("Please select a number for the menu option\n");
 
+                    // Takes User Input
                     int userInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (userInput == 1) {
                         System.out.println("userInput 1 WORKS"); // TESTING CODE

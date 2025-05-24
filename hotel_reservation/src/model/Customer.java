@@ -36,7 +36,7 @@ public class Customer {
         String[] domainArray = emailArray[1].split(".com"); // splits "domain" string at ".com"
 
         // Checks if email has domain, does NOT have "@.com"
-        if (emailArray[1].contains(".com")) {
+        if (domainArray[0] == null) {
             throw new IllegalArgumentException("Email must have a domain and cannot have \"@.com\"");
         }
     }

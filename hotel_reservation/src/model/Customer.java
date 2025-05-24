@@ -6,7 +6,7 @@ public class Customer {
     String firstName, lastName, email;
 
     // Constructor
-    public Customer(String email) { // Checks if email format is correct
+    public Customer(String firstName, String lastName, String email) { // Checks if email format is correct
         // Checks if there's only 1 @ in email
         int atSymbolAmount = 0; // amount of @ in email
         for (int i = 0; i < email.length(); i++) { // finds amount of @ in "email"

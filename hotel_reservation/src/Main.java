@@ -25,7 +25,7 @@ public class Main {
                     System.out.println("4. Admin");
                     System.out.println("5. Exit");
                     System.out.println("-------------------------------------------------");
-                    System.out.println("Please select a number for the menu option\n");
+                    System.out.println("Please select a number for the menu option");
 
                     // Takes User Input
                     int userInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input

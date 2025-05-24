@@ -13,6 +13,7 @@ public class Customer {
         for (int i = 0; i < email.length(); i++) { // finds amount of @ in "email"
             System.out.println("atSymbolAmount amount: " + atSymbolAmount); // TESTING CODE
             if (Objects.equals(email.charAt(i), "@")){
+                System.out.println("atSymbolAmount amount: " + atSymbolAmount); // TESTING CODE
                 atSymbolAmount++;
             }
         }

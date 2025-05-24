@@ -7,6 +7,11 @@ public class Customer {
 
     // Constructor
     public Customer(String firstName, String lastName, String email) { // Checks if email format is correct
+        // Defines "firstName", "lastName", and "email" in "toString()" function
+        this.firstName = firstName; // set current "firstName" as "firstName"
+        this.lastName = lastName; // set current "lastName" as "lastName"
+        this.email = email; // set current "email" as "email"
+
         // Checks if there's only 1 @ in email
         int atSymbolAmount = 0; // amount of @ in email
         System.out.println("In Customer constructor"); // TESTING CODE

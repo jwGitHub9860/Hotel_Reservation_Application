@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.util.List;
 
 public class AdminResource {
-    public Customer getCustomer(String email) { return; }
+    /*public Customer getCustomer(String email) { return; }
 
     public void addRoom(List<IRoom> rooms) {}
 
@@ -15,5 +15,5 @@ public class AdminResource {
 
     public Collection<Customer> getAllCustomers() { return; }
 
-    public void displayAllReservations() {}
+    public void displayAllReservations() {}*/
 }

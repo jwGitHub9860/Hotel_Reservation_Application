@@ -33,6 +33,8 @@ public class Customer {
             throw new IllegalArgumentException("Email must have a name and cannot start with \"@\"");
         }
 
+        String[] domainArray = emailArray[1].split(".com"); // splits "domain" string at ".com"
+
         // Checks if email has domain, does NOT have "@.com"
         if (emailArray[1].contains(".com")) {
             throw new IllegalArgumentException("Email must have a domain and cannot have \"@.com\"");

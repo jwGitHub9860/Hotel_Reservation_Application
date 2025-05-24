@@ -27,6 +27,8 @@ HaakonFlaar. “How to Use ‘Throws Illegalargumentexception’ in Method Decla
 
 “Java String substring() Method.” _W3Schools Online Web Tutorials_, www.w3schools.com/java/ref_string_substring.asp. Accessed 23 May 2025.
 
+JEAN, Ebillson GRAND. “What Does It Mean to Provide a Static Reference in the Context of a Java Program?” _Stack Overflow_, 27 June 2022, stackoverflow.com/questions/72779198/what-does-it-mean-to-provide-a-static-reference-in-the-context-of-a-java-program. Accessed 23 May 2025.
+
 “MLA Works Cited: Electronic Sources (Web Publications).” _MLA Works Cited: Electronic Sources - Purdue OWL® - Purdue University_, owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_works_cited_electronic_sources.html. Accessed 22 May 2025.
 
 “Online Compiler and Debugger for C/C++.” _GDB Online Debugger_, www.onlinegdb.com/. Accessed 22 May 2025. 

@@ -27,7 +27,7 @@ public class Main {
                     System.out.println("-------------------------------------------------");
                     System.out.println("Please select a number for the menu option\n");
 
-                    int userInput = Integer.parseInt(scanner.nextLine()); // reads & takes ONLY INTEGER from full line as user input
+                    int userInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (userInput == 1) {
                         System.out.println("userInput 1 WORKS"); // TESTING CODE
                     } else if (userInput == 2) {

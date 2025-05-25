@@ -1,5 +1,6 @@
 import api.HotelResource;
 import model.Customer;
+import service.ReservationService;
 
 import java.util.Scanner;
 
@@ -33,7 +34,7 @@ public class Main {
                     if (userInput == 1) {
                         System.out.println("userInput 1 WORKS"); // TESTING CODE
                     } else if (userInput == 2) {
-                        HotelResource.getCustomersReservations(customerEmailInput);
+                        ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
                     } else if (userInput == 3) {
                         System.out.println("userInput 3 WORKS"); // TESTING CODE
                     } else if (userInput == 4) {

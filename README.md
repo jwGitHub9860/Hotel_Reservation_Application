@@ -19,6 +19,8 @@ Abba, Ihechikara. “Java Enum – Enumeration in Java Example.” _freeCodeCamp
 
 “Arraylist vs LinkedList in Java.” _GeeksforGeeks_, GeeksforGeeks, 24 Aug. 2023, www.geeksforgeeks.org/arraylist-vs-linkedlist-java/. Accessed 24 May 2025.
 
+Dong, Nick. “nextInt() Caused an Infinit Loop.” _Stack Overflow_, 29 Mar. 2022, stackoverflow.com/questions/71665702/nextint-caused-an-infinit-loop. Accessed 24 May 2025.
+
 Ha, Truong. “What Is the Difference between Collection and List in Java?” Edited by Cs95, _Stack Overflow_, 23 July 2010, stackoverflow.com/questions/3317381/what-is-the-difference-between-collection-and-list-in-java. Accessed 24 May 2025.
 
 HaakonFlaar. “How to Use ‘Throws Illegalargumentexception’ in Method Declaration.” _Stack Overflow_, 1 June 2018, stackoverflow.com/questions/50640610/how-to-use-throws-illegalargumentexception-in-method-declaration/50640675. Accessed 23 May 2025.

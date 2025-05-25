@@ -6,7 +6,7 @@ import java.util.Collection;
 
 public class CustomerService {
     public static void addCustomer(String email, String firstName, String lastName) {
-        Customer customer = new Customer("first", "second", "j@domain.com"); // TESTING CODE
+        Customer customer = new Customer(firstName, lastName, email); // calls "Customer" constructor
 
         /*System.out.printf(String.valueOf(customer)); // TESTING CODE
         System.out.printf("\n\nTest 2:\n"); // TESTING CODE

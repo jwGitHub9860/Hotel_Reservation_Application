@@ -13,5 +13,5 @@ public class CustomerService {
 
     //public Customer getCustomer(String customerEmail) { return; } // ADD CORRECT CODE
 
-    public static Collection<Customer> getAllCustomers() { return ReservationService.customerCollection; } // ADD CORRECT CODE
+    public static Collection<Customer> getAllCustomers() { return ReservationService.customerCollection; }
 }

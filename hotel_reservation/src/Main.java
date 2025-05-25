@@ -36,10 +36,15 @@ public class Main {
                             System.out.println(reservation);
                         }*/
                     } else if (userInput == 3) {
-                        String email = scanner.nextLine();
-                        String firstName = scanner.nextLine();
-                        String lastName = scanner.nextLine();
-                        CustomerService.addCustomer(email, firstName, lastName);
+                        // Takes User Input for Account Information
+                        System.out.printf("Enter email: ");
+                        String email = scanner.nextLine(); // Takes User Input for "email"
+                        System.out.printf("\nEnter first name: ");
+                        String firstName = scanner.nextLine(); // Takes User Input for "firstName"
+                        System.out.printf("\nEnter last name: ");
+                        String lastName = scanner.nextLine(); // Takes User Input for "lastName"
+
+                        CustomerService.addCustomer(email, firstName, lastName); // calls "addCustomer()" method
                     } else if (userInput == 4) {
                         AdminMenu.Admin(); // calls "Admin()" method
                     } else if (userInput == 5) {

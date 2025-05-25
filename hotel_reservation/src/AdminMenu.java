@@ -4,9 +4,11 @@ public class AdminMenu {
     public static void Admin() {
         // Admin Menu
         boolean runAdmin = true;
-        try (Scanner scanner = new Scanner(System.in)) { // allows user input to be read
+        try {
             while (runAdmin) {
                 try {
+                    Scanner scanner = new Scanner(System.in); // allows user input to be read & Must Be Put Here To PREVENT INFINITE WHILE LOOP
+
                     // Admin Menu Items
                     System.out.println("\nAdmin Menu");
                     System.out.println("-------------------------------------------------");
@@ -20,20 +22,20 @@ public class AdminMenu {
                     System.out.println("Please select a number for the menu option");
 
                     // Takes User Input
-                    int userInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
-                    if (userInput == 1) {
-                        System.out.println("ADMINuserInput 1 WORKS"); // TESTING CODE
-                    } else if (userInput == 2) {
-                        System.out.println("ADMINuserInput 2 WORKS"); // TESTING CODE
-                    } else if (userInput == 3) {
-                        System.out.println("ADMINuserInput 3 WORKS"); // TESTING CODE
-                    } else if (userInput == 4) {
-                        System.out.println("ADMINuserInput 4 WORKS"); // TESTING CODE
-                    } else if (userInput == 5) {
-                        System.out.println("ADMINuserInput 5 WORKS"); // TESTING CODE
-                    } else if (userInput == 6) {
+                    int adminUserInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
+                    if (adminUserInput == 1) {
+                        System.out.println("ADMINadminUserInput 1 WORKS"); // TESTING CODE
+                    } else if (adminUserInput == 2) {
+                        System.out.println("ADMINadminUserInput 2 WORKS"); // TESTING CODE
+                    } else if (adminUserInput == 3) {
+                        System.out.println("ADMINadminUserInput 3 WORKS"); // TESTING CODE
+                    } else if (adminUserInput == 4) {
+                        System.out.println("ADMINadminUserInput 4 WORKS"); // TESTING CODE
+                    } else if (adminUserInput == 5) {
+                        System.out.println("ADMINadminUserInput 5 WORKS"); // TESTING CODE
+                    } else if (adminUserInput == 6) {
                         runAdmin = false;
-                        scanner.close(); // avoid memory leaks
+                        //scanner.close(); // avoid memory leaks
                     } else {
                         System.out.println("Please enter an integer between 1 and 6");
                     }

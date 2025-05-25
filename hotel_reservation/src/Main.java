@@ -42,7 +42,7 @@ public class Main {
                             System.out.println(reservation);
                         }*/
                     } else if (userInput == 3) {
-                        System.out.println("userInput 3 WORKS"); // TESTING CODE
+
                     } else if (userInput == 4) {
                         AdminMenu.Admin(); // calls "Admin()" method
                     } else if (userInput == 5) {

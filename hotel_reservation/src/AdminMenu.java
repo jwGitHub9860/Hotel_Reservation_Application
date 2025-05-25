@@ -1,6 +1,8 @@
+import model.Customer;
 import service.CustomerService;
 import service.ReservationService;
 
+import java.util.Collection;
 import java.util.Scanner;
 
 public class AdminMenu {
@@ -27,7 +29,7 @@ public class AdminMenu {
                     // Takes User Input
                     int adminUserInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (adminUserInput == 1) {
-                        CustomerService.getAllCustomers(); // calls "getAllCustomers()" method
+                        Collection<Customer> customerList = CustomerService.getAllCustomers(); // calls "getAllCustomers()" method
                     } else if (adminUserInput == 2) {
                         System.out.println("ADMINadminUserInput 2 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 3) {

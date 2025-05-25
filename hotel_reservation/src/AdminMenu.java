@@ -38,7 +38,7 @@ public class AdminMenu {
                         System.out.println("Please enter an integer between 1 and 6");
                     }
                 } catch (Exception e) { // if user does NOT ENTER A NUMBER
-                    System.out.println("\nPlease enter a number\n");
+                    System.out.println("\nPlease enter a number");
                 }
             }
         } catch (Exception ex) {

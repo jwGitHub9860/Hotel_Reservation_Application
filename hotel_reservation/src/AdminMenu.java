@@ -28,7 +28,7 @@ public class AdminMenu {
                     } else if (adminUserInput == 2) {
                         System.out.println("ADMINadminUserInput 2 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 3) {
-                        System.out.println("ADMINadminUserInput 3 WORKS"); // TESTING CODE
+
                     } else if (adminUserInput == 4) {
                         System.out.println("ADMINadminUserInput 4 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 5) {

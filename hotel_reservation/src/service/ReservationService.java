@@ -26,5 +26,7 @@ public class ReservationService {
 
     public Collection<Reservation> getCustomersReservation(Customer customer) { return; }*/
 
-    public void printAllReservation() {}
+    public void printAllReservation() {
+        System.out.println("ADMINadminUserInput 3 WORKS"); // TESTING CODE
+    }
 }

@@ -11,9 +11,9 @@ import java.util.List;
 
 public class ReservationService {
     // Collections to store & retrieve reservations
-    Collection<Customer> customerCollection = new LinkedList<Customer>();
-    Collection<IRoom> roomCollection = new LinkedList<>();
-    Collection<Reservation> reservationCollection = new LinkedList<>();
+    public static Collection<Customer> customerCollection = new LinkedList<Customer>();
+    public static Collection<IRoom> roomCollection = new LinkedList<>();
+    public static Collection<Reservation> reservationCollection = new LinkedList<>();
 
     public void addRoom(IRoom room) {}
 

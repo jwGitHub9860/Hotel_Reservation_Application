@@ -1,3 +1,5 @@
+import service.ReservationService;
+
 import java.util.Scanner;
 
 public class AdminMenu {
@@ -28,7 +30,7 @@ public class AdminMenu {
                     } else if (adminUserInput == 2) {
                         System.out.println("ADMINadminUserInput 2 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 3) {
-
+                        ReservationService.printAllReservation(); // calls "printAllReservation()" method
                     } else if (adminUserInput == 4) {
                         System.out.println("ADMINadminUserInput 4 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 5) {

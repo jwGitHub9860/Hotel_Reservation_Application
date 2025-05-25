@@ -41,6 +41,8 @@ JEAN, Ebillson GRAND. “What Does It Mean to Provide a Static Reference in the 
 
 “Online Compiler and Debugger for C/C++.” _GDB Online Debugger_, www.onlinegdb.com/. Accessed 22 May 2025. 
 
+Pierce, Doug. “How to Catch Multiple Exceptions in Java.” _Rollbar_, 12 Aug. 2024, rollbar.com/blog/how-to-catch-multiple-exceptions-in-java/. Accessed 25 May 2025.
+
 sdellysse. “When to Use LinkedList over ArrayList in Java?” Edited by Simeon Leyzerzon, _Stack Overflow_, 27 Nov. 2008, stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java. Accessed 24 May 2025.
 
 “Udacity Git Commit Message Style Guide.” _Udacity Nanodegree Style Guide_, udacity.github.io/git-styleguide/. Accessed 22 May 2025.

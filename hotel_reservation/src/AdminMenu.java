@@ -30,6 +30,11 @@ public class AdminMenu {
                     int adminUserInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (adminUserInput == 1) {
                         Collection<Customer> customerList = CustomerService.getAllCustomers(); // calls "getAllCustomers()" method
+
+                        // Display customer information inside "customerList" collection
+                        for (Customer customer : customerList) {
+                            System.out.println(customer);
+                        }
                     } else if (adminUserInput == 2) {
                         System.out.println("ADMINadminUserInput 2 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 3) {

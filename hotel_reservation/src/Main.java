@@ -1,6 +1,7 @@
 import api.HotelResource;
 import model.Customer;
 import model.Reservation;
+import service.CustomerService;
 import service.ReservationService;
 
 import java.util.Scanner;
@@ -42,7 +43,9 @@ public class Main {
                             System.out.println(reservation);
                         }*/
                     } else if (userInput == 3) {
-
+                        String email = scanner.nextLine();
+                        String firstName = scanner.nextLine();
+                        String lastName = scanner.nextLine();
                     } else if (userInput == 4) {
                         AdminMenu.Admin(); // calls "Admin()" method
                     } else if (userInput == 5) {

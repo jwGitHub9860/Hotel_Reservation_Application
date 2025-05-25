@@ -53,6 +53,8 @@ public class Main {
                     } else {
                         System.out.println("Please enter an integer between 1 and 5");
                     }
+                } catch (IllegalArgumentException e) { // if user does NOT ENTER EMAIL IN CORRECT FORMAT
+                    System.out.println("\nEmail must be in \"name@domain.com\" format\n");
                 } catch (Exception e) { // if user does NOT ENTER A NUMBER
                     System.out.println("\nPlease enter a number\n");
                 }

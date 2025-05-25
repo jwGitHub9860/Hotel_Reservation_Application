@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // Main Menu
-        boolean runApplication = true;
+        /*boolean runApplication = true;
         try (Scanner scanner = new Scanner(System.in)) { // allows user input to be read
             while (runApplication) {
                 try {
@@ -35,7 +35,7 @@ public class Main {
                         for (Reservation reservation : ReservationService.reservationCollection){
                             System.out.println(reservation);
                         }*/
-                    } else if (userInput == 3) {
+                    /*} else if (userInput == 3) {
                         // Takes User Input for Account Information
                         System.out.printf("Enter email: ");
                         String email = scanner.nextLine(); // Takes User Input for "email"
@@ -59,6 +59,6 @@ public class Main {
             }
         } catch (Exception ex) {
             ex.getLocalizedMessage(); // prints any messages or exceptions to console
-        }
+        }*/
     }
 }

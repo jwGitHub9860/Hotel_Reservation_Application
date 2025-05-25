@@ -6,6 +6,12 @@ import java.util.Collection;
 
 public class CustomerService {
     public static void addCustomer(String email, String firstName, String lastName) {
+        /*Customer customer = new Customer("first", "second", "j@domain.com"); // TESTING CODE
+
+        System.out.printf(String.valueOf(customer)); // TESTING CODE
+
+        System.out.printf("\n\nTest 2:\n"); // TESTING CODE
+        Customer customer2 = new Customer("first", "second", "email");*/ // TESTING CODE
         email = "i"; // ADD CORRECT CODE
     }
 

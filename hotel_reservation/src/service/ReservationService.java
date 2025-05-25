@@ -11,7 +11,6 @@ import java.util.List;
 
 public class ReservationService {
     // Collections to store & retrieve reservations
-    List<String> customerList = new LinkedList<String>(); // DO I STILL NEED?
     Collection<Customer> customerCollection = new LinkedList<Customer>();
     Collection<IRoom> roomCollection = new LinkedList<>();
     Collection<Reservation> reservationCollection = new LinkedList<>();

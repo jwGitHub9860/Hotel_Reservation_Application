@@ -46,6 +46,7 @@ public class Main {
                         String email = scanner.nextLine();
                         String firstName = scanner.nextLine();
                         String lastName = scanner.nextLine();
+                        CustomerService.addCustomer(email, firstName, lastName);
                     } else if (userInput == 4) {
                         AdminMenu.Admin(); // calls "Admin()" method
                     } else if (userInput == 5) {

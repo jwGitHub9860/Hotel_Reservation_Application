@@ -35,7 +35,7 @@ public class AdminMenu {
                         System.out.println("ADMINadminUserInput 5 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 6) {
                         runAdmin = false;
-                        //scanner.close(); // avoid memory leaks
+                        System.out.println("\n");
                     } else {
                         System.out.println("Please enter an integer between 1 and 6");
                     }

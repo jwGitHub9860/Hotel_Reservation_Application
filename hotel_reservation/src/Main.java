@@ -8,20 +8,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*Scanner scanner = new Scanner(System.in);
-        System.out.printf("Enter email: "); // TESTING CODE
-        String email = scanner.nextLine();
-        System.out.printf("\nEnter first name: "); // TESTING CODE
-        String firstName = scanner.nextLine();
-        System.out.printf("\nEnter last name: "); // TESTING CODE
-        String lastName = scanner.nextLine();
-        System.out.printf("\nfirstName: " + firstName + "\nlastName: " + lastName + "\nemail: " + email + "\n\n"); // TESTING CODE
-        Customer customer = new Customer(firstName, lastName, email); // calls "Customer" constructor
-        System.out.printf(String.valueOf(customer)); // TESTING CODE
-
-        //Customer customer2 = new Customer("first", "second", "email"); // TESTING CODE
-        CustomerService.addCustomer(email, firstName, lastName);*/
-
         // Main Menu
         boolean runApplication = true;
         try (Scanner scanner = new Scanner(System.in)) { // allows user input to be read

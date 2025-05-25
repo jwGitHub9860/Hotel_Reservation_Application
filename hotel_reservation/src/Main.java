@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         System.out.printf("Enter email: "); // TESTING CODE
         String email = scanner.nextLine();
         System.out.printf("\nEnter first name: "); // TESTING CODE
@@ -20,10 +20,10 @@ public class Main {
         System.out.printf(String.valueOf(customer)); // TESTING CODE
 
         //Customer customer2 = new Customer("first", "second", "email"); // TESTING CODE
-        CustomerService.addCustomer(email, firstName, lastName);
+        CustomerService.addCustomer(email, firstName, lastName);*/
 
         // Main Menu
-        /*boolean runApplication = true;
+        boolean runApplication = true;
         try (Scanner scanner = new Scanner(System.in)) { // allows user input to be read
             while (runApplication) {
                 try {
@@ -49,7 +49,7 @@ public class Main {
                         for (Reservation reservation : ReservationService.reservationCollection){
                             System.out.println(reservation);
                         }*/
-                    /*} else if (userInput == 3) {
+                    } else if (userInput == 3) {
                         // Takes User Input for Account Information
                         System.out.printf("Enter email: ");
                         String email = scanner.nextLine(); // Takes User Input for "email"
@@ -73,6 +73,6 @@ public class Main {
             }
         } catch (Exception ex) {
             ex.getLocalizedMessage(); // prints any messages or exceptions to console
-        }*/
+        }
     }
 }

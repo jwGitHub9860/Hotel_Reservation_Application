@@ -35,12 +35,12 @@ public class Main {
                     if (userInput == 1) {
                         System.out.println("userInput 1 WORKS"); // TESTING CODE
                     } else if (userInput == 2) {
-                        ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
+                        /*ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
 
                         // Displays "reservationCollection" collection
                         for (Reservation reservation : ReservationService.reservationCollection){
                             System.out.println(reservation);
-                        }
+                        }*/
                     } else if (userInput == 3) {
                         System.out.println("userInput 3 WORKS"); // TESTING CODE
                     } else if (userInput == 4) {

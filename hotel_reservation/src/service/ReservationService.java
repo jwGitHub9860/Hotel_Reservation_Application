@@ -6,9 +6,9 @@ import java.util.*;
 
 public class ReservationService {
     // Collections to store & retrieve reservations
-    public static Collection<Customer> customerCollection = new LinkedList<Customer>();
+    public final static Collection<Customer> customerCollection = new LinkedList<Customer>();
     public final static Collection<IRoom> roomCollection = new LinkedList<>();
-    public static Collection<Reservation> reservationCollection = new LinkedList<>();
+    public final static Collection<Reservation> reservationCollection = new LinkedList<>();
 
     public static void addRoom(IRoom room) {
         Scanner scanner = new Scanner(System.in); // allows user input to be read

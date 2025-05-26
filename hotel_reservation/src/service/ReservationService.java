@@ -13,7 +13,7 @@ public class ReservationService {
     public static Collection<IRoom> roomCollection = new LinkedList<>();
     public static Collection<Reservation> reservationCollection = new LinkedList<>();
 
-    public void addRoom(IRoom room) {
+    public static void addRoom(IRoom room) {
         String addRoomRepeat = "y"; // initial "addRoomRepeat" value
         while (addRoomRepeat.equals("y")) {
             // Takes User Input for Room Information

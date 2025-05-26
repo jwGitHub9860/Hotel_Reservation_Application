@@ -2,10 +2,7 @@ package service;
 
 import model.*;
 
-import java.util.Collection;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class ReservationService {
     // Collections to store & retrieve reservations
@@ -14,6 +11,7 @@ public class ReservationService {
     public static Collection<Reservation> reservationCollection = new LinkedList<>();
 
     public static void addRoom(IRoom room) {
+        Scanner scanner = new Scanner(System.in); // allows user input to be read
         String addRoomRepeat = "y"; // initial "addRoomRepeat" value
         while (addRoomRepeat.equals("y")) {
             // Takes User Input for Room Information

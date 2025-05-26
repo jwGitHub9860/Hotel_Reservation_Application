@@ -40,7 +40,15 @@ public class AdminMenu {
                     } else if (adminUserInput == 3) {
                         ReservationService.printAllReservation(); // calls "printAllReservation()" method
                     } else if (adminUserInput == 4) {
-                        System.out.println("ADMINadminUserInput 4 WORKS"); // TESTING CODE
+                        // Takes User Input for Room Information
+                        System.out.println("Enter room number: ");
+                        String roomNumber = scanner.nextLine(); // takes User Input for "roomNumber"
+                        System.out.println("Enter price per night: ");
+                        Double roomPrice = scanner.nextDouble(); // takes User Input for "roomPrice"
+                        System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
+                        int roomType = scanner.nextInt(); // takes User Input for "roomType"
+                        System.out.println("Would you like to add another room (y/n): ");
+                        String addRoomRepeat = scanner.next(); // takes User Input to confirm if user wants to add another room
                     } else if (adminUserInput == 5) {
                         System.out.println("ADMINadminUserInput 5 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 6) {

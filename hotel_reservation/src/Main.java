@@ -38,11 +38,11 @@ public class Main {
                     } else if (userInput == 3) {
                         // Takes User Input for Account Information
                         System.out.printf("Enter email (format: name@domain.com): ");
-                        String email = scanner.nextLine(); // Takes User Input for "email"
+                        String email = scanner.nextLine(); // takes User Input for "email"
                         System.out.printf("\nEnter first name: ");
-                        String firstName = scanner.nextLine(); // Takes User Input for "firstName"
+                        String firstName = scanner.nextLine(); // takes User Input for "firstName"
                         System.out.printf("\nEnter last name: ");
-                        String lastName = scanner.nextLine(); // Takes User Input for "lastName"
+                        String lastName = scanner.nextLine(); // takes User Input for "lastName"
 
                         CustomerService.addCustomer(email, firstName, lastName); // calls "addCustomer()" method
                     } else if (userInput == 4) {

@@ -34,7 +34,7 @@ public class AdminMenu {
                     // Takes User Input
                     int adminUserInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (adminUserInput == 1) {
-                        Collection<Customer> customerList = CustomerService.getAllCustomers(); // calls "getAllCustomers()" method
+
 
                         // Display customer information inside "customerList" collection
                         for (Customer customer : customerList) {

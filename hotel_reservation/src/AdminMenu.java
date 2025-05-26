@@ -1,3 +1,4 @@
+import api.AdminResource;
 import model.Customer;
 import model.IRoom;
 import model.Room;
@@ -41,7 +42,7 @@ public class AdminMenu {
                     } else if (adminUserInput == 2) {
                         System.out.println("ADMINadminUserInput 2 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 3) {
-
+                        AdminResource.displayAllReservations(); // calls "displayAllReservations()" method
                     } else if (adminUserInput == 4) {
                         ReservationService.addRoom((IRoom) ReservationService.roomCollection); // calls "addRoom()" method
                     } else if (adminUserInput == 5) {

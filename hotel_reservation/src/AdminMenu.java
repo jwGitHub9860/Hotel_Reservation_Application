@@ -7,6 +7,7 @@ import service.CustomerService;
 import service.ReservationService;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Scanner;
 
 public class AdminMenu {
@@ -44,7 +45,7 @@ public class AdminMenu {
                     } else if (adminUserInput == 3) {
                         AdminResource.displayAllReservations(); // calls "displayAllReservations()" method
                     } else if (adminUserInput == 4) {
-
+                        AdminResource.addRoom((List<IRoom>) ReservationService.roomCollection);
                     } else if (adminUserInput == 5) {
                         System.out.println("ADMINadminUserInput 5 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 6) {

@@ -55,10 +55,8 @@ public class AdminMenu {
                             while (true) {
                                 try {
                                     addRoomRepeat = scanner.next(); // takes User Input to confirm if user wants to add another room
-                                    if (addRoomRepeat.equals("y") || addRoomRepeat.equals("n")) { // Valid answers
-                                        break;
-                                    } else { // INVALID answer
-                                        throw new IllegalArgumentException("Answer must be \"y\" or \"n\"");
+                                    if (!(addRoomRepeat.equals("y")) || !(addRoomRepeat.equals("n"))) { // INVALID answer
+                                        throw new IllegalArgumentException("Email must have 1 \"@\"");
                                     }
                                 } catch (Exception e) {
                                     System.out.println("Please enter y (yes) or n (n): ");

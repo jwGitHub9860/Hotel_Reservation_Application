@@ -45,6 +45,8 @@ Pierce, Doug. “How to Catch Multiple Exceptions in Java.” _Rollbar_, 12 Aug.
 
 sdellysse. “When to Use LinkedList over ArrayList in Java?” Edited by Simeon Leyzerzon, _Stack Overflow_, 27 Nov. 2008, stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java. Accessed 24 May 2025.
 
+“Types of Exception in Java with Examples.” _GeeksforGeeks_, GeeksforGeeks, 11 Sept. 2023, www.geeksforgeeks.org/types-of-exception-in-java-with-examples/. Accessed 26 May 2025.
+
 “Udacity Git Commit Message Style Guide.” _Udacity Nanodegree Style Guide_, udacity.github.io/git-styleguide/. Accessed 22 May 2025.
 
 Zilk. “Access to Private Collection Fields in Java.” _Stack Overflow_, 1 Oct. 2009, stackoverflow.com/questions/1502025/access-to-private-collection-fields-in-java. Accessed 24 May 2025.

@@ -1,4 +1,6 @@
 import model.Customer;
+import model.Room;
+import model.RoomType;
 import service.CustomerService;
 import service.ReservationService;
 
@@ -51,8 +53,26 @@ public class AdminMenu {
 
                             System.out.println("Enter price per night: ");
                             Double roomPrice = scanner.nextDouble(); // takes User Input for "roomPrice"
+
+                            // Checks if user inputted "1" or "2"
                             System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
-                            int roomType = scanner.nextInt(); // takes User Input for "roomType"
+                            while (true) {
+                                int roomTypeInput = scanner.nextInt(); // takes User Input for "roomTypeInput"
+
+                                switch (roomTypeInput) {
+                                    case 1:
+                                        Room.roomType = RoomType.SINGLE;
+                                        break;
+                                    case 2:
+                                        Room.roomType = RoomType.DOUBLE;
+                                        break;
+                                    default:
+                                        System.out.println("Please enter 1 or 2: ");
+                                        break;
+                                }
+
+                                if (roomTypeInput == 1 || roomTypeInput == 2) { break; } // exits while loop if "roomTypeInput" is "1" or "2"
+                            }
 
                             // Checks if user inputted "y" or "n"
                             System.out.println("Would you like to add another room (y/n): ");

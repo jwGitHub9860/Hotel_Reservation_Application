@@ -1,4 +1,5 @@
 import model.Customer;
+import model.IRoom;
 import model.Room;
 import model.RoomType;
 import service.CustomerService;
@@ -42,7 +43,7 @@ public class AdminMenu {
                     } else if (adminUserInput == 3) {
                         ReservationService.printAllReservation(); // calls "printAllReservation()" method
                     } else if (adminUserInput == 4) {
-                        ReservationService.addRoom(ReservationService.roomCollection); // calls "addRoom()" method
+                        ReservationService.addRoom((IRoom) ReservationService.roomCollection); // calls "addRoom()" method
                     } else if (adminUserInput == 5) {
                         System.out.println("ADMINadminUserInput 5 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 6) {

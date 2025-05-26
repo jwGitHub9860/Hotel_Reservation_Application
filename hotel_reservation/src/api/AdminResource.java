@@ -15,7 +15,7 @@ public class AdminResource {
 
     //public Collection<IRoom> getAllRooms() { return; }
 
-    public Collection<Customer> getAllCustomers() {
+    public static Collection<Customer> getAllCustomers() {
         Collection<Customer> customerList = CustomerService.getAllCustomers(); // calls "getAllCustomers()" method
         return;
     }

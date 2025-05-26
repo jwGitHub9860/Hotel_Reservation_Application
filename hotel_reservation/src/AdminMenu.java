@@ -49,8 +49,10 @@ public class AdminMenu {
                             Double roomPrice = scanner.nextDouble(); // takes User Input for "roomPrice"
                             System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
                             int roomType = scanner.nextInt(); // takes User Input for "roomType"
-                            System.out.println("Would you like to add another room (y/n): ");
-                            addRoomRepeat = scanner.next(); // takes User Input to confirm if user wants to add another room
+                            while (true) {
+                                System.out.println("Would you like to add another room (y/n): ");
+                                addRoomRepeat = scanner.next(); // takes User Input to confirm if user wants to add another room
+                            }
                         }
                     } else if (adminUserInput == 5) {
                         System.out.println("ADMINadminUserInput 5 WORKS"); // TESTING CODE

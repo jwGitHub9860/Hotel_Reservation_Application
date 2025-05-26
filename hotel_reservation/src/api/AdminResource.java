@@ -15,10 +15,7 @@ public class AdminResource {
 
     //public Collection<IRoom> getAllRooms() { return; }
 
-    public static Collection<Customer> getAllCustomers() {
-        Collection<Customer> customerList = CustomerService.getAllCustomers(); // calls "getAllCustomers()" method
-        return;
-    }
+    public static Collection<Customer> getAllCustomers() { return CustomerService.getAllCustomers(); } // calls "getAllCustomers()" method;
 
     public static void displayAllReservations() { ReservationService.printAllReservation(); } // calls "printAllReservation()" method from SERVICE file
 }

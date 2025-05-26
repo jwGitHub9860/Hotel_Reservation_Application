@@ -40,6 +40,7 @@ public class AdminMenu {
                     } else if (adminUserInput == 3) {
                         ReservationService.printAllReservation(); // calls "printAllReservation()" method
                     } else if (adminUserInput == 4) {
+                        String addRoomRepeat = "y"; // initial "addRoomRepeat" value
                         // Takes User Input for Room Information
                         System.out.println("Enter room number: ");
                         String roomNumber = scanner.nextLine(); // takes User Input for "roomNumber"

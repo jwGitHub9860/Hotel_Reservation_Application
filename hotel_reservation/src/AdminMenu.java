@@ -45,6 +45,10 @@ public class AdminMenu {
                             // Takes User Input for Room Information
                             System.out.println("Enter room number: ");
                             String roomNumber = scanner.nextLine(); // takes User Input for "roomNumber"
+
+                            // ensures that user inputted "roomNumber"
+                            if (roomNumber.isEmpty()) { roomNumber = scanner.nextLine(); }
+
                             System.out.println("Enter price per night: ");
                             Double roomPrice = scanner.nextDouble(); // takes User Input for "roomPrice"
                             System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
@@ -55,8 +59,10 @@ public class AdminMenu {
                             while (true) {
                                 try {
                                     addRoomRepeat = scanner.next(); // takes User Input to confirm if user wants to add another room
-                                    if (!(addRoomRepeat.equals("y")) || !(addRoomRepeat.equals("n"))) { // INVALID answer
-                                        throw new IllegalArgumentException("Email must have 1 \"@\"");
+                                    if (addRoomRepeat.equals("y") || addRoomRepeat.equals("n")) { // Valid answers
+                                        break;
+                                    } else { // INVALID answer
+                                        throw new IllegalArgumentException("Answer must be \"y\" or \"n\"");
                                     }
                                 } catch (Exception e) {
                                     System.out.println("Please enter y (yes) or n (n): ");

@@ -3,7 +3,7 @@ package model;
 public class Room implements IRoom {
     String roomNumber;
     Double price;
-    public RoomType roomType; // Enum declaration variable
+    public static RoomType roomType; // Enum declaration variable
     boolean test; // TESTING CODE
 
     // Room Method Definitions

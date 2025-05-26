@@ -25,6 +25,8 @@ Ha, Truong. “What Is the Difference between Collection and List in Java?” Ed
 
 HaakonFlaar. “How to Use ‘Throws Illegalargumentexception’ in Method Declaration.” _Stack Overflow_, 1 June 2018, stackoverflow.com/questions/50640610/how-to-use-throws-illegalargumentexception-in-method-declaration/50640675. Accessed 23 May 2025.
 
+“HashMap in Java.” _GeeksforGeeks_, 7 Mar. 2025, www.geeksforgeeks.org/java-util-hashmap-in-java-with-examples/. Accessed 26 May 2025.
+
 "How to Find the First and Last Character of a String in Java.” _GeeksforGeeks_, 13 Dec. 2022, www.geeksforgeeks.org/how-to-find-the-first-and-last-character-of-a-string-in-java/. Accessed 23 May 2025.
 
 Ignorant Coder. “Differences between Java ArrayList and LinkedList Collections: Features, Performance and Code Examples.” _Juejin.Cn_, 26 Mar. 2024, juejin.cn/post/7350585600858849332. Accessed 24 May 2025.

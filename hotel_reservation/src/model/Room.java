@@ -4,7 +4,6 @@ public class Room implements IRoom {
     String roomNumber;
     Double price;
     public static RoomType roomType; // Enum declaration variable
-    boolean test; // TESTING CODE
 
     // Room Method Definitions
     public String getRoomNumber(String roomNumber) { return roomNumber; }

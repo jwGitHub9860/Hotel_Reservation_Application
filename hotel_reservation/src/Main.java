@@ -34,9 +34,9 @@ public class Main {
                     if (userInput == 1) {
                         // Takes User Input for Check-In and Check-Out Dates
                         System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
-                        Reservation.checkInDate = scanner.nextLine(); // takes User Input for "checkInDate"
+                        String checkInDate = scanner.nextLine(); // takes User Input for "checkInDate" AS STRING
                         System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
-                        Reservation.checkOutDate = scanner.nextLine(); // takes User Input for "checkOutDate"
+                        String checkOutDate = scanner.nextLine(); // takes User Input for "checkOutDate" AS STRING
 
                         HotelResource.findARoom(checkInDate, checkOutDate); // display all rooms created
 

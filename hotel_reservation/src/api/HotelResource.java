@@ -9,15 +9,15 @@ import java.util.Collection;
 import java.util.Date;
 
 public class HotelResource {
-    public Customer getCustomer(String email) { return; }
+    public static Customer getCustomer(String email) { return; }
 
-    public void createACustomer(String email, String firstName, String lastName) {}
+    public static void createACustomer(String email, String firstName, String lastName) {}
 
-    public IRoom getRoom(String roomNumber) { return; }
+    public static IRoom getRoom(String roomNumber) { return; }
 
-    public Reservation bookARoom(String customerEmail, IRoom room, Date checkInDate, Date checkOutDate) { return; }*/
+    public static Reservation bookARoom(String customerEmail, IRoom room, Date checkInDate, Date checkOutDate) { return; }*/
 
-    public Collection<Reservation> getCustomersReservations(String customerEmail) { return ReservationService.reservationCollection; }
+    public static Collection<Reservation> getCustomersReservations(String customerEmail) { return ReservationService.reservationCollection; }
 
-    public Collection<IRoom> findARoom(Date checkIn, Date checkOut) { return; }
+    public static Collection<IRoom> findARoom(Date checkIn, Date checkOut) { return; }
 }

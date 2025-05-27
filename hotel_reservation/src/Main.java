@@ -44,7 +44,7 @@ public class Main {
                         System.out.printf("\nEnter last name: ");
                         String lastName = scanner.nextLine(); // takes User Input for "lastName"
 
-
+                        HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
                     } else if (userInput == 4) {
                         AdminMenu.Admin(); // calls "Admin()" method
                     } else if (userInput == 5) {

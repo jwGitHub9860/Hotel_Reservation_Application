@@ -6,6 +6,7 @@ import service.CustomerService;
 import service.ReservationService;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -33,10 +34,29 @@ public class Main {
                     int userInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (userInput == 1) {
                         // Takes User Input for Check-In and Check-Out Dates
+                        // Checks if user inputted "checkInDate" and "checkOutDate" in "MM-dd-yyyy" format
                         System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
-                        String checkInDate = scanner.nextLine(); // takes User Input for "checkInDate" AS STRING
+                        while (true) {
+                            try {
+                                String checkInDate = scanner.nextLine(); // takes User Input for "checkInDate" AS STRING
+                                Date date = simpleDateFormat.parse(checkInDate);// checks if "checkInDate" is in "MM-dd-yyyy" format
+                                break;
+                            } catch (Exception e) {
+                                System.out.println("Please enter date in \"MM-dd-yyyy\" format: ");
+                            }
+                        }
+
+                        // Checks if user inputted "checkInDate" and "checkOutDate" in "MM-dd-yyyy" format
                         System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
-                        String checkOutDate = scanner.nextLine(); // takes User Input for "checkOutDate" AS STRING
+                        while (true) {
+                            try {
+                                String checkOutDate = scanner.nextLine(); // takes User Input for "checkOutDate" AS STRING
+                                Date date = simpleDateFormat.parse(checkOutDate);// checks if "checkOutDate" is in "MM-dd-yyyy" format
+                                break;
+                            } catch (Exception e) {
+                                System.out.println("Please enter date in \"MM-dd-yyyy\" format: ");
+                            }
+                        }
 
                         HotelResource.findARoom(checkInDate, checkOutDate); // display all rooms created
 

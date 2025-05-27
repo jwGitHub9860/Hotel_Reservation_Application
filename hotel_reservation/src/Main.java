@@ -27,7 +27,8 @@ public class Main {
                     // Takes User Input
                     int userInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (userInput == 1) {
-                        System.out.println("userInput 1 WORKS"); // TESTING CODE
+                        HotelResource.findARoom(checkInDate, checkOutDate);
+                        HotelResource.bookARoom(email, room, checkInDate, checkOutDate);
                     } else if (userInput == 2) {
                         /*ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
 

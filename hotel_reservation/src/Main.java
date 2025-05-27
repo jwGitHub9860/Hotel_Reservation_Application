@@ -69,6 +69,14 @@ public class Main {
 
                         // Creates Customer Account if User does NOT have account
                         if (accountAnswer.equals("n")) {
+                            // Takes User Input for Account Information
+                            System.out.printf("Enter email (format: name@domain.com): ");
+                            String email = scanner.nextLine(); // takes User Input for "email"
+                            System.out.printf("\nEnter first name: ");
+                            String firstName = scanner.nextLine(); // takes User Input for "firstName"
+                            System.out.printf("\nEnter last name: ");
+                            String lastName = scanner.nextLine(); // takes User Input for "lastName"
+
                             HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
                         }
 

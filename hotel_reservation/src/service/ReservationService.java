@@ -61,13 +61,13 @@ public class ReservationService {
         }
     }
 
-    /*public IRoom getARoom(String roomId) { return; }
+    /*public static IRoom getARoom(String roomId) { return; }
 
-    public Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) { return; }
+    public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) { return; }
 
-    public Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) { return; }*/
+    public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) { return; }*/
 
-    public Collection<Reservation> getCustomersReservation(Customer customer) { return; }
+    public static Collection<Reservation> getCustomersReservation(Customer customer) { return; }
 
     public static void printAllReservation() {
         System.out.println("\nADMINadminUserInput 3 WORKS"); // TESTING CODE

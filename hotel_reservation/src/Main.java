@@ -5,10 +5,14 @@ import model.Reservation;
 import service.CustomerService;
 import service.ReservationService;
 
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Allows user to input "Date" as input
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy");
+
         // Main Menu
         boolean runApplication = true;
         try (Scanner scanner = new Scanner(System.in)) { // allows user input to be read

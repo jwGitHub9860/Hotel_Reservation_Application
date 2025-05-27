@@ -19,6 +19,8 @@ Abba, Ihechikara. “Java Enum – Enumeration in Java Example.” _freeCodeCamp
 
 Armas, Jadiel de. “What Does It Mean for a Collection to Be Final in Java? - Stack Overflow.” Stack Overflow, 22 Oct. 2014, stackoverflow.com/questions/26500423/what-does-it-mean-for-a-collection-to-be-final-in-java. Accessed 26 May 2025.
 
+“Array vs Arraylist in Java.” _GeeksforGeeks_, GeeksforGeeks, 24 Mar. 2025, www.geeksforgeeks.org/array-vs-arraylist-in-java/. Accessed 27 May 2025.
+
 “Arraylist vs LinkedList in Java.” _GeeksforGeeks_, GeeksforGeeks, 24 Aug. 2023, www.geeksforgeeks.org/arraylist-vs-linkedlist-java/. Accessed 24 May 2025.
 
 Dong, Nick. “nextInt() Caused an Infinit Loop.” _Stack Overflow_, 29 Mar. 2022, stackoverflow.com/questions/71665702/nextint-caused-an-infinit-loop. Accessed 24 May 2025.

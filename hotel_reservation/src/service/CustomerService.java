@@ -11,7 +11,7 @@ public class CustomerService {
         ReservationService.customerCollection.add(customer); // add "customer" to "customerCollection"
     }
 
-    public Customer getCustomer(String customerEmail) { return; } // ADD CORRECT CODE
+    public static Customer getCustomer(String customerEmail) { return; } // ADD CORRECT CODE
 
     public static Collection<Customer> getAllCustomers() { return ReservationService.customerCollection; }
 }

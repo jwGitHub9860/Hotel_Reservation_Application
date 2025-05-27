@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.Date;
 
 public class HotelResource {
-    public static Customer getCustomer(String email) { return; }
+    public static Customer getCustomer(String email) { return CustomerService.getCustomer(email); } // calls "getCustomer()" method from SERVICE file
 
     public static void createACustomer(String email, String firstName, String lastName) { CustomerService.addCustomer(email, firstName, lastName); } // calls "addCustomer()" method from SERVICE file
 

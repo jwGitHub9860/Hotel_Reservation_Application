@@ -67,7 +67,7 @@ public class ReservationService {
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) { return; }*/
 
-    public static Collection<Reservation> getCustomersReservation(Customer customer) { return; }
+    public static Collection<Reservation> getCustomersReservation(Customer customer) { return ReservationService.reservationCollection; }
 
     public static void printAllReservation() {
         System.out.println("\nADMINadminUserInput 3 WORKS"); // TESTING CODE

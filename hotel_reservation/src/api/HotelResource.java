@@ -18,7 +18,7 @@ public class HotelResource {
 
     public static Reservation bookARoom(String customerEmail, IRoom room, Date checkInDate, Date checkOutDate) { return; }
 
-    public static Collection<Reservation> getCustomersReservations(String customerEmail) { return ReservationService.reservationCollection; }
+    public static Collection<Reservation> getCustomersReservations(String customerEmail) { return; }
 
     public static Collection<IRoom> findARoom(Date checkIn, Date checkOut) { return; }
 }

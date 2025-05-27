@@ -39,11 +39,6 @@ public class Customer {
         }
     }
 
-    // Getter Methods
-    public String getFirstName() { return firstName; }
-    public String getLastName() { return lastName; }
-    public String getEmail() { return email; }
-
     @Override
     public String toString() {
         return "Customer First Name: " + firstName + ", Last Name: " + lastName + ", Email: " + email;

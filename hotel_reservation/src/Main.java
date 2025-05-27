@@ -27,8 +27,55 @@ public class Main {
                     // Takes User Input
                     int userInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (userInput == 1) {
-                        HotelResource.findARoom(checkInDate, checkOutDate);
-                        HotelResource.bookARoom(email, room, checkInDate, checkOutDate);
+                        // Takes User Input for Check-In and Check-Out Dates
+                        System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
+                        Reservation.checkInDate = scanner.nextLine(); // takes User Input for "checkInDate"
+                        System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
+                        Reservation.checkOutDate = scanner.nextLine(); // takes User Input for "checkOutDate"
+
+                        HotelResource.findARoom(checkInDate, checkOutDate); // display all rooms created
+
+                        // Checks if user inputted "y" or "n"
+                        System.out.println("Would you like to book a room (y/n): ");
+                        String bookRoomAnswer = null;
+                        while (true) {
+                            try {
+                                bookRoomAnswer = scanner.next();
+                                if (bookRoomAnswer.equals("y") || bookRoomAnswer.equals("n")) { // Valid answer
+                                    break;
+                                } else { // INVALID answer
+                                    throw new IllegalArgumentException("Answer must be \"y\" or \"n\"");
+                                }
+                            } catch (Exception e) {
+                                System.out.println("Please enter y (yes) or n (n): ");
+                            }
+                        }
+
+                        // Checks if user inputted "y" or "n"
+                        System.out.println("Do you have an account with us (y/n): ");
+                        String accountAnswer = null;
+                        while (true) {
+                            try {
+                                accountAnswer = scanner.next();
+                                if (accountAnswer.equals("y") || accountAnswer.equals("n")) { // Valid answer
+                                    break;
+                                } else { // INVALID answer
+                                    throw new IllegalArgumentException("Answer must be \"y\" or \"n\"");
+                                }
+                            } catch (Exception e) {
+                                System.out.println("Please enter y (yes) or n (n): ");
+                            }
+                        }
+
+                        // Creates Customer Account if User does NOT have account
+                        if (accountAnswer.equals("n")) {
+                            HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
+                        }
+
+                        // Books Hotel Room
+                        if (bookRoomAnswer.equals("y")) {
+                            HotelResource.bookARoom(email, room, checkInDate, checkOutDate);
+                        }
                     } else if (userInput == 2) {
                         /*ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
 

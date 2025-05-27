@@ -1,5 +1,6 @@
 import api.HotelResource;
 import model.Customer;
+import model.IRoom;
 import model.Reservation;
 import service.CustomerService;
 import service.ReservationService;
@@ -82,7 +83,13 @@ public class Main {
 
                         // Books Hotel Room
                         if (bookRoomAnswer.equals("y")) {
-                            HotelResource.bookARoom(email, room, checkInDate, checkOutDate);
+                            // Takes User Input for Account Information
+                            System.out.printf("Enter email (format: name@domain.com): ");
+                            String email = scanner.nextLine(); // takes User Input for "email"
+                            System.out.printf("\nChoose room number to reserve: ");
+                            int room = scanner.nextInt(); // takes User Input for "room"
+
+                            HotelResource.bookARoom(email, room, checkInDate, checkOutDate); // calls "bookARoom()" method
                         }
                     } else if (userInput == 2) {
                         /*ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method

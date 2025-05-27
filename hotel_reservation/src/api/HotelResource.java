@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.Date;
 
 public class HotelResource {
-    /*public Customer getCustomer(String email) { return; }
+    public Customer getCustomer(String email) { return; }
 
     public void createACustomer(String email, String firstName, String lastName) {}
 
@@ -19,5 +19,5 @@ public class HotelResource {
 
     public Collection<Reservation> getCustomersReservations(String customerEmail) { return ReservationService.reservationCollection; }
 
-    /*public Collection<IRoom> findARoom(Date checkIn, Date checkOut) { return; }*/
+    public Collection<IRoom> findARoom(Date checkIn, Date checkOut) { return; }
 }

@@ -114,7 +114,7 @@ public class Main {
                             System.out.printf("Enter email (format: name@domain.com): ");
                             String email = scanner.nextLine(); // takes User Input for "email"
                             System.out.printf("\nChoose room number to reserve: ");
-                            int room = scanner.nextInt(); // takes User Input for "room"
+                            String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
 
                             HotelResource.bookARoom(email, room, checkInDate, checkOutDate); // calls "bookARoom()" method
                         }

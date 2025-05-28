@@ -23,8 +23,7 @@ public class HotelResource {
 
     public static Collection<Reservation> getCustomersReservations(String customerEmail) {
         Customer customer = getCustomer(customerEmail); // calls "getCustomer()" method to find "customer" WITH TYPE "Customer"
-        ReservationService.getCustomersReservation(customer); // calls "getCustomersReservation()" method from SERVICE file
-        return;
+        return ReservationService.getCustomersReservation(customer); // calls "getCustomersReservation()" method from SERVICE file
     }
 
     public static Collection<IRoom> findARoom(Date checkIn, Date checkOut) { return; }

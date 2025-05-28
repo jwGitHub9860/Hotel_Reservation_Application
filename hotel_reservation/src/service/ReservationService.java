@@ -78,6 +78,7 @@ public class ReservationService {
                     System.out.println("Please enter y (yes) or n (n): ");
                 }
             }
+            roomCollection.add(roomInstance); // adds "roomNumber", "price", and "roomType" to "roomCollection"
         }
     }
 

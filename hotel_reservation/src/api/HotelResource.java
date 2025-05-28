@@ -14,7 +14,7 @@ public class HotelResource {
 
     public static void createACustomer(String email, String firstName, String lastName) { CustomerService.addCustomer(email, firstName, lastName); } // calls "addCustomer()" method from SERVICE file
 
-    public static IRoom getRoom(String roomNumber) { return; }
+    public static IRoom getRoom(String roomNumber) { return ReservationService.getARoom(roomNumber); }
 
     public static Reservation bookARoom(String customerEmail, IRoom room, Date checkInDate, Date checkOutDate) { return; }
 

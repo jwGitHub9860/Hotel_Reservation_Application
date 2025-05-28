@@ -1,8 +1,8 @@
 package model;
 
 public class Room implements IRoom {
-    String roomNumber;
-    Double price;
+    public static String roomNumber;
+    public static Double price;
     public static RoomType roomType; // Enum declaration variable
 
     // Room Method Definitions

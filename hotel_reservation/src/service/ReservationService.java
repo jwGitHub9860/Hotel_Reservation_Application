@@ -21,8 +21,16 @@ public class ReservationService {
             // ensures that user inputted "roomNumber"
             if (roomNumber.isEmpty()) { roomNumber = scanner.nextLine(); }
 
+            // Checks if user inputted "Double" value for "roomPrice"
             System.out.println("Enter price per night: ");
-            Double roomPrice = scanner.nextDouble(); // takes User Input for "roomPrice"
+            while (true) {
+                try {
+                    Double roomPrice = scanner.nextDouble(); // takes User Input for "roomPrice"
+                    break;
+                } catch (Exception e) {
+                    System.out.println("Please enter price in \"#.##\" format: ");
+                }
+            }
 
             // Checks if user inputted "1" or "2"
             System.out.println("Enter room type (1 for single bed, 2 for double bed): ");

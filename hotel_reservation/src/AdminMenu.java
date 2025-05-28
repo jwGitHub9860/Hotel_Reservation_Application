@@ -34,19 +34,23 @@ public class AdminMenu {
                     // Takes User Input
                     int adminUserInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (adminUserInput == 1) {
-                        Collection<Customer> customerList = AdminResource.getAllCustomers(); // calls "getAllCustomers()" method from "AdminResource.java"
+                        // Calls "getAllCustomers()" method from "AdminResource.java"
+                        Collection<Customer> customerList = AdminResource.getAllCustomers();
 
                         // Display customer information inside "customerList" collection
                         for (Customer customer : customerList) {
                             System.out.println(customer);
                         }
                     } else if (adminUserInput == 2) {
+                        // Calls "getAllRooms()" method from "AdminResource.java"
+                        Collection<IRoom> roomList = AdminResource.getAllRooms();
+
                         // Display room information inside "roomCollection" collection
                         for (IRoom room : ReservationService.roomCollection) {
                             System.out.println(room);
                         }
                     } else if (adminUserInput == 3) {
-                        AdminResource.displayAllReservations(); // calls "displayAllReservations()" method
+                        AdminResource.displayAllReservations(); // calls "displayAllReservations()" method from "AdminResource.java"
                     } else if (adminUserInput == 4) {
                         // FIGURE OUT HOW TO ADD TO ROOM LIST
                         AdminResource.addRoom((List<IRoom>) ReservationService.roomCollection);

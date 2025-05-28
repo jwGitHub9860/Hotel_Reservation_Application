@@ -8,7 +8,12 @@ import java.util.*;
 public class ReservationService {
     // Collections to store & retrieve reservations
     public static Collection<Customer> customerCollection = new LinkedList<Customer>();
-    public static HashMap<String, Room[]> roomCollection = new HashMap<>(); // Room Collection
+
+    // Room Collections
+    public static HashMap<String, Room[]> roomCollection = new HashMap<>();
+    public static HashMap<String, Double> roomPriceCollection = new HashMap<>();
+    public static HashMap<String, RoomType> roomTypeCollection = new HashMap<>();
+
     public static Collection<Reservation> reservationCollection = new LinkedList<>();
 
     public static void addRoom(IRoom room) {

@@ -82,7 +82,7 @@ public class ReservationService {
         }
     }
 
-    public static IRoom getARoom(String roomId) { return; }
+    public static IRoom getARoom(String roomId) { return roomInstance; }
 
     //public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) { return; }
 

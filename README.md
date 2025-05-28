@@ -23,6 +23,8 @@ Armas, Jadiel de. “What Does It Mean for a Collection to Be Final in Java? - S
 
 “Arraylist vs LinkedList in Java.” _GeeksforGeeks_, GeeksforGeeks, 24 Aug. 2023, www.geeksforgeeks.org/arraylist-vs-linkedlist-java/. Accessed 24 May 2025.
 
+“Decimalformat toPattern() Method in Java.” GeeksforGeeks, GeeksforGeeks, 1 Apr. 2019, www.geeksforgeeks.org/decimalformat-topattern-method-in-java/. Accessed 27 May 2025.
+
 Dong, Nick. “nextInt() Caused an Infinit Loop.” _Stack Overflow_, 29 Mar. 2022, stackoverflow.com/questions/71665702/nextint-caused-an-infinit-loop. Accessed 24 May 2025.
 
 “Final Keyword in Java.” _GeeksforGeeks_, 5 May 2025, www.geeksforgeeks.org/final-keyword-in-java/. Accessed 26 May 2025.
@@ -52,6 +54,8 @@ JEAN, Ebillson GRAND. “What Does It Mean to Provide a Static Reference in the 
 “Online Compiler and Debugger for C/C++.” _GDB Online Debugger_, www.onlinegdb.com/. Accessed 22 May 2025. 
 
 Pierce, Doug. “How to Catch Multiple Exceptions in Java.” _Rollbar_, 12 Aug. 2024, rollbar.com/blog/how-to-catch-multiple-exceptions-in-java/. Accessed 25 May 2025.
+
+Rajesh. “Round a Double to 2 Decimal Places [duplicate].” Edited by Ryanyuyu, _Stack Overflow_, 11 May 2010, stackoverflow.com/questions/2808535/round-a-double-to-2-decimal-places. Accessed 27 May 2025.
 
 sdellysse. “When to Use LinkedList over ArrayList in Java?” Edited by Simeon Leyzerzon, _Stack Overflow_, 27 Nov. 2008, stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java. Accessed 24 May 2025.
 

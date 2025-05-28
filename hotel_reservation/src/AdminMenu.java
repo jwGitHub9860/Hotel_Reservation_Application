@@ -41,7 +41,10 @@ public class AdminMenu {
                             System.out.println(customer);
                         }
                     } else if (adminUserInput == 2) {
-                        System.out.println("ADMINadminUserInput 2 WORKS"); // TESTING CODE
+                        // Display room information inside "roomCollection" collection
+                        for (IRoom room : ReservationService.roomCollection) {
+                            System.out.println(room);
+                        }
                     } else if (adminUserInput == 3) {
                         AdminResource.displayAllReservations(); // calls "displayAllReservations()" method
                     } else if (adminUserInput == 4) {

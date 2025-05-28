@@ -17,7 +17,7 @@ public class ReservationService {
     public static Collection<Reservation> reservationCollection = new LinkedList<>();
 
     // Allows access to "IRoom" interface
-    Room roomInstance = new Room(); // creates "Room" instance
+    static Room roomInstance = new Room(); // creates "Room" instance
 
     public static void addRoom(IRoom room) {
         Scanner scanner = new Scanner(System.in); // allows user input to be read

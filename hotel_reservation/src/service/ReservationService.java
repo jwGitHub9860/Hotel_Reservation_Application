@@ -10,7 +10,7 @@ public class ReservationService {
     public static Collection<Customer> customerCollection = new LinkedList<Customer>();
 
     // Room Collections
-    public static HashMap<String, Room[]> roomCollection = new HashMap<>();
+    public static Collection<IRoom> roomCollection = new HashSet<>();
     public static HashMap<String, Double> roomPriceCollection = new HashMap<>();
     public static HashMap<String, RoomType> roomTypeCollection = new HashMap<>();
 

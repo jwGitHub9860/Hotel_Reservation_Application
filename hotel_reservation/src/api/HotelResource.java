@@ -26,5 +26,5 @@ public class HotelResource {
         return ReservationService.getCustomersReservation(customer); // calls "getCustomersReservation()" method from SERVICE file
     }
 
-    public static Collection<IRoom> findARoom(Date checkIn, Date checkOut) { return; }
+    public static Collection<IRoom> findARoom(Date checkIn, Date checkOut) { return ReservationService.findRooms(checkIn, checkOut); } // calls "findRooms()" method from SERVICE file
 }

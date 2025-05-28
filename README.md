@@ -43,6 +43,8 @@ Ignorant Coder. “Differences between Java ArrayList and LinkedList Collections
 
 “Java Enums.” _Programiz_, www.programiz.com/java-programming/enums. Accessed 22 May 2025. 
 
+“Java HashSet.” _GeeksforGeeks_, 12 Mar. 2025, www.geeksforgeeks.org/hashset-in-java/. Accessed 27 May 2025.
+
 “Java String split() Method.” _W3Schools Online Web Tutorials_, www.w3schools.com/java/ref_string_split.asp. Accessed 23 May 2025.
 
 “Java String substring() Method.” _W3Schools Online Web Tutorials_, www.w3schools.com/java/ref_string_substring.asp. Accessed 23 May 2025.

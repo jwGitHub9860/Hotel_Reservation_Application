@@ -17,10 +17,10 @@ public class ReservationService {
         while (addRoomRepeat.equals("y")) {
             // Takes User Input for Room Information
             System.out.println("Enter room number: ");
-            String roomNumber = scanner.nextLine(); // takes User Input for "roomNumber"
+            Room.roomNumber = scanner.nextLine(); // takes User Input for "roomNumber"
 
             // Ensures that user inputted "roomNumber"
-            if (roomNumber.isEmpty()) { roomNumber = scanner.nextLine(); }
+            if (Room.roomNumber.isEmpty()) { Room.roomNumber = scanner.nextLine(); }
 
             // Checks if user inputted "Double" value for Room "price"
             System.out.println("Enter price per night: ");

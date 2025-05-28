@@ -28,7 +28,7 @@ public class ReservationService {
                 try {
                     Double roomPrice = scanner.nextDouble(); // takes User Input for "roomPrice"
                     DecimalFormat decimalFormat = new DecimalFormat("#.##"); // creates "DecimalFormat" instance with "#.##" format
-                    roomPrice = Double.valueOf(decimalFormat.format(roomPrice));
+                    roomPrice = Double.valueOf(decimalFormat.format(roomPrice)); // rounds "roomPrice" of to "#.##" format
                     break;
                 } catch (Exception e) {
                     System.out.println("Please enter price in \"#.##\" format: ");

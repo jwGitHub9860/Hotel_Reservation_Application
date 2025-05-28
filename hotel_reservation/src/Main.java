@@ -116,6 +116,8 @@ public class Main {
                             System.out.printf("\nChoose room number to reserve: ");
                             String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
 
+                            HotelResource.getRoom(chosenRoom); // calls "getRoom()" method to find "chosenRoom" in "roomCollection"
+
                             HotelResource.bookARoom(email, room, checkInDate, checkOutDate); // calls "bookARoom()" method
                         }
                     } else if (userInput == 2) {

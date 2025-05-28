@@ -23,7 +23,7 @@ public class HotelResource {
 
     public static Collection<Reservation> getCustomersReservations(String customerEmail) {
         Customer customer = getCustomer(customerEmail); // calls "getCustomer()" method to find "customer" WITH TYPE "Customer"
-        ReservationService.getCustomersReservation(Customer customer); // calls "getCustomersReservation()" method from SERVICE file
+        ReservationService.getCustomersReservation(customer); // calls "getCustomersReservation()" method from SERVICE file
         return;
     }
 

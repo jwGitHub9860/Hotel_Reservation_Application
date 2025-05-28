@@ -13,7 +13,7 @@ public class AdminResource {
 
     public static void addRoom(List<IRoom> rooms) { ReservationService.addRoom((IRoom) ReservationService.roomCollection); } // calls "addRoom()" method from SERVICE file
 
-    public Collection<IRoom> getAllRooms() { return; }
+    public Collection<IRoom> getAllRooms() { return ReservationService.roomCollection; }
 
     public static Collection<Customer> getAllCustomers() { return CustomerService.getAllCustomers(); } // calls "getAllCustomers()" method from SERVICE file
 

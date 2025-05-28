@@ -19,16 +19,16 @@ public class ReservationService {
             System.out.println("Enter room number: ");
             String roomNumber = scanner.nextLine(); // takes User Input for "roomNumber"
 
-            // ensures that user inputted "roomNumber"
+            // Ensures that user inputted "roomNumber"
             if (roomNumber.isEmpty()) { roomNumber = scanner.nextLine(); }
 
             // Checks if user inputted "Double" value for "roomPrice"
             System.out.println("Enter price per night: ");
             while (true) {
                 try {
-                    Double roomPrice = scanner.nextDouble(); // takes User Input for "roomPrice"
+                    // Ensures that "roomPrice" is in "#.##" format
                     DecimalFormat decimalFormat = new DecimalFormat("#.##"); // creates "DecimalFormat" instance with "#.##" format
-                    roomPrice = Double.valueOf(decimalFormat.format(roomPrice)); // rounds "roomPrice" of to "#.##" format
+                    Double roomPrice = Double.valueOf(decimalFormat.format(scanner.nextDouble())); // takes User Input for "roomPrice" & rounds "roomPrice" off to "#.##" format
                     break;
                 } catch (Exception e) {
                     System.out.println("Please enter price in \"#.##\" format: ");

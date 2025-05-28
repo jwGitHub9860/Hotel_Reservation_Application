@@ -18,6 +18,10 @@ public class ReservationService {
 
     public static void addRoom(IRoom room) {
         Scanner scanner = new Scanner(System.in); // allows user input to be read
+
+        // Allows access to "IRoom" interface
+        Room roomInstance = new Room(); // creates "Room" instance
+
         String addRoomRepeat = "y"; // initial "addRoomRepeat" value
         while (addRoomRepeat.equals("y")) {
             // Takes User Input for Room Information

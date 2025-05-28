@@ -16,7 +16,9 @@ public class HotelResource {
 
     public static IRoom getRoom(String roomNumber) { return ReservationService.getARoom(roomNumber); }
 
-    public static Reservation bookARoom(String customerEmail, IRoom room, Date checkInDate, Date checkOutDate) { return; }
+    public static Reservation bookARoom(String customerEmail, IRoom room, Date checkInDate, Date checkOutDate) {
+        return ReservationService.reserveARoom(customer, room, checkInDate, checkOutDate); // calls "reserveARoom()" method from SERVICE file
+    }
 
     public static Collection<Reservation> getCustomersReservations(String customerEmail) {
         ReservationService.getCustomersReservation(Customer customer); // calls "getCustomersReservation()" method from SERVICE file

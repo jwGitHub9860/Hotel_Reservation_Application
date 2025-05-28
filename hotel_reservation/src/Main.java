@@ -119,6 +119,8 @@ public class Main {
                             IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom); // calls "getRoom()" method to find "chosenRoom" in "roomCollection"
 
                             Reservation customerReservation = HotelResource.bookARoom(email, chosenRoomNumber, checkInDate, checkOutDate); // calls "bookARoom()" method
+
+                            ReservationService.reservationCollection.add(customerReservation); // adds "customerReservation" to "reservationCollection"
                         }
                     } else if (userInput == 2) {
                         /*ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method

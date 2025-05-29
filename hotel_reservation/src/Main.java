@@ -133,10 +133,9 @@ public class Main {
                         System.out.println("Enter email (format: name@domain.com): ");
                         String customerEmail = scanner.nextLine(); // takes User Input for "customerEmail"
 
-                        ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
-
                         // Displays "reservationCollection" collection
-                        for (Reservation reservation : ReservationService.reservationCollection){
+                        ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
+                        for (Reservation reservation : ReservationService.reservationCollection) {
                             System.out.println(reservation);
                         }
                     } else if (userInput == 3) {

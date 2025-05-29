@@ -6,6 +6,7 @@ import service.CustomerService;
 import service.ReservationService;
 
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -61,7 +62,7 @@ public class Main {
                             }
                         }
 
-                        HotelResource.findARoom(checkInDate, checkOutDate); // display all rooms created
+                        Collection<IRoom> roomSearch = HotelResource.findARoom(checkInDate, checkOutDate); // display all rooms created
 
                         // Checks if user inputted "y" or "n"
                         System.out.println("Would you like to book a room (y/n): ");

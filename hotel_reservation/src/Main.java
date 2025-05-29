@@ -64,6 +64,11 @@ public class Main {
 
                         Collection<IRoom> roomSearch = HotelResource.findARoom(checkInDate, checkOutDate); // calls "findARoom()" method
 
+                        // Display all rooms created
+                        for (IRoom room : roomSearch) {
+                            System.out.println(room);
+                        }
+
                         // Checks if user inputted "y" or "n"
                         System.out.println("Would you like to book a room (y/n): ");
                         String bookRoomAnswer = null;

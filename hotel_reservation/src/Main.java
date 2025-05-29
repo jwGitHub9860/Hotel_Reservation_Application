@@ -129,12 +129,12 @@ public class Main {
                             ReservationService.reservationCollection.add(customerReservation); // adds "customerReservation" to "reservationCollection"
                         }
                     } else if (userInput == 2) {
-                        /*ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
+                        ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
 
                         // Displays "reservationCollection" collection
                         for (Reservation reservation : ReservationService.reservationCollection){
                             System.out.println(reservation);
-                        }*/
+                        }
                     } else if (userInput == 3) {
                         // Takes User Input for Account Information
                         System.out.println("Enter email (format: name@domain.com): ");

@@ -98,11 +98,11 @@ public class Main {
                         // Creates Customer Account if User does NOT have account
                         if (accountAnswer.equals("n")) {
                             // Takes User Input for Account Information
-                            System.out.printf("Enter email (format: name@domain.com): ");
+                            System.out.println("Enter email (format: name@domain.com): ");
                             String email = scanner.nextLine(); // takes User Input for "email"
-                            System.out.printf("\nEnter first name: ");
+                            System.out.println("\nEnter first name: ");
                             String firstName = scanner.nextLine(); // takes User Input for "firstName"
-                            System.out.printf("\nEnter last name: ");
+                            System.out.println("\nEnter last name: ");
                             String lastName = scanner.nextLine(); // takes User Input for "lastName"
 
                             HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
@@ -111,9 +111,9 @@ public class Main {
                         // Books Hotel Room
                         if (bookRoomAnswer.equals("y")) {
                             // Takes User Input for Account Information
-                            System.out.printf("Enter email (format: name@domain.com): ");
+                            System.out.println("Enter email (format: name@domain.com): ");
                             String email = scanner.nextLine(); // takes User Input for "email"
-                            System.out.printf("\nChoose room number to reserve: ");
+                            System.out.println("\nChoose room number to reserve: ");
                             String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
 
                             IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom); // calls "getRoom()" method to find "chosenRoom" in "roomCollection"
@@ -131,11 +131,11 @@ public class Main {
                         }*/
                     } else if (userInput == 3) {
                         // Takes User Input for Account Information
-                        System.out.printf("Enter email (format: name@domain.com): ");
+                        System.out.println("Enter email (format: name@domain.com): ");
                         String email = scanner.nextLine(); // takes User Input for "email"
-                        System.out.printf("\nEnter first name: ");
+                        System.out.println("\nEnter first name: ");
                         String firstName = scanner.nextLine(); // takes User Input for "firstName"
-                        System.out.printf("\nEnter last name: ");
+                        System.out.println("\nEnter last name: ");
                         String lastName = scanner.nextLine(); // takes User Input for "lastName"
 
                         HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method

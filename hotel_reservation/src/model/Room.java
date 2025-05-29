@@ -5,6 +5,9 @@ public class Room implements IRoom {
     public static Double price;
     public static RoomType roomType; // Enum declaration variable
 
+    // Constructor
+    public Room() {}
+
     // Room Method Definitions
     public String getRoomNumber() { return roomNumber; }
     public Double getRoomPrice() { return price; }

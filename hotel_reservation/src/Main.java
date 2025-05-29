@@ -129,6 +129,10 @@ public class Main {
                             ReservationService.reservationCollection.add(customerReservation); // adds "customerReservation" to "reservationCollection"
                         }
                     } else if (userInput == 2) {
+                        // Takes User Input for "customerEmail"
+                        System.out.println("Enter email (format: name@domain.com): ");
+                        String customerEmail = scanner.nextLine(); // takes User Input for "customerEmail"
+
                         ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
 
                         // Displays "reservationCollection" collection

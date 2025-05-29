@@ -62,7 +62,7 @@ public class Main {
                             }
                         }
 
-                        Collection<IRoom> roomSearch = HotelResource.findARoom(checkInDate, checkOutDate); // display all rooms created
+                        Collection<IRoom> roomSearch = HotelResource.findARoom(checkInDate, checkOutDate); // calls "findARoom()" method
 
                         // Checks if user inputted "y" or "n"
                         System.out.println("Would you like to book a room (y/n): ");

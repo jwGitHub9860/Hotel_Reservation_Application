@@ -87,7 +87,7 @@ public class ReservationService {
 
     public static IRoom getARoom(String roomId) { return roomInstance; } // ADD CORRECT CODE
 
-    public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) { return reservationInstance; } // CORRECT OR NOT?
+    public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) { return reservationInstance; } // Creates & Returns WHOLE "Reservation"
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) { return roomCollection; }
 

@@ -12,5 +12,5 @@ public class Room implements IRoom {
     public boolean isFree() { return true; }
 
     @Override
-    public String toString(){ return "Room Number is " + roomNumber + " and Price is $" + price; }
+    public String toString(){ return "Room Number is " + roomNumber + ", " + roomType + " bed, Room Price is $" + price; }
 }

@@ -113,9 +113,9 @@ public class AdminMenu {
                                 }
                             }
                             ReservationService.roomCollection.add(roomInstance); // adds "roomNumber", "price", and "roomType" to "roomCollection"
+                            // FIGURE OUT HOW TO ADD TO ROOM LIST
+                            //AdminResource.addRoom((List<IRoom>) ReservationService.roomCollection); // calls "addRoom()" method from "AdminResource.java"
                         }
-                        // FIGURE OUT HOW TO ADD TO ROOM LIST
-                        //AdminResource.addRoom((List<IRoom>) ReservationService.roomCollection); // calls "addRoom()" method from "AdminResource.java"
                     } else if (adminUserInput == 5) {
                         System.out.println("ADMINadminUserInput 5 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 6) {

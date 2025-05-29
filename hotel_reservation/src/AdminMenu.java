@@ -54,9 +54,7 @@ public class AdminMenu {
                         AdminResource.displayAllReservations(); // calls "displayAllReservations()" method from "AdminResource.java"
                     } else if (adminUserInput == 4) {
                         // Allows access to "IRoom" interface
-                        Room roomInstance = new Room(); // creates "Room" instance
-
-
+                        Room room = new Room(); // creates "Room" instance
                     } else if (adminUserInput == 5) {
                         System.out.println("ADMINadminUserInput 5 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 6) {

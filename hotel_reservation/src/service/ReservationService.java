@@ -19,6 +19,9 @@ public class ReservationService {
     // Allows access to "IRoom" interface
     static Room roomInstance = new Room(); // creates "Room" instance
 
+    // Allows access to "Reservation" interface
+    static Reservation reservationInstance = new Reservation(); // creates "Reservation" instance
+
     public static void addRoom(IRoom room) {
         Scanner scanner = new Scanner(System.in); // allows user input to be read
 

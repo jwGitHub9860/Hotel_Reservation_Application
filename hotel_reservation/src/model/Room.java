@@ -69,9 +69,6 @@ public class Room implements IRoom {
                     System.out.println("Please enter y (yes) or n (n): ");
                 }
             }
-            ReservationService.roomCollection.add(roomInstance); // adds "roomNumber", "price", and "roomType" to "roomCollection"
-            // FIGURE OUT HOW TO ADD TO ROOM LIST
-            //AdminResource.addRoom((List<IRoom>) ReservationService.roomCollection); // calls "addRoom()" method from "AdminResource.java"
         }
     }
 

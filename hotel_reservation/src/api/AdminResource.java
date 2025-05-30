@@ -3,9 +3,11 @@ package api;
 import model.Customer;
 import model.IRoom;
 import model.Room;
+import model.RoomType;
 import service.CustomerService;
 import service.ReservationService;
 
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
 
@@ -13,9 +15,12 @@ public class AdminResource {
     //public static Customer getCustomer(String email) { return; }
 
     public static void addRoom(List<IRoom> rooms) {
-        // Calls "Room" constructor
-        IRoom room = new Room(); // allows access to "IRoom" interface
-        ReservationService.addRoom(room); // calls "addRoom()" method from SERVICE file
+        String addRoomRepeat = "y"; // initial "addRoomRepeat" value
+        while (addRoomRepeat.equals("y")) {
+            // Calls "Room" constructor
+            IRoom room = new Room(); // allows access to "IRoom" interface
+            ReservationService.addRoom(room); // calls "addRoom()" method from SERVICE file
+        }
     }
 
     public static Collection<IRoom> getAllRooms() { return ReservationService.roomCollection; }

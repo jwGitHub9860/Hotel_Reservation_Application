@@ -17,10 +17,10 @@ public class Room implements IRoom {
         while (addRoomRepeat.equals("y")) {
             // Takes User Input for Room Information
             System.out.println("Enter room number: ");
-            Room.roomNumber = scanner.nextLine(); // takes User Input for "roomNumber"
+            roomNumber = scanner.nextLine(); // takes User Input for "roomNumber"
 
             // Ensures that user inputted "roomNumber"
-            if (Room.roomNumber.isEmpty()) { Room.roomNumber = scanner.nextLine(); }
+            if (roomNumber.isEmpty()) { roomNumber = scanner.nextLine(); }
 
             // Checks if user inputted "Double" value for Room "price"
             System.out.println("Enter price per night: ");

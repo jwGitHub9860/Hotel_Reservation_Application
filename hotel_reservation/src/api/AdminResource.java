@@ -19,7 +19,9 @@ public class AdminResource {
         while (addRoomRepeat.equals("y")) {
             // Calls "Room" constructor
             IRoom room = new Room(); // allows access to "IRoom" interface
-            ReservationService.addRoom(room); // calls "addRoom()" method from SERVICE file
+
+            // Calls "addRoom()" method from SERVICE file
+            ReservationService.addRoom(room);
 
             // Checks if user inputted "y" or "n"
             System.out.println("Would you like to add another room (y/n): ");

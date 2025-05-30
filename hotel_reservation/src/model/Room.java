@@ -28,7 +28,7 @@ public class Room implements IRoom {
                 try {
                     // Ensures that Room "price" is in "#.##" format
                     DecimalFormat decimalFormat = new DecimalFormat("#.##"); // creates "DecimalFormat" instance with "#.##" format
-                    Room.price = Double.valueOf(decimalFormat.format(scanner.nextDouble())); // takes User Input for Room "price" & rounds Room "price" off to "#.##" format
+                    price = Double.valueOf(decimalFormat.format(scanner.nextDouble())); // takes User Input for Room "price" & rounds Room "price" off to "#.##" format
                     break;
                 } catch (Exception e) {
                     System.out.println("Please enter price in \"#.##\" format: ");

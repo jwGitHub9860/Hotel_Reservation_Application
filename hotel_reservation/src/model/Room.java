@@ -10,6 +10,7 @@ public class Room implements IRoom {
     Double price;
     RoomType roomType; // Enum declaration variable
     boolean isValid = false;
+    boolean addRoomNumber = false;
 
     // Constructor
     public Room() {
@@ -31,7 +32,7 @@ public class Room implements IRoom {
                             throw new IllegalArgumentException("There cannot be two hotel rooms with the same room number.");
                         }
                         else {
-
+                            addRoomNumber = true;
                         }
                     }
                     if (addRoomNumber) {

@@ -31,12 +31,12 @@ public class Room implements IRoom {
                             throw new IllegalArgumentException("There cannot be two hotel rooms with the same room number.");
                         }
                         else {
-                            ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
-                            isValid = true;
+
                         }
                     }
                     if (addRoomNumber) {
-
+                        ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
+                        isValid = true;
                     }
                 } else {
                     ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"

@@ -17,7 +17,7 @@ public class Room implements IRoom {
 
         // Takes User Input for Room Information
         System.out.println("Enter room number: ");
-        while (!isValid) {
+        while (!isValid) { // ensures that user inputted "roomNumber"
             try {
                 roomNumber = String.valueOf(scanner.nextInt()); // takes User Input for "roomNumber"
 
@@ -40,10 +40,10 @@ public class Room implements IRoom {
                 }
             } catch (IllegalArgumentException e) { // if user enters Room Number that is the SAME AS PREVIOUS HOTEL NUMBER
                 System.out.println("Please enter a different room number: ");
-                isValid = false;
+                isValid = false; // ensures that user inputted "roomNumber"
             } catch (Exception e) { // if user does NOT ENTER INTEGER FOR HOTEL NUMBER
                 System.out.println("Please enter an integer for the room number: ");
-                isValid = false;
+                isValid = false; // ensures that user inputted "roomNumber"
             }
         }
 

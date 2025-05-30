@@ -47,9 +47,6 @@ public class Room implements IRoom {
             }
         }
 
-        // Ensures that user inputted "roomNumber"
-        if (roomNumber.isEmpty()) { roomNumber = scanner.nextLine(); }
-
         // Checks if user inputted "Double" value for Room "price"
         System.out.println("Enter price per night: ");
         while (true) {

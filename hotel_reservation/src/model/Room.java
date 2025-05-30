@@ -17,7 +17,7 @@ public class Room implements IRoom {
         // Takes User Input for Room Information
         System.out.println("Enter room number: ");
         roomNumber = scanner.nextLine(); // takes User Input for "roomNumber"
-        ReservationService.roomNumberCollection.add(roomNumber);
+        ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
 
         // Ensures that user inputted "roomNumber"
         if (roomNumber.isEmpty()) { roomNumber = scanner.nextLine(); }

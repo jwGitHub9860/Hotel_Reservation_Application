@@ -25,7 +25,6 @@ public class Room implements IRoom {
                 if (!ReservationService.roomNumberCollection.isEmpty()) {
                     // Prevents user from creating two Hotel Rooms with the Same Room Number
                     for (String number : ReservationService.roomNumberCollection) {
-                        System.out.println(number); // TESTING CODE
                         // Checks if user inputted "roomNumber" that is the Same as a Previous "roomNumber"
                         if (roomNumber.equals(number)) {
                             throw new IllegalArgumentException("There cannot be two hotel rooms with the same room number.");

@@ -17,11 +17,7 @@ public class ReservationService {
     // Allows access to "Reservation" interface
     static Reservation reservationInstance = new Reservation(); // creates "Reservation" instance
 
-    public static void addRoom(IRoom room) {
-        ReservationService.roomCollection.add(room); // adds "roomNumber", "price", and "roomType" to "roomCollection"
-        // FIGURE OUT HOW TO ADD TO ROOM LIST
-        //AdminResource.addRoom((List<IRoom>) ReservationService.roomCollection); // calls "addRoom()" method from "AdminResource.java"
-    }
+    public static void addRoom(IRoom room) { ReservationService.roomCollection.add(room); } // adds "roomNumber", "price", and "roomType" to "roomCollection"
 
     public static IRoom getARoom(String roomId) {
         // ADD CORRECT CODE

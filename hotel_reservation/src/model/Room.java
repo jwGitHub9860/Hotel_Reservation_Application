@@ -6,9 +6,9 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Room implements IRoom {
-    public static String roomNumber;
-    public static Double price;
-    public static RoomType roomType; // Enum declaration variable
+    String roomNumber;
+    Double price;
+    RoomType roomType; // Enum declaration variable
 
     // Constructor
     public Room() {

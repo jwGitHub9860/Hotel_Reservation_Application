@@ -3,6 +3,7 @@ package model;
 import service.ReservationService;
 
 import java.text.DecimalFormat;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Room implements IRoom {
@@ -63,21 +64,25 @@ public class Room implements IRoom {
         // Checks if user inputted "1" or "2"
         System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
         while (true) {
-            int roomTypeInput = scanner.nextInt(); // takes User Input for "roomTypeInput"
+            try {
+                int roomTypeInput = scanner.nextInt(); // takes User Input for "roomTypeInput"
 
-            switch (roomTypeInput) {
-                case 1:
-                    roomType = RoomType.SINGLE;
-                    break;
-                case 2:
-                    roomType = RoomType.DOUBLE;
-                    break;
-                default:
-                    System.out.println("Please enter 1 or 2: ");
-                    break;
+                switch (roomTypeInput) {
+                    case 1:
+                        roomType = RoomType.SINGLE;
+                        break;
+                    case 2:
+                        roomType = RoomType.DOUBLE;
+                        break;
+                    default:
+                        System.out.println("Please enter 1 or 2: ");
+                        break;
+                }
+
+                if (roomTypeInput == 1 || roomTypeInput == 2) { break; } // exits while loop if "roomTypeInput" is "1" or "2"
+            } catch (InputMismatchException e) {
+                System.out.println("Please enter 1 or 2: ");
             }
-
-            if (roomTypeInput == 1 || roomTypeInput == 2) { break; } // exits while loop if "roomTypeInput" is "1" or "2"
         }
     }
 

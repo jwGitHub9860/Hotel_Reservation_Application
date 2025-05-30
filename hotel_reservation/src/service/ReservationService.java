@@ -21,7 +21,7 @@ public class ReservationService {
     static Reservation reservationInstance = new Reservation(); // creates "Reservation" instance
 
     public static void addRoom(IRoom room) {
-        Scanner scanner = new Scanner(System.in); // allows user input to be read
+
 
 
     }

@@ -3,6 +3,7 @@ package model;
 import service.ReservationService;
 
 import java.text.DecimalFormat;
+import java.util.Scanner;
 
 public class Room implements IRoom {
     public static String roomNumber;
@@ -11,6 +12,7 @@ public class Room implements IRoom {
 
     // Constructor
     public Room() {
+        Scanner scanner = new Scanner(System.in); // allows user input to be read
         String addRoomRepeat = "y"; // initial "addRoomRepeat" value
         while (addRoomRepeat.equals("y")) {
             // Takes User Input for Room Information

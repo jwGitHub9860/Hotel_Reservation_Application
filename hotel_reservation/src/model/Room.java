@@ -68,6 +68,7 @@ public class Room implements IRoom {
         System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
         while (!isValid) { // ensures that user inputted "roomType"
             try {
+                if (roomTypeInput == 1 || roomTypeInput == 2) { break; } // exits while loop if "roomTypeInput" is "1" or "2"
                 int roomTypeInput = scanner.nextInt(); // takes User Input for "roomTypeInput"
 
                 // Checks if user inputted "1" or "2"
@@ -84,10 +85,9 @@ public class Room implements IRoom {
                         System.out.println("Please enter 1 or 2: ");
                         break;
                 }
-
-                if (roomTypeInput == 1 || roomTypeInput == 2) { break; } // exits while loop if "roomTypeInput" is "1" or "2"
             } catch (InputMismatchException e) {
                 System.out.println("Please enter 1 or 2: ");
+                isValid = false;
             }
         }
     }

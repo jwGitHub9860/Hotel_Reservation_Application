@@ -71,9 +71,11 @@ public class Room implements IRoom {
                 switch (roomTypeInput) {
                     case 1:
                         roomType = RoomType.SINGLE;
+                        isValid = true;
                         break;
                     case 2:
                         roomType = RoomType.DOUBLE;
+                        isValid = true;
                         break;
                     default:
                         System.out.println("Please enter 1 or 2: ");

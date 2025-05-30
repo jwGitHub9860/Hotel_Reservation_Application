@@ -10,11 +10,14 @@ import service.ReservationService;
 import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
+import java.util.Scanner;
 
 public class AdminResource {
     //public static Customer getCustomer(String email) { return; }
 
     public static void addRoom(List<IRoom> rooms) {
+        Scanner scanner = new Scanner(System.in); // allows user input to be read
+
         String addRoomRepeat = "y"; // initial "addRoomRepeat" value
         while (addRoomRepeat.equals("y")) {
             // Calls "Room" constructor

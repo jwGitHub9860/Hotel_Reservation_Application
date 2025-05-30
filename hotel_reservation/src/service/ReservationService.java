@@ -14,9 +14,6 @@ public class ReservationService {
 
     public static Collection<Reservation> reservationCollection = new LinkedList<>();
 
-    // Allows access to "IRoom" interface
-    static Room roomInstance = new Room(); // creates "Room" instance
-
     // Allows access to "Reservation" interface
     static Reservation reservationInstance = new Reservation(); // creates "Reservation" instance
 
@@ -26,7 +23,13 @@ public class ReservationService {
         //AdminResource.addRoom((List<IRoom>) ReservationService.roomCollection); // calls "addRoom()" method from "AdminResource.java"
     }
 
-    public static IRoom getARoom(String roomId) { return roomInstance; } // ADD CORRECT CODE
+    public static IRoom getARoom(String roomId) {
+        // ADD CORRECT CODE
+
+        // Allows access to "IRoom" interface
+        static Room roomInstance = new Room(); // creates "Room" instance
+        return roomInstance;
+    }
 
     public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) { return reservationInstance; } // Creates & Returns WHOLE "Reservation"
 

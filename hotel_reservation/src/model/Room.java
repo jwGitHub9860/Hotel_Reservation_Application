@@ -20,7 +20,6 @@ public class Room implements IRoom {
         while (!isValid) {
             try {
                 roomNumber = String.valueOf(scanner.nextInt()); // takes User Input for "roomNumber"
-                ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
 
                 // Prevents user from creating two Hotel Rooms with the Same Room Number
                 for (String number : ReservationService.roomNumberCollection) {
@@ -30,6 +29,7 @@ public class Room implements IRoom {
                         throw new IllegalArgumentException("There cannot be two hotel rooms with the same room number.");
                     }
                     else {
+                        ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
                         isValid = true;
                     }
                 }

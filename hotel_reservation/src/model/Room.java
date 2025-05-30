@@ -10,7 +10,6 @@ public class Room implements IRoom {
     Double price;
     RoomType roomType; // Enum declaration variable
     boolean isValid = false;
-    boolean addRoomNumber = false;
 
     // Constructor
     public Room() {
@@ -32,13 +31,10 @@ public class Room implements IRoom {
                             throw new IllegalArgumentException("There cannot be two hotel rooms with the same room number.");
                         }
                         else {
-                            addRoomNumber = true;
+                            isValid = true;
                         }
                     }
-                    if (addRoomNumber) {
-                        ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
-                        isValid = true;
-                    }
+                    ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
                 } else {
                     ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
                     isValid = true;

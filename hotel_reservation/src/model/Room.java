@@ -13,10 +13,10 @@ public class Room implements IRoom {
     boolean isValid = false;
 
     // Constructor
-    public Room() {
+    public Room() { // Takes User Input for Room Information
         Scanner scanner = new Scanner(System.in); // allows user input to be read
 
-        // Takes User Input for Room Information
+        // Takes User Input for Room Number
         System.out.println("Enter room number: ");
         while (!isValid) { // ensures that user inputted "roomNumber"
             try {

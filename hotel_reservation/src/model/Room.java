@@ -40,8 +40,10 @@ public class Room implements IRoom {
                 }
             } catch (IllegalArgumentException e) { // if user enters Room Number that is the SAME AS PREVIOUS HOTEL NUMBER
                 System.out.println("Please enter a different room number: ");
+                isValid = false;
             } catch (Exception e) { // if user does NOT ENTER INTEGER FOR HOTEL NUMBER
                 System.out.println("Please enter an integer for the room number: ");
+                isValid = false;
             }
         }
 

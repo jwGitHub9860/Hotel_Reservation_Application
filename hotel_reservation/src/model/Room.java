@@ -53,21 +53,6 @@ public class Room implements IRoom {
 
             if (roomTypeInput == 1 || roomTypeInput == 2) { break; } // exits while loop if "roomTypeInput" is "1" or "2"
         }
-
-        // Checks if user inputted "y" or "n"
-        System.out.println("Would you like to add another room (y/n): ");
-        while (true) {
-            try {
-                addRoomRepeat = scanner.next(); // takes User Input to confirm if user wants to add another room
-                if (addRoomRepeat.equals("y") || addRoomRepeat.equals("n")) { // Valid answers
-                    break;
-                } else { // INVALID answer
-                    throw new IllegalArgumentException("Answer must be \"y\" or \"n\"");
-                }
-            } catch (Exception e) {
-                System.out.println("Please enter y (yes) or n (n): ");
-            }
-        }
     }
 
     // Room Method Definitions

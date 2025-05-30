@@ -48,6 +48,9 @@ public class Room implements IRoom {
             }
         }
 
+        // Resets "isValid" back to "false"
+        isValid = false; // allows "while loop" that takes User Input for Room Type to Run
+
         // Checks if user inputted "Double" value for Room "price"
         System.out.println("Enter price per night: ");
         while (true) {

@@ -21,17 +21,23 @@ public class Room implements IRoom {
             try {
                 roomNumber = String.valueOf(scanner.nextInt()); // takes User Input for "roomNumber"
 
-                // Prevents user from creating two Hotel Rooms with the Same Room Number
-                for (String number : ReservationService.roomNumberCollection) {
-                    System.out.println(number);
-                    // Checks if user inputted "roomNumber" that is the Same as a Previous "roomNumber"
-                    if (roomNumber.equals(number)) {
-                        throw new IllegalArgumentException("There cannot be two hotel rooms with the same room number.");
+                // Checks if "roomNumberCollection" is NOT empty
+                if (!ReservationService.roomNumberCollection.isEmpty()) {
+                    // Prevents user from creating two Hotel Rooms with the Same Room Number
+                    for (String number : ReservationService.roomNumberCollection) {
+                        System.out.println(number); // TESTING CODE
+                        // Checks if user inputted "roomNumber" that is the Same as a Previous "roomNumber"
+                        if (roomNumber.equals(number)) {
+                            throw new IllegalArgumentException("There cannot be two hotel rooms with the same room number.");
+                        }
+                        else {
+                            ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
+                            isValid = true;
+                        }
                     }
-                    else {
-                        ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
-                        isValid = true;
-                    }
+                } else {
+                    ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
+                    isValid = true;
                 }
             } catch (IllegalArgumentException e) { // if user enters Room Number that is the SAME AS PREVIOUS HOTEL NUMBER
                 System.out.println("Please enter a different room number: ");

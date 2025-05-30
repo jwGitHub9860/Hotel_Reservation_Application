@@ -21,7 +21,7 @@ public class ReservationService {
     static Reservation reservationInstance = new Reservation(); // creates "Reservation" instance
 
     public static void addRoom(IRoom room) {
-        ReservationService.roomCollection.add(roomInstance); // adds "roomNumber", "price", and "roomType" to "roomCollection"
+        ReservationService.roomCollection.add(room); // adds "roomNumber", "price", and "roomType" to "roomCollection"
         // FIGURE OUT HOW TO ADD TO ROOM LIST
         //AdminResource.addRoom((List<IRoom>) ReservationService.roomCollection); // calls "addRoom()" method from "AdminResource.java"
     }

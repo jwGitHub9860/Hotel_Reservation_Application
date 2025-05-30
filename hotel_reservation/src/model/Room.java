@@ -42,10 +42,10 @@ public class Room implements IRoom {
 
                 switch (roomTypeInput) {
                     case 1:
-                        Room.roomType = RoomType.SINGLE;
+                        roomType = RoomType.SINGLE;
                         break;
                     case 2:
-                        Room.roomType = RoomType.DOUBLE;
+                        roomType = RoomType.DOUBLE;
                         break;
                     default:
                         System.out.println("Please enter 1 or 2: ");

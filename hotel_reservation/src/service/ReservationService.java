@@ -27,7 +27,7 @@ public class ReservationService {
         // ADD CORRECT CODE
 
         // Allows access to "IRoom" interface
-        static Room roomInstance = new Room(); // creates "Room" instance
+        Room roomInstance = new Room(); // creates "Room" instance
         return roomInstance;
     }
 

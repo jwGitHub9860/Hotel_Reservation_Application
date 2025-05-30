@@ -35,6 +35,9 @@ public class Room implements IRoom {
                             isValid = true;
                         }
                     }
+                    if (addRoomNumber) {
+
+                    }
                 } else {
                     ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
                     isValid = true;

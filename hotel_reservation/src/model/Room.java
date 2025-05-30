@@ -9,6 +9,7 @@ public class Room implements IRoom {
     String roomNumber;
     Double price;
     RoomType roomType; // Enum declaration variable
+    boolean isValid = false;
 
     // Constructor
     public Room() {
@@ -16,16 +17,20 @@ public class Room implements IRoom {
 
         // Takes User Input for Room Information
         System.out.println("Enter room number: ");
-        while (true) {
+        while (!isValid) {
             try {
                 roomNumber = String.valueOf(scanner.nextInt()); // takes User Input for "roomNumber"
                 ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
 
                 // Prevents user from creating two Hotel Rooms with the Same Room Number
                 for (String number : ReservationService.roomNumberCollection) {
+                    System.out.println(number);
                     // Checks if user inputted "roomNumber" that is the Same as a Previous "roomNumber"
                     if (roomNumber.equals(number)) {
                         throw new IllegalArgumentException("There cannot be two hotel rooms with the same room number.");
+                    }
+                    else {
+                        isValid = true;
                     }
                 }
             } catch (IllegalArgumentException e) { // if user enters Room Number that is the SAME AS PREVIOUS HOTEL NUMBER

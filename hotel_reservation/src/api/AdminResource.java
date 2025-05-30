@@ -15,7 +15,7 @@ public class AdminResource {
     public static void addRoom(List<IRoom> rooms) {
         // Calls "Room" constructor
         IRoom room = new Room(); // allows access to "IRoom" interface
-        ReservationService.addRoom((IRoom) rooms); // calls "addRoom()" method from SERVICE file
+        ReservationService.addRoom(room); // calls "addRoom()" method from SERVICE file
     }
 
     public static Collection<IRoom> getAllRooms() { return ReservationService.roomCollection; }

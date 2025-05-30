@@ -2,7 +2,6 @@ package service;
 
 import model.*;
 
-import java.text.DecimalFormat;
 import java.util.*;
 
 public class ReservationService {
@@ -11,8 +10,7 @@ public class ReservationService {
 
     // Room Collections
     public static Collection<IRoom> roomCollection = new ArrayList<>();
-    public static HashMap<String, Double> roomPriceCollection = new HashMap<>();
-    public static HashMap<String, RoomType> roomTypeCollection = new HashMap<>();
+    public static List<IRoom> roomList = new ArrayList<>(); // holds User Input for each Individual Room
 
     public static Collection<Reservation> reservationCollection = new LinkedList<>();
 

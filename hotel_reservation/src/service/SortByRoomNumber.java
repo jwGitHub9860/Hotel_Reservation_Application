@@ -1,4 +1,6 @@
 package service;
 
-public class SortByRoomNumber {
+import java.util.Comparator;
+
+public class SortByRoomNumber implements Comparator<Room> {
 }

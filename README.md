@@ -25,6 +25,8 @@ Armas, Jadiel de. “What Does It Mean for a Collection to Be Final in Java? - S
 
 Bohemian♦. “Best Way to Format a Double Value to 2 Decimal Places [duplicate].” _Stack Overflow_, 11 Jan. 2012, stackoverflow.com/questions/8819842/best-way-to-format-a-double-value-to-2-decimal-places. Accessed 29 May 2025.
 
+“Collections.Sort() in Java with Examples.” _GeeksforGeeks_, GeeksforGeeks, 4 Jan. 2025, www.geeksforgeeks.org/collections-sort-java-examples/. Accessed 30 May 2025.
+
 “Decimalformat toPattern() Method in Java.” GeeksforGeeks, GeeksforGeeks, 1 Apr. 2019, www.geeksforgeeks.org/decimalformat-topattern-method-in-java/. Accessed 27 May 2025.
 
 Dong, Nick. “nextInt() Caused an Infinit Loop.” _Stack Overflow_, 29 Mar. 2022, stackoverflow.com/questions/71665702/nextint-caused-an-infinit-loop. Accessed 24 May 2025.

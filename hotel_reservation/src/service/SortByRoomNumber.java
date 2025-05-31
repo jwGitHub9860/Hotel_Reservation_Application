@@ -4,7 +4,7 @@ import model.Room;
 
 import java.util.Comparator;
 
-public abstract class SortByRoomNumber implements Comparator<Room> {
+public class SortByRoomNumber implements Comparator<Room> {
     // Sorts Collection in Ascending Order of Room Numbers
     @Override
     public int compare(Room o1, Room o2) {

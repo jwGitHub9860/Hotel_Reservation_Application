@@ -1,6 +1,8 @@
 package service;
 
+import model.Room;
+
 import java.util.Comparator;
 
-public class SortByRoomNumber implements Comparator<Room> {
+public abstract class SortByRoomNumber implements Comparator<Room> {
 }

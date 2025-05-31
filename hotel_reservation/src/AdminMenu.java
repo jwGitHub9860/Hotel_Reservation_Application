@@ -48,7 +48,7 @@ public class AdminMenu {
                         Collection<IRoom> roomList = AdminResource.getAllRooms();
 
                         // Display room information inside "roomCollection" collection
-                        for (IRoom room : ReservationService.roomCollection) {
+                        for (IRoom room : roomList) {
                             System.out.println(room);
                         }
                     } else if (adminUserInput == 3) {

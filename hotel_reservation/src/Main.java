@@ -142,15 +142,20 @@ public class Main {
                             System.out.println(reservation);
                         }
                     } else if (userInput == 3) {
-                        // Takes User Input for Account Information
-                        System.out.println("Enter email (format: name@domain.com): ");
-                        String email = scanner.nextLine(); // takes User Input for "email"
-                        System.out.println("\nEnter first name: ");
-                        String firstName = scanner.nextLine(); // takes User Input for "firstName"
-                        System.out.println("\nEnter last name: ");
-                        String lastName = scanner.nextLine(); // takes User Input for "lastName"
+                        try {
+                            // Takes User Input for Account Information
+                            System.out.println("Enter email (format: name@domain.com): ");
+                            String email = scanner.nextLine(); // takes User Input for "email"
+                            System.out.println("\nEnter first name: ");
+                            String firstName = scanner.nextLine(); // takes User Input for "firstName"
+                            System.out.println("\nEnter last name: ");
+                            String lastName = scanner.nextLine(); // takes User Input for "lastName"
 
-                        HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
+                            HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
+                        } catch (IllegalArgumentException e) { // if user does NOT ENTER EMAIL IN CORRECT FORMAT
+                            System.out.println("\nEmail must be in \"name@domain.com\" format\n");
+                            scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
+                        }
                     } else if (userInput == 4) {
                         AdminMenu.Admin(); // calls "Admin()" method
                     } else if (userInput == 5) {
@@ -159,9 +164,6 @@ public class Main {
                     } else {
                         System.out.println("Please enter an integer between 1 and 5");
                     }
-                } catch (IllegalArgumentException e) { // if user does NOT ENTER EMAIL IN CORRECT FORMAT
-                    System.out.println("\nEmail must be in \"name@domain.com\" format\n");
-                    scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                 } catch (Exception e) { // if user does NOT ENTER A NUMBER
                     System.out.println("\nPlease enter a number\n");
                     scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop

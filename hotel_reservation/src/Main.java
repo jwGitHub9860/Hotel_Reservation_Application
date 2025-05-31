@@ -161,8 +161,10 @@ public class Main {
                     }
                 } catch (IllegalArgumentException e) { // if user does NOT ENTER EMAIL IN CORRECT FORMAT
                     System.out.println("\nEmail must be in \"name@domain.com\" format\n");
+                    scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                 } catch (Exception e) { // if user does NOT ENTER A NUMBER
                     System.out.println("\nPlease enter a number\n");
+                    scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                 }
             }
         } catch (Exception ex) {

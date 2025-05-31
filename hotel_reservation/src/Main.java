@@ -12,12 +12,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Allows user input to be read
+        Scanner scanner = new Scanner(System.in);
+
         // Allows user to input "Date" as input
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy");
 
         // Main Menu
         boolean runApplication = true;
-        try (Scanner scanner = new Scanner(System.in)) { // allows user input to be read
+        try {
             while (runApplication) {
                 try {
                     // Menu Items

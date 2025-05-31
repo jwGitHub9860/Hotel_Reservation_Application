@@ -60,6 +60,11 @@ public class Room implements IRoom {
                 // Ensures that Room "price" is in "#.##" format
                 DecimalFormat decimalFormat = new DecimalFormat("#.00"); // creates "DecimalFormat" instance with "#.##" format
                 price = Double.valueOf(decimalFormat.format(scanner.nextDouble())); // takes User Input for Room "price" & rounds Room "price" off to "#.##" format
+
+                // Makes Room a Free Room if user inputs 0 for "price"
+                if (price == 0) {
+                    new FreeRoom(price); // calls "FreeRoom" constructor
+                }
                 break;
             } catch (Exception e) {
                 System.out.println("Please enter price in \"#.##\" format: ");

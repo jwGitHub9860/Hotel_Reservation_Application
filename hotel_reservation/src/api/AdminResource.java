@@ -38,6 +38,7 @@ public class AdminResource {
                     }
                 } catch (Exception e) {
                     System.out.println("Please enter y (yes) or n (n): ");
+                    scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                 }
             }
         }

@@ -64,10 +64,12 @@ public class AdminMenu {
                     }
                 } catch (Exception e) { // if user does NOT ENTER A NUMBER
                     System.out.println("\nPlease enter a number");
+                    scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                 }
             }
         } catch (Exception ex) {
             ex.getLocalizedMessage(); // prints any messages or exceptions to console
+            scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
         }
     }
 }

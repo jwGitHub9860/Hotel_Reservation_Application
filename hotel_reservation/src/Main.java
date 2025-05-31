@@ -164,6 +164,7 @@ public class Main {
             }
         } catch (Exception ex) {
             ex.getLocalizedMessage(); // prints any messages or exceptions to console
+            scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
         }
     }
 }

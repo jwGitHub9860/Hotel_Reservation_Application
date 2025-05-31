@@ -41,9 +41,11 @@ public class Room implements IRoom {
                 }
             } catch (IllegalArgumentException e) { // if user enters Room Number that is the SAME AS PREVIOUS HOTEL NUMBER
                 System.out.println("Please enter a different room number: ");
+                scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                 isValid = false; // ensures that user inputted "roomNumber"
             } catch (Exception e) { // if user does NOT ENTER INTEGER FOR HOTEL NUMBER
                 System.out.println("Please enter an integer for the room number: ");
+                scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                 isValid = false; // ensures that user inputted "roomNumber"
             }
         }
@@ -61,6 +63,7 @@ public class Room implements IRoom {
                 break;
             } catch (Exception e) {
                 System.out.println("Please enter price in \"#.##\" format: ");
+                scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
             }
         }
 

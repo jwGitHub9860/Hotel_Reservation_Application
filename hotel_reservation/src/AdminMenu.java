@@ -13,13 +13,14 @@ import java.util.Scanner;
 
 public class AdminMenu {
     public static void Admin() {
+        // Allows user input to be read
+        Scanner scanner = new Scanner(System.in); // Must Be Put Here To PREVENT INFINITE WHILE LOOP
+
         // Admin Menu
         boolean runAdmin = true;
         try {
             while (runAdmin) {
                 try {
-                    Scanner scanner = new Scanner(System.in); // allows user input to be read & Must Be Put Here To PREVENT INFINITE WHILE LOOP
-
                     // Admin Menu Items
                     System.out.println("\nAdmin Menu");
                     System.out.println("-------------------------------------------------");

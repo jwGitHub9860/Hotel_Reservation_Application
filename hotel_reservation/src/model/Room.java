@@ -63,7 +63,8 @@ public class Room implements IRoom {
 
                 // Makes Room a Free Room if user inputs 0 for "price"
                 if (price == 0) {
-                    new FreeRoom(price); // calls "FreeRoom" constructor
+                    FreeRoom freeRoom = new FreeRoom(price); // calls "FreeRoom" constructor
+                    System.out.println(freeRoom);
                 }
                 break;
             } catch (Exception e) {

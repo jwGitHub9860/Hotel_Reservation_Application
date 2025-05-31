@@ -86,6 +86,7 @@ public class Room implements IRoom {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Please enter 1 or 2: ");
+                scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                 isValid = false;
             }
         }

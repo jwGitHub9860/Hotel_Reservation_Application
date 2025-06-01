@@ -47,6 +47,15 @@ public class AdminResource {
 
         // Sorts "roomList" with "SortByRoomNumber" class from SERVICE file
         Collections.sort(ReservationService.roomList);
+
+        System.out.println("\nroomList:\n"); // TESTING CODE
+        for (String data : ReservationService.roomList){ //
+            System.out.printf(data + "\n"); // TESTING CODE
+        }
+        System.out.println("\nroomCollection:"); // TESTING CODE
+        for (IRoom data : ReservationService.roomCollection){ //
+            System.out.printf(data + "\n"); // TESTING CODE
+        }
     }
 
     public static Collection<IRoom> getAllRooms() { return ReservationService.roomCollection; }

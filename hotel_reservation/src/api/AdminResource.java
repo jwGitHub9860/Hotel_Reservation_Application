@@ -6,9 +6,11 @@ import model.Room;
 import model.RoomType;
 import service.CustomerService;
 import service.ReservationService;
+import service.SortByRoomNumber;
 
 import java.text.DecimalFormat;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -42,6 +44,9 @@ public class AdminResource {
                 }
             }
         }
+
+        // Sorts "roomCollection" with "SortByRoomNumber" class from SERVICE file
+        Collections.sort(ReservationService.roomCollection, new SortByRoomNumber());
     }
 
     public static Collection<IRoom> getAllRooms() { return ReservationService.roomCollection; }

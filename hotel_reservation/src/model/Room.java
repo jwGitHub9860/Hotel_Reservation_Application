@@ -19,14 +19,10 @@ public class Room implements IRoom {
 
     // Constructor
     public Room(String roomNumber, Double price, RoomType roomType) {
-
-
-        // Resets "isValid" back to "false"
-        isValid = false; // allows "while loop" that takes User Input for Room Type to Run
-
-
-
-
+        // Sets "roomNumber", "price", "roomType" to CURRENT "roomNumber", "price", "roomType"
+        this.roomNumber = roomNumber;
+        this.price = price;
+        this.roomType = roomType;
     }
 
     // Room Method Definitions

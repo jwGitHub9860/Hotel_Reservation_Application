@@ -91,6 +91,9 @@ public class Room implements IRoom {
     public static RoomType inputRoomType() {
         Scanner scanner = new Scanner(System.in); // allows user input to be read
 
+        // Reverts "isValid" back to "false"
+        isValid = false; // "isValid" was CHANGED TO "true" After "inputRoomNumber()" method FINISHED
+
         // Takes User Input for Room Type
         System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
         while (!isValid) { // ensures that user inputted "roomTypeInput"

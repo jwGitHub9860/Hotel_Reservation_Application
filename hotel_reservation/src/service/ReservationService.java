@@ -9,7 +9,7 @@ public class ReservationService {
     public static Collection<Customer> customerCollection = new LinkedList<Customer>();
 
     // Room Collections
-    public static Collection<IRoom> roomCollection = new ArrayList<>();
+    public static List<IRoom> roomCollection = new ArrayList<>();
     public static List<IRoom> roomList = new ArrayList<>(); // holds User Input for each Individual Room
     public static Collection<String> roomNumberCollection = new HashSet<String>(); // holds ONLY Room Numbers of rooms created
 

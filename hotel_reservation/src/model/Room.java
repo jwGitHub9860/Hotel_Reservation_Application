@@ -25,32 +25,7 @@ public class Room implements IRoom {
 
 
 
-        // Takes User Input for Room Type
-        System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
-        while (!isValid) { // ensures that user inputted "roomType"
-            try {
-                int roomTypeInput = scanner.nextInt(); // takes User Input for "roomTypeInput"
 
-                // Checks if user inputted "1" or "2"
-                switch (roomTypeInput) {
-                    case 1:
-                        roomType = RoomType.SINGLE;
-                        isValid = true;
-                        break;
-                    case 2:
-                        roomType = RoomType.DOUBLE;
-                        isValid = true;
-                        break;
-                    default:
-                        System.out.println("Please enter 1 or 2: ");
-                        break;
-                }
-            } catch (InputMismatchException e) {
-                System.out.println("Please enter 1 or 2: ");
-               // scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
-                isValid = false;
-            }
-        }
     }
 
     // Room Method Definitions
@@ -116,7 +91,34 @@ public class Room implements IRoom {
         }
         return priceInput;
     }
-    public RoomType inputRoomType() {}
+    public RoomType inputRoomType() {
+        // Takes User Input for Room Type
+        System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
+        while (!isValid) { // ensures that user inputted "roomType"
+            try {
+                int roomTypeInput = scanner.nextInt(); // takes User Input for "roomTypeInput"
+
+                // Checks if user inputted "1" or "2"
+                switch (roomTypeInput) {
+                    case 1:
+                        roomType = RoomType.SINGLE;
+                        isValid = true;
+                        break;
+                    case 2:
+                        roomType = RoomType.DOUBLE;
+                        isValid = true;
+                        break;
+                    default:
+                        System.out.println("Please enter 1 or 2: ");
+                        break;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Please enter 1 or 2: ");
+                // scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
+                isValid = false;
+            }
+        }
+    }
 
     @Override
     public String toString(){ return "Room Number is " + roomNumber + ", " + roomType + " bed, Room Price is $" + String.format("%.2f", price); }

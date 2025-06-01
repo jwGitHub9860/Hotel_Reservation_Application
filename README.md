@@ -57,6 +57,8 @@ JEAN, Ebillson GRAND. “What Does It Mean to Provide a Static Reference in the 
 
 kvdevika. “What Happens If the User Enters an Invalid Input While Using the Scanner Class in Java?” _Sarthaks eConnect_, 24 Apr. 2023, www.sarthaks.com/3492807/what-happens-if-the-user-enters-an-invalid-input-while-using-the-scanner-class-in-java. Accessed 30 May 2025.
 
+“List Addall() Method in Java with Examples.” _GeeksforGeeks_, GeeksforGeeks, 2 Jan. 2019, www.geeksforgeeks.org/list-addall-method-in-java-with-examples/. Accessed 1 Jun. 2025.
+
 “MLA Works Cited: Electronic Sources (Web Publications).” _MLA Works Cited: Electronic Sources - Purdue OWL® - Purdue University_, owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_works_cited_electronic_sources.html. Accessed 22 May 2025.
 
 “Online Compiler and Debugger for C/C++.” _GDB Online Debugger_, www.onlinegdb.com/. Accessed 22 May 2025. 

@@ -64,38 +64,38 @@ public class Room implements IRoom {
 
         // Takes User Input for Room Number
         System.out.println("Enter room number: ");
-        while (!isValid) { // ensures that user inputted "roomNumber"
+        while (!isValid) { // ensures that user inputted "roomNumberInput"
             try {
-                roomNumber = String.valueOf(scanner.nextInt()); // takes User Input for "roomNumber"
+                roomNumberInput = String.valueOf(scanner.nextInt()); // takes User Input for "roomNumberInput"
 
                 // Checks if "roomNumberCollection" is NOT empty
                 if (!ReservationService.roomNumberCollection.isEmpty()) {
                     // Prevents user from creating two Hotel Rooms with the Same Room Number
                     for (String number : ReservationService.roomNumberCollection) {
-                        // Checks if user inputted "roomNumber" that is the Same as a Previous "roomNumber"
-                        if (roomNumber.equals(number)) {
+                        // Checks if user inputted "roomNumberInput" that is the Same as a Previous "roomNumberInput"
+                        if (roomNumberInput.equals(number)) {
                             throw new IllegalArgumentException("There cannot be two hotel rooms with the same room number.");
                         }
                         else {
                             isValid = true;
                         }
                     }
-                    //ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
+                    //ReservationService.roomNumberCollection.add(roomNumberInput); // adds "roomNumberInput" to "roomNumberCollection"
                 } else {
-                    //ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
+                    //ReservationService.roomNumberCollection.add(roomNumberInput); // adds "roomNumberInput" to "roomNumberCollection"
                     isValid = true;
                 }
             } catch (IllegalArgumentException e) { // if user enters Room Number that is the SAME AS PREVIOUS HOTEL NUMBER
                 System.out.println("Please enter a different room number: ");
                 // scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
-                isValid = false; // ensures that user inputted "roomNumber"
+                isValid = false; // ensures that user inputted "roomNumberInput"
             } catch (Exception e) { // if user does NOT ENTER INTEGER FOR HOTEL NUMBER
                 System.out.println("Please enter an integer for the room number: ");
                 // scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
-                isValid = false; // ensures that user inputted "roomNumber"
+                isValid = false; // ensures that user inputted "roomNumberInput"
             }
         }
-        return roomNumber;
+        return roomNumberInput;
     }
     public Double inputRoomPrice() {
         Scanner scanner = new Scanner(System.in); // allows user input to be read

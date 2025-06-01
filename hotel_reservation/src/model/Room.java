@@ -12,6 +12,9 @@ public class Room implements IRoom {
     RoomType roomType; // Enum declaration variable
     boolean isValid = false;
 
+    // Variables for Methods that Take User Input for Room Information
+    Double priceInput;
+
     // Constructor
     public Room() {
 

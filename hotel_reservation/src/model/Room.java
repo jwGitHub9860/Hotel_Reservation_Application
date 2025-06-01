@@ -104,9 +104,9 @@ public class Room implements IRoom {
         System.out.println("Enter price per night: ");
         while (true) {
             try {
-                // Ensures that Room "price" is in "#.##" format
+                // Ensures that Room "priceInput" is in "#.##" format
                 DecimalFormat decimalFormat = new DecimalFormat("#.00"); // creates "DecimalFormat" instance with "#.##" format
-                priceInput = Double.valueOf(decimalFormat.format(scanner.nextDouble())); // takes User Input for Room "priceInput" & rounds Room "priceInput" off to "#.##" format
+                priceInput = Double.valueOf(decimalFormat.format(scanner.nextDouble())); // takes User Input for Room "priceInput" & rounds "priceInput" off to "#.##" format
                 break;
             } catch (Exception e) {
                 System.out.println("Please enter price in \"#.##\" format: ");

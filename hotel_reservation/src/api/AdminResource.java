@@ -28,6 +28,9 @@ public class AdminResource {
             // Calls "inputRoomPrice()" method
             Double roomPriceUserInput = Room.inputRoomPrice();
 
+            // Calls "inputRoomType()" method
+            RoomType roomTypeUserInput = Room.inputRoomType();
+
             // Calls "Room" constructor
             IRoom room = new Room(); // allows access to "IRoom" interface
 

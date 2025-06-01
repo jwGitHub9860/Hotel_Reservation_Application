@@ -32,7 +32,7 @@ public class AdminResource {
             RoomType roomTypeUserInput = Room.inputRoomType();
 
             // Calls "Room" constructor
-            IRoom room = new Room(); // allows access to "IRoom" interface
+            IRoom room = new Room(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
 
             // Calls "addRoom()" method from SERVICE file
             ReservationService.addRoom(room);

@@ -100,13 +100,13 @@ public class Room implements IRoom {
     public Double inputRoomPrice() {
         Scanner scanner = new Scanner(System.in); // allows user input to be read
 
-        // Checks if user inputted "Double" value for Room "price"
+        // Checks if user inputted "Double" value for Room "priceInput"
         System.out.println("Enter price per night: ");
         while (true) {
             try {
                 // Ensures that Room "price" is in "#.##" format
                 DecimalFormat decimalFormat = new DecimalFormat("#.00"); // creates "DecimalFormat" instance with "#.##" format
-                priceInput = Double.valueOf(decimalFormat.format(scanner.nextDouble())); // takes User Input for Room "price" & rounds Room "price" off to "#.##" format
+                priceInput = Double.valueOf(decimalFormat.format(scanner.nextDouble())); // takes User Input for Room "priceInput" & rounds Room "priceInput" off to "#.##" format
                 break;
             } catch (Exception e) {
                 System.out.println("Please enter price in \"#.##\" format: ");

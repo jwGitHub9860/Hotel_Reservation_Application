@@ -121,6 +121,10 @@ public class Room implements IRoom {
                 isValid = false;
             }
         }
+
+        // Reverts "isValid" back to "false"
+        isValid = false; // "isValid" was CHANGED TO "true" After "inputRoomNumber()" method FINISHED
+
         return roomTypeInput;
     }
 

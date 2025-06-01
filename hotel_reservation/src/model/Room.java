@@ -32,7 +32,7 @@ public class Room implements IRoom {
     public boolean isFree() { return true; }
 
     // Takes User Input for Room Information
-    public String inputRoomNumber() {
+    public static String inputRoomNumber() {
         Scanner scanner = new Scanner(System.in); // allows user input to be read
 
         // Takes User Input for Room Number
@@ -70,7 +70,7 @@ public class Room implements IRoom {
         }
         return roomNumberInput;
     }
-    public Double inputRoomPrice() {
+    public static Double inputRoomPrice() {
         Scanner scanner = new Scanner(System.in); // allows user input to be read
 
         // Checks if user inputted "Double" value for Room "priceInput"
@@ -88,7 +88,7 @@ public class Room implements IRoom {
         }
         return priceInput;
     }
-    public RoomType inputRoomType() {
+    public static RoomType inputRoomType() {
         Scanner scanner = new Scanner(System.in); // allows user input to be read
 
         // Takes User Input for Room Type

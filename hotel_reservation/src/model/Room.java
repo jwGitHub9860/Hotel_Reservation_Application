@@ -97,18 +97,18 @@ public class Room implements IRoom {
 
         // Takes User Input for Room Type
         System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
-        while (!isValid) { // ensures that user inputted "roomType"
+        while (!isValid) { // ensures that user inputted "roomTypeInput"
             try {
                 int roomTypeUserInput = scanner.nextInt(); // takes User Input for "roomTypeUserInput"
 
                 // Checks if user inputted "1" or "2"
                 switch (roomTypeUserInput) {
                     case 1:
-                        roomType = RoomType.SINGLE;
+                        roomTypeInput = RoomType.SINGLE;
                         isValid = true;
                         break;
                     case 2:
-                        roomType = RoomType.DOUBLE;
+                        roomTypeInput = RoomType.DOUBLE;
                         isValid = true;
                         break;
                     default:

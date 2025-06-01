@@ -13,7 +13,7 @@ public class Room implements IRoom {
     boolean isValid = false;
 
     // Constructor
-    public Room() { // Takes User Input for Room Information
+    public Room() {
 
 
         // Resets "isValid" back to "false"
@@ -67,6 +67,7 @@ public class Room implements IRoom {
     public RoomType getRoomType() { return roomType; }
     public boolean isFree() { return true; }
 
+    // Takes User Input for Room Information
     public String inputRoomNumber() {
         Scanner scanner = new Scanner(System.in); // allows user input to be read
 

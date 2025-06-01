@@ -89,9 +89,9 @@ public class Room implements IRoom {
                             isValid = true;
                         }
                     }
-                    ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
+                    //ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
                 } else {
-                    ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
+                    //ReservationService.roomNumberCollection.add(roomNumber); // adds "roomNumber" to "roomNumberCollection"
                     isValid = true;
                 }
             } catch (IllegalArgumentException e) { // if user enters Room Number that is the SAME AS PREVIOUS HOTEL NUMBER

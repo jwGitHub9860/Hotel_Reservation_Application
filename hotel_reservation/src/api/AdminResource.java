@@ -22,6 +22,9 @@ public class AdminResource {
 
         String addRoomRepeat = "y"; // initial "addRoomRepeat" value
         while (addRoomRepeat.equals("y")) {
+            // Calls "inputRoomNumber()" method
+            String roomNumberUserInput = Room.inputRoomNumber();
+
             // Calls "Room" constructor
             IRoom room = new Room(); // allows access to "IRoom" interface
 

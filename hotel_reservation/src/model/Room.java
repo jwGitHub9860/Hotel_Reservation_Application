@@ -104,6 +104,7 @@ public class Room implements IRoom {
                 isValid = false; // ensures that user inputted "roomNumber"
             }
         }
+        return roomNumber;
     }
     public Double inputRoomPrice() {}
     public RoomType inputRoomType() {}

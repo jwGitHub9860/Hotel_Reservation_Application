@@ -10,7 +10,7 @@ public class Room implements IRoom {
     String roomNumber;
     Double price;
     RoomType roomType; // Enum declaration variable
-    boolean isValid = false;
+    private boolean isValid = false;
 
     // Variables for Methods that Take User Input for Room Information
     private static String roomNumberInput;

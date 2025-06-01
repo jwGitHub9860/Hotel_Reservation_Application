@@ -101,6 +101,10 @@ public class Room implements IRoom {
     public RoomType getRoomType() { return roomType; }
     public boolean isFree() { return true; }
 
+    public String inputRoomNumber() {}
+    public Double inputRoomPrice() {}
+    public RoomType inputRoomType() {}
+
     @Override
     public String toString(){ return "Room Number is " + roomNumber + ", " + roomType + " bed, Room Price is $" + String.format("%.2f", price); }
 }

@@ -121,6 +121,7 @@ public class Room implements IRoom {
                 isValid = false;
             }
         }
+        return roomTypeInput;
     }
 
     @Override

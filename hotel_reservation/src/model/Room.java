@@ -68,6 +68,10 @@ public class Room implements IRoom {
                 isValid = false; // ensures that user inputted "roomNumberInput"
             }
         }
+
+        // Reverts "isValid" back to "false"
+        isValid = false; // "isValid" was CHANGED TO "true" After "inputRoomNumber()" method FINISHED
+
         return roomNumberInput;
     }
     public static Double inputRoomPrice() {
@@ -90,9 +94,6 @@ public class Room implements IRoom {
     }
     public static RoomType inputRoomType() {
         Scanner scanner = new Scanner(System.in); // allows user input to be read
-
-        // Reverts "isValid" back to "false"
-        isValid = false; // "isValid" was CHANGED TO "true" After "inputRoomNumber()" method FINISHED
 
         // Takes User Input for Room Type
         System.out.println("Enter room type (1 for single bed, 2 for double bed): ");

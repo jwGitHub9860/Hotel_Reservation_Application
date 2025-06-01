@@ -110,6 +110,7 @@ public class Room implements IRoom {
                 // scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
             }
         }
+        return priceInput;
     }
     public RoomType inputRoomType() {}
 

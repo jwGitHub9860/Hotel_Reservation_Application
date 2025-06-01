@@ -53,11 +53,10 @@ public class Room implements IRoom {
                             isValid = true;
                         }
                     }
-                    //ReservationService.roomNumberCollection.add(roomNumberInput); // adds "roomNumberInput" to "roomNumberCollection"
                 } else {
-                    //ReservationService.roomNumberCollection.add(roomNumberInput); // adds "roomNumberInput" to "roomNumberCollection"
                     isValid = true;
                 }
+                ReservationService.roomNumberCollection.add(roomNumberInput); // adds "roomNumberInput" to "roomNumberCollection"
             } catch (IllegalArgumentException e) { // if user enters Room Number that is the SAME AS PREVIOUS HOTEL NUMBER
                 System.out.println("Please enter a different room number: ");
                 // scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop

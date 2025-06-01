@@ -95,6 +95,8 @@ public class Room implements IRoom {
         return roomNumber;
     }
     public Double inputRoomPrice() {
+        Scanner scanner = new Scanner(System.in); // allows user input to be read
+
         // Checks if user inputted "Double" value for Room "price"
         System.out.println("Enter price per night: ");
         while (true) {

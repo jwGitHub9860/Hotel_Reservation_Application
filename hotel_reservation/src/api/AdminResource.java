@@ -45,8 +45,8 @@ public class AdminResource {
             }
         }
 
-        // Sorts "roomCollection" with "SortByRoomNumber" class from SERVICE file
-        Collections.sort(ReservationService.roomCollection);
+        // Sorts "roomList" with "SortByRoomNumber" class from SERVICE file
+        Collections.sort(ReservationService.roomList);
     }
 
     public static Collection<IRoom> getAllRooms() { return ReservationService.roomCollection; }

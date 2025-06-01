@@ -19,19 +19,7 @@ public class Room implements IRoom {
         // Resets "isValid" back to "false"
         isValid = false; // allows "while loop" that takes User Input for Room Type to Run
 
-        // Checks if user inputted "Double" value for Room "price"
-        System.out.println("Enter price per night: ");
-        while (true) {
-            try {
-                // Ensures that Room "price" is in "#.##" format
-                DecimalFormat decimalFormat = new DecimalFormat("#.00"); // creates "DecimalFormat" instance with "#.##" format
-                price = Double.valueOf(decimalFormat.format(scanner.nextDouble())); // takes User Input for Room "price" & rounds Room "price" off to "#.##" format
-                break;
-            } catch (Exception e) {
-                System.out.println("Please enter price in \"#.##\" format: ");
-               // scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
-            }
-        }
+
 
         // Takes User Input for Room Type
         System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
@@ -106,7 +94,21 @@ public class Room implements IRoom {
         }
         return roomNumber;
     }
-    public Double inputRoomPrice() {}
+    public Double inputRoomPrice() {
+        // Checks if user inputted "Double" value for Room "price"
+        System.out.println("Enter price per night: ");
+        while (true) {
+            try {
+                // Ensures that Room "price" is in "#.##" format
+                DecimalFormat decimalFormat = new DecimalFormat("#.00"); // creates "DecimalFormat" instance with "#.##" format
+                price = Double.valueOf(decimalFormat.format(scanner.nextDouble())); // takes User Input for Room "price" & rounds Room "price" off to "#.##" format
+                break;
+            } catch (Exception e) {
+                System.out.println("Please enter price in \"#.##\" format: ");
+                // scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
+            }
+        }
+    }
     public RoomType inputRoomType() {}
 
     @Override

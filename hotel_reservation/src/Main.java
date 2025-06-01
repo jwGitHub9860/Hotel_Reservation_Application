@@ -142,10 +142,10 @@ public class Main {
                             System.out.println(reservation);
                         }
                     } else if (userInput == 3) {
+                        // Takes User Input for Account Information
+                        System.out.println("Enter email (format: name@domain.com): ");
                         while (true) {
                             try {
-                                // Takes User Input for Account Information
-                                System.out.println("Enter email (format: name@domain.com): ");
                                 String email = scanner.nextLine(); // takes User Input for "email"
                                 System.out.println("\nEnter first name: ");
                                 String firstName = scanner.nextLine(); // takes User Input for "firstName"

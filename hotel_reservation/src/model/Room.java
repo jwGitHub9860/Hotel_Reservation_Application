@@ -15,6 +15,7 @@ public class Room implements IRoom {
     // Variables for Methods that Take User Input for Room Information
     private static String roomNumberInput;
     Double priceInput;
+    private static RoomType roomTypeInput;
 
     // Constructor
     public Room() {

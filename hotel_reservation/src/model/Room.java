@@ -92,6 +92,8 @@ public class Room implements IRoom {
         return priceInput;
     }
     public RoomType inputRoomType() {
+        Scanner scanner = new Scanner(System.in); // allows user input to be read
+
         // Takes User Input for Room Type
         System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
         while (!isValid) { // ensures that user inputted "roomType"

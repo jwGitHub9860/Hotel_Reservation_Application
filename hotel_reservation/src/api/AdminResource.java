@@ -46,7 +46,7 @@ public class AdminResource {
         }
 
         // Sorts "roomCollection" with "SortByRoomNumber" class from SERVICE file
-        Collections.sort(ReservationService.roomCollection, new SortByRoomNumber());
+        Collections.sort(ReservationService.roomCollection);
     }
 
     public static Collection<IRoom> getAllRooms() { return ReservationService.roomCollection; }

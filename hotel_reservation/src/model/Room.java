@@ -18,7 +18,7 @@ public class Room implements IRoom {
     private static RoomType roomTypeInput;
 
     // Constructor
-    public Room() {
+    public Room(String roomNumber, Double price, RoomType roomType) {
 
 
         // Resets "isValid" back to "false"

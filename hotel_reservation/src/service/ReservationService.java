@@ -24,7 +24,7 @@ public class ReservationService {
         // ADD CORRECT CODE
 
         // Allows access to "IRoom" interface
-        Room roomInstance = new Room(); // creates "Room" instance
+        Room roomInstance = new Room("test", 0.00, RoomType.DOUBLE); // creates "Room" instance         TESTING CODE
         return roomInstance;
     }
 

@@ -13,7 +13,7 @@ public class CustomerService {
 
         // Sorts "roomList" by Room Numbers
         ReservationService.customerCollection.sort(Comparator.comparing(person -> {
-            String string = person.getRoomNumber(); // obtains "roomNumber"
+            String string = person.getFirstName(); // obtains "roomNumber"
             String[] variables = string.split("\\."); // "\\." - match the character
             int firstVariable = Integer.parseInt(variables[0]); // obtains 1st Room Number
             int secondVariable = variables.length > 1 ? Integer.parseInt(variables[1]) : 0; // finds which Room Number is greater

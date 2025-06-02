@@ -51,7 +51,7 @@ public class Main {
                                 //checkInDate = simpleDateFormat.parse(checkInDateInput);// checks if "checkInDateInput" is in "MM-dd-yyyy" format
 
                                 // 2nd Attempt
-                                Date checkInDateInput = simpleDateFormat.parse(scanner.nextLine()); // takes User Input for "checkInDateInput" AS Date
+                                //Date checkInDateInput = simpleDateFormat.parse(scanner.nextLine()); // takes User Input for "checkInDateInput" AS Date
                                 break;
                             } catch (ParseException e) { // if "checkInDateInput" could NOT Be Parsed
                                 System.out.println("Date could not be parsed: ");

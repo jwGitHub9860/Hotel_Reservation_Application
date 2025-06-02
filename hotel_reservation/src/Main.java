@@ -155,6 +155,9 @@ public class Main {
 
                                 HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
                                 break;
+                            } catch (ArrayIndexOutOfBoundsException ex) {
+                                System.out.println("Array is out of bounds: ");
+                                scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                             } catch (IndexOutOfBoundsException e) {
                                 System.out.println("Collection is out of bounds: ");
                                 scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop

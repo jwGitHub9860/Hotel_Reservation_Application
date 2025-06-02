@@ -13,7 +13,7 @@ public class Customer {
         // Defines "firstName", "lastName", and "email" in "toString()" function
         this.firstName = firstName; // set current "firstName" as "firstName"
         this.lastName = lastName; // set current "lastName" as "lastName"
-        this.email = email; // set current "email" as "email"
+        Customer.email = email; // set current "email" as "email"
     }
 
     // Takes User Input for Room Information

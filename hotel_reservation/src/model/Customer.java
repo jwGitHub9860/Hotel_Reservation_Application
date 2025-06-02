@@ -53,7 +53,7 @@ public class Customer {
 
                     // Checks if email has domain, does NOT have "@.com"
                     if (domainArray[0] == null) {
-                        throw new IllegalArgumentException("Email must have a domain and cannot have \"@.com\"");
+                        throw new NullPointerException("Email must have a domain and cannot have \"@.com\"");
                     }
 
                     break;

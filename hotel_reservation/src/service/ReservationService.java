@@ -6,7 +6,7 @@ import java.util.*;
 
 public class ReservationService {
     // Collections to store & retrieve reservations
-    public static Collection<Customer> customerCollection = new LinkedList<Customer>();
+    public static List<Customer> customerCollection = new LinkedList<Customer>();
 
     // Room Collections
     public static List<IRoom> roomCollection = new ArrayList<>();

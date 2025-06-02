@@ -58,15 +58,6 @@ public class AdminResource {
             int secondRoomNumber = roomRoomNumbers.length > 1 ? Integer.parseInt(roomRoomNumbers[1]) : 0; // finds which Room Number is greater
             return firstRoomNumber * 1000 + secondRoomNumber; // returns "roomNumber1" and "roomNumber2" in Ascending Order
         }));
-
-        System.out.println("\nroomList:\n"); // TESTING CODE
-        for (IRoom data : rooms){ //
-            System.out.printf(data + "\n"); // TESTING CODE
-        }
-        System.out.println("\nroomCollection:"); // TESTING CODE
-        for (IRoom data : ReservationService.roomCollection){ //
-            System.out.printf(data + "\n"); // TESTING CODE
-        }
     }
 
     public static Collection<IRoom> getAllRooms() { return ReservationService.roomCollection; }

@@ -18,7 +18,7 @@ public class ReservationService {
     // Allows access to "Reservation" interface
     static Reservation reservationInstance = new Reservation(); // creates "Reservation" instance
 
-    public static void addRoom(IRoom room) { roomList.add(String.valueOf(room)); } // adds "roomNumber", "price", and "roomType" to "roomList"
+    public static void addRoom(IRoom room) { roomCollection.add(room); } // adds "roomNumber", "price", and "roomType" to "roomList"
 
     public static IRoom getARoom(String roomId) {
         // ADD CORRECT CODE

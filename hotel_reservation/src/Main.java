@@ -146,6 +146,7 @@ public class Main {
                         while (true) {
                             try {
                                 // Obtains User Input for "email", "firstName", and "lastName" for "HotelResource" constructor & "createACustomer()" method
+                                System.out.println("Enter email (format: name@domain.com): ");
                                 String email = Customer.inputEmail(); // calls "inputEmail()" method
                                 System.out.println("\nEnter first name: ");
                                 String firstName = scanner.nextLine(); // takes User Input for "firstName"

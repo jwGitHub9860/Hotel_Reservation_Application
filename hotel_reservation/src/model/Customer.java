@@ -24,7 +24,6 @@ public class Customer {
         Scanner scanner = new Scanner(System.in); // allows user input to be read
 
         // Takes User Input for Email
-        System.out.println("Enter email (format: name@domain.com): ");
         while (true) { // ensures that user inputted "email"
             try {
                 email = scanner.nextLine(); // takes User Input for "email"

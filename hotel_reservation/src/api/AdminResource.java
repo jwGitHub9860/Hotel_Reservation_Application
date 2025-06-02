@@ -18,14 +18,10 @@ public class AdminResource {
 
         String addRoomRepeat = "y"; // initial "addRoomRepeat" value
         while (addRoomRepeat.equals("y")) {
-            // Calls "inputRoomNumber()" method
-            String roomNumberUserInput = Room.inputRoomNumber();
-
-            // Calls "inputRoomPrice()" method
-            Double roomPriceUserInput = Room.inputRoomPrice();
-
-            // Calls "inputRoomType()" method
-            RoomType roomTypeUserInput = Room.inputRoomType();
+            // Obtains User Input for "roomNumber", "price", and "roomType" for "Room" constructor
+            String roomNumberUserInput = Room.inputRoomNumber(); // calls "inputRoomNumber()" method
+            Double roomPriceUserInput = Room.inputRoomPrice(); // calls "inputRoomPrice()" method
+            RoomType roomTypeUserInput = Room.inputRoomType(); // calls "inputRoomType()" method
 
             // Calls "Room" constructor
             IRoom room = new Room(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface

@@ -16,6 +16,9 @@ public class Customer {
         Customer.email = email; // set current "email" as "email"
     }
 
+    // Customer Method Definitions
+    public String getFirstName() { return firstName; }
+
     // Takes User Input for Room Information
     public static String inputEmail() {
         Scanner scanner = new Scanner(System.in); // allows user input to be read

@@ -1,5 +1,9 @@
 package model;
 
+import service.ReservationService;
+
+import java.util.Scanner;
+
 public class Customer {
     String firstName, lastName, email;
 
@@ -37,6 +41,49 @@ public class Customer {
         if (domainArray[0] == null) {
             throw new IllegalArgumentException("Email must have a domain and cannot have \"@.com\"");
         }
+    }
+
+    // Takes User Input for Room Information
+    public static String inputEmail() {
+        Scanner scanner = new Scanner(System.in); // allows user input to be read
+
+        // Takes User Input for Room Number
+        System.out.println("Enter room number: ");
+        while (!isValid) { // ensures that user inputted "roomNumberInput"
+            try {
+                roomNumberInput = String.valueOf(scanner.nextInt()); // takes User Input for "roomNumberInput"
+
+                // Checks if "roomNumberCollection" is NOT empty
+                if (!ReservationService.roomNumberCollection.isEmpty()) {
+                    // Prevents user from creating two Hotel Rooms with the Same Room Number
+                    for (String number : ReservationService.roomNumberCollection) {
+                        // Checks if user inputted "roomNumberInput" that is the Same as a Previous "roomNumberInput"
+                        if (roomNumberInput.equals(number)) {
+                            throw new IllegalArgumentException("There cannot be two hotel rooms with the same room number.");
+                        }
+                        else {
+                            isValid = true;
+                        }
+                    }
+                } else {
+                    isValid = true;
+                }
+                ReservationService.roomNumberCollection.add(roomNumberInput); // adds "roomNumberInput" to "roomNumberCollection"
+            } catch (IllegalArgumentException e) { // if user enters Room Number that is the SAME AS PREVIOUS HOTEL NUMBER
+                System.out.println("Please enter a different room number: ");
+                scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
+                isValid = false; // ensures that user inputted "roomNumberInput"
+            } catch (Exception e) { // if user does NOT ENTER INTEGER FOR HOTEL NUMBER
+                System.out.println("Please enter an integer for the room number: ");
+                scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
+                isValid = false; // ensures that user inputted "roomNumberInput"
+            }
+        }
+
+        // Reverts "isValid" back to "false"
+        isValid = false; // "isValid" was CHANGED TO "true" After "inputRoomNumber()" method FINISHED
+
+        return roomNumberInput;
     }
 
     @Override

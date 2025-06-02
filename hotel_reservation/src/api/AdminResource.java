@@ -6,7 +6,6 @@ import model.Room;
 import model.RoomType;
 import service.CustomerService;
 import service.ReservationService;
-import service.SortByRoomNumber;
 
 import java.text.DecimalFormat;
 import java.util.*;
@@ -51,7 +50,7 @@ public class AdminResource {
             }
         }
 
-        // Sorts "roomList" with "SortByRoomNumber" class from SERVICE file
+        // Sorts "roomList" by Room Numbers
         rooms.sort(Comparator.comparing(iRoom -> {
             String string = iRoom.getRoomNumber(); // obtains "roomNumber"
             String[] roomRoomNumbers = string.split("\\."); // "\\." - match the character
@@ -59,9 +58,6 @@ public class AdminResource {
             int secondRoomNumber = roomRoomNumbers.length > 1 ? Integer.parseInt(roomRoomNumbers[1]) : 0; // finds which Room Number is greater
             return firstRoomNumber * 1000 + secondRoomNumber; // returns "roomNumber1" and "roomNumber2" in Ascending Order
         }));
-
-        // Sorts "roomList" with "SortByRoomNumber" class from SERVICE file
-        Collections.sort(ReservationService.roomList);
 
         System.out.println("\nroomList:\n"); // TESTING CODE
         for (IRoom data : rooms){ //

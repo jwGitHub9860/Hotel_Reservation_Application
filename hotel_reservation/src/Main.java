@@ -156,7 +156,7 @@ public class Main {
                                 HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
                                 break;
                             } catch (Exception e) {
-                                System.out.println("Please re-enter name again: ");
+                                System.out.println("Please re-enter account information: ");
                                 scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                             }
                         }

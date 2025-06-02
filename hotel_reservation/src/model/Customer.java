@@ -53,7 +53,7 @@ public class Customer {
 
                     // Checks if email has domain, does NOT have "@.com"
                     if (domainArray[0] == null) {
-                        throw new NullPointerException("Email must have a domain and cannot have \"@.com\"");
+                        throw new ArrayIndexOutOfBoundsException("Email must have a domain and cannot have \"@.com\"");
                     }
 
                     break;
@@ -61,6 +61,8 @@ public class Customer {
             } catch (IllegalArgumentException e) { // if user does NOT ENTER EMAIL IN CORRECT FORMAT
                 System.out.println("Email must be in \"name@domain.com\" format: ");
                 //scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Email must have a domain and cannot have \"@.com\": ");
             }
         }
         return email;

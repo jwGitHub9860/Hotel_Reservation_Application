@@ -143,10 +143,10 @@ public class Main {
                         }
                     } else if (userInput == 3) {
                         // Takes User Input for Account Information
-                        System.out.println("Enter email (format: name@domain.com): ");
                         while (true) {
                             try {
-                                String email = scanner.nextLine(); // takes User Input for "email"
+                                // Obtains User Input for "email", "firstName", and "lastName" for "HotelResource" constructor & "createACustomer()" method
+                                String email = Customer.inputEmail(); // calls "inputEmail()" method
                                 System.out.println("\nEnter first name: ");
                                 String firstName = scanner.nextLine(); // takes User Input for "firstName"
                                 System.out.println("\nEnter last name: ");
@@ -154,8 +154,8 @@ public class Main {
 
                                 HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
                                 break;
-                            } catch (IllegalArgumentException e) { // if user does NOT ENTER EMAIL IN CORRECT FORMAT
-                                System.out.println("\nEmail must be in \"name@domain.com\" format\n");
+                            } catch (Exception e) {
+                                System.out.println("Please re-enter name again: ");
                                 scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                             }
                         }

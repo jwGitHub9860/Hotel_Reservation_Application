@@ -60,8 +60,11 @@ public class AdminResource {
             return firstRoomNumber * 1000 + secondRoomNumber; // returns "roomNumber1" and "roomNumber2" in Ascending Order
         }));
 
+        // Sorts "roomList" with "SortByRoomNumber" class from SERVICE file
+        Collections.sort(ReservationService.roomList);
+
         System.out.println("\nroomList:\n"); // TESTING CODE
-        for (IRoom data : ReservationService.roomList){ //
+        for (IRoom data : rooms){ //
             System.out.printf(data + "\n"); // TESTING CODE
         }
         System.out.println("\nroomCollection:"); // TESTING CODE

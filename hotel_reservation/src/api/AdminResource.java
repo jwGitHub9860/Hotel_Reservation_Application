@@ -9,10 +9,7 @@ import service.ReservationService;
 import service.SortByRoomNumber;
 
 import java.text.DecimalFormat;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class AdminResource {
     //public static Customer getCustomer(String email) { return; }
@@ -55,7 +52,13 @@ public class AdminResource {
         }
 
         // Sorts "roomList" with "SortByRoomNumber" class from SERVICE file
-        Collections.sort(ReservationService.roomList);
+        rooms.sort(Comparator.comparing(iRoom -> {
+            String string = iRoom.getRoomNumber(); // obtains "roomNumber"
+            String[] roomRoomNumbers = string.split("\\."); // "\\." - match the character
+            int firstRoomNumber = Integer.parseInt(roomRoomNumbers[0]); // obtains 1st Room Number
+            int secondRoomNumber = roomRoomNumbers.length > 1 ? Integer.parseInt(roomRoomNumbers[1]) : 0; // finds which Room Number is greater
+            return firstRoomNumber * 1000 + secondRoomNumber; // returns "roomNumber1" and "roomNumber2" in Ascending Order
+        }));
 
         System.out.println("\nroomList:\n"); // TESTING CODE
         for (String data : ReservationService.roomList){ //

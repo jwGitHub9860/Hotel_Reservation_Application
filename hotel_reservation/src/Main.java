@@ -110,7 +110,7 @@ public class Main {
                         if (accountAnswer.equals("n")) {
                             // Takes User Input for Account Information
                             System.out.println("Enter email (format: name@domain.com): ");
-                            String email = scanner.nextLine(); // takes User Input for "email"
+                            String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
                             System.out.println("\nEnter first name: ");
                             String firstName = scanner.nextLine(); // takes User Input for "firstName"
                             System.out.println("\nEnter last name: ");
@@ -123,7 +123,7 @@ public class Main {
                         if (bookRoomAnswer.equals("y")) {
                             // Takes User Input for Account Information
                             System.out.println("Enter email (format: name@domain.com): ");
-                            String email = scanner.nextLine(); // takes User Input for "email"
+                            String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
                             System.out.println("\nChoose room number to reserve: ");
                             String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
 

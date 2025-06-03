@@ -13,10 +13,10 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
-    private static Date inputCheckInAndCheckOutDates() {
-        // Allows user input to be read
-        Scanner scanner = new Scanner(System.in);
+    // Allows user input to be read
+    Scanner scanner = new Scanner(System.in);
 
+    private static Date inputCheckInAndCheckOutDates() {
         // Allows user to input "Date" as input
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 

@@ -11,7 +11,7 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 public class AdminResource {
-    // Allows User Input to be Read in ALL Methods WITHIN "Main" class
+    // Allows User Input to be Read in ALL Methods WITHIN "AdminResource" class
     final static Scanner scanner = new Scanner(System.in);
 
     public static String inputYOrN() {

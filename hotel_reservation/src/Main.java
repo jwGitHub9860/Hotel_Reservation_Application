@@ -79,11 +79,15 @@ public class Main {
                         System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
                         Date checkOutDate = inputCheckInAndCheckOutDates(); // calls "inputCheckInAndCheckOutDates()" method to take user input for "checkOutDate"
 
-                        // Display all rooms Available to be Reserved
+                        // Display all Rooms Available to be Reserved
                         Collection<IRoom> roomSearch = HotelResource.findARoom(checkInDate, checkOutDate); // calls "findARoom()" method
-                        // Display all rooms created
-                        for (IRoom room : roomSearch) {
-                            System.out.println(room);
+                        if (!roomSearch.isEmpty()) { // indicates if No Rooms are Available
+                            // Display all rooms created
+                            for (IRoom room : roomSearch) {
+                                System.out.println(room);
+                            }
+                        } else {
+                            System.out.println("There are no available rooms.\n");
                         }
 
                         // Takes User Input for Answering if User wants to Book A Room or Already Has Account

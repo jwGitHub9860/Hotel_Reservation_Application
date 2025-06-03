@@ -24,11 +24,7 @@ public class ReservationService {
         return roomInstance;
     }
 
-    public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
-        // Allows access to "Reservation" interface
-        Reservation reservationInstance = new Reservation(customer, room, checkInDate, checkOutDate); // calls "Reservation" constructor
-        return reservationInstance;
-    } // Creates & Returns WHOLE "Reservation"
+    public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) { return new Reservation(customer, room, checkInDate, checkOutDate); } // calls "Reservation" constructor to Create & Return WHOLE "Reservation"
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) { return roomCollection; }
 

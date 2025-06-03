@@ -34,7 +34,21 @@ public class Main {
         }
     }
 
-    private static String inputYOrN() {}
+    private static String inputYOrN() {
+        // Checks if user inputted "y" or "n"
+        while (true) {
+            try {
+                bookRoomAnswer = scanner.next();
+                if (bookRoomAnswer.equals("y") || bookRoomAnswer.equals("n")) { // Valid answer
+                    break;
+                } else { // INVALID answer
+                    throw new IllegalArgumentException("Answer must be \"y\" or \"n\"");
+                }
+            } catch (Exception e) {
+                System.out.println("Please enter y (yes) or n (n): ");
+            }
+        }
+    }
 
     public static void main(String[] args) {
         // Allows user input to be read
@@ -72,21 +86,9 @@ public class Main {
                             System.out.println(room);
                         }
 
-                        // Checks if user inputted "y" or "n"
                         System.out.println("Would you like to book a room (y/n): ");
                         String bookRoomAnswer = null;
-                        while (true) {
-                            try {
-                                bookRoomAnswer = scanner.next();
-                                if (bookRoomAnswer.equals("y") || bookRoomAnswer.equals("n")) { // Valid answer
-                                    break;
-                                } else { // INVALID answer
-                                    throw new IllegalArgumentException("Answer must be \"y\" or \"n\"");
-                                }
-                            } catch (Exception e) {
-                                System.out.println("Please enter y (yes) or n (n): ");
-                            }
-                        }
+
 
                         // Checks if user inputted "y" or "n"
                         System.out.println("Do you have an account with us (y/n): ");

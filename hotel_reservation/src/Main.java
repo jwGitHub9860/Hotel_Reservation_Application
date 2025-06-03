@@ -109,7 +109,7 @@ public class Main {
 
                         // Creates Customer Account if User does NOT have account
                         if (accountAnswer.equals("n")) {
-
+                            inputAccountInformation(); // calls "inputAccountInformation()" method
                         }
 
                         // Books Hotel Room
@@ -139,7 +139,7 @@ public class Main {
                     } else if (userInput == 3) {
                         while (true) {
                             try {
-
+                                inputAccountInformation(); // calls "inputAccountInformation()" method
                                 break;
                             } catch (StringIndexOutOfBoundsException e) {
                                 System.out.println("String Index is out of bounds: ");

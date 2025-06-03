@@ -18,6 +18,8 @@ public class Customer {
 
     // Customer Method Definitions
     public String getFirstName() { return firstName; }
+    public static String getLastName() { return lastName; }
+    public static String getEmail() { return email; }
 
     // Takes User Input for Room Information
     public static String inputEmail() {

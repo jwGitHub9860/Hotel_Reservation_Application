@@ -83,6 +83,7 @@ public class Main {
                             System.out.println(room);
                         }
 
+                        // Takes User Input for Answering if User wants to Book A Room or Already Has Account
                         System.out.println("Would you like to book a room (y/n): ");
                         String bookRoomAnswer = null;
                         System.out.println("Do you have an account with us (y/n): ");

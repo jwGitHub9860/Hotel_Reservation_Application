@@ -60,10 +60,11 @@ public class Main {
                         // Takes User Input for Check-In and Check-Out Dates
                         System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
                         Date checkInDate = null; // initial "checkInDate" value & allows "findARoom()" method access to "checkInDate"
+                        System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
                         Date checkOutDate = null; // initial "checkOutDate" value & allows "findARoom()" method access to "checkOutDate"
 
                         // Checks if user inputted and "checkOutDateInput" in "MM/dd/yyyy" format
-                        System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
+
                         while (true) {
                             try {
                                 String checkOutDateInput = scanner.nextLine(); // takes User Input for "checkOutDateInput" AS STRING

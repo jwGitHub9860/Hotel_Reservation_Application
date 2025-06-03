@@ -56,6 +56,7 @@ public class AdminMenu {
                     } else if (adminUserInput == 4) {
                         AdminResource.addRoom(ReservationService.roomCollection); // calls "addRoom()" method from "AdminResource.java"
                     } else if (adminUserInput == 5) {
+                        Customer test = new Customer("firstName", "lastName", "email"); // calls "Customer" constructor
                         System.out.println("ADMINadminUserInput 5 WORKS"); // TESTING CODE
                     } else if (adminUserInput == 6) {
                         runAdmin = false;

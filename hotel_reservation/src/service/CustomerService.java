@@ -19,7 +19,7 @@ public class CustomerService {
 
     public static Customer getCustomer(String customerEmail) {
         // ADD CORRECT CODE
-        Customer test = new Customer("firstName", "lastName", "email"); // calls "Customer" constructor
+
         return test;
     }
 

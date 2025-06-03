@@ -40,10 +40,10 @@ public class Main {
                     int userInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (userInput == 1) {
                         // Takes User Input for Check-In and Check-Out Dates
-                        Date checkInDate = null; // initial "checkInDate" value
-                        Date checkOutDate = null; // initial "checkOutDate" value
+                        Date checkInDate = null; // initial "checkInDate" value & allows "findARoom()" method access to "checkInDate"
+                        Date checkOutDate = null; // initial "checkOutDate" value & allows "findARoom()" method access to "checkOutDate"
 
-                        // Checks if user inputted "checkInDateInput" and "checkOutDateInput" in "MM-dd-yyyy" format
+                        // Checks if user inputted "checkInDateInput" in "MM-dd-yyyy" format
                         System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
                         while (true) {
                             try {
@@ -58,7 +58,7 @@ public class Main {
                             }
                         }
 
-                        // Checks if user inputted "checkInDateInput" and "checkOutDateInput" in "MM-dd-yyyy" format
+                        // Checks if user inputted and "checkOutDateInput" in "MM-dd-yyyy" format
                         System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
                         while (true) {
                             try {

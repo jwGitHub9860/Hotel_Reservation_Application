@@ -52,6 +52,8 @@ public class AdminResource {
         }
 
         // Sorts "roomList" by Room Numbers
+        rooms.sort((room1, room2) -> room1.getRoomNumber().compareTo(room2.getRoomNumber()));
+
         rooms.sort(Comparator.comparing(iRoom -> {
             String string = iRoom.getRoomNumber(); // obtains "roomNumber"
             String[] roomRoomNumbers = string.split("\\."); // "\\." - match the character

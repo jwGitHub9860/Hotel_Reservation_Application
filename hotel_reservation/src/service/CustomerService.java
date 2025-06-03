@@ -14,7 +14,7 @@ public class CustomerService {
         ReservationService.customerCollection.add(customer);
 
         // Sorts "customerCollection" by First Names in Alphabetical Order
-        ReservationService.customerCollection.sort((person1, person2) -> person1.getFirstName().compareTo(person2.getFirstName())); // finds which Room Number is greater
+        ReservationService.customerCollection.sort((person1, person2) -> person1.getFirstName().compareTo(person2.getFirstName()));
     }
 
     public static Customer getCustomer(String customerEmail) {

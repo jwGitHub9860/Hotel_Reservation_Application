@@ -59,9 +59,9 @@ public class Main {
                     if (userInput == 1) {
                         // Takes User Input for Check-In and Check-Out Dates
                         System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
-                        Date checkInDate = null; // initial "checkInDate" value & allows "findARoom()" method access to "checkInDate"
+                        Date checkInDate = inputCheckInAndCheckOutDates(); // initial "checkInDate" value & allows "findARoom()" method access to "checkInDate"
                         System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
-                        Date checkOutDate = null; // initial "checkOutDate" value & allows "findARoom()" method access to "checkOutDate"
+                        Date checkOutDate = inputCheckInAndCheckOutDates(); // initial "checkOutDate" value & allows "findARoom()" method access to "checkOutDate"
 
                         Collection<IRoom> roomSearch = HotelResource.findARoom(checkInDate, checkOutDate); // calls "findARoom()" method
 

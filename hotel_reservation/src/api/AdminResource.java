@@ -48,19 +48,7 @@ public class AdminResource {
 
             // Checks if user inputted "y" or "n"
             System.out.println("Would you like to add another room (y/n): ");
-            while (true) {
-                try {
-                    addRoomRepeat = scanner.next(); // takes User Input to confirm if user wants to add another room
-                    if (addRoomRepeat.equals("y") || addRoomRepeat.equals("n")) { // Valid answers
-                        break;
-                    } else { // INVALID answer
-                        throw new IllegalArgumentException("Answer must be \"y\" or \"n\"");
-                    }
-                } catch (Exception e) {
-                    System.out.println("Please enter y (yes) or n (n): ");
-                    scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
-                }
-            }
+            addRoomRepeat = inputYOrN(); // calls "inputYOrN()" method to take User Input to confirm if user wants to add another room
         }
 
         // Sorts "roomList" by Room Numbers

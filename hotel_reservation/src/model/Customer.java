@@ -5,7 +5,7 @@ import service.ReservationService;
 import java.util.Scanner;
 
 public class Customer {
-    static String firstName, lastName, email;
+    String firstName, lastName, email;
 
     // Constructor
     public Customer(String firstName, String lastName, String email) { // Checks if email format is correct
@@ -16,9 +16,9 @@ public class Customer {
     }
 
     // Customer Method Definitions
-    public static String getFirstName() { return firstName; }
-    public static String getLastName() { return lastName; }
-    public static String getEmail() { return email; }
+    public String getFirstName() { return firstName; }
+    public String getLastName() { return lastName; }
+    public String getEmail() { return email; }
 
     // Takes User Input for Room Information
     public static String inputEmail() {

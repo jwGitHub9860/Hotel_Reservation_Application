@@ -47,26 +47,8 @@ public class Main {
                         System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
                         while (true) {
                             try {
-                                // 1st Attempt
                                 //String checkInDateInput = scanner.nextLine(); // takes User Input for "checkInDateInput" AS STRING
                                 //checkInDate = simpleDateFormat.parse(checkInDateInput);// checks if "checkInDateInput" is in "MM-dd-yyyy" format
-
-                                // 2nd Attempt
-                                //Date checkInDateInput = simpleDateFormat.parse(scanner.nextLine()); // takes User Input for "checkInDateInput" AS Date
-
-                                // 3rd Attempt
-                                //SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
-                                //Date checkInDateInput = sdf.parse(scanner.nextLine()); // takes User Input for "checkInDateInput" AS Date
-
-                                // 4th Attempt
-                                //simpleDateFormat.setLenient(false); // sets "lenient" to "false" to apply strict date parsing
-                                //Date checkInDateInput = simpleDateFormat.parse(scanner.nextLine()); // takes User Input for "checkInDateInput" AS Date
-
-                                // 5th Attempt
-                                // Creates "DateTimeFormatter" object with "MM-dd-yyyy" format
-                                //DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
-                                //simpleDateFormat.setLenient(false); // sets "lenient" to "false" to apply strict date parsing
-                                //Date checkInDateInput = simpleDateFormat.parse(scanner.nextLine()); // takes User Input for "checkInDateInput" AS Date
                                 break;
                             } catch (ParseException e) { // if "checkInDateInput" could NOT Be Parsed
                                 System.out.println("Date could not be parsed: ");

@@ -13,6 +13,8 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
+    private Date inputCheckInAndCheckOutDates() {}
+
     public static void main(String[] args) {
         // Allows user input to be read
         Scanner scanner = new Scanner(System.in);
@@ -45,18 +47,6 @@ public class Main {
                         // Takes User Input for Check-In and Check-Out Dates
                         Date checkInDate = null; // initial "checkInDate" value & allows "findARoom()" method access to "checkInDate"
                         Date checkOutDate = null; // initial "checkOutDate" value & allows "findARoom()" method access to "checkOutDate"
-
-                        // Checks if user inputted "checkInDateInput" in "MM/dd/yyyy" format
-                        System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
-                        while (true) {
-                            try {
-                                String checkInDateInput = scanner.nextLine(); // takes User Input for "checkInDateInput" AS STRING
-                                checkInDate = simpleDateFormat.parse(checkInDateInput); // checks if "checkInDateInput" is in "MM/dd/yyyy" format
-                                break;
-                            } catch (Exception e) {
-                                System.out.println("Please enter date in \"MM/dd/yyyy\" format: ");
-                            }
-                        }
 
                         // Checks if user inputted and "checkOutDateInput" in "MM/dd/yyyy" format
                         System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");

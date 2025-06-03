@@ -24,7 +24,6 @@ public class Main {
         simpleDateFormat.setLenient(false);
 
         // Checks if user inputted "checkInDateInput" in "MM/dd/yyyy" format
-        System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
         while (true) {
             try {
                 String checkInDateInput = scanner.nextLine(); // takes User Input for "checkInDateInput" AS STRING
@@ -59,6 +58,7 @@ public class Main {
                     int userInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (userInput == 1) {
                         // Takes User Input for Check-In and Check-Out Dates
+                        System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
                         Date checkInDate = null; // initial "checkInDate" value & allows "findARoom()" method access to "checkInDate"
                         Date checkOutDate = null; // initial "checkOutDate" value & allows "findARoom()" method access to "checkOutDate"
 

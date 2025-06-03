@@ -18,7 +18,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Allows user to input "Date" as input
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
         // Main Menu
         boolean runApplication = true;
@@ -43,12 +43,12 @@ public class Main {
                         Date checkInDate = null; // initial "checkInDate" value & allows "findARoom()" method access to "checkInDate"
                         Date checkOutDate = null; // initial "checkOutDate" value & allows "findARoom()" method access to "checkOutDate"
 
-                        // Checks if user inputted "checkInDateInput" in "MM-dd-yyyy" format
+                        // Checks if user inputted "checkInDateInput" in "MM/dd/yyyy" format
                         System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
                         while (true) {
                             try {
                                 String checkInDateInput = scanner.nextLine(); // takes User Input for "checkInDateInput" AS STRING
-                                checkInDate = simpleDateFormat.parse(checkInDateInput);// checks if "checkInDateInput" is in "MM-dd-yyyy" format
+                                checkInDate = simpleDateFormat.parse(checkInDateInput);// checks if "checkInDateInput" is in "MM/dd/yyyy" format
                                 break;
                             } catch (ParseException e) { // if "checkInDateInput" could NOT Be Parsed
                                 System.out.println("Date could not be parsed: ");
@@ -58,12 +58,12 @@ public class Main {
                             }
                         }
 
-                        // Checks if user inputted and "checkOutDateInput" in "MM-dd-yyyy" format
+                        // Checks if user inputted and "checkOutDateInput" in "MM/dd/yyyy" format
                         System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
                         while (true) {
                             try {
                                 String checkOutDateInput = scanner.nextLine(); // takes User Input for "checkOutDateInput" AS STRING
-                                checkOutDate = simpleDateFormat.parse(checkOutDateInput);// checks if "checkOutDateInput" is in "MM-dd-yyyy" format
+                                checkOutDate = simpleDateFormat.parse(checkOutDateInput);// checks if "checkOutDateInput" is in "MM/dd/yyyy" format
                                 break;
                             } catch (Exception e) {
                                 System.out.println("Please enter date in \"MM-dd-yyyy\" format: ");

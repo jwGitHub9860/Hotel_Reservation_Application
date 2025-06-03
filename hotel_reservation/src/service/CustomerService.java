@@ -18,9 +18,13 @@ public class CustomerService {
     }
 
     public static Customer getCustomer(String customerEmail) {
-        // ADD CORRECT CODE
-
-        return test;
+        // Searches for Customer Information with "customerEmail"
+        for (Customer email : ReservationService.customerCollection) {
+            // Checks if "customerEmail" matches "email" of CURRENT "customer" within "customerCollection"
+            if (customerEmail.equals(Customer.inputEmail())) {
+                return email;
+            }
+        }
     }
 
     public static Collection<Customer> getAllCustomers() { return ReservationService.customerCollection; }

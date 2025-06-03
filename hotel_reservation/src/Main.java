@@ -64,9 +64,9 @@ public class Main {
 
                                 // 5th Attempt
                                 // Creates "DateTimeFormatter" object with "MM-dd-yyyy" format
-                                DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
-                                simpleDateFormat.setLenient(false); // sets "lenient" to "false" to apply strict date parsing
-                                Date checkInDateInput = simpleDateFormat.parse(scanner.nextLine()); // takes User Input for "checkInDateInput" AS Date
+                                //DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
+                                //simpleDateFormat.setLenient(false); // sets "lenient" to "false" to apply strict date parsing
+                                //Date checkInDateInput = simpleDateFormat.parse(scanner.nextLine()); // takes User Input for "checkInDateInput" AS Date
                                 break;
                             } catch (ParseException e) { // if "checkInDateInput" could NOT Be Parsed
                                 System.out.println("Date could not be parsed: ");

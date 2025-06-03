@@ -50,6 +50,8 @@ public class Main {
         }
     }
 
+    private static void inputAccountInformation() {}
+
     public static void main(String[] args) {
         // Main Menu
         boolean runApplication = true;

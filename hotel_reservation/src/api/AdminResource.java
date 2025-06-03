@@ -51,7 +51,7 @@ public class AdminResource {
             addRoomRepeat = inputYOrN(); // calls "inputYOrN()" method to take User Input
         }
 
-        // Sorts "roomList" by Room Numbers
+        // Sorts "roomList" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
         rooms.sort(Comparator.comparing(iRoom -> {
             String string = iRoom.getRoomNumber(); // obtains "roomNumber"
             String[] roomRoomNumbers = string.split("\\."); // "\\." - match the character

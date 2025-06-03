@@ -13,7 +13,7 @@ public class CustomerService {
         // Adds "customer" to "customerCollection"
         ReservationService.customerCollection.add(customer);
 
-        // Sorts "customerCollection" by First Names in Alphabetical Order
+        // Sorts "customerCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
         ReservationService.customerCollection.sort((person1, person2) -> person1.getFirstName().compareTo(person2.getFirstName()));
     }
 

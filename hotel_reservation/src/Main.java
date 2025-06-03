@@ -20,6 +20,9 @@ public class Main {
         // Allows user to input "Date" as input
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
+        // Sets "lenient" to "false" to apply strict Date Parsing
+        simpleDateFormat.setLenient(false);
+
         // Main Menu
         boolean runApplication = true;
         try {

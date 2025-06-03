@@ -19,14 +19,6 @@ public class CustomerService {
         } // TESTING CODE
         // Sorts "customerCollection" by First Names in Alphabetical Order
         ReservationService.customerCollection.sort((person1, person2) -> person1.getFirstName().compareTo(person2.getFirstName())); // finds which Room Number is greater
-        
-        /*ReservationService.customerCollection.sort(Comparator.comparing(person -> {
-            String string = person.getFirstName(); // obtains "roomNumber"
-            String[] people = string.split("\\."); // "\\." - match the character
-            int firstPerson = Integer.parseInt(people[0]); // obtains 1st Room Number
-            int secondPerson = people.length > 1 ? Integer.parseInt(people[1]) : 0; // finds which Room Number is greater
-            return firstPerson * 1000 + secondPerson; // returns "roomNumber1" and "roomNumber2" in Ascending Order
-        }));*/
     }
 
     public static Customer getCustomer(String customerEmail) {

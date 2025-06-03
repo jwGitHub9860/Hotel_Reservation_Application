@@ -34,6 +34,8 @@ public class Main {
         }
     }
 
+    private static String inputYOrN() {}
+
     public static void main(String[] args) {
         // Allows user input to be read
         Scanner scanner = new Scanner(System.in);

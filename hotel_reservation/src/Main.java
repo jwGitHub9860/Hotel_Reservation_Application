@@ -116,6 +116,12 @@ public class Main {
                             String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
                             System.out.println("\nEnter first name: ");
                             String firstName = scanner.nextLine(); // takes User Input for "firstName"
+
+                            // Ensures User Inputs "firstName" BEFORE Inputting "lastName"
+                            if (firstName.isEmpty()) {
+                                firstName = scanner.nextLine(); // takes User Input for "firstName"
+                            }
+
                             System.out.println("\nEnter last name: ");
                             String lastName = scanner.nextLine(); // takes User Input for "lastName"
 

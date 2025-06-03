@@ -8,15 +8,9 @@ import java.util.Comparator;
 public class CustomerService {
     public static void addCustomer(String email, String firstName, String lastName) {
         Customer customer = new Customer(firstName, lastName, email); // calls "Customer" constructor
-        System.out.println("BEFORE:\n"); // TESTING CODE
-        for (Customer customer1 : ReservationService.customerCollection) { // TESTING CODE
-            System.out.println(customer1); // TESTING CODE
-        } // TESTING CODE
+
         ReservationService.customerCollection.add(customer); // add "customer" to "customerCollection"
-        System.out.println("AFTER:\n"); // TESTING CODE
-        for (Customer customer1 : ReservationService.customerCollection) { // TESTING CODE
-            System.out.println(customer1); // TESTING CODE
-        } // TESTING CODE
+
         // Sorts "customerCollection" by First Names in Alphabetical Order
         ReservationService.customerCollection.sort((person1, person2) -> person1.getFirstName().compareTo(person2.getFirstName())); // finds which Room Number is greater
     }

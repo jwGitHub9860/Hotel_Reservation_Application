@@ -18,7 +18,7 @@ public class CustomerService {
             System.out.println(customer1); // TESTING CODE
         } // TESTING CODE
         // Sorts "customerCollection" by First Names in Alphabetical Order
-        ReservationService.customerCollection.sort(Comparator.comparing(person -> Customer.getFirstName())); // finds which Room Number is greater
+        ReservationService.customerCollection.sort((person1, person2) -> person1.getFirstName().compareTo(person2.getFirstName())); // finds which Room Number is greater
         
         /*ReservationService.customerCollection.sort(Comparator.comparing(person -> {
             String string = person.getFirstName(); // obtains "roomNumber"

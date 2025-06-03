@@ -1,3 +1,4 @@
+import api.AdminResource;
 import api.HotelResource;
 import model.Customer;
 import model.IRoom;
@@ -87,9 +88,9 @@ public class Main {
 
                         // Takes User Input for Answering if User wants to Book A Room or Already Has Account
                         System.out.println("Would you like to book a room (y/n): ");
-                        String bookRoomAnswer = inputYOrN(); // calls "inputYOrN()" method to take user input for "bookRoomAnswer"
+                        String bookRoomAnswer = AdminResource.inputYOrN(); // calls "inputYOrN()" method to take user input for "bookRoomAnswer"
                         System.out.println("Do you have an account with us (y/n): ");
-                        String accountAnswer = inputYOrN(); // calls "inputYOrN()" method to take user input for "accountAnswer"
+                        String accountAnswer = AdminResource.inputYOrN(); // calls "inputYOrN()" method to take user input for "accountAnswer"
 
                         // Creates Customer Account if User does NOT have account
                         if (accountAnswer.equals("n")) {

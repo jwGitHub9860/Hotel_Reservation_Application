@@ -14,8 +14,6 @@ public class AdminResource {
     //public static Customer getCustomer(String email) { return; }
 
     public static void addRoom(List<IRoom> rooms) {
-        Scanner scanner = new Scanner(System.in); // allows user input to be read
-
         String addRoomRepeat = "y"; // initial "addRoomRepeat" value
         while (addRoomRepeat.equals("y")) {
             // Obtains User Input for "roomNumber", "price", and "roomType" for "Room" constructor

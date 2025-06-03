@@ -17,7 +17,7 @@ public class Customer {
     }
 
     // Customer Method Definitions
-    public String getFirstName() { return firstName; }
+    public static String getFirstName() { return firstName; }
     public static String getLastName() { return lastName; }
     public static String getEmail() { return email; }
 

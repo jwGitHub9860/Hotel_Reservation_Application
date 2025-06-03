@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 public class Main {
     // Allows User Input to be Read in ALL Methods WITHIN "Main" class
-    Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
 
     private static Date inputCheckInAndCheckOutDates() {
         // Allows user to input "Date" as input

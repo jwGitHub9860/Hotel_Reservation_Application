@@ -10,9 +10,9 @@ public class Customer {
     // Constructor
     public Customer(String firstName, String lastName, String email) { // Checks if email format is correct
         // Defines "firstName", "lastName", and "email" in "toString()" function
-        Customer.firstName = firstName; // set current "firstName" as "firstName"
-        Customer.lastName = lastName; // set current "lastName" as "lastName"
-        Customer.email = email; // set current "email" as "email"
+        this.firstName = firstName; // set current "firstName" as "firstName"
+        this.lastName = lastName; // set current "lastName" as "lastName"
+        this.email = email; // set current "email" as "email"
     }
 
     // Customer Method Definitions

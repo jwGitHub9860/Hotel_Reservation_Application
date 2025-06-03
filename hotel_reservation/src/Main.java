@@ -85,23 +85,8 @@ public class Main {
 
                         System.out.println("Would you like to book a room (y/n): ");
                         String bookRoomAnswer = null;
-
-
-                        // Checks if user inputted "y" or "n"
                         System.out.println("Do you have an account with us (y/n): ");
                         String accountAnswer = null;
-                        while (true) {
-                            try {
-                                accountAnswer = scanner.next();
-                                if (accountAnswer.equals("y") || accountAnswer.equals("n")) { // Valid answer
-                                    break;
-                                } else { // INVALID answer
-                                    throw new IllegalArgumentException("Answer must be \"y\" or \"n\"");
-                                }
-                            } catch (Exception e) {
-                                System.out.println("Please enter y (yes) or n (n): ");
-                            }
-                        }
 
                         // Creates Customer Account if User does NOT have account
                         if (accountAnswer.equals("n")) {

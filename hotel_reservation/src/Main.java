@@ -14,6 +14,12 @@ import java.util.Scanner;
 
 public class Main {
     private Date inputCheckInAndCheckOutDates() {
+        // Allows user to input "Date" as input
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+
+        // Sets "lenient" to "false" to apply strict Date Parsing
+        simpleDateFormat.setLenient(false);
+
         // Checks if user inputted "checkInDateInput" in "MM/dd/yyyy" format
         System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
         while (true) {
@@ -30,12 +36,6 @@ public class Main {
     public static void main(String[] args) {
         // Allows user input to be read
         Scanner scanner = new Scanner(System.in);
-
-        // Allows user to input "Date" as input
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
-
-        // Sets "lenient" to "false" to apply strict Date Parsing
-        simpleDateFormat.setLenient(false);
 
         // Main Menu
         boolean runApplication = true;

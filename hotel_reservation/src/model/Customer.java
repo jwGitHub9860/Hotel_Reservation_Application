@@ -58,8 +58,7 @@ public class Customer {
                     if (domainArray[0] == null) {
                         throw new ArrayIndexOutOfBoundsException("Email must have a domain and cannot have \"@.com\"");
                     }
-
-                    break;
+                    return emailInput;
                 }
             } catch (IllegalArgumentException e) { // if user does NOT ENTER EMAIL IN CORRECT FORMAT
                 System.out.println("Email must be in \"name@domain.com\" format: ");
@@ -68,7 +67,6 @@ public class Customer {
                 System.out.println("Email must have a domain and cannot have \"@.com\": ");
             }
         }
-        return emailInput;
     }
 
     @Override

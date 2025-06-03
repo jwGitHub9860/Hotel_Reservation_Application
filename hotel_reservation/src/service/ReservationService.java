@@ -14,9 +14,6 @@ public class ReservationService {
 
     public static Collection<Reservation> reservationCollection = new LinkedList<>();
 
-    // Allows access to "Reservation" interface
-    static Reservation reservationInstance = new Reservation(); // creates "Reservation" instance
-
     public static void addRoom(IRoom room) { roomCollection.add(room); } // adds "roomNumber", "price", and "roomType" to "roomList"
 
     public static IRoom getARoom(String roomId) {
@@ -27,7 +24,11 @@ public class ReservationService {
         return roomInstance;
     }
 
-    public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) { return reservationInstance; } // Creates & Returns WHOLE "Reservation"
+    public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
+        // Allows access to "Reservation" interface
+        static Reservation reservationInstance = new Reservation(); // creates "Reservation" instance
+        return reservationInstance;
+    } // Creates & Returns WHOLE "Reservation"
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) { return roomCollection; }
 

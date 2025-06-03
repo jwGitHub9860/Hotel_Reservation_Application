@@ -52,6 +52,7 @@ public class Main {
                                 break;
                             } catch (Exception e) {
                                 System.out.println("Please enter date in \"MM/dd/yyyy\" format: ");
+                                scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                             }
                         }
 

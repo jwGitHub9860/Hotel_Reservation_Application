@@ -40,7 +40,7 @@ public class Main {
             try {
                 String answer = scanner.next();
                 if (answer.equals("y") || answer.equals("n")) { // Valid answer
-                    break;
+                    return answer;
                 } else { // INVALID answer
                     throw new IllegalArgumentException("Answer must be \"y\" or \"n\"");
                 }

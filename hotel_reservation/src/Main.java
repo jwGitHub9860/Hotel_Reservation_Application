@@ -54,7 +54,7 @@ public class Main {
                                 System.out.println("Date could not be parsed: ");
                                 //scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                             } catch (Exception e) {
-                                System.out.println("Please enter date in \"MM-dd-yyyy\" format: ");
+                                System.out.println("Please enter date in \"MM/dd/yyyy\" format: ");
                             }
                         }
 
@@ -66,7 +66,7 @@ public class Main {
                                 checkOutDate = simpleDateFormat.parse(checkOutDateInput);// checks if "checkOutDateInput" is in "MM/dd/yyyy" format
                                 break;
                             } catch (Exception e) {
-                                System.out.println("Please enter date in \"MM-dd-yyyy\" format: ");
+                                System.out.println("Please enter date in \"MM/dd/yyyy\" format: ");
                             }
                         }
 

@@ -29,7 +29,6 @@ public class Main {
             try {
                 String checkInDateInput = scanner.nextLine(); // takes User Input for "checkInDateInput" AS STRING
                 return simpleDateFormat.parse(checkInDateInput); // checks if "checkInDateInput" is in "MM/dd/yyyy" format
-                break;
             } catch (Exception e) {
                 System.out.println("Please enter date in \"MM/dd/yyyy\" format: ");
             }

@@ -149,7 +149,7 @@ public class Main {
                             try {
                                 // Obtains User Input for "email", "firstName", and "lastName" for "HotelResource" constructor & "createACustomer()" method
                                 System.out.println("Enter email (format: name@domain.com): ");
-                                String email = Customer.inputEmail(); // calls "inputEmail()" method
+                                String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
                                 System.out.println("\nEnter first name: ");
                                 String firstName = scanner.nextLine(); // takes User Input for "firstName"
                                 System.out.println("\nEnter last name: ");

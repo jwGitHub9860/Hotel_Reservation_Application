@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
-    private Date inputCheckInAndCheckOutDates() {
+    private static Date inputCheckInAndCheckOutDates() {
         // Allows user input to be read
         Scanner scanner = new Scanner(System.in);
 

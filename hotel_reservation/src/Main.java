@@ -47,8 +47,8 @@ public class Main {
                         System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
                         while (true) {
                             try {
-                                //String checkInDateInput = scanner.nextLine(); // takes User Input for "checkInDateInput" AS STRING
-                                //checkInDate = simpleDateFormat.parse(checkInDateInput);// checks if "checkInDateInput" is in "MM-dd-yyyy" format
+                                String checkInDateInput = scanner.nextLine(); // takes User Input for "checkInDateInput" AS STRING
+                                checkInDate = simpleDateFormat.parse(checkInDateInput);// checks if "checkInDateInput" is in "MM-dd-yyyy" format
                                 break;
                             } catch (ParseException e) { // if "checkInDateInput" could NOT Be Parsed
                                 System.out.println("Date could not be parsed: ");

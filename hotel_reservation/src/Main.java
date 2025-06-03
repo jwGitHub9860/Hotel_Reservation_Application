@@ -38,8 +38,8 @@ public class Main {
         // Checks if user inputted "y" or "n"
         while (true) {
             try {
-                bookRoomAnswer = scanner.next();
-                if (bookRoomAnswer.equals("y") || bookRoomAnswer.equals("n")) { // Valid answer
+                String answer = scanner.next();
+                if (answer.equals("y") || answer.equals("n")) { // Valid answer
                     break;
                 } else { // INVALID answer
                     throw new IllegalArgumentException("Answer must be \"y\" or \"n\"");

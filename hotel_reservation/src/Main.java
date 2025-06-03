@@ -48,11 +48,10 @@ public class Main {
                         while (true) {
                             try {
                                 String checkInDateInput = scanner.nextLine(); // takes User Input for "checkInDateInput" AS STRING
-                                checkInDate = simpleDateFormat.parse(checkInDateInput);// checks if "checkInDateInput" is in "MM/dd/yyyy" format
+                                checkInDate = simpleDateFormat.parse(checkInDateInput); // checks if "checkInDateInput" is in "MM/dd/yyyy" format
                                 break;
                             } catch (Exception e) {
                                 System.out.println("Please enter date in \"MM/dd/yyyy\" format: ");
-                                scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                             }
                         }
 
@@ -61,7 +60,7 @@ public class Main {
                         while (true) {
                             try {
                                 String checkOutDateInput = scanner.nextLine(); // takes User Input for "checkOutDateInput" AS STRING
-                                checkOutDate = simpleDateFormat.parse(checkOutDateInput);// checks if "checkOutDateInput" is in "MM/dd/yyyy" format
+                                checkOutDate = simpleDateFormat.parse(checkOutDateInput); // checks if "checkOutDateInput" is in "MM/dd/yyyy" format
                                 break;
                             } catch (Exception e) {
                                 System.out.println("Please enter date in \"MM/dd/yyyy\" format: ");

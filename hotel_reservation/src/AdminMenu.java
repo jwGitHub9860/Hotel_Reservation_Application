@@ -58,7 +58,7 @@ public class AdminMenu {
                     } else if (adminUserInput == 5) {
                         // TESTING CODE
                         Customer customerTest = new Customer("firstName", "lastName", "email"); // calls "Customer" constructor
-                        System.out.println(customerTest);
+                        System.out.println(customerTest); // calls "toString()" override method from "Customer.java"
                     } else if (adminUserInput == 6) {
                         runAdmin = false;
                         System.out.println("\n");

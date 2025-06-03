@@ -27,7 +27,7 @@ public class Customer {
         // Takes User Input for Email
         while (true) { // ensures that user inputted "email"
             try {
-                email = scanner.nextLine(); // takes User Input for "email"
+                String emailInput = scanner.nextLine(); // takes User Input for "emailInput"
 
                 // Checks if "email" is NOT empty
                 if (!email.isEmpty()) {

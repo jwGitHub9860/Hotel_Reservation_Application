@@ -46,8 +46,9 @@ public class AdminResource {
             // Calls "addRoom()" method from SERVICE file
             ReservationService.addRoom(room);
 
+            // Confirms if User wants to Add Another Room
             System.out.println("Would you like to add another room (y/n): ");
-            addRoomRepeat = inputYOrN(); // calls "inputYOrN()" method to take User Input to confirm if user wants to add another room
+            addRoomRepeat = inputYOrN(); // calls "inputYOrN()" method to take User Input
         }
 
         // Sorts "roomList" by Room Numbers

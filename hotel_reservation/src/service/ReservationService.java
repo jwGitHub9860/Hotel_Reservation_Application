@@ -26,7 +26,7 @@ public class ReservationService {
 
     public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
         // Allows access to "Reservation" interface
-        static Reservation reservationInstance = new Reservation(); // creates "Reservation" instance
+        Reservation reservationInstance = new Reservation(); // creates "Reservation" instance
         return reservationInstance;
     } // Creates & Returns WHOLE "Reservation"
 

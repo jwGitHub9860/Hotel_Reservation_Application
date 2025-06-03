@@ -43,6 +43,8 @@ HaakonFlaar. “How to Use ‘Throws Illegalargumentexception’ in Method Decla
 
 "How to Find the First and Last Character of a String in Java.” _GeeksforGeeks_, 13 Dec. 2022, www.geeksforgeeks.org/how-to-find-the-first-and-last-character-of-a-string-in-java/. Accessed 23 May 2025.
 
+“How to Validate Date Input from User in Specific Formats in Java?” _GeeksforGeeks_, GeeksforGeeks, 15 Feb. 2024, www.geeksforgeeks.org/validate-a-date-input-from-a-user-to-ensure-in-a-specific-format-in-java/. Accessed 2 Jun. 2025.
+
 HpdsbuZt. “Read Date in Java with Scanner.” _Stack Overflow_, 6 May 2014, stackoverflow.com/questions/23491255/read-date-in-java-with-scanner. Accessed 27 May 2025.
 
 Ignorant Coder. “Differences between Java ArrayList and LinkedList Collections: Features, Performance and Code Examples.” _Juejin.Cn_, 26 Mar. 2024, juejin.cn/post/7350585600858849332. Accessed 24 May 2025.

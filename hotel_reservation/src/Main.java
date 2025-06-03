@@ -50,9 +50,6 @@ public class Main {
                                 String checkInDateInput = scanner.nextLine(); // takes User Input for "checkInDateInput" AS STRING
                                 checkInDate = simpleDateFormat.parse(checkInDateInput);// checks if "checkInDateInput" is in "MM/dd/yyyy" format
                                 break;
-                            } catch (ParseException e) { // if "checkInDateInput" could NOT Be Parsed
-                                System.out.println("Date could not be parsed: ");
-                                //scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                             } catch (Exception e) {
                                 System.out.println("Please enter date in \"MM/dd/yyyy\" format: ");
                             }

@@ -54,13 +54,13 @@ public class AdminResource {
         // Sorts "roomList" by Room Numbers
         rooms.sort((room1, room2) -> room1.getRoomNumber().compareTo(room2.getRoomNumber()));
 
-        /*rooms.sort(Comparator.comparing(iRoom -> {
+        rooms.sort(Comparator.comparing(iRoom -> {
             String string = iRoom.getRoomNumber(); // obtains "roomNumber"
             String[] roomRoomNumbers = string.split("\\."); // "\\." - match the character
             int firstRoomNumber = Integer.parseInt(roomRoomNumbers[0]); // obtains 1st Room Number
             int secondRoomNumber = roomRoomNumbers.length > 1 ? Integer.parseInt(roomRoomNumbers[1]) : 0; // finds which Room Number is greater
             return firstRoomNumber * 1000 + secondRoomNumber; // returns "roomNumber1" and "roomNumber2" in Ascending Order
-        }));*/
+        }));
     }
 
     public static Collection<IRoom> getAllRooms() { return ReservationService.roomCollection; }

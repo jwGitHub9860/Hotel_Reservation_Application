@@ -34,7 +34,7 @@ public class Main {
         }
     }
 
-    private static String inputYOrN() {
+    public static String inputYOrN() {
         // Checks if user inputted "y" or "n"
         while (true) {
             try {

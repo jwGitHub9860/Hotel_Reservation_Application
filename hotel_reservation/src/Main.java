@@ -58,8 +58,8 @@ public class Main {
                                 //Date checkInDateInput = sdf.parse(scanner.nextLine()); // takes User Input for "checkInDateInput" AS Date
 
                                 // 4th Attempt
-                                simpleDateFormat.setLenient(false); // sets "lenient" to "false" to apply strict date parsing
-                                Date checkInDateInput = simpleDateFormat.parse(scanner.nextLine()); // takes User Input for "checkInDateInput" AS Date
+                                //simpleDateFormat.setLenient(false); // sets "lenient" to "false" to apply strict date parsing
+                                //Date checkInDateInput = simpleDateFormat.parse(scanner.nextLine()); // takes User Input for "checkInDateInput" AS Date
                                 break;
                             } catch (ParseException e) { // if "checkInDateInput" could NOT Be Parsed
                                 System.out.println("Date could not be parsed: ");

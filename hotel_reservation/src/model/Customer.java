@@ -11,10 +11,10 @@ public class Customer {
     // Constructor
     public Customer(String firstName, String lastName, String email, String nonExistentEmail) { // Checks if email format is correct
         // Defines "firstName", "lastName", "email", and "nonExistentEmail" in "toString()" function
-        this.firstName = firstName; // set current "firstName" as "firstName"
-        this.lastName = lastName; // set current "lastName" as "lastName"
-        this.email = email; // set current "email" as "email"
-        this.nonExistentEmail = nonExistentEmail;
+        this.firstName = firstName; // set current "firstName" to "firstName"
+        this.lastName = lastName; // set current "lastName" to "lastName"
+        this.email = email; // set current "email" to "email"
+        this.nonExistentEmail = nonExistentEmail; // set current "nonExistentEmail" to "nonExistentEmail"
     }
 
     // Customer Method Definitions

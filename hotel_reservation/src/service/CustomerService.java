@@ -24,9 +24,7 @@ public class CustomerService {
             if (customerEmail.equals(Customer.inputEmail())) {
                 return email;
             } else {
-                // Calls "Customer" constructor to Allow Access to "getNonExistentEmail()" method in "Customer.java"
-                Customer customer = new Customer("firstName", "lastName", "email");
-                return null;
+                System.out.println("Email does not exist.");
             }
         }
         return null;

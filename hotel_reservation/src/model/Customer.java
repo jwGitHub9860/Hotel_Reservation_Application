@@ -19,7 +19,7 @@ public class Customer {
     public String getFirstName() { return firstName; }
     public String getLastName() { return lastName; }
     public String getEmail() { return email; }
-    public String getNonExistentEmail() { return "Email does not exist."; }
+    public String getNonExistentEmail() { return ; }
 
     // Takes User Input for Room Information
     public static String inputEmail() {

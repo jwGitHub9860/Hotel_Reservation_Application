@@ -13,7 +13,7 @@ public class Customer {
         this.firstName = firstName; // set current "firstName" to "firstName"
         this.lastName = lastName; // set current "lastName" to "lastName"
         this.email = email; // set current "email" to "email"
-        Customer.nonExistentEmail = nonExistentEmail; // set "nonExistentEmail" FROM "Customer" CLASS to "nonExistentEmail"
+        this.nonExistentEmail = nonExistentEmail; // set current "nonExistentEmail" to "nonExistentEmail"
     }
 
     // Customer Method Definitions

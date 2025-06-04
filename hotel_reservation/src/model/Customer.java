@@ -9,11 +9,12 @@ public class Customer {
     final String nonExistentEmail = "Email does not exist.";
 
     // Constructor
-    public Customer(String firstName, String lastName, String email) { // Checks if email format is correct
-        // Defines "firstName", "lastName", and "email" in "toString()" function
+    public Customer(String firstName, String lastName, String email, String nonExistentEmail) { // Checks if email format is correct
+        // Defines "firstName", "lastName", "email", and "nonExistentEmail" in "toString()" function
         this.firstName = firstName; // set current "firstName" as "firstName"
         this.lastName = lastName; // set current "lastName" as "lastName"
         this.email = email; // set current "email" as "email"
+        this.nonExistentEmail = nonExistentEmail;
     }
 
     // Customer Method Definitions

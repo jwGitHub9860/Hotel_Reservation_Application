@@ -24,10 +24,12 @@ public class CustomerService {
             if (customerEmail.equals(Customer.inputEmail())) {
                 return email;
             } else {
-                // Calls "Customer" constructor to obtain WHOLE Customer Information
+                // Calls "Customer" constructor to Allow Access to "getNonExistentEmail()" method in "Customer.java"
                 Customer customer = new Customer("firstName", "lastName", "email");
+                return null;
             }
         }
+        return null;
     }
 
     public static Collection<Customer> getAllCustomers() { return ReservationService.customerCollection; }

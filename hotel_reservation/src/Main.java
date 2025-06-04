@@ -109,11 +109,14 @@ public class Main {
                             System.out.println("\nChoose room number to reserve: ");
                             String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
 
-                            IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom); // calls "getRoom()" method to find "chosenRoom" in "roomCollection"
+                            // Calls "getRoom()" method to Find "chosenRoomNumber" in "roomCollection"
+                            IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom);
 
-                            Reservation customerReservation = HotelResource.bookARoom(email, chosenRoomNumber, checkInDate, checkOutDate); // calls "bookARoom()" method
+                            // Call "bookARoom()" method to Create WHOLE "Reservation"
+                            Reservation customerReservation = HotelResource.bookARoom(email, chosenRoomNumber, checkInDate, checkOutDate);
 
-                            ReservationService.reservationCollection.add(customerReservation); // adds "customerReservation" to "reservationCollection"
+                            // Add "customerReservation" to "reservationCollection"
+                            ReservationService.reservationCollection.add(customerReservation);
                         }
                     } else if (userInput == 2) {
                         // Takes User Input for "customerEmail"

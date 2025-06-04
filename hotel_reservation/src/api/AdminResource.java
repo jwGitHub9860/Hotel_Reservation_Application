@@ -30,7 +30,7 @@ public class AdminResource {
         }
     }
 
-    //public static Customer getCustomer(String email) { return; }
+    public static Customer getCustomer(String email) { return; }
 
     public static void addRoom(List<IRoom> rooms) {
         String addRoomRepeat = "y"; // initial "addRoomRepeat" value

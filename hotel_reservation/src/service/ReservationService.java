@@ -17,11 +17,16 @@ public class ReservationService {
     public static void addRoom(IRoom room) { roomCollection.add(room); } // adds "roomNumber", "price", and "roomType" to "roomList"
 
     public static IRoom getARoom(String roomId) {
-        // ADD CORRECT CODE
-
-        // Allows access to "IRoom" interface
-        Room roomInstance = new Room("test", 0.00, RoomType.DOUBLE); // creates "Room" instance         TESTING CODE
-        return roomInstance;
+        // Searches for Room Information with "roomId"
+        for (IRoom room : roomCollection) {
+            // Checks if "roomId" matches "roomNumber" of CURRENT "room" within "roomCollection"
+            if (roomId.equals(room.getRoomNumber())) {
+                return room;
+            } else {
+                System.out.println("Room does not exist.");
+            }
+        }
+        return null;
     }
 
     public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) { return new Reservation(customer, room, checkInDate, checkOutDate); } // calls "Reservation" constructor to Create & Return WHOLE "Reservation"

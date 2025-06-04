@@ -5,8 +5,7 @@ import service.ReservationService;
 import java.util.Scanner;
 
 public class Customer {
-    String firstName, lastName, email;
-    static String nonExistentEmail;
+    String firstName, lastName, email, nonExistentEmail;
 
     // Constructor
     public Customer(String firstName, String lastName, String email) { // Checks if email format is correct

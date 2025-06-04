@@ -23,6 +23,9 @@ public class CustomerService {
             // Checks if "customerEmail" matches "email" of CURRENT "customer" within "customerCollection"
             if (customerEmail.equals(Customer.inputEmail())) {
                 return email;
+            } else {
+                // Calls "Customer" constructor to obtain WHOLE Customer Information
+                Customer customer = new Customer("firstName", "lastName", "email");
             }
         }
     }

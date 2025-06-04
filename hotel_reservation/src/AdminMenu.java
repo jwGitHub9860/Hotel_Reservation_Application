@@ -16,6 +16,8 @@ public class AdminMenu {
         // Allows user input to be read
         Scanner scanner = new Scanner(System.in); // Must Be Put Here To PREVENT INFINITE WHILE LOOP
 
+        final String nonExistentEmail = "Email does not exist.";
+
         // Admin Menu
         boolean runAdmin = true;
         try {

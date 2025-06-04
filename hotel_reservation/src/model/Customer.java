@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Customer {
     String firstName, lastName, email;
-    final String nonExistentEmail = "Email does not exist.";
+
 
     // Constructor
     public Customer(String firstName, String lastName, String email, String nonExistentEmail) { // Checks if email format is correct

@@ -71,9 +71,6 @@ public class Customer {
         }
     }
 
-    // Returns Message that Email Does Not Exist
-    public static String returnNonExistentEmailMessage() { return nonExistentEmail; }
-
     @Override
     public String toString() {
         return "Customer First Name: " + firstName + ", Last Name: " + lastName + ", Email: " + email;

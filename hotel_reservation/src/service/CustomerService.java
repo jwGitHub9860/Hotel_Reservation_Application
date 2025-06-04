@@ -21,7 +21,7 @@ public class CustomerService {
         // Searches for Customer Information with "customerEmail"
         for (Customer email : ReservationService.customerCollection) {
             // Checks if "customerEmail" matches "email" of CURRENT "customer" within "customerCollection"
-            if (customerEmail.equals(Customer.inputEmail())) {
+            if (customerEmail.equals(email.getEmail())) {
                 return email;
             } else {
                 System.out.println("Email does not exist.");

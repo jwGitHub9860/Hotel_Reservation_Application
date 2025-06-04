@@ -31,6 +31,9 @@ public class ReservationService {
     public static Collection<Reservation> getCustomersReservation(Customer customer) { return reservationCollection; }
 
     public static void printAllReservation() {
-        System.out.println("\nADMINadminUserInput 3 WORKS"); // TESTING CODE
+        // Display reservation information inside "reservationCollection" collection
+        for (Reservation reservation : reservationCollection) {
+            System.out.println(reservation);
+        }
     }
 }

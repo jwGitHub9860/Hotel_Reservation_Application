@@ -31,7 +31,7 @@ public class ReservationService {
     public static Collection<Reservation> getCustomersReservation(Customer customer) { return reservationCollection; }
 
     public static void printAllReservation() {
-        // Display reservation information inside "reservationCollection" collection
+        // Display reservation information inside "reservationCollection"
         for (Reservation reservation : reservationCollection) {
             System.out.println(reservation);
         }

@@ -47,7 +47,7 @@ public class AdminMenu {
                         // Calls "getAllRooms()" method from "AdminResource.java"
                         Collection<IRoom> roomList = AdminResource.getAllRooms();
 
-                        // Display room information inside "roomCollection" collection
+                        // Display room information inside "roomCollection"
                         for (IRoom room : roomList) {
                             System.out.println(room);
                         }

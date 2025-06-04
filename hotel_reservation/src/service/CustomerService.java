@@ -7,10 +7,8 @@ import java.util.Comparator;
 
 public class CustomerService {
     public static void addCustomer(String email, String firstName, String lastName) {
-        final String nonExistentEmail = "Email does not exist.";
-
         // Calls "Customer" constructor to obtain WHOLE Customer Information
-        Customer customer = new Customer(firstName, lastName, email, nonExistentEmail);
+        Customer customer = new Customer(firstName, lastName, email);
 
         // Adds "customer" to "customerCollection"
         ReservationService.customerCollection.add(customer);

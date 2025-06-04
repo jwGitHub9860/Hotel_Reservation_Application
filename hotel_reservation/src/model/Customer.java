@@ -9,7 +9,7 @@ public class Customer {
     static String nonExistentEmail;
 
     // Constructor
-    public Customer(String firstName, String lastName, String email, String nonExistentEmail) { // Checks if email format is correct
+    public Customer(String firstName, String lastName, String email) { // Checks if email format is correct
         // Defines "firstName", "lastName", "email", and "nonExistentEmail" in "toString()" function
         this.firstName = firstName; // set current "firstName" to "firstName"
         this.lastName = lastName; // set current "lastName" to "lastName"

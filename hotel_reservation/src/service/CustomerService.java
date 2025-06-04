@@ -6,9 +6,9 @@ import java.util.Collection;
 import java.util.Comparator;
 
 public class CustomerService {
-    final String nonExistentEmail = "Email does not exist.";
-
     public static void addCustomer(String email, String firstName, String lastName) {
+        final String nonExistentEmail = "Email does not exist.";
+
         // Calls "Customer" constructor to obtain WHOLE Customer Information
         Customer customer = new Customer(firstName, lastName, email, nonExistentEmail);
 

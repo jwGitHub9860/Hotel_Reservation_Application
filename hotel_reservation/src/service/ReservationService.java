@@ -17,14 +17,19 @@ public class ReservationService {
     public static void addRoom(IRoom room) { roomCollection.add(room); } // adds "roomNumber", "price", and "roomType" to "roomList"
 
     public static IRoom getARoom(String roomId) {
+        boolean roomNotFound = false; // initial "roomNotFound" value
+
         // Searches for Room Information with "roomId"
         for (IRoom room : roomCollection) {
             // Checks if "roomId" matches "roomNumber" of CURRENT "room" within "roomCollection"
             if (roomId.equals(room.getRoomNumber())) {
                 return room;
             } else {
-                System.out.println("Room does not exist.");
+                roomNotFound = true;
             }
+        }
+        if (roomNotFound) {
+            System.out.println("Room does not exist.");
         }
         return null;
     }

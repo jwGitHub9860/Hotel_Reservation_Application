@@ -18,15 +18,22 @@ public class CustomerService {
     }
 
     public static Customer getCustomer(String customerEmail) {
+        boolean emailNotFound = false; // initial "emailNotFound" value
+        
         // Searches for Customer Information with "customerEmail"
         for (Customer email : ReservationService.customerCollection) {
             // Checks if "customerEmail" matches "email" of CURRENT "customer" within "customerCollection"
             if (customerEmail.equals(email.getEmail())) {
                 return email;
             } else {
-                System.out.println("Email does not exist.\n");
-                throw new NullPointerException("Email does not exist");
+                emailNotFound = true;
             }
+        }
+
+        // Indicates if Email Exists Or Not & Throws Exception if Email does NOT Exist
+        if (emailNotFound) {
+            System.out.println("Email does not exist.\n");
+            throw new NullPointerException("Email does not exist");
         }
         return null;
     }

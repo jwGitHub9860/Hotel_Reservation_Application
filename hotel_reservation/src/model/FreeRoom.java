@@ -4,7 +4,7 @@ public class FreeRoom extends Room {
     // Constructor
     public FreeRoom(String roomNumber, Double price, RoomType roomType) {
         super(roomNumber, price, roomType);
-        price = 0.0;
+        this.price = 0.00;
     }
 
     @Override

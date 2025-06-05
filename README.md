@@ -73,6 +73,8 @@ Pierce, Doug. “How to Catch Multiple Exceptions in Java.” _Rollbar_, 12 Aug.
 
 Rajesh. “Round a Double to 2 Decimal Places [duplicate].” Edited by Ryanyuyu, _Stack Overflow_, 11 May 2010, stackoverflow.com/questions/2808535/round-a-double-to-2-decimal-places. Accessed 27 May 2025.
 
+Rana, Laxman. “Removing Time from a Date Object?” Edited by Rangi Lin, Stack Overflow, 22 Mar. 2012, stackoverflow.com/questions/9816459/removing-time-from-a-date-object. Accessed 5 Jun. 2025.
+
 sdellysse. “When to Use LinkedList over ArrayList in Java?” Edited by Simeon Leyzerzon, _Stack Overflow_, 27 Nov. 2008, stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java. Accessed 24 May 2025.
 
 “Types of Exception in Java with Examples.” _GeeksforGeeks_, GeeksforGeeks, 11 Sept. 2023, www.geeksforgeeks.org/types-of-exception-in-java-with-examples/. Accessed 26 May 2025.

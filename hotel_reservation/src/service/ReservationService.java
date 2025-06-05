@@ -32,6 +32,7 @@ public class ReservationService {
         }
         if (roomNotFound) {
             System.out.println("Room does not exist.");
+            throw new NullPointerException("Room does not exist");
         }
         return null;
     }

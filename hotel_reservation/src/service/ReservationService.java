@@ -20,7 +20,6 @@ public class ReservationService {
 
     public static IRoom getARoom(String roomId) {
         boolean roomNotFound = false; // initial "roomNotFound" value
-        boolean roomNotReserved = true; // initial "roomNotReserved" value
 
         // Searches for Room Information with "roomId"
         for (IRoom room : roomCollection) {
@@ -40,16 +39,11 @@ public class ReservationService {
 
         // Checks if Room is Already Reserved
         for (Reservation reservation : reservationCollection) {
-            // Checks if "roomId" Number in Reservation Matches "room"
-            if (roomId.equals(reservation.getRoom().getRoomNumber())) {
+            // Indicates if Room is Available Or Not & Throws Exception if Room is NOT Available
+            if (roomId.equals(reservation.getRoom().getRoomNumber())) { // Checks if "roomId" Number in Reservation Matches "room"
+                System.out.println("Room is not available.\n");
                 throw new IllegalArgumentException("Room cannot be reserved");
             }
-        }
-
-        // Indicates if Room is Available Or Not & Throws Exception if Room is NOT Available
-        if (roomNotReserved) {
-            System.out.println("Room is not available.\n");
-            throw new NullPointerException("Room is not available");
         }
         return null;
     }

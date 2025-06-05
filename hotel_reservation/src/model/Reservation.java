@@ -16,6 +16,9 @@ public class Reservation {
         this.checkOutDate = checkOutDate;
     }
 
+    // Reservation Method Definitions
+    public IRoom getRoom() { return room; }
+
     @Override
     public String toString() { return "Reservation:\nCustomer: " + customer.getFirstName() + " " + customer.getLastName() + "\nRoom: " + room.getRoomNumber() + " - " + room.getRoomType() + " bed\nPrice: " + room.getRoomPrice() + " price per night\nCheck-In Date: " + checkInDate + "\nCheck-Out Date: " + checkOutDate; }
 }

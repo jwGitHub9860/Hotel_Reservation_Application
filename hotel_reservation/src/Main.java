@@ -103,7 +103,7 @@ public class Main {
                         if (bookRoomAnswer.equals("y")) {
                             // Takes User Input for Email Information
                             System.out.println("Enter email (format: name@domain.com): ");
-                            String email;
+                            String email; // defines "email"
                             while (true) {
                                 try {
                                     // Calls "inputEmail()" method to Take User Input for "email"

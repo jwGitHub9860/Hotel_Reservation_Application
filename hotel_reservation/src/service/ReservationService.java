@@ -14,7 +14,7 @@ public class ReservationService {
 
     // Reservation Collections
     public static Collection<Reservation> reservationCollection = new LinkedList<>();
-    public static Collection<Reservation> customerReservationCollection = new LinkedList<>();
+    public static Collection<Reservation> customerReservationCollection = new LinkedList<>(); // holds ONLY Reservations of CHOSEN Customer
 
     public static void addRoom(IRoom room) { roomCollection.add(room); } // adds "roomNumber", "price", and "roomType" to "roomList"
 
@@ -52,7 +52,16 @@ public class ReservationService {
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) { return roomCollection; }
 
-    public static Collection<Reservation> getCustomersReservation(Customer customer) { return reservationCollection; }
+    public static Collection<Reservation> getCustomersReservation(Customer customer) {
+        // Checks if Reservation was Made By "customer"
+        for (Reservation reservation : reservationCollection) {
+            // Indicates if Reservation was Made By "customer"
+            if (customer.equals(reservation.getCustomer())) { // Checks if "customer" in Reservation Matches "customer"
+                customerReservationCollection.add(reservation); // adds "reservation" to "customerReservationCollection"
+            }
+        }
+        return customerReservationCollection;
+    }
 
     public static void printAllReservation() {
         // Display reservation information inside "reservationCollection"

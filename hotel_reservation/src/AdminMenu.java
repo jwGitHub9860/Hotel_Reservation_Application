@@ -49,7 +49,7 @@ public class AdminMenu {
 
                         // Display room information inside "roomCollection"
                         for (IRoom room : roomList) {
-                            System.out.println(room + "\n");
+                            System.out.println(room);
                         }
                     } else if (adminUserInput == 3) {
                         AdminResource.displayAllReservations(); // calls "displayAllReservations()" method from "AdminResource.java"

@@ -146,8 +146,8 @@ public class Main {
                         String customerEmail = scanner.nextLine(); // takes User Input for "customerEmail"
 
                         // Displays "reservationCollection" collection
-                        ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
-                        for (Reservation reservation : ReservationService.reservationCollection) {
+                        Collection<Reservation> customerReservations = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
+                        for (Reservation reservation : customerReservations) {
                             System.out.println(reservation + "\n");
                         }
                     } else if (userInput == 3) {

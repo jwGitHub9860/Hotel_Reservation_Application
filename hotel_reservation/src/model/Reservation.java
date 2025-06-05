@@ -17,6 +17,7 @@ public class Reservation {
     }
 
     // Reservation Method Definitions
+    public Customer getCustomer() { return customer; }
     public IRoom getRoom() { return room; }
 
     @Override

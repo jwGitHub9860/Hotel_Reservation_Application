@@ -12,7 +12,9 @@ public class ReservationService {
     public static List<IRoom> roomCollection = new ArrayList<>();
     public static Collection<String> roomNumberCollection = new HashSet<String>(); // holds ONLY Room Numbers of rooms created
 
+    // Reservation Collections
     public static Collection<Reservation> reservationCollection = new LinkedList<>();
+    public static Collection<Reservation> customerReservationCollection = new LinkedList<>();
 
     public static void addRoom(IRoom room) { roomCollection.add(room); } // adds "roomNumber", "price", and "roomType" to "roomList"
 

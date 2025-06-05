@@ -103,10 +103,13 @@ public class Main {
                         if (bookRoomAnswer.equals("y")) {
                             // Takes User Input for Email Information
                             System.out.println("Enter email (format: name@domain.com): ");
-                            try {
-                                String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
-                            } catch (Exception e) {
-                                System.out.println("Please enter a different email (format: name@domain.com): ");
+                            while (true) {
+                                try {
+                                    String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
+                                    break;
+                                } catch (Exception e) {
+                                    System.out.println("Please enter a different email (format: name@domain.com): ");
+                                }
                             }
 
                             // Reserves Room for Customer

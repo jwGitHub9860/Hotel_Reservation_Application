@@ -1,8 +1,5 @@
 import api.AdminResource;
-import model.Customer;
-import model.IRoom;
-import model.Room;
-import model.RoomType;
+import model.*;
 import service.CustomerService;
 import service.ReservationService;
 
@@ -59,6 +56,10 @@ public class AdminMenu {
                         // Tests if "Customer" constructor works
                         Customer customerTest = new Customer("firstName", "lastName", "email"); // calls "Customer" constructor
                         System.out.println(customerTest); // calls "toString()" override method from "Customer.java"
+
+                        // Tests if "FreeRoom" constructor works
+                        FreeRoom freeRoom = new FreeRoom("100", 0.0, RoomType.DOUBLE); // calls "FreeRoom" constructor
+                        System.out.println(freeRoom); // calls "toString()" override method from "FreeRoom.java"
                     } else if (adminUserInput == 6) {
                         runAdmin = false;
                         System.out.println("\n");

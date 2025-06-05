@@ -124,7 +124,7 @@ public class Main {
                         // Displays "reservationCollection" collection
                         ReservationService.reservationCollection = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
                         for (Reservation reservation : ReservationService.reservationCollection) {
-                            System.out.println(reservation);
+                            System.out.println(reservation + "\n");
                         }
                     } else if (userInput == 3) {
                         while (true) {

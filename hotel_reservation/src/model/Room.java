@@ -41,6 +41,9 @@ public class Room implements IRoom {
             try {
                 roomNumberInput = String.valueOf(scanner.nextInt()); // takes User Input for "roomNumberInput"
 
+                // Ensures User Inputs "roomNumberInput" BEFORE Inputting "priceInput" to Prevent Infinite While Loop
+                if (roomNumberInput.isEmpty()) { roomNumberInput = String.valueOf(scanner.nextInt()); } // takes User Input for "roomNumberInput"
+
                 // Checks if "roomNumberCollection" is NOT empty
                 if (!ReservationService.roomNumberCollection.isEmpty()) {
                     // Prevents user from creating two Hotel Rooms with the Same Room Number

@@ -24,7 +24,7 @@ public class CustomerService {
             if (customerEmail.equals(email.getEmail())) {
                 return email;
             } else {
-                System.out.println("Email does not exist.");
+                System.out.println("Email does not exist.\n");
                 throw new NullPointerException("Email does not exist");
             }
         }

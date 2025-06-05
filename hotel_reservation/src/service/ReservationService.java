@@ -37,6 +37,12 @@ public class ReservationService {
             System.out.println("Room does not exist.\n");
             throw new NullPointerException("Room does not exist");
         }
+
+        // Indicates if Room Exists Or Not & Throws Exception if Room does NOT Exist
+        if (roomNotReserved) {
+            System.out.println("Room is not available.\n");
+            throw new NullPointerException("Room is not available");
+        }
         return null;
     }
 

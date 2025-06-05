@@ -38,6 +38,14 @@ public class ReservationService {
             throw new NullPointerException("Room does not exist");
         }
 
+        // Checks if Room is Already Reserved
+        for (Reservation reservation : reservationCollection) {
+            // Checks if "roomId" Number in Reservation Matches "room"
+            if (roomId.equals(reservation.getRoom().getRoomNumber())) {
+                throw new IllegalArgumentException("Room cannot be reserved");
+            }
+        }
+
         // Indicates if Room is Available Or Not & Throws Exception if Room is NOT Available
         if (roomNotReserved) {
             System.out.println("Room is not available.\n");

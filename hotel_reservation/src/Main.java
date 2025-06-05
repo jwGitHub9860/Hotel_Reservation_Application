@@ -106,8 +106,12 @@ public class Main {
                             String email;
                             while (true) {
                                 try {
-                                    email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
-                                    Customer existingEmail = HotelResource.getCustomer(email); // calls "getCustomer()" method to check if "email" exists in "customerCollection"
+                                    // Calls "inputEmail()" method to Take User Input for "email"
+                                    email = Customer.inputEmail();
+
+                                    // Calls "getCustomer()" method to Check if "email" EXISTS in "customerCollection"
+                                    Customer existingEmail = HotelResource.getCustomer(email);
+
                                     break;
                                 } catch (Exception e) {
                                     System.out.println("Please enter a different email (format: name@domain.com): ");

@@ -73,7 +73,7 @@ public class AdminMenu {
                         } else {
                             // Calls "Room" constructor
                             IRoom room = new Room(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
-                            System.out.println(room); // calls "toString()" override method from "FreeRoom.java"
+                            System.out.println(room); // calls "toString()" override method from "Room.java"
                         }
 
                     } else if (adminUserInput == 6) {

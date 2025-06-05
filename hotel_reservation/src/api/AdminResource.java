@@ -1,9 +1,6 @@
 package api;
 
-import model.Customer;
-import model.IRoom;
-import model.Room;
-import model.RoomType;
+import model.*;
 import service.CustomerService;
 import service.ReservationService;
 
@@ -40,15 +37,28 @@ public class AdminResource {
             Double roomPriceUserInput = Room.inputRoomPrice(); // calls "inputRoomPrice()" method
             RoomType roomTypeUserInput = Room.inputRoomType(); // calls "inputRoomType()" method
 
-            // Calls "Room" constructor
-            IRoom room = new Room(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
+            // Determines which Constructor to Call Based On "roomPriceUserInput"
+            if (roomPriceUserInput == 0.0) {
+                // Calls "FreeRoom" constructor
+                IRoom room = new FreeRoom(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
 
-            // Calls "addRoom()" method from SERVICE file
-            ReservationService.addRoom(room);
+                // Calls "addRoom()" method from SERVICE file
+                ReservationService.addRoom(room);
 
-            // Confirms if User wants to Add Another Room
-            System.out.println("Would you like to add another room (y/n): ");
-            addRoomRepeat = inputYOrN(); // calls "inputYOrN()" method to take User Input
+                // Confirms if User wants to Add Another Room
+                System.out.println("Would you like to add another room (y/n): ");
+                addRoomRepeat = inputYOrN(); // calls "inputYOrN()" method to take User Input
+            } else {
+                // Calls "Room" constructor
+                IRoom room = new Room(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
+
+                // Calls "addRoom()" method from SERVICE file
+                ReservationService.addRoom(room);
+
+                // Confirms if User wants to Add Another Room
+                System.out.println("Would you like to add another room (y/n): ");
+                addRoomRepeat = inputYOrN(); // calls "inputYOrN()" method to take User Input
+            }
         }
 
         // Sorts "roomList" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER

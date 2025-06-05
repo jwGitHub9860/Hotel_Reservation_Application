@@ -101,9 +101,13 @@ public class Main {
 
                         // Books Hotel Room
                         if (bookRoomAnswer.equals("y")) {
-                            // Takes User Input for Account Information
+                            // Takes User Input for Email Information
                             System.out.println("Enter email (format: name@domain.com): ");
-                            String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
+                            try {
+                                String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
+                            } catch (Exception e) {
+                                System.out.println("Please enter a different email (format: name@domain.com): ");
+                            }
 
                             // Reserves Room for Customer
                             System.out.println("\nChoose room number to reserve: ");

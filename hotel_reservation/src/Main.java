@@ -104,17 +104,28 @@ public class Main {
                             // Takes User Input for Account Information
                             System.out.println("Enter email (format: name@domain.com): ");
                             String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
-                            System.out.println("\nChoose room number to reserve: ");
-                            String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
 
-                            // Calls "getRoom()" method to Find "chosenRoomNumber" in "roomCollection"
-                            IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom);
+                            // Reserves Room for Customer
+                            while (true) {
+                                try {
+                                    // Takes User Input for Reserving Room Number
+                                    System.out.println("\nChoose room number to reserve: ");
+                                    String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
 
-                            // Call "bookARoom()" method to Create WHOLE "Reservation"
-                            Reservation customerReservation = HotelResource.bookARoom(email, chosenRoomNumber, checkInDate, checkOutDate);
+                                    // Calls "getRoom()" method to Find "chosenRoomNumber" in "roomCollection"
+                                    IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom);
 
-                            // Add "customerReservation" to "reservationCollection"
-                            ReservationService.reservationCollection.add(customerReservation);
+                                    // Calls "bookARoom()" method to Create WHOLE "Reservation"
+                                    Reservation customerReservation = HotelResource.bookARoom(email, chosenRoomNumber, checkInDate, checkOutDate);
+
+                                    // Adds "customerReservation" to "reservationCollection"
+                                    ReservationService.reservationCollection.add(customerReservation);
+
+                                    break;
+                                } catch (Exception e) { // if Room is Already Reserved OR does Not exist
+                                    System.out.println("Please choose a different room number to reserve: ");
+                                }
+                            }
                         }
                     } else if (userInput == 2) {
                         // Takes User Input for "customerEmail"

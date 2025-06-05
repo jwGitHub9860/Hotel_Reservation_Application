@@ -103,9 +103,10 @@ public class Main {
                         if (bookRoomAnswer.equals("y")) {
                             // Takes User Input for Email Information
                             System.out.println("Enter email (format: name@domain.com): ");
+                            String email;
                             while (true) {
                                 try {
-                                    String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
+                                    email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
                                     Customer existingEmail = HotelResource.getCustomer(email); // calls "getCustomer()" method to check if "email" exists in "customerCollection"
                                     break;
                                 } catch (Exception e) {

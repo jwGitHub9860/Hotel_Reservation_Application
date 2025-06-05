@@ -85,11 +85,11 @@ public class Main {
                                 System.out.println(room);
                             }
                         } else {
-                            System.out.println("There are no available rooms.\n");
+                            System.out.println("There are no available rooms.");
                         }
 
                         // Takes User Input for Answering if User wants to Book A Room or Already Has Account
-                        System.out.println("Would you like to book a room (y/n): ");
+                        System.out.println("\nWould you like to book a room (y/n): ");
                         String bookRoomAnswer = AdminResource.inputYOrN(); // calls "inputYOrN()" method to take user input for "bookRoomAnswer"
                         System.out.println("Do you have an account with us (y/n): ");
                         String accountAnswer = AdminResource.inputYOrN(); // calls "inputYOrN()" method to take user input for "accountAnswer"

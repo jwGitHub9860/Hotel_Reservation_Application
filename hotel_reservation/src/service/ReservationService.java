@@ -20,7 +20,7 @@ public class ReservationService {
 
     public static IRoom getARoom(String roomId) {
         boolean roomNotFound = false; // initial "roomNotFound" value
-        boolean roomNotReserved = true;
+        boolean roomNotReserved = true; // initial "roomNotReserved" value
 
         // Searches for Room Information with "roomId"
         for (IRoom room : roomCollection) {

@@ -57,9 +57,25 @@ public class AdminMenu {
                         Customer customerTest = new Customer("firstName", "lastName", "email"); // calls "Customer" constructor
                         System.out.println(customerTest); // calls "toString()" override method from "Customer.java"
 
-                        // Tests if "FreeRoom" constructor works
+                        // FIRST Test if "FreeRoom" constructor works
                         FreeRoom freeRoom = new FreeRoom("100", 0.0, RoomType.DOUBLE); // calls "FreeRoom" constructor
                         System.out.println(freeRoom); // calls "toString()" override method from "FreeRoom.java"
+
+                        // SECOND Test if "FreeRoom" constructor works
+                        // Obtains User Input for "roomNumber", "price", and "roomType" for "Room" constructor
+                        String roomNumberUserInput = Room.inputRoomNumber(); // calls "inputRoomNumber()" method
+                        Double roomPriceUserInput = Room.inputRoomPrice(); // calls "inputRoomPrice()" method
+                        RoomType roomTypeUserInput = Room.inputRoomType(); // calls "inputRoomType()" method
+
+                        if (roomPriceUserInput == 0.0) {
+                            IRoom room = new FreeRoom(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
+                            System.out.println(room); // calls "toString()" override method from "FreeRoom.java"
+                        } else {
+                            // Calls "Room" constructor
+                            IRoom room = new Room(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
+                            System.out.println(room); // calls "toString()" override method from "FreeRoom.java"
+                        }
+
                     } else if (adminUserInput == 6) {
                         runAdmin = false;
                         System.out.println("\n");

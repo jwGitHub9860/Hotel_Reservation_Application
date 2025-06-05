@@ -20,6 +20,7 @@ public class ReservationService {
 
     public static IRoom getARoom(String roomId) {
         boolean roomNotFound = false; // initial "roomNotFound" value
+        boolean roomNotReserved = true;
 
         // Searches for Room Information with "roomId"
         for (IRoom room : roomCollection) {
@@ -30,6 +31,8 @@ public class ReservationService {
                 roomNotFound = true;
             }
         }
+
+        // Indicates if Room Exists Or Not & Throws Exception if Room does NOT Exist
         if (roomNotFound) {
             System.out.println("Room does not exist.\n");
             throw new NullPointerException("Room does not exist");

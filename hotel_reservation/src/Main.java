@@ -106,10 +106,10 @@ public class Main {
                             String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
 
                             // Reserves Room for Customer
+                            System.out.println("\nChoose room number to reserve: ");
                             while (true) {
                                 try {
                                     // Takes User Input for Reserving Room Number
-                                    System.out.println("\nChoose room number to reserve: ");
                                     String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
 
                                     // Calls "getRoom()" method to Find "chosenRoomNumber" in "roomCollection"

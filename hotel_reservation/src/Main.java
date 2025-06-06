@@ -113,7 +113,7 @@ public class Main {
                                 System.out.println(room);
                             }
                         } else {
-                            System.out.println("There are no available rooms.");
+                            System.out.println("There are no available rooms.\n\nRooms must be created first.");
                         }
 
                         // Takes User Input for Answering if User wants to Book A Room or Already Has Account

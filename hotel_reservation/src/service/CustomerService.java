@@ -20,13 +20,16 @@ public class CustomerService {
     public static Customer getCustomer(String customerEmail) {
         boolean emailNotFound = false; // initial "emailNotFound" value
         
-        // Searches for Customer Information with "customerEmail"
-        for (Customer email : ReservationService.customerCollection) {
-            // Checks if "customerEmail" matches "email" of CURRENT "customer" within "customerCollection"
-            if (customerEmail.equals(email.getEmail())) {
-                return email;
-            } else {
-                emailNotFound = true;
+        // Checks if "customerCollection" is Empty or Not
+        if (!ReservationService.customerCollection.isEmpty()) {
+            // Searches for Customer Information with "customerEmail"
+            for (Customer email : ReservationService.customerCollection) {
+                // Checks if "customerEmail" matches "email" of CURRENT "customer" within "customerCollection"
+                if (customerEmail.equals(email.getEmail())) {
+                    return email;
+                } else {
+                    emailNotFound = true;
+                }
             }
         }
 

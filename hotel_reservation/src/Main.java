@@ -52,19 +52,23 @@ public class Main {
     }
 
     private static void inputAccountInformation() {
-        // Obtains User Input for "email", "firstName", and "lastName" for "HotelResource" constructor & "createACustomer()" method
+        // Obtains User Input for "email" for "HotelResource" constructor & "createACustomer()" method
         System.out.println("Enter email (format: name@domain.com): ");
         String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"
+
+        // Obtains User Input for "firstName" for "HotelResource" constructor & "createACustomer()" method
         System.out.println("\nEnter first name: ");
         String firstName = scanner.nextLine(); // takes User Input for "firstName"
 
         // Ensures User Inputs "firstName" BEFORE Inputting "lastName"
         if (firstName.isEmpty()) { firstName = scanner.nextLine(); } // takes User Input for "firstName"
 
+        // Obtains User Input for "lastName" for "HotelResource" constructor & "createACustomer()" method
         System.out.println("\nEnter last name: ");
         String lastName = scanner.nextLine(); // takes User Input for "lastName"
 
-        HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
+        // Calls "createACustomer()" method
+        HotelResource.createACustomer(email, firstName, lastName);
     }
 
     public static void main(String[] args) {

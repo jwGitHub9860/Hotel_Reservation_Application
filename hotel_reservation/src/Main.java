@@ -36,6 +36,11 @@ public class Main {
                     Integer.parseInt(datePart);
                 }
 
+                // Checks if "dateInput" Ends With "/"
+                if (dateInput.endsWith("/")) {
+                    throw new IllegalArgumentException("Date cannot end with \"/\"");
+                }
+
                 // Checks if "dateInput" is in "MM/dd/yyyy" format
                 return simpleDateFormat.parse(dateInput);
             } catch (NumberFormatException numberFormatException) {

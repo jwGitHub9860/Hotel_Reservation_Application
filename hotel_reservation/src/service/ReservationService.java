@@ -49,7 +49,6 @@ public class ReservationService {
                 }
             }
         }
-
         // calls "Reservation" constructor to Create & Return WHOLE "Reservation"
         return new Reservation(customer, room, checkInDate, checkOutDate);
     }

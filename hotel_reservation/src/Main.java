@@ -171,16 +171,16 @@ public class Main {
                                 // Calls "getCustomer()" method to Check if "customerEmail" EXISTS in "customerCollection"
                                 Customer existingEmail = HotelResource.getCustomer(customerEmail);
 
+                                // Displays "reservationCollection" collection
+                                Collection<Reservation> customerReservations = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
+                                for (Reservation reservation : customerReservations) {
+                                    System.out.println(reservation + "\n");
+                                }
+
                                 break;
                             } catch (Exception e) {
                                 System.out.println("Please enter a different email (format: name@domain.com): ");
                             }
-                        }
-
-                        // Displays "reservationCollection" collection
-                        Collection<Reservation> customerReservations = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
-                        for (Reservation reservation : customerReservations) {
-                            System.out.println(reservation + "\n");
                         }
                     } else if (userInput == 3) {
                         while (true) {

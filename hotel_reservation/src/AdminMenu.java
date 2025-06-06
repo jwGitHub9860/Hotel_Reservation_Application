@@ -31,7 +31,7 @@ public class AdminMenu {
                     System.out.println("Please select a number for the menu option");
 
                     // Takes User Input
-                    int adminUserInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
+                    int adminUserInput = scanner.nextInt(); // reads User Input & takes ONLY INTEGER from full line of user input
 
                     // MUST BE IN "if-else statements" OR CODE WILL JUMP TO ANOTHER CASE WHEN IT IS NOT SUPPOSE TO
                     if (adminUserInput == 1) {

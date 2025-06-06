@@ -165,11 +165,11 @@ public class Main {
                         System.out.println("Enter email (format: name@domain.com): ");
                         while (true) {
                             try {
-                                // Calls "inputEmail()" method to Take User Input for "email"
-                                String emailInput = Customer.inputEmail();
+                                // Calls "inputEmail()" method to Take User Input for "customerEmail"
+                                String customerEmail = Customer.inputEmail();
 
-                                // Calls "getCustomer()" method to Check if "email" EXISTS in "customerCollection"
-                                Customer existingEmail = HotelResource.getCustomer(emailInput);
+                                // Calls "getCustomer()" method to Check if "customerEmail" EXISTS in "customerCollection"
+                                Customer existingEmail = HotelResource.getCustomer(customerEmail);
 
                                 break;
                             } catch (Exception e) {

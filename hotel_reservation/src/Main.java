@@ -149,14 +149,12 @@ public class Main {
                                                 }
                                             }
                                         }
-
                                         break;
                                     }
                                 } catch (Exception e) { // in case user mistyped "email" OR answered Yes by mistake
                                     System.out.println("Are you sure that you have an account (y/n): ");
                                 }
                             }
-
                         } else { // if NO Rooms Were CREATED
                             System.out.println("There are no available rooms.\n\nRooms must be created first.\n");
                         }
@@ -176,7 +174,6 @@ public class Main {
                                 for (Reservation reservation : customerReservations) {
                                     System.out.println(reservation + "\n");
                                 }
-
                                 break;
                             } catch (Exception e) { // Customer should Technically ALREADY HAVE Account
                                 System.out.println("Please enter a different email (format: name@domain.com): ");

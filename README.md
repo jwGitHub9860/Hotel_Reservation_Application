@@ -83,4 +83,6 @@ sdellysse. “When to Use LinkedList over ArrayList in Java?” Edited by Simeon
 
 “W3schools.Com.” _W3Schools Online Web Tutorials_, www.w3schools.com/java/java_class_attributes.asp. Accessed 26 May 2025. 
 
+“W3schools.Com.” _W3Schools Online Web Tutorials_, www.w3schools.com/java/ref_string_endswith.asp. Accessed 6 June 2025. 
+
 Zilk. “Access to Private Collection Fields in Java.” _Stack Overflow_, 1 Oct. 2009, stackoverflow.com/questions/1502025/access-to-private-collection-fields-in-java. Accessed 24 May 2025.

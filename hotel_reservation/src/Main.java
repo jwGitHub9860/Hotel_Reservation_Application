@@ -24,11 +24,22 @@ public class Main {
         // Sets "lenient" to "false" to apply strict Date Parsing
         simpleDateFormat.setLenient(false);
 
-        // Checks if user inputted "checkInDateInput" in "MM/dd/yyyy" format
+        // Checks if user inputted "dateInput" in "MM/dd/yyyy" format
         while (true) {
             try {
-                String checkInDateInput = scanner.nextLine(); // takes User Input for "checkInDateInput" AS STRING
-                return simpleDateFormat.parse(checkInDateInput); // checks if "checkInDateInput" is in "MM/dd/yyyy" format
+                // Takes User Input for "dateInput" AS STRING
+                String dateInput = scanner.nextLine();
+
+                // Checks if Month, Day, and Year are ALL Integers
+                String[] dateInputArray = dateInput.split("/"); // splits "dateInput" at "/"
+                for (String datePart : dateInputArray) {
+                    Integer.parseInt(datePart);
+                }
+
+                // Checks if "dateInput" is in "MM/dd/yyyy" format
+                return simpleDateFormat.parse(dateInput);
+            } catch (NumberFormatException numberFormatException) {
+                System.out.println("Month, day, and year must all be integers: ");
             } catch (Exception e) {
                 System.out.println("Please enter date in \"MM/dd/yyyy\" format: ");
             }

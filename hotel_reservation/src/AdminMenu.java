@@ -32,55 +32,58 @@ public class AdminMenu {
 
                     // Takes User Input
                     int adminUserInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
-                    if (adminUserInput == 1) {
-                        // Calls "getAllCustomers()" method from "AdminResource.java"
-                        Collection<Customer> customerList = AdminResource.getAllCustomers();
 
-                        // Display customer information inside "customerList" collection
-                        for (Customer customer : customerList) {
-                            System.out.println(customer);
-                        }
-                    } else if (adminUserInput == 2) {
-                        // Calls "getAllRooms()" method from "AdminResource.java"
-                        Collection<IRoom> roomList = AdminResource.getAllRooms();
+                    switch (adminUserInput) {
+                        case 1:
+                            // Calls "getAllCustomers()" method from "AdminResource.java"
+                            Collection<Customer> customerList = AdminResource.getAllCustomers();
 
-                        // Display room information inside "roomCollection"
-                        for (IRoom room : roomList) {
-                            System.out.println(room);
-                        }
-                    } else if (adminUserInput == 3) {
-                        AdminResource.displayAllReservations(); // calls "displayAllReservations()" method from "AdminResource.java"
-                    } else if (adminUserInput == 4) {
-                        AdminResource.addRoom(ReservationService.roomCollection); // calls "addRoom()" method from "AdminResource.java"
-                    } else if (adminUserInput == 5) {
-                        // Tests if "Customer" constructor works
-                        Customer customerTest = new Customer("firstName", "lastName", "email"); // calls "Customer" constructor
-                        System.out.println(customerTest); // calls "toString()" override method from "Customer.java"
+                            // Display customer information inside "customerList" collection
+                            for (Customer customer : customerList) {
+                                System.out.println(customer);
+                            }
+                            break;
+                        case 2:
+                            // Calls "getAllRooms()" method from "AdminResource.java"
+                            Collection<IRoom> roomList = AdminResource.getAllRooms();
 
-                        // FIRST Test if "FreeRoom" constructor works
-                        FreeRoom freeRoom = new FreeRoom("100", 0.0, RoomType.DOUBLE); // calls "FreeRoom" constructor
-                        System.out.println(freeRoom); // calls "toString()" override method from "FreeRoom.java"
+                            // Display room information inside "roomCollection"
+                            for (IRoom room : roomList) {
+                                System.out.println(room);
+                            }
+                            break;
+                        case 3:
+                            AdminResource.displayAllReservations(); // calls "displayAllReservations()" method from "AdminResource.java"
+                        case 4:
+                            AdminResource.addRoom(ReservationService.roomCollection); // calls "addRoom()" method from "AdminResource.java"
+                        case 5:
+                            // Tests if "Customer" constructor works
+                            Customer customerTest = new Customer("firstName", "lastName", "email"); // calls "Customer" constructor
+                            System.out.println(customerTest); // calls "toString()" override method from "Customer.java"
 
-                        // SECOND Test if "FreeRoom" constructor works
-                        // Obtains User Input for "roomNumber", "price", and "roomType" for "Room" constructor
-                        String roomNumberUserInput = Room.inputRoomNumber(); // calls "inputRoomNumber()" method
-                        Double roomPriceUserInput = Room.inputRoomPrice(); // calls "inputRoomPrice()" method
-                        RoomType roomTypeUserInput = Room.inputRoomType(); // calls "inputRoomType()" method
+                            // FIRST Test if "FreeRoom" constructor works
+                            FreeRoom freeRoom = new FreeRoom("100", 0.0, RoomType.DOUBLE); // calls "FreeRoom" constructor
+                            System.out.println(freeRoom); // calls "toString()" override method from "FreeRoom.java"
 
-                        if (roomPriceUserInput == 0.0) {
-                            IRoom room = new FreeRoom(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
-                            System.out.println(room); // calls "toString()" override method from "FreeRoom.java"
-                        } else {
-                            // Calls "Room" constructor
-                            IRoom room = new Room(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
-                            System.out.println(room); // calls "toString()" override method from "Room.java"
-                        }
+                            // SECOND Test if "FreeRoom" constructor works
+                            // Obtains User Input for "roomNumber", "price", and "roomType" for "Room" constructor
+                            String roomNumberUserInput = Room.inputRoomNumber(); // calls "inputRoomNumber()" method
+                            Double roomPriceUserInput = Room.inputRoomPrice(); // calls "inputRoomPrice()" method
+                            RoomType roomTypeUserInput = Room.inputRoomType(); // calls "inputRoomType()" method
 
-                    } else if (adminUserInput == 6) {
-                        runAdmin = false;
-                        System.out.println("\n");
-                    } else {
-                        System.out.println("Please enter an integer between 1 and 6");
+                            if (roomPriceUserInput == 0.0) {
+                                IRoom room = new FreeRoom(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
+                                System.out.println(room); // calls "toString()" override method from "FreeRoom.java"
+                            } else {
+                                // Calls "Room" constructor
+                                IRoom room = new Room(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
+                                System.out.println(room); // calls "toString()" override method from "Room.java"
+                            }
+                        case 6:
+                            runAdmin = false;
+                            System.out.println("\n");
+                        default:
+                            System.out.println("Please enter an integer between 1 and 6");
                     }
                 } catch (Exception e) { // if user does NOT ENTER A NUMBER
                     System.out.println("\nPlease enter a number");

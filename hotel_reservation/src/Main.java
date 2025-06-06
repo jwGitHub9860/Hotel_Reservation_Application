@@ -112,47 +112,47 @@ public class Main {
                             for (IRoom room : roomSearch) {
                                 System.out.println(room);
                             }
-                        } else {
-                            System.out.println("There are no available rooms.\n\nRooms must be created first.");
-                        }
 
-                        // Takes User Input for Answering if User wants to Book A Room or Already Has Account
-                        System.out.println("\nWould you like to book a room (y/n): ");
-                        String bookRoomAnswer = AdminResource.inputYOrN(); // calls "inputYOrN()" method to take user input for "bookRoomAnswer"
-                        System.out.println("Do you have an account with us (y/n): ");
-                        String accountAnswer = AdminResource.inputYOrN(); // calls "inputYOrN()" method to take user input for "accountAnswer"
+                            // Takes User Input for Answering if User wants to Book A Room or Already Has Account
+                            System.out.println("\nWould you like to book a room (y/n): ");
+                            String bookRoomAnswer = AdminResource.inputYOrN(); // calls "inputYOrN()" method to take user input for "bookRoomAnswer"
+                            System.out.println("Do you have an account with us (y/n): ");
+                            String accountAnswer = AdminResource.inputYOrN(); // calls "inputYOrN()" method to take user input for "accountAnswer"
 
-                        // Creates Customer Account if User does NOT have account
-                        if (accountAnswer.equals("n")) {
-                            inputAccountInformation(); // calls "inputAccountInformation()" method
-                        }
+                            // Creates Customer Account if User does NOT have account
+                            if (accountAnswer.equals("n")) {
+                                inputAccountInformation(); // calls "inputAccountInformation()" method
+                            }
 
-                        // Books Hotel Room
-                        if (bookRoomAnswer.equals("y")) {
-                            // Takes User Input for "customerEmail"
-                            String customerEmail = inputEmailInformation(); // calls "inputEmailInformation()" method to take user input for "customerEmail"
+                            // Books Hotel Room
+                            if (bookRoomAnswer.equals("y")) {
+                                // Takes User Input for "customerEmail"
+                                String customerEmail = inputEmailInformation(); // calls "inputEmailInformation()" method to take user input for "customerEmail"
 
-                            // Reserves Room for Customer
-                            System.out.println("\nChoose room number to reserve: ");
-                            while (true) {
-                                try {
-                                    // Takes User Input for Reserving Room Number
-                                    String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
+                                // Reserves Room for Customer
+                                System.out.println("\nChoose room number to reserve: ");
+                                while (true) {
+                                    try {
+                                        // Takes User Input for Reserving Room Number
+                                        String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
 
-                                    // Calls "getRoom()" method to Find "chosenRoomNumber" in "roomCollection"
-                                    IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom);
+                                        // Calls "getRoom()" method to Find "chosenRoomNumber" in "roomCollection"
+                                        IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom);
 
-                                    // Calls "bookARoom()" method to Create WHOLE "Reservation"
-                                    Reservation customerReservation = HotelResource.bookARoom(customerEmail, chosenRoomNumber, checkInDate, checkOutDate);
+                                        // Calls "bookARoom()" method to Create WHOLE "Reservation"
+                                        Reservation customerReservation = HotelResource.bookARoom(customerEmail, chosenRoomNumber, checkInDate, checkOutDate);
 
-                                    // Adds "customerReservation" to "reservationCollection"
-                                    ReservationService.reservationCollection.add(customerReservation);
+                                        // Adds "customerReservation" to "reservationCollection"
+                                        ReservationService.reservationCollection.add(customerReservation);
 
-                                    break;
-                                } catch (Exception e) { // if Room is Already Reserved OR does Not exist
-                                    System.out.println("Please choose a different room number to reserve: ");
+                                        break;
+                                    } catch (Exception e) { // if Room is Already Reserved OR does Not exist
+                                        System.out.println("Please choose a different room number to reserve: ");
+                                    }
                                 }
                             }
+                        } else { // if NO Rooms Were CREATED
+                            System.out.println("There are no available rooms.\n\nRooms must be created first.");
                         }
                     } else if (userInput == 2) {
                         // Takes User Input for "customerEmail"

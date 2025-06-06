@@ -62,6 +62,23 @@ public class Main {
         HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
     }
 
+    private static String inputEmailInformation() {
+        System.out.println("Enter email (format: name@domain.com): ");
+        while (true) {
+            try {
+                // Calls "inputEmail()" method to Take User Input for "email"
+                String emailInput = Customer.inputEmail();
+
+                // Calls "getCustomer()" method to Check if "email" EXISTS in "customerCollection"
+                Customer existingEmail = HotelResource.getCustomer(emailInput);
+
+                return emailInput;
+            } catch (Exception e) {
+                System.out.println("Please enter a different email (format: name@domain.com): ");
+            }
+        }
+    }
+
     public static void main(String[] args) {
         // Main Menu
         boolean runApplication = true;
@@ -112,22 +129,8 @@ public class Main {
 
                         // Books Hotel Room
                         if (bookRoomAnswer.equals("y")) {
-                            // Takes User Input for Email Information
-                            System.out.println("Enter email (format: name@domain.com): ");
-                            String email; // defines "email"
-                            while (true) {
-                                try {
-                                    // Calls "inputEmail()" method to Take User Input for "email"
-                                    email = Customer.inputEmail();
-
-                                    // Calls "getCustomer()" method to Check if "email" EXISTS in "customerCollection"
-                                    Customer existingEmail = HotelResource.getCustomer(email);
-
-                                    break;
-                                } catch (Exception e) {
-                                    System.out.println("Please enter a different email (format: name@domain.com): ");
-                                }
-                            }
+                            // Takes User Input for "customerEmail"
+                            String customerEmail = inputEmailInformation(); // calls "inputEmailInformation()" method to take user input for "customerEmail"
 
                             // Reserves Room for Customer
                             System.out.println("\nChoose room number to reserve: ");
@@ -140,7 +143,7 @@ public class Main {
                                     IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom);
 
                                     // Calls "bookARoom()" method to Create WHOLE "Reservation"
-                                    Reservation customerReservation = HotelResource.bookARoom(email, chosenRoomNumber, checkInDate, checkOutDate);
+                                    Reservation customerReservation = HotelResource.bookARoom(customerEmail, chosenRoomNumber, checkInDate, checkOutDate);
 
                                     // Adds "customerReservation" to "reservationCollection"
                                     ReservationService.reservationCollection.add(customerReservation);
@@ -153,8 +156,7 @@ public class Main {
                         }
                     } else if (userInput == 2) {
                         // Takes User Input for "customerEmail"
-                        System.out.println("Enter email (format: name@domain.com): ");
-                        String customerEmail = scanner.nextLine(); // takes User Input for "customerEmail"
+                        String customerEmail = inputEmailInformation(); // calls "inputEmailInformation()" method to take user input for "customerEmail"
 
                         // Displays "reservationCollection" collection
                         Collection<Reservation> customerReservations = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method

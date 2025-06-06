@@ -44,8 +44,9 @@ public class ReservationService {
         for (Reservation reservation : reservationCollection) {
             // Indicates if Room is Available Or Not & Throws Exception if Room is NOT Available
             if (checkInDate.equals(reservation.getCheckInDate())) { // Checks if "checkInDate" in Reservation Matches ANY "checkInDate" in "reservationCollection"
-                System.out.println("Room is not available.\n");
-                throw new IllegalArgumentException("Room cannot be reserved");
+                if (room.getRoomNumber().equals(reservation.getRoom().getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "reservationCollection"
+                    throw new IllegalArgumentException("Room cannot be reserved");
+                }
             }
         }
 

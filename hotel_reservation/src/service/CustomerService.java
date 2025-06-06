@@ -31,6 +31,8 @@ public class CustomerService {
                     emailNotFound = true;
                 }
             }
+        } else { // if "customerCollection" is Empty
+            emailNotFound = true;
         }
 
         // Indicates if Email Exists Or Not & Throws Exception if Email does NOT Exist

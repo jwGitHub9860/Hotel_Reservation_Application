@@ -152,7 +152,7 @@ public class Main {
                                 }
                             }
                         } else { // if NO Rooms Were CREATED
-                            System.out.println("There are no available rooms.\n\nRooms must be created first.");
+                            System.out.println("There are no available rooms.\n\nRooms must be created first.\n");
                         }
                     } else if (userInput == 2) {
                         // Takes User Input for "customerEmail"

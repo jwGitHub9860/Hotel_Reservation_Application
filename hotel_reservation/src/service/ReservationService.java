@@ -36,7 +36,10 @@ public class ReservationService {
             System.out.println("Room does not exist.\n");
             throw new NullPointerException("Room does not exist");
         }
+        return null;
+    }
 
+    public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
         // Checks if Room is Already Reserved
         for (Reservation reservation : reservationCollection) {
             // Indicates if Room is Available Or Not & Throws Exception if Room is NOT Available
@@ -45,10 +48,10 @@ public class ReservationService {
                 throw new IllegalArgumentException("Room cannot be reserved");
             }
         }
-        return null;
-    }
 
-    public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) { return new Reservation(customer, room, checkInDate, checkOutDate); } // calls "Reservation" constructor to Create & Return WHOLE "Reservation"
+        // calls "Reservation" constructor to Create & Return WHOLE "Reservation"
+        return new Reservation(customer, room, checkInDate, checkOutDate);
+    }
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) { return roomCollection; }
 

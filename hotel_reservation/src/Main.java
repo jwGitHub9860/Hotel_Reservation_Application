@@ -178,7 +178,7 @@ public class Main {
                                 }
 
                                 break;
-                            } catch (Exception e) {
+                            } catch (Exception e) { // Customer should Technically ALREADY HAVE Account
                                 System.out.println("Please enter a different email (format: name@domain.com): ");
                             }
                         }

@@ -135,34 +135,35 @@ public class Main {
                                     } else {
                                         // Takes User Input for "customerEmail"
                                         String customerEmail = inputEmailInformation(); // calls "inputEmailInformation()" method to take user input for "customerEmail"
+
+                                        // Books Hotel Room
+                                        if (bookRoomAnswer.equals("y")) {
+                                            // Reserves Room for Customer
+                                            System.out.println("\nChoose room number to reserve: ");
+                                            while (true) {
+                                                try {
+                                                    // Takes User Input for Reserving Room Number
+                                                    String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
+
+                                                    // Calls "getRoom()" method to Find "chosenRoomNumber" in "roomCollection"
+                                                    IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom);
+
+                                                    // Calls "bookARoom()" method to Create WHOLE "Reservation"
+                                                    Reservation customerReservation = HotelResource.bookARoom(customerEmail, chosenRoomNumber, checkInDate, checkOutDate);
+
+                                                    // Adds "customerReservation" to "reservationCollection"
+                                                    ReservationService.reservationCollection.add(customerReservation);
+
+                                                    break;
+                                                } catch (Exception e) { // if Room is Already Reserved OR does Not exist
+                                                    System.out.println("Please choose a different room number to reserve: ");
+                                                }
+                                            }
+                                        }
+                                        break;
                                     }
                                 } catch (Exception e) { // in case user mistyped "email" OR answered Yes by mistake
                                     System.out.println("Are you sure that you have an account (y/n): ");
-                                }
-                            }
-
-                            // Books Hotel Room
-                            if (bookRoomAnswer.equals("y")) {
-                                // Reserves Room for Customer
-                                System.out.println("\nChoose room number to reserve: ");
-                                while (true) {
-                                    try {
-                                        // Takes User Input for Reserving Room Number
-                                        String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
-
-                                        // Calls "getRoom()" method to Find "chosenRoomNumber" in "roomCollection"
-                                        IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom);
-
-                                        // Calls "bookARoom()" method to Create WHOLE "Reservation"
-                                        Reservation customerReservation = HotelResource.bookARoom(customerEmail, chosenRoomNumber, checkInDate, checkOutDate);
-
-                                        // Adds "customerReservation" to "reservationCollection"
-                                        ReservationService.reservationCollection.add(customerReservation);
-
-                                        break;
-                                    } catch (Exception e) { // if Room is Already Reserved OR does Not exist
-                                        System.out.println("Please choose a different room number to reserve: ");
-                                    }
                                 }
                             }
                         } else { // if NO Rooms Were CREATED

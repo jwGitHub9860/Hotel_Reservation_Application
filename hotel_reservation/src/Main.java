@@ -67,10 +67,6 @@ public class Main {
         HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
     }
 
-    /*private static String inputEmailInformation() {
-
-    }*/
-
     public static void main(String[] args) {
         // Main Menu
         boolean runApplication = true;
@@ -182,10 +178,10 @@ public class Main {
                         }
 
                         // Displays "reservationCollection" collection
-                        /*Collection<Reservation> customerReservations = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
+                        Collection<Reservation> customerReservations = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
                         for (Reservation reservation : customerReservations) {
                             System.out.println(reservation + "\n");
-                        }*/
+                        }
                     } else if (userInput == 3) {
                         while (true) {
                             try {

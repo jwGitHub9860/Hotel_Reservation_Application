@@ -31,6 +31,8 @@ codeFinatic. “Parseexception Java.” Edited by Jops, _Stack Overflow_, 20 Apr
 
 “Decimalformat toPattern() Method in Java.” GeeksforGeeks, GeeksforGeeks, 1 Apr. 2019, www.geeksforgeeks.org/decimalformat-topattern-method-in-java/. Accessed 27 May 2025.
 
+Dominik. “Java Regular Expression Removing Everything but Numbers from String.” Edited by DaMainBoss, _Stack Overflow_, 30 July 2011, stackoverflow.com/questions/6883579/java-regular-expression-removing-everything-but-numbers-from-string/6883591. Accessed 6 Jun. 2025.
+
 Dong, Nick. “nextInt() Caused an Infinit Loop.” _Stack Overflow_, 29 Mar. 2022, stackoverflow.com/questions/71665702/nextint-caused-an-infinit-loop. Accessed 24 May 2025.
 
 “Final Keyword in Java.” _GeeksforGeeks_, 5 May 2025, www.geeksforgeeks.org/final-keyword-in-java/. Accessed 26 May 2025.

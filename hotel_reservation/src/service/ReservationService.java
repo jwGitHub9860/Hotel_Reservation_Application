@@ -13,7 +13,7 @@ public class ReservationService {
     public static Collection<String> roomNumberCollection = new HashSet<String>(); // holds ONLY Room Numbers of rooms created
 
     // Reservation Collection
-    public static Collection<Reservation> reservationCollection = new LinkedList<>();
+    public static List<Reservation> reservationCollection = new LinkedList<>();
 
     public static void addRoom(IRoom room) { roomCollection.add(room); } // adds "roomNumber", "price", and "roomType" to "roomList"
 
@@ -69,6 +69,15 @@ public class ReservationService {
     }
 
     public static void printAllReservation() {
+        // Sorts "roomList" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
+        reservationCollection.sort(Comparator.comparing(reservation -> {
+            String string = reservation.getCustomer().getLastName(); // obtains "lastName" of "customer"
+            String[] customerLastNames = string.split("\\."); // "\\." - match the character
+            int firstLastName = Integer.parseInt(customerLastNames[0]); // obtains 1st Last Name
+            int secondLastName = customerLastNames.length > 1 ? Integer.parseInt(customerLastNames[1]) : 0; // finds which Last Name should go first
+            return firstLastName * 1000 + secondLastName; // returns "firstLastName" and "secondLastName" in Alphabetical
+        }));
+        
         // Display reservation information inside "reservationCollection"
         for (Reservation reservation : reservationCollection) {
             System.out.println(reservation);

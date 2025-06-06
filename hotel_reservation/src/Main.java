@@ -67,22 +67,9 @@ public class Main {
         HotelResource.createACustomer(email, firstName, lastName); // calls "createACustomer()" method
     }
 
-    private static String inputEmailInformation() {
-        System.out.println("Enter email (format: name@domain.com): ");
-        while (true) {
-            try {
-                // Calls "inputEmail()" method to Take User Input for "email"
-                String emailInput = Customer.inputEmail();
+    /*private static String inputEmailInformation() {
 
-                // Calls "getCustomer()" method to Check if "email" EXISTS in "customerCollection"
-                Customer existingEmail = HotelResource.getCustomer(emailInput);
-
-                return emailInput;
-            } catch (Exception e) {
-                System.out.println("Please enter a different email (format: name@domain.com): ");
-            }
-        }
-    }
+    }*/
 
     public static void main(String[] args) {
         // Main Menu
@@ -134,50 +121,71 @@ public class Main {
                                         System.out.println("\nDo you have an account with us (y/n): "); // asks if user now has account
                                     } else {
                                         // Takes User Input for "customerEmail"
-                                        String customerEmail = inputEmailInformation(); // calls "inputEmailInformation()" method to take user input for "customerEmail"
+                                        System.out.println("Enter email (format: name@domain.com): ");
 
-                                        // Books Hotel Room
-                                        if (bookRoomAnswer.equals("y")) {
-                                            // Reserves Room for Customer
-                                            System.out.println("\nChoose room number to reserve: ");
-                                            while (true) {
-                                                try {
-                                                    // Takes User Input for Reserving Room Number
-                                                    String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
+                                        // Calls "inputEmail()" method to Take User Input for "email"
+                                        String emailInput = Customer.inputEmail();
 
-                                                    // Calls "getRoom()" method to Find "chosenRoomNumber" in "roomCollection"
-                                                    IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom);
+                                        // Calls "getCustomer()" method to Check if "email" EXISTS in "customerCollection"
+                                        Customer existingEmail = HotelResource.getCustomer(emailInput);
 
-                                                    // Calls "bookARoom()" method to Create WHOLE "Reservation"
-                                                    Reservation customerReservation = HotelResource.bookARoom(customerEmail, chosenRoomNumber, checkInDate, checkOutDate);
-
-                                                    // Adds "customerReservation" to "reservationCollection"
-                                                    ReservationService.reservationCollection.add(customerReservation);
-
-                                                    break;
-                                                } catch (Exception e) { // if Room is Already Reserved OR does Not exist
-                                                    System.out.println("Please choose a different room number to reserve: ");
-                                                }
-                                            }
-                                        }
                                         break;
                                     }
                                 } catch (Exception e) { // in case user mistyped "email" OR answered Yes by mistake
                                     System.out.println("Are you sure that you have an account (y/n): ");
                                 }
                             }
+
+                            // Books Hotel Room
+                            if (bookRoomAnswer.equals("y")) {
+                                // Reserves Room for Customer
+                                System.out.println("\nChoose room number to reserve: ");
+                                while (true) {
+                                    try {
+                                        // Takes User Input for Reserving Room Number
+                                        String chosenRoom = scanner.nextLine(); // takes User Input for "chosenRoom"
+
+                                        // Calls "getRoom()" method to Find "chosenRoomNumber" in "roomCollection"
+                                        IRoom chosenRoomNumber = HotelResource.getRoom(chosenRoom);
+
+                                        // Calls "bookARoom()" method to Create WHOLE "Reservation"
+                                        Reservation customerReservation = HotelResource.bookARoom(customerEmail, chosenRoomNumber, checkInDate, checkOutDate);
+
+                                        // Adds "customerReservation" to "reservationCollection"
+                                        ReservationService.reservationCollection.add(customerReservation);
+
+                                        break;
+                                    } catch (Exception e) { // if Room is Already Reserved OR does Not exist
+                                        System.out.println("Please choose a different room number to reserve: ");
+                                    }
+                                }
+                            }
+
                         } else { // if NO Rooms Were CREATED
                             System.out.println("There are no available rooms.\n\nRooms must be created first.\n");
                         }
                     } else if (userInput == 2) {
                         // Takes User Input for "customerEmail"
-                        String customerEmail = inputEmailInformation(); // calls "inputEmailInformation()" method to take user input for "customerEmail"
+                        System.out.println("Enter email (format: name@domain.com): ");
+                        while (true) {
+                            try {
+                                // Calls "inputEmail()" method to Take User Input for "email"
+                                String emailInput = Customer.inputEmail();
+
+                                // Calls "getCustomer()" method to Check if "email" EXISTS in "customerCollection"
+                                Customer existingEmail = HotelResource.getCustomer(emailInput);
+
+                                break;
+                            } catch (Exception e) {
+                                System.out.println("Please enter a different email (format: name@domain.com): ");
+                            }
+                        }
 
                         // Displays "reservationCollection" collection
-                        Collection<Reservation> customerReservations = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
+                        /*Collection<Reservation> customerReservations = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
                         for (Reservation reservation : customerReservations) {
                             System.out.println(reservation + "\n");
-                        }
+                        }*/
                     } else if (userInput == 3) {
                         while (true) {
                             try {

@@ -121,19 +121,28 @@ public class Main {
                             // Takes User Input for Answering if User wants to Book A Room or Already Has Account
                             System.out.println("\nWould you like to book a room (y/n): ");
                             String bookRoomAnswer = AdminResource.inputYOrN(); // calls "inputYOrN()" method to take user input for "bookRoomAnswer"
-                            System.out.println("Do you have an account with us (y/n): ");
-                            String accountAnswer = AdminResource.inputYOrN(); // calls "inputYOrN()" method to take user input for "accountAnswer"
 
-                            // Creates Customer Account if User does NOT have account
-                            if (accountAnswer.equals("n")) {
-                                inputAccountInformation(); // calls "inputAccountInformation()" method
+                            // Double-Checks that User has Account
+                            System.out.println("Do you have an account with us (y/n): ");
+                            while (true) {
+                                try {
+                                    String accountAnswer = AdminResource.inputYOrN(); // calls "inputYOrN()" method to take user input for "accountAnswer"
+
+                                    // Creates Customer Account if User does NOT have account
+                                    if (accountAnswer.equals("n")) {
+                                        inputAccountInformation(); // calls "inputAccountInformation()" method
+                                        System.out.println("\nDo you have an account with us (y/n): "); // asks if user now has account
+                                    } else {
+                                        // Takes User Input for "customerEmail"
+                                        String customerEmail = inputEmailInformation(); // calls "inputEmailInformation()" method to take user input for "customerEmail"
+                                    }
+                                } catch (Exception e) { // in case user mistyped "email" OR answered Yes by mistake
+                                    System.out.println("Are you sure that you have an account (y/n): ");
+                                }
                             }
 
                             // Books Hotel Room
                             if (bookRoomAnswer.equals("y")) {
-                                // Takes User Input for "customerEmail"
-                                String customerEmail = inputEmailInformation(); // calls "inputEmailInformation()" method to take user input for "customerEmail"
-
                                 // Reserves Room for Customer
                                 System.out.println("\nChoose room number to reserve: ");
                                 while (true) {

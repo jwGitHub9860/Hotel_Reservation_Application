@@ -53,34 +53,31 @@ public class Main {
                     dateInput2Array = dateInput.split("/"); // splits "checkOutDate" into "dateInput2Array" IN "String" FORM
                 }
 
-                // Inputs String holders for "dateInput1Array" IF "dateInput1Array" Is NOT EMPTY
-                if (!((dateInput1Array.length) == 0)) {
-                    // String holders for "dateInput1Array"
-                    int month1 = Integer.parseInt(dateInput1Array[0]);
-                    int day1 = Integer.parseInt(dateInput1Array[1]);
-                    int year1 = Integer.parseInt(dateInput1Array[2]);
+                // String holders for "dateInput1Array"
+                int month1 = Integer.parseInt(dateInput1Array[0]);
+                int day1 = Integer.parseInt(dateInput1Array[1]);
+                int year1 = Integer.parseInt(dateInput1Array[2]);
 
-                    // Inputs String holders for "dateInput2Array" IF "dateInput2Array" Is NOT EMPTY
-                    if (!((dateInput2Array.length) == 0)) {
-                        // String holders for "dateInput2Array"
-                        int month2 = Integer.parseInt(dateInput2Array[0]);
-                        int day2 = Integer.parseInt(dateInput2Array[1]);
-                        int year2 = Integer.parseInt(dateInput2Array[2]);
+                // Inputs String holders for "dateInput2Array" IF "dateInput2Array" Is NOT EMPTY
+                if (!((dateInput2Array.length) == 0)) {
+                    // String holders for "dateInput2Array"
+                    int month2 = Integer.parseInt(dateInput2Array[0]);
+                    int day2 = Integer.parseInt(dateInput2Array[1]);
+                    int year2 = Integer.parseInt(dateInput2Array[2]);
 
-                        // Checks if Check-In Date is Later Than Check-Out Date
-                        if (year1 > year2) { // Ex. Check-In Date: 2/1/2020 & Check-Out Date: 2/1/2019
-                            dateInput1Array = new String[0]; // REINITIALIZE "dateInput1Array"
-                            dateInput2Array = new String[0]; // REINITIALIZE "dateInput2Array"
-                            throw new IllegalArgumentException("Check-in date cannot be later than check-out date.");
-                        } else if ((year1 == year2) && (month1 > month2)) { // Ex.1: Check-In Date: 7/1/2020 & Check-Out Date: 3/11/2020 & Ex.2: Check-In Date: 7/11/2020 & Check-Out Date: 3/1/2020
-                            dateInput1Array = new String[0]; // REINITIALIZE "dateInput1Array"
-                            dateInput2Array = new String[0]; // REINITIALIZE "dateInput2Array"
-                            throw new IllegalArgumentException("Check-in date cannot be later than check-out date.");
-                        } else if ((year1 == year2) && (month1 == month2) && (day1 > day2)) { // Ex. Check-In Date: 5/9/2020 & Check-Out Date: 5/1/2020
-                            dateInput1Array = new String[0]; // REINITIALIZE "dateInput1Array"
-                            dateInput2Array = new String[0]; // REINITIALIZE "dateInput2Array"
-                            throw new IllegalArgumentException("Check-in date cannot be later than check-out date.");
-                        }
+                    // Checks if Check-In Date is Later Than Check-Out Date
+                    if (year1 > year2) { // Ex. Check-In Date: 2/1/2020 & Check-Out Date: 2/1/2019
+                        dateInput1Array = new String[0]; // REINITIALIZE "dateInput1Array"
+                        dateInput2Array = new String[0]; // REINITIALIZE "dateInput2Array"
+                        throw new IllegalArgumentException("Check-in date cannot be later than check-out date.");
+                    } else if ((year1 == year2) && (month1 > month2)) { // Ex.1: Check-In Date: 7/1/2020 & Check-Out Date: 3/11/2020 & Ex.2: Check-In Date: 7/11/2020 & Check-Out Date: 3/1/2020
+                        dateInput1Array = new String[0]; // REINITIALIZE "dateInput1Array"
+                        dateInput2Array = new String[0]; // REINITIALIZE "dateInput2Array"
+                        throw new IllegalArgumentException("Check-in date cannot be later than check-out date.");
+                    } else if ((year1 == year2) && (month1 == month2) && (day1 > day2)) { // Ex. Check-In Date: 5/9/2020 & Check-Out Date: 5/1/2020
+                        dateInput1Array = new String[0]; // REINITIALIZE "dateInput1Array"
+                        dateInput2Array = new String[0]; // REINITIALIZE "dateInput2Array"
+                        throw new IllegalArgumentException("Check-in date cannot be later than check-out date.");
                     }
                 }
 

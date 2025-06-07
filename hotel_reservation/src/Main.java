@@ -53,6 +53,16 @@ public class Main {
                     dateInput2Array = dateInput.split("/"); // splits "checkOutDate" into "dateInput2Array" IN "String" FORM
                 }
 
+                // String holders for "dateInput1Array"
+                String month1 = dateInput1Array[0];
+                String day1 = dateInput1Array[1];
+                String year1 = dateInput1Array[2];
+
+                // String holders for "dateInput2Array"
+                String month2 = dateInput2Array[0];
+                String day2 = dateInput2Array[1];
+                String year2 = dateInput2Array[2];
+
                 // Checks if "dateInput" is in "MM/dd/yyyy" format
                 return simpleDateFormat.parse(dateInput);
             } catch (NumberFormatException numberFormatException) {

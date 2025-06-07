@@ -9,6 +9,7 @@ import service.ReservationService;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Scanner;
@@ -40,6 +41,10 @@ public class Main {
                 if (dateInput.endsWith("[^0-9]")) {
                     throw new IllegalArgumentException("Date cannot end with anything, but a number, 0-9"); // Throws Error to Prevent Malicious Attacks (ex. SQL Injection)
                 }
+
+                // Checks if Check-In Date is Later Than Check-Out Date
+                String[] dateInput1Array = dateInput.split("/"); // holds "checkInDate" IN "String" FORM
+                String[] dateInput2Array = dateInput.split("/"); // holds "checkOutDate" IN "String" FORM
 
                 // Checks if "dateInput" is in "MM/dd/yyyy" format
                 return simpleDateFormat.parse(dateInput);

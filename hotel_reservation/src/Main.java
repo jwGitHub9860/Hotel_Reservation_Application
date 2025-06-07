@@ -36,9 +36,9 @@ public class Main {
                     Integer.parseInt(datePart);
                 }
 
-                // Checks if "dateInput" Ends With "/"
-                if (dateInput.endsWith("/")) {
-                    throw new IllegalArgumentException("Date cannot end with \"/\"");
+                // Checks if "dateInput" Ends With ANYTHING BUT A NUMBER, "0-9"
+                if (dateInput.endsWith("[^0-9]")) {
+                    throw new IllegalArgumentException("Date cannot end with anything, but a number, 0-9"); // Throws Error to Prevent Malicious Attacks (ex. SQL Injection)
                 }
 
                 // Checks if "dateInput" is in "MM/dd/yyyy" format

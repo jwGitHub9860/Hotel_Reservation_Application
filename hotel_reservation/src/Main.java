@@ -30,7 +30,10 @@ public class Main {
         String[] dateInput2Array = new String[0]; // holds "checkOutDate" IN "String" FORM
 
         // String holders for "dateInput1Array"
-        int month1, day1, year1;
+        int month1 = 0, day1 = 0, year1 = 0;
+
+        // String holders for "dateInput2Array"
+        int month2, day2, year2;
 
         // Checks if user inputted "dateInput" in "MM/dd/yyyy" format
         while (true) {
@@ -58,7 +61,7 @@ public class Main {
 
                 // Inputs String holders for "dateInput1Array" IF "dateInput1Array" Is NOT EMPTY
                 if (!((dateInput1Array.length) == 0)) {
-                    // String holders for "dateInput1Array"
+                    // Input "dateInput1Array" Elements into String holders
                     month1 = Integer.parseInt(dateInput1Array[0]);
                     day1 = Integer.parseInt(dateInput1Array[1]);
                     year1 = Integer.parseInt(dateInput1Array[2]);
@@ -66,10 +69,10 @@ public class Main {
 
                 // Inputs String holders for "dateInput2Array" IF "dateInput2Array" Is NOT EMPTY
                 if (!((dateInput2Array.length) == 0)) {
-                    // String holders for "dateInput2Array"
-                    int month2 = Integer.parseInt(dateInput2Array[0]);
-                    int day2 = Integer.parseInt(dateInput2Array[1]);
-                    int year2 = Integer.parseInt(dateInput2Array[2]);
+                    // Input "dateInput2Array" Elements into String holders
+                    month2 = Integer.parseInt(dateInput2Array[0]);
+                    day2 = Integer.parseInt(dateInput2Array[1]);
+                    year2 = Integer.parseInt(dateInput2Array[2]);
 
                     // Checks if Check-In Date is Later Than Check-Out Date
                     if (year1 > year2) { // Ex. Check-In Date: 2/1/2020 & Check-Out Date: 2/1/2019

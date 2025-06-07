@@ -59,16 +59,16 @@ public class Main {
                     dateInput2Array = dateInput.split("/"); // splits "checkOutDate" into "dateInput2Array" IN "String" FORM
                 }
 
-                // Inputs String holders for "dateInput1Array" IF "dateInput1Array" Is NOT EMPTY
-                if (!((dateInput1Array.length) == 0)) {
+                // Inputs String holders for "dateInput1Array" IF "dateInput1Array" IS EMPTY
+                if (dateInput1Array.length == 0) {
                     // Input "dateInput1Array" Elements into String holders
                     month1 = Integer.parseInt(dateInput1Array[0]);
                     day1 = Integer.parseInt(dateInput1Array[1]);
                     year1 = Integer.parseInt(dateInput1Array[2]);
                 }
 
-                // Inputs String holders for "dateInput2Array" IF "dateInput2Array" Is NOT EMPTY
-                if (!((dateInput2Array.length) == 0)) {
+                // Inputs String holders for "dateInput2Array" IF "dateInput2Array" IS EMPTY
+                if (dateInput2Array.length == 0) {
                     // Input "dateInput2Array" Elements into String holders
                     month2 = Integer.parseInt(dateInput2Array[0]);
                     day2 = Integer.parseInt(dateInput2Array[1]);

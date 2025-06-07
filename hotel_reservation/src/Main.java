@@ -43,8 +43,13 @@ public class Main {
                 }
 
                 // Checks if Check-In Date is Later Than Check-Out Date
-                String[] dateInput1Array = dateInput.split("/"); // holds "checkInDate" IN "String" FORM
-                String[] dateInput2Array = dateInput.split("/"); // holds "checkOutDate" IN "String" FORM
+                String[] dateInput1Array = new String[0]; // holds "checkInDate" IN "String" FORM
+                String[] dateInput2Array = new String[0]; // holds "checkOutDate" IN "String" FORM
+                if (dateInput1Array == null) {
+                    dateInput1Array = dateInput.split("/"); // splits "checkInDate" into "dateInput1Array" IN "String" FORM
+                } else {
+                    dateInput2Array = dateInput.split("/"); // splits "checkOutDate" into "dateInput2Array" IN "String" FORM
+                }
 
                 // Checks if "dateInput" is in "MM/dd/yyyy" format
                 return simpleDateFormat.parse(dateInput);

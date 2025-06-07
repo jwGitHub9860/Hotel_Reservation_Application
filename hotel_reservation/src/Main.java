@@ -53,10 +53,13 @@ public class Main {
                     dateInput2Array = dateInput.split("/"); // splits "checkOutDate" into "dateInput2Array" IN "String" FORM
                 }
 
-                // String holders for "dateInput1Array"
-                int month1 = Integer.parseInt(dateInput1Array[0]);
-                int day1 = Integer.parseInt(dateInput1Array[1]);
-                int year1 = Integer.parseInt(dateInput1Array[2]);
+                // Inputs String holders for "dateInput1Array" IF "dateInput1Array" Is NOT EMPTY
+                if (!((dateInput1Array.length) == 0)) {
+                    // String holders for "dateInput1Array"
+                    int month1 = Integer.parseInt(dateInput1Array[0]);
+                    int day1 = Integer.parseInt(dateInput1Array[1]);
+                    int year1 = Integer.parseInt(dateInput1Array[2]);
+                }
 
                 // Inputs String holders for "dateInput2Array" IF "dateInput2Array" Is NOT EMPTY
                 if (!((dateInput2Array.length) == 0)) {

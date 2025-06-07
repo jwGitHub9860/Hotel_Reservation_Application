@@ -2,6 +2,7 @@ package model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Reservation {
     Customer customer;
@@ -15,6 +16,9 @@ public class Reservation {
 
     // String holders for "dateInput1Array" & MUST BE OUTSIDE "inputCheckInAndCheckOutDates()" Method to Prevent "dateInput1Array" and "dateInput2Array" From Resetting Their Data Everytime "inputCheckInAndCheckOutDates()" Method Runs
     static int month1 = 0, day1 = 0, year1 = 0;
+
+    // Allows User Input to be Read in ALL Methods WITHIN "Reservation" class
+    final static Scanner scanner = new Scanner(System.in);
 
     // Constructor
     public Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {

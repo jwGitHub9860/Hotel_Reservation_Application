@@ -88,6 +88,8 @@ public class Main {
                 return simpleDateFormat.parse(dateInput);
             } catch (NumberFormatException numberFormatException) {
                 System.out.println("Month, day, and year must all be integers: ");
+            } catch (IllegalArgumentException e) {
+                System.out.println("Check-in date cannot be later than check-out date: ");
             } catch (Exception e) {
                 System.out.println("Please enter date in \"MM/dd/yyyy\" format: ");
             }

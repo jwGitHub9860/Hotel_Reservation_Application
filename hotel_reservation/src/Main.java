@@ -14,6 +14,9 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Scanner;
 
+import static model.Customer.inputAccountInformation;
+import static model.Customer.inputCheckInAndCheckOutDates;
+
 public class Main {
     public static void main(String[] args) {
         // Allows user input to be read

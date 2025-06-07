@@ -22,15 +22,15 @@ public class Main {
     static String[] dateInput1Array = new String[0]; // holds "checkInDate" IN "String" FORM
     static String[] dateInput2Array = new String[0]; // holds "checkOutDate" IN "String" FORM
 
+    // String holders for "dateInput1Array" & MUST BE PUT HERE to Prevent "dateInput1Array" and "dateInput2Array" From Resetting Their Data Everytime "inputCheckInAndCheckOutDates()" Method Runs
+    int month1 = 0, day1 = 0, year1 = 0;
+
     private static Date inputCheckInAndCheckOutDates() {
         // Allows user to input "Date" as input
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
         // Sets "lenient" to "false" to apply strict Date Parsing
         simpleDateFormat.setLenient(false);
-
-        // String holders for "dateInput1Array"
-        int month1 = 0, day1 = 0, year1 = 0;
 
         // String holders for "dateInput2Array"
         int month2, day2, year2;

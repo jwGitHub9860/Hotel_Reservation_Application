@@ -79,7 +79,7 @@ public class Customer {
             }
         }
     }
-    private static Date inputCheckInAndCheckOutDates() {
+    public static Date inputCheckInAndCheckOutDates() {
         // Allows user to input "Date" as input
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
@@ -155,7 +155,7 @@ public class Customer {
             }
         }
     }
-    private static void inputAccountInformation() {
+    public static void inputAccountInformation() {
         // Obtains User Input for "email" for "HotelResource" constructor & "createACustomer()" method
         System.out.println("Enter email (format: name@domain.com): ");
         String email = Customer.inputEmail(); // calls "inputEmail()" method to take User Input for "email"

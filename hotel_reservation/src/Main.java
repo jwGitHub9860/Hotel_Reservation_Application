@@ -46,7 +46,7 @@ public class Main {
                     throw new IllegalArgumentException("Date cannot end with anything, but a number, 0-9"); // Throws Error to Prevent Malicious Attacks (ex. SQL Injection)
                 }
 
-                // Checks if Check-In Date is Later Than Check-Out Date
+                // Splits "dateInput" into EITHER "dateInput1Array" OR "dateInput2Array"
                 if (dateInput1Array == null) {
                     dateInput1Array = dateInput.split("/"); // splits "checkInDate" into "dateInput1Array" IN "String" FORM
                 } else {
@@ -54,14 +54,14 @@ public class Main {
                 }
 
                 // String holders for "dateInput1Array"
-                String month1 = dateInput1Array[0];
-                String day1 = dateInput1Array[1];
-                String year1 = dateInput1Array[2];
+                int month1 = Integer.parseInt(dateInput1Array[0]);
+                int day1 = Integer.parseInt(dateInput1Array[1]);
+                int year1 = Integer.parseInt(dateInput1Array[2]);
 
                 // String holders for "dateInput2Array"
-                String month2 = dateInput2Array[0];
-                String day2 = dateInput2Array[1];
-                String year2 = dateInput2Array[2];
+                int month2 = Integer.parseInt(dateInput2Array[0]);
+                int day2 = Integer.parseInt(dateInput2Array[1]);
+                int year2 = Integer.parseInt(dateInput2Array[2]);
 
                 // Checks if "dateInput" is in "MM/dd/yyyy" format
                 return simpleDateFormat.parse(dateInput);

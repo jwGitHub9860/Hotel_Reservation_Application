@@ -19,8 +19,8 @@ public class Main {
     final static Scanner scanner = new Scanner(System.in);
 
     // Initializes "dateInput1Array" and "dateInput2Array" for code section that Checks if Check-In Date is Later Than Check-Out Date & MUST BE PUT HERE to Prevent "dateInput1Array" and "dateInput2Array" From Resetting Their Data Everytime "inputCheckInAndCheckOutDates()" Method Runs
-    String[] dateInput1Array = new String[0]; // holds "checkInDate" IN "String" FORM
-    String[] dateInput2Array = new String[0]; // holds "checkOutDate" IN "String" FORM
+    static String[] dateInput1Array = new String[0]; // holds "checkInDate" IN "String" FORM
+    static String[] dateInput2Array = new String[0]; // holds "checkOutDate" IN "String" FORM
 
     private static Date inputCheckInAndCheckOutDates() {
         // Allows user to input "Date" as input

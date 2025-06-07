@@ -35,8 +35,6 @@ public class Customer {
 
     // Takes User Input for Room Information
     public static String inputEmail() {
-        Scanner scanner = new Scanner(System.in); // allows user input to be read
-
         // Takes User Input for Email
         while (true) { // ensures that user inputted "emailInput"
             try {

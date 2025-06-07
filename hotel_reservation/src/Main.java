@@ -16,6 +16,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Allows user input to be read
+        Scanner scanner = new Scanner(System.in);
+
         // Main Menu
         boolean runApplication = true;
         try {

@@ -23,7 +23,7 @@ public class Main {
     static String[] dateInput2Array = new String[0]; // holds "checkOutDate" IN "String" FORM
 
     // String holders for "dateInput1Array" & MUST BE PUT HERE to Prevent "dateInput1Array" and "dateInput2Array" From Resetting Their Data Everytime "inputCheckInAndCheckOutDates()" Method Runs
-    int month1 = 0, day1 = 0, year1 = 0;
+    static int month1 = 0, day1 = 0, year1 = 0;
 
     private static Date inputCheckInAndCheckOutDates() {
         // Allows user to input "Date" as input

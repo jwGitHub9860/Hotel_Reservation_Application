@@ -10,13 +10,6 @@ import java.util.Scanner;
 public class Customer {
     String firstName, lastName, email, nonExistentEmail;
 
-    // Initializes "dateInput1Array" and "dateInput2Array" for code section that Checks if Check-In Date is Later Than Check-Out Date & MUST BE "inputCheckInAndCheckOutDates()" Method to Prevent "dateInput1Array" and "dateInput2Array" From Resetting Their Data Everytime "inputCheckInAndCheckOutDates()" Method Runs
-    static String[] dateInput1Array = new String[0]; // holds "checkInDate" IN "String" FORM
-    static String[] dateInput2Array = new String[0]; // holds "checkOutDate" IN "String" FORM
-
-    // String holders for "dateInput1Array" & MUST BE OUTSIDE "inputCheckInAndCheckOutDates()" Method to Prevent "dateInput1Array" and "dateInput2Array" From Resetting Their Data Everytime "inputCheckInAndCheckOutDates()" Method Runs
-    static int month1 = 0, day1 = 0, year1 = 0;
-
     // Allows User Input to be Read in ALL Methods WITHIN "Customer" class
     final static Scanner scanner = new Scanner(System.in);
 

@@ -29,6 +29,9 @@ public class Main {
         String[] dateInput1Array = new String[0]; // holds "checkInDate" IN "String" FORM
         String[] dateInput2Array = new String[0]; // holds "checkOutDate" IN "String" FORM
 
+        // String holders for "dateInput1Array"
+        int month1, day1, year1;
+
         // Checks if user inputted "dateInput" in "MM/dd/yyyy" format
         while (true) {
             try {
@@ -56,9 +59,9 @@ public class Main {
                 // Inputs String holders for "dateInput1Array" IF "dateInput1Array" Is NOT EMPTY
                 if (!((dateInput1Array.length) == 0)) {
                     // String holders for "dateInput1Array"
-                    int month1 = Integer.parseInt(dateInput1Array[0]);
-                    int day1 = Integer.parseInt(dateInput1Array[1]);
-                    int year1 = Integer.parseInt(dateInput1Array[2]);
+                    month1 = Integer.parseInt(dateInput1Array[0]);
+                    day1 = Integer.parseInt(dateInput1Array[1]);
+                    year1 = Integer.parseInt(dateInput1Array[2]);
                 }
 
                 // Inputs String holders for "dateInput2Array" IF "dateInput2Array" Is NOT EMPTY

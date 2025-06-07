@@ -25,6 +25,10 @@ public class Main {
         // Sets "lenient" to "false" to apply strict Date Parsing
         simpleDateFormat.setLenient(false);
 
+        // Initializes "dateInput1Array" and "dateInput2Array" for code section that Checks if Check-In Date is Later Than Check-Out Date
+        String[] dateInput1Array = new String[0]; // holds "checkInDate" IN "String" FORM
+        String[] dateInput2Array = new String[0]; // holds "checkOutDate" IN "String" FORM
+
         // Checks if user inputted "dateInput" in "MM/dd/yyyy" format
         while (true) {
             try {
@@ -43,8 +47,6 @@ public class Main {
                 }
 
                 // Checks if Check-In Date is Later Than Check-Out Date
-                String[] dateInput1Array = new String[0]; // holds "checkInDate" IN "String" FORM
-                String[] dateInput2Array = new String[0]; // holds "checkOutDate" IN "String" FORM
                 if (dateInput1Array == null) {
                     dateInput1Array = dateInput.split("/"); // splits "checkInDate" into "dateInput1Array" IN "String" FORM
                 } else {

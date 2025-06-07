@@ -18,7 +18,7 @@ public class Reservation {
     private static int month1 = 0, day1 = 0, year1 = 0;
 
     // String holders for "dateInput2Array"
-    int month2, day2, year2;
+    private static int month2, day2, year2;
 
     // Allows User Input to be Read in ALL Methods WITHIN "Reservation" class
     final static Scanner scanner = new Scanner(System.in);

@@ -69,12 +69,11 @@ public class Reservation {
 
     // Checks if Check-In Date is Later Than Check-Out Date
     public static void findLaterDate(String dateInput1, String dateInput2) {
-        // Splits "dateInput" into EITHER "dateInput1Array" OR "dateInput2Array"
-        if (dateInput1Array.length == 0) {
-            dateInput1Array = dateInput1.split("/"); // splits "dateInput1" into "dateInput1Array" IN "String" FORM
-        } else {
-            dateInput2Array = dateInput2.split("/"); // splits "dateInput2" into "dateInput2Array" IN "String" FORM
-        }
+        // Splits "dateInput1" into "dateInput1Array" IN "String" FORM
+        dateInput1Array = dateInput1.split("/");
+
+        // Splits "dateInput2" into "dateInput2Array" IN "String" FORM
+        dateInput2Array = dateInput2.split("/");
 
         // Input "dateInput1Array" Elements into String Holders for "dateInput1Array"
         int month1 = Integer.parseInt(dateInput1Array[0]);

@@ -15,6 +15,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 import static model.Customer.inputAccountInformation;
+import static model.Reservation.findLaterDate;
 import static model.Reservation.inputCheckInAndCheckOutDates;
 
 public class Main {
@@ -48,7 +49,17 @@ public class Main {
                                 String checkInDateString = inputCheckInAndCheckOutDates(); // calls "inputCheckInAndCheckOutDates()" method to take user input for "checkInDateString"
                                 System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
                                 String checkOutDateString = inputCheckInAndCheckOutDates(); // calls "inputCheckInAndCheckOutDates()" method to take user input for "checkOutDateString"
-                                break;
+
+                                // Determines if Check-In and Check-Out Dates can Parse into "Date" variables
+                                if (findLaterDate(checkInDateString, checkOutDateString)) { // checks if "checkInDateString" is LATER THAN "checkOutDateString"
+                                    // Parse "checkInDateString" into "Date" variable
+                                    Date checkInDate = simpleDateFormat.parse(checkInDateString);
+
+                                    // Parse "checkOutDateString" into "Date" variable
+                                    Date checkOutDate = simpleDateFormat.parse(checkOutDateString);
+
+                                    break;
+                                }
                             } catch (IllegalArgumentException e) {
                                 System.out.println("Check-in date cannot be later than check-out date: ");
                             }

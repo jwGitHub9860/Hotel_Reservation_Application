@@ -15,8 +15,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 import static model.Customer.inputAccountInformation;
-import static model.Reservation.findLaterDate;
-import static model.Reservation.inputCheckInAndCheckOutDates;
+import static model.Reservation.*;
 
 public class Main {
     public static void main(String[] args) {

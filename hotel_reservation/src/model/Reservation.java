@@ -11,7 +11,7 @@ public class Reservation {
     Date checkOutDate;
 
     // Allows user to input "Date" as input
-    public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+    final public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
     // Allows User Input to be Read in ALL Methods WITHIN "Reservation" class
     final static Scanner scanner = new Scanner(System.in);

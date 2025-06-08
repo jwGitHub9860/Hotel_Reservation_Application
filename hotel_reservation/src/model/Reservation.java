@@ -11,7 +11,7 @@ public class Reservation {
     Date checkOutDate;
 
     // Allows user to input "Date" as input
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+    public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
     // Initializes "dateInput1Array" and "dateInput2Array" for code section that Checks if Check-In Date is Later Than Check-Out Date & MUST BE "inputCheckInAndCheckOutDates()" Method to Prevent "dateInput1Array" and "dateInput2Array" From Resetting Their Data Everytime "inputCheckInAndCheckOutDates()" Method Runs
     private static String[] dateInput1Array = new String[0]; // holds "checkInDate" IN "String" FORM

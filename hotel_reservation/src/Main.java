@@ -41,11 +41,16 @@ public class Main {
                     // Takes User Input
                     int userInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (userInput == 1) {
-                        // Takes User Input for Check-In and Check-Out Dates
-                        System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
-                        Date checkInDate = inputCheckInAndCheckOutDates(); // calls "inputCheckInAndCheckOutDates()" method to take user input for "checkInDate"
-                        System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
-                        Date checkOutDate = inputCheckInAndCheckOutDates(); // calls "inputCheckInAndCheckOutDates()" method to take user input for "checkOutDate"
+                        while (true) {
+                            try {
+                                // Takes User Input for Check-In and Check-Out Dates
+                                System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
+                                Date checkInDate = inputCheckInAndCheckOutDates(); // calls "inputCheckInAndCheckOutDates()" method to take user input for "checkInDate"
+                                System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
+                                Date checkOutDate = inputCheckInAndCheckOutDates(); // calls "inputCheckInAndCheckOutDates()" method to take user input for "checkOutDate"
+                                break;
+                            }
+                        }
 
                         // Display all Rooms Available to be Reserved
                         Collection<IRoom> roomSearch = HotelResource.findARoom(checkInDate, checkOutDate); // calls "findARoom()" method

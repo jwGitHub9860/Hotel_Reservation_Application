@@ -119,6 +119,9 @@ public class Main {
                                                     // Adds "customerReservation" to "reservationCollection"
                                                     ReservationService.reservationCollection.add(customerReservation);
 
+                                                    // Sorts "reservationCollection" by Last Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                                                    ReservationService.reservationCollection.sort((reservation1, reservation2) -> reservation1.getCustomer().getLastName().compareTo(reservation2.getCustomer().getLastName()));
+
                                                     break;
                                                 } catch (Exception e) { // if Room is Already Reserved OR does Not exist
                                                     System.out.println("Please choose a different room number to reserve: ");

@@ -66,10 +66,10 @@ public class Reservation {
     // Checks if Check-In Date is Later Than Check-Out Date
     public static boolean findLaterDate(String dateInput1, String dateInput2) {
         // Splits "dateInput1" into "dateInput1Array" IN "String" FORM
-        dateInput1Array = dateInput1.split("/"); // holds "checkInDate" IN "String" FORM
+        String[] dateInput1Array = dateInput1.split("/"); // holds "checkInDate" IN "String" FORM
 
         // Splits "dateInput2" into "dateInput2Array" IN "String" FORM
-        dateInput2Array = dateInput2.split("/"); // holds "checkOutDate" IN "String" FORM
+        String[] dateInput2Array = dateInput2.split("/"); // holds "checkOutDate" IN "String" FORM
 
         // Input "dateInput1Array" Elements into String Holders for "dateInput1Array"
         int month1 = Integer.parseInt(dateInput1Array[0]);

@@ -14,12 +14,6 @@ public class Reservation {
     private static String[] dateInput1Array = new String[0]; // holds "checkInDate" IN "String" FORM
     private static String[] dateInput2Array = new String[0]; // holds "checkOutDate" IN "String" FORM
 
-    // String holders for "dateInput1Array" & MUST BE OUTSIDE "inputCheckInAndCheckOutDates()" Method to Prevent "dateInput1Array" and "dateInput2Array" From Resetting Their Data Everytime "inputCheckInAndCheckOutDates()" Method Runs
-    private static int month1 = 0, day1 = 0, year1 = 0;
-
-    // String holders for "dateInput2Array"
-    private static int month2, day2, year2;
-
     // Allows User Input to be Read in ALL Methods WITHIN "Reservation" class
     final static Scanner scanner = new Scanner(System.in);
 

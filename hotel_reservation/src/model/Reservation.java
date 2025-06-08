@@ -13,10 +13,6 @@ public class Reservation {
     // Allows user to input "Date" as input
     public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
-    // Initializes "dateInput1Array" and "dateInput2Array" for code section that Checks if Check-In Date is Later Than Check-Out Date & MUST BE "inputCheckInAndCheckOutDates()" Method to Prevent "dateInput1Array" and "dateInput2Array" From Resetting Their Data Everytime "inputCheckInAndCheckOutDates()" Method Runs
-    private static String[] dateInput1Array = new String[0]; // holds "checkInDate" IN "String" FORM
-    private static String[] dateInput2Array = new String[0]; // holds "checkOutDate" IN "String" FORM
-
     // Allows User Input to be Read in ALL Methods WITHIN "Reservation" class
     final static Scanner scanner = new Scanner(System.in);
 
@@ -70,10 +66,10 @@ public class Reservation {
     // Checks if Check-In Date is Later Than Check-Out Date
     public static boolean findLaterDate(String dateInput1, String dateInput2) {
         // Splits "dateInput1" into "dateInput1Array" IN "String" FORM
-        dateInput1Array = dateInput1.split("/");
+        dateInput1Array = dateInput1.split("/"); // holds "checkInDate" IN "String" FORM
 
         // Splits "dateInput2" into "dateInput2Array" IN "String" FORM
-        dateInput2Array = dateInput2.split("/");
+        dateInput2Array = dateInput2.split("/"); // holds "checkOutDate" IN "String" FORM
 
         // Input "dateInput1Array" Elements into String Holders for "dateInput1Array"
         int month1 = Integer.parseInt(dateInput1Array[0]);

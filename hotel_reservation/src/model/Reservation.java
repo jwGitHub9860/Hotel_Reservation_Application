@@ -38,7 +38,7 @@ public class Reservation {
     public Date getCheckOutDate() { return checkOutDate; }
 
     // Takes User Input for Reservation Information
-    public static Date inputCheckInAndCheckOutDates() {
+    public static String inputCheckInAndCheckOutDates() {
         // Allows user to input "Date" as input
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 

@@ -145,7 +145,7 @@ public class Main {
                                 // Calls "getCustomer()" method to Check if "customerEmail" EXISTS in "customerCollection"
                                 Customer existingEmail = HotelResource.getCustomer(customerEmail);
 
-                                // Displays "reservationCollection" collection
+                                // Displays Reservations made by Customer
                                 Collection<Reservation> customerReservations = HotelResource.getCustomersReservations(customerEmail); // calls "getCustomersReservations()" method
                                 for (Reservation reservation : customerReservations) {
                                     System.out.println(reservation + "\n");

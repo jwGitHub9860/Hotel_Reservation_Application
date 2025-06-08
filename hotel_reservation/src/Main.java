@@ -49,6 +49,8 @@ public class Main {
                                 System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
                                 Date checkOutDate = inputCheckInAndCheckOutDates(); // calls "inputCheckInAndCheckOutDates()" method to take user input for "checkOutDate"
                                 break;
+                            } catch (IllegalArgumentException e) {
+                                System.out.println("Check-in date cannot be later than check-out date: ");
                             }
                         }
 

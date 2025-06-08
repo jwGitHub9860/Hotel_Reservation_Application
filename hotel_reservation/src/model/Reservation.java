@@ -99,6 +99,7 @@ public class Reservation {
             dateInput2Array = new String[0]; // REINITIALIZE "dateInput2Array"
             throw new IllegalArgumentException("Check-in date cannot be later than check-out date.");
         }
+        return true;
     }
 
     @Override

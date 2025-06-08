@@ -79,8 +79,8 @@ public class AdminMenu {
                         }
 
                         // Tests if "getCustomer()" method from "AdminResource.java" works
-                        AdminResource.getCustomer("name@domain.com");
-
+                        Customer methodTest = AdminResource.getCustomer("name@domain.com");
+                        System.out.println(methodTest);
                     } else if (adminUserInput == 6) {
                         runAdmin = false;
                         System.out.println("\n");

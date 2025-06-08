@@ -76,13 +76,10 @@ public class Reservation {
             dateInput2Array = dateInput2.split("/"); // splits "dateInput2" into "dateInput2Array" IN "String" FORM
         }
 
-        // Inputs String holders for "dateInput1Array" IF "dateInput1Array" Is NOT EMPTY
-        if (!((dateInput1Array.length) == 0)) {
-            // Input "dateInput1Array" Elements into String holders
-            int month1 = Integer.parseInt(dateInput1Array[0]);
-            int day1 = Integer.parseInt(dateInput1Array[1]);
-            int year1 = Integer.parseInt(dateInput1Array[2]);
-        }
+        // Input "dateInput1Array" Elements into String Holders for "dateInput1Array"
+        int month1 = Integer.parseInt(dateInput1Array[0]);
+        int day1 = Integer.parseInt(dateInput1Array[1]);
+        int year1 = Integer.parseInt(dateInput1Array[2]);
 
         // Inputs String holders for "dateInput2Array" IF "dateInput2Array" Is NOT EMPTY
         if (!((dateInput2Array.length) == 0)) {

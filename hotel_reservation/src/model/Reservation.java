@@ -68,7 +68,7 @@ public class Reservation {
     }
 
     // Checks if Check-In Date is Later Than Check-Out Date
-    public static boolean findLaterDate(String dateInput1, String dateInput2) {
+    public static void findLaterDate(String dateInput1, String dateInput2) {
         // Splits "dateInput1" into "dateInput1Array" IN "String" FORM
         dateInput1Array = dateInput1.split("/");
 

@@ -79,7 +79,7 @@ public class Reservation {
         if (dateInput1Array.length == 0) {
             dateInput1Array = dateInput1.split("/"); // splits "dateInput1" into "dateInput1Array" IN "String" FORM
         } else {
-            dateInput2Array = dateInput.split("/"); // splits "checkOutDate" into "dateInput2Array" IN "String" FORM
+            dateInput2Array = dateInput2.split("/"); // splits "dateInput2" into "dateInput2Array" IN "String" FORM
         }
 
         // Inputs String holders for "dateInput1Array" IF "dateInput1Array" Is NOT EMPTY

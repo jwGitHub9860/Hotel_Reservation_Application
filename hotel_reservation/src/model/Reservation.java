@@ -62,8 +62,7 @@ public class Reservation {
                     throw new IllegalArgumentException("Date cannot end with anything, but a number, 0-9"); // Throws Error to Prevent Malicious Attacks (ex. SQL Injection)
                 }
 
-                // Checks if "dateInput" is in "MM/dd/yyyy" format
-                return simpleDateFormat.parse(dateInput);
+                return dateInput;
             } catch (NumberFormatException numberFormatException) {
                 System.out.println("Month, day, and year must all be integers: ");
             } catch (IllegalArgumentException e) {

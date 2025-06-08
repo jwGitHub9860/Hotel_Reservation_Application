@@ -78,6 +78,9 @@ public class AdminMenu {
                             System.out.println(room); // calls "toString()" override method from "Room.java"
                         }
 
+                        // Tests if "getCustomer()" method from "AdminResource.java" works
+                        AdminResource.getCustomer("name@domain.com");
+
                     } else if (adminUserInput == 6) {
                         runAdmin = false;
                         System.out.println("\n");

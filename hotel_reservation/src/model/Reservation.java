@@ -77,7 +77,7 @@ public class Reservation {
     public static void findLaterDate(String dateInput1, String dateInput2) {
         // Splits "dateInput" into EITHER "dateInput1Array" OR "dateInput2Array"
         if (dateInput1Array.length == 0) {
-            dateInput1Array = dateInput.split("/"); // splits "checkInDate" into "dateInput1Array" IN "String" FORM
+            dateInput1Array = dateInput1.split("/"); // splits "dateInput1" into "dateInput1Array" IN "String" FORM
         } else {
             dateInput2Array = dateInput.split("/"); // splits "checkOutDate" into "dateInput2Array" IN "String" FORM
         }

@@ -67,7 +67,7 @@ public class Reservation {
             } catch (NumberFormatException numberFormatException) {
                 System.out.println("Month, day, and year must all be integers: ");
             } catch (IllegalArgumentException e) {
-                System.out.println("Check-in date cannot be later than check-out date: ");
+                System.out.println("Date cannot end with anything, but a number (0-9): ");
             } catch (Exception e) {
                 System.out.println("Please enter date in \"MM/dd/yyyy\" format: ");
             }

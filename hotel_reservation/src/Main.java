@@ -45,9 +45,9 @@ public class Main {
                             try {
                                 // Takes User Input for Check-In and Check-Out Dates
                                 System.out.println("Enter Check-In Date (ex. 02/01/2020): ");
-                                Date checkInDate = inputCheckInAndCheckOutDates(); // calls "inputCheckInAndCheckOutDates()" method to take user input for "checkInDate"
+                                String checkInDateString = inputCheckInAndCheckOutDates(); // calls "inputCheckInAndCheckOutDates()" method to take user input for "checkInDateString"
                                 System.out.println("Enter Check-Out Date (ex. 02/01/2020): ");
-                                Date checkOutDate = inputCheckInAndCheckOutDates(); // calls "inputCheckInAndCheckOutDates()" method to take user input for "checkOutDate"
+                                String checkOutDateString = inputCheckInAndCheckOutDates(); // calls "inputCheckInAndCheckOutDates()" method to take user input for "checkOutDateString"
                                 break;
                             } catch (IllegalArgumentException e) {
                                 System.out.println("Check-in date cannot be later than check-out date: ");

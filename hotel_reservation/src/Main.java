@@ -65,7 +65,7 @@ public class Main {
                                     break;
                                 }
                             } catch (IllegalArgumentException e) {
-                                System.out.println("\nCheck-in date cannot be later than check-out date\n");
+                                System.out.println("\nCheck-in date cannot be later than check-out date.\n");
                             }
                         }
 

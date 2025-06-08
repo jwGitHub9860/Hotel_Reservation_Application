@@ -79,8 +79,12 @@ public class AdminMenu {
                         }
 
                         // Tests if "getCustomer()" method from "AdminResource.java" works
-                        Customer methodTest = AdminResource.getCustomer("name@domain.com");
-                        System.out.println(methodTest);
+                        try {
+                            Customer methodTest = AdminResource.getCustomer("name@domain.com");
+                            System.out.println(methodTest);
+                        } catch (NullPointerException e) {
+                            System.out.println("Email does not exist.");
+                        }
                     } else if (adminUserInput == 6) {
                         runAdmin = false;
                         System.out.println("\n");

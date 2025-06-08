@@ -41,6 +41,11 @@ public class Main {
                     // Takes User Input
                     int userInput = Integer.parseInt(scanner.nextLine()); // reads User Input & takes ONLY INTEGER from full line of user input
                     if (userInput == 1) {
+                        // Check-In and Check-Out Dates & MUST BE DEFINED AT BEGINNING OF "if statement" to Allow Access To "checkInDate" And "checkOutDate" Throughout WHOLE "if statement"
+                        Date checkInDate;
+                        Date checkOutDate;
+
+                        // Obtains Check-In and Check-Out Dates for Reservation
                         while (true) {
                             try {
                                 // Takes User Input for Check-In and Check-Out Dates
@@ -52,10 +57,10 @@ public class Main {
                                 // Determines if Check-In and Check-Out Dates can Parse into "Date" variables
                                 if (findLaterDate(checkInDateString, checkOutDateString)) { // checks if "checkInDateString" is LATER THAN "checkOutDateString"
                                     // Parse "checkInDateString" into "Date" variable
-                                    Date checkInDate = simpleDateFormat.parse(checkInDateString);
+                                    checkInDate = simpleDateFormat.parse(checkInDateString);
 
                                     // Parse "checkOutDateString" into "Date" variable
-                                    Date checkOutDate = simpleDateFormat.parse(checkOutDateString);
+                                    checkOutDate = simpleDateFormat.parse(checkOutDateString);
 
                                     break;
                                 }

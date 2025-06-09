@@ -69,14 +69,8 @@ public class ReservationService {
     }
 
     public static void printAllReservation() {
-        // Sorts "roomList" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
-        reservationCollection.sort(Comparator.comparing(reservation -> {
-            String string = reservation.getCustomer().getLastName(); // obtains "lastName" of "customer"
-            String[] customerLastNames = string.split("\\."); // "\\." - match the character
-            int firstLastName = Integer.parseInt(customerLastNames[0]); // obtains 1st Last Name
-            int secondLastName = customerLastNames.length > 1 ? Integer.parseInt(customerLastNames[1]) : 0; // finds which Last Name should go first
-            return firstLastName * 1000 + secondLastName; // returns "firstLastName" and "secondLastName" in Alphabetical
-        }));
+        // Sorts "reservationCollection" by Last Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+        ReservationService.reservationCollection.sort((reservation1, reservation2) -> reservation1.getCustomer().getLastName().compareTo(reservation2.getCustomer().getLastName()));
         
         // Display reservation information inside "reservationCollection"
         for (Reservation reservation : reservationCollection) {

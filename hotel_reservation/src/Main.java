@@ -69,6 +69,9 @@ public class Main {
                             }
                         }
 
+                        // Separates "checkOutDate" User Input & Rooms Available to be Reserved on Console
+                        System.out.println("\n");
+
                         // Display all Rooms Available to be Reserved
                         Collection<IRoom> roomSearch = HotelResource.findARoom(checkInDate, checkOutDate); // calls "findARoom()" method
                         if (!roomSearch.isEmpty()) { // indicates if No Rooms are Available

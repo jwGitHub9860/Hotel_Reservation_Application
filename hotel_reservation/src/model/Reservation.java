@@ -47,19 +47,13 @@ public class Reservation {
                     Integer.parseInt(datePart);
                 }
 
+                // Checks if "dateInput" Has TWO "/" to Indicate that "dateInput" Has Month, Day, and Year
+                if (dateInputArray.length != 3) { throw new RuntimeException("Date must have 2 \"/\""); }
+
                 // Checks if "dateInput" Ends With ANYTHING BUT A NUMBER, "0-9"
                 if (dateInput.endsWith("[^0-9]")) {
                     throw new IllegalArgumentException("Date cannot end with anything, but a number, 0-9"); // Throws Error to Prevent Malicious Attacks (ex. SQL Injection)
                 }
-
-                // Checks if "dateInput" Has TWO "/" to Indicate that "dateInput" Has Month, Day, and Year
-                int slashCount = 0; // initial "slashCount" value
-                for (String datePart : dateInputArray) {
-                    if (datePart.equals("/")) {
-                        slashCount++;
-                    }
-                }
-                if (slashCount != 2) { throw new RuntimeException("Date must have 2 \"/\""); }
 
                 return dateInput;
             } catch (NumberFormatException numberFormatException) {

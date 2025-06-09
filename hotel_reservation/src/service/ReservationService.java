@@ -74,7 +74,7 @@ public class ReservationService {
         
         // Display reservation information inside "reservationCollection"
         for (Reservation reservation : reservationCollection) {
-            System.out.println(reservation);
+            System.out.println(reservation + "\n");
         }
     }
 }

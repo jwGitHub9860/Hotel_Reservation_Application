@@ -93,7 +93,6 @@ public class AdminMenu {
                     }
                 } catch (Exception e) { // if user does NOT ENTER A NUMBER
                     System.out.println("Please enter an integer between 1 and 6: ");
-                    scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                 }
             }
         } catch (Exception ex) {

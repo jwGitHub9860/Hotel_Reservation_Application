@@ -147,33 +147,35 @@ public class Room implements IRoom {
                 String finalSortChoice = sortChoice;
 
                 // Checks if User chose "Room Price"
-                if (finalSortChoice.equals("room price")) { ReservationService.roomCollection.sort(Comparator.comparingDouble(IRoom::getRoomPrice)); } // sorts "roomCollection" by "price"
-
-                // Sorts "roomCollection" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
-                ReservationService.roomCollection.sort(Comparator.comparing(iRoom -> {
-                    // Checks if User chose "Room Number", "Room Type", or "Room Price"
-                    switch (finalSortChoice) {
-                        case "room number":
-                            obtainRoomInfo = iRoom.getRoomNumber(); // obtains "roomNumber"
-                            break;
-                        case "room type":
-                            RoomType roomTypeAnswer = iRoom.getRoomType(); // obtains "roomType"
-                            if (roomTypeAnswer.equals(RoomType.SINGLE)) {
-                                obtainRoomInfo = "1";
-                            } else {
-                                obtainRoomInfo = "2";
-                            }
-                            break;
-                        case "room price": // prevents "IllegalArgumentException" from being thrown
-                            break;
-                        default:
-                            throw new IllegalArgumentException("Choice must be either Room Number, Room Price, or Room Type");
-                    }
-                    hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
-                    firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
-                    secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
-                    return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
-                }));
+                if (finalSortChoice.equals("room price")) {
+                    ReservationService.roomCollection.sort(Comparator.comparingDouble(IRoom::getRoomPrice)); // sorts "roomCollection" by "price"
+                } else {
+                    // Sorts "roomCollection" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
+                    ReservationService.roomCollection.sort(Comparator.comparing(iRoom -> {
+                        // Checks if User chose "Room Number", "Room Type", or "Room Price"
+                        switch (finalSortChoice) {
+                            case "room number":
+                                obtainRoomInfo = iRoom.getRoomNumber(); // obtains "roomNumber"
+                                break;
+                            case "room type":
+                                RoomType roomTypeAnswer = iRoom.getRoomType(); // obtains "roomType"
+                                if (roomTypeAnswer.equals(RoomType.SINGLE)) {
+                                    obtainRoomInfo = "1";
+                                } else {
+                                    obtainRoomInfo = "2";
+                                }
+                                break;
+                            case "room price": // prevents "IllegalArgumentException" from being thrown
+                                break;
+                            default:
+                                throw new IllegalArgumentException("Choice must be either Room Number, Room Price, or Room Type");
+                        }
+                        hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
+                        firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
+                        secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
+                        return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
+                    }));
+                }
                 break;
             } catch (Exception e) {
                 System.out.println("Please enter Room Number, Room Type, or Room Price: ");

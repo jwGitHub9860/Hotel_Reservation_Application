@@ -43,7 +43,7 @@ public class ReservationService {
         for (Reservation reservation : reservationCollection) {
             // Indicates if Room is Available Or Not & Throws Exception if Room is NOT Available
             if (room.getRoomNumber().equals(reservation.getRoom().getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "reservationCollection"
-                if (checkInDate.equals(reservation.getCheckInDate())) { // Checks if "checkInDate" in Reservation Matches ANY "checkInDate" in "reservationCollection"
+                if ((checkInDate.after(reservation.getCheckInDate()) || checkInDate.equals(reservation.getCheckInDate())) && (checkOutDate.before(reservation.getCheckOutDate()) || checkOutDate.equals(reservation.getCheckOutDate()))) { // Checks if "checkInDate" in Reservation is AFTER or EQUAL TO "checkInDate" & if "checkOutDate" in Reservation is BEFORE or EQUAL TO "checkOutDate" in "reservationCollection"
                     throw new IllegalArgumentException("Room cannot be reserved");
                 }
             }

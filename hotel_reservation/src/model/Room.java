@@ -149,6 +149,7 @@ public class Room implements IRoom {
                     switch (finalSortChoice) {
                         case "room number":
                             obtainRoomInfo = iRoom.getRoomNumber(); // obtains "roomNumber"
+                            sortRoomNumberAndRoomType(); // calls "sortRoomNumberAndRoomType()" method
                             break;
                         case "room type":
                             RoomType roomTypeAnswer = iRoom.getRoomType(); // obtains "roomType"
@@ -157,6 +158,7 @@ public class Room implements IRoom {
                             } else {
                                 obtainRoomInfo = "2";
                             }
+                            sortRoomNumberAndRoomType(); // calls "sortRoomNumberAndRoomType()" method
                             break;
                         case "room price":
                             obtainRoomInfo = String.valueOf(iRoom.getRoomPrice()); // obtains "roomPrice"

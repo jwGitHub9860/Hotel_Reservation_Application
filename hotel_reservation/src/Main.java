@@ -180,10 +180,10 @@ public class Main {
                         runApplication = false;
                         scanner.close(); // avoid memory leaks
                     } else {
-                        System.out.println("Please enter an integer between 1 and 5");
+                        throw new IllegalArgumentException("Input must be an integer between 1 and 5"); // must throw "IllegalArgumentException" TO PREVENT INFINITE WHILE LOOP
                     }
                 } catch (Exception e) { // if user does NOT ENTER A NUMBER
-                    System.out.println("\nPlease enter an integer between 1 and 5\n");
+                    System.out.println("Please enter an integer between 1 and 5: ");
                     scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                 }
             }

@@ -149,7 +149,10 @@ public class Room implements IRoom {
                     switch (finalSortChoice) {
                         case "room number":
                             obtainRoomInfo = iRoom.getRoomNumber(); // obtains "roomNumber"
-                            sortRoomNumberAndRoomType(); // calls "sortRoomNumberAndRoomType()" method
+                            String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
+                            int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
+                            int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
+                            return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
                             break;
                         case "room type":
                             RoomType roomTypeAnswer = iRoom.getRoomType(); // obtains "roomType"
@@ -158,7 +161,10 @@ public class Room implements IRoom {
                             } else {
                                 obtainRoomInfo = "2";
                             }
-                            sortRoomNumberAndRoomType(); // calls "sortRoomNumberAndRoomType()" method
+                            String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
+                            int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
+                            int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
+                            return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
                             break;
                         case "room price":
                             obtainRoomInfo = String.valueOf(iRoom.getRoomPrice()); // obtains "roomPrice"
@@ -174,14 +180,6 @@ public class Room implements IRoom {
                 System.out.println("Please enter Room Number, Room Type, or Room Price: ");
             }
         }
-    }
-
-    // Second Part that Sorts "roomCollection" By Room Number or Room Type
-    private static int sortRoomNumberAndRoomType() {
-        String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
-        int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
-        int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
-        return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
     }
 
     @Override

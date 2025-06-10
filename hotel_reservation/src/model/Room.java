@@ -20,6 +20,9 @@ public class Room implements IRoom {
     
     // Room Info to Sort By
     private static String obtainRoomInfo;
+    private static String[] hotelRoom;
+    private static int firstHotelRoom;
+    private static int secondHotelRoom;
 
     // Allows User Input to be Read in ALL Methods WITHIN "Room" class
     final static Scanner scanner = new Scanner(System.in);
@@ -149,9 +152,11 @@ public class Room implements IRoom {
                     switch (finalSortChoice) {
                         case "room number":
                             obtainRoomInfo = iRoom.getRoomNumber(); // obtains "roomNumber"
-                            String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
-                            int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
-                            int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
+
+                            // MUST BE PUT HERE TO PREVENT "IndexOutOfBoundsException" EXCEPTION, NOT IN ANOTHER METHOD
+                            hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
+                            firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
+                            secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
                             return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
                             break;
                         case "room type":
@@ -161,9 +166,11 @@ public class Room implements IRoom {
                             } else {
                                 obtainRoomInfo = "2";
                             }
-                            String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
-                            int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
-                            int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
+
+                            // MUST BE PUT HERE TO PREVENT "IndexOutOfBoundsException" EXCEPTION, NOT IN ANOTHER METHOD
+                            hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
+                            firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
+                            secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
                             return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
                             break;
                         case "room price":

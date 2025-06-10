@@ -49,6 +49,9 @@ public class AdminMenu {
                         // Calls "getAllRooms()" method from "AdminResource.java"
                         Collection<IRoom> roomList = AdminResource.getAllRooms();
 
+                        // Calls "sortRooms()" method from "Room.java" to sort "roomList"
+                        Room.sortRooms();
+
                         // Display room information inside "roomCollection"
                         for (IRoom room : roomList) {
                             System.out.println(room);

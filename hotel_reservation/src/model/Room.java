@@ -3,6 +3,7 @@ package model;
 import service.ReservationService;
 
 import java.text.DecimalFormat;
+import java.util.Comparator;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -16,6 +17,12 @@ public class Room implements IRoom {
     private static String roomNumberInput;
     static Double priceInput;
     private static RoomType roomTypeInput;
+    
+    // Room Info to Sort By
+    private static String obtainRoomInfo;
+
+    // Allows User Input to be Read in ALL Methods WITHIN "Room" class
+    final static Scanner scanner = new Scanner(System.in);
 
     // Constructor
     public Room(String roomNumber, Double price, RoomType roomType) {
@@ -33,8 +40,6 @@ public class Room implements IRoom {
 
     // Takes User Input for Room Information
     public static String inputRoomNumber() {
-        Scanner scanner = new Scanner(System.in); // allows user input to be read
-
         // Takes User Input for Room Number
         System.out.println("Enter room number: ");
         while (!isValid) { // ensures that user inputted "roomNumberInput"
@@ -75,8 +80,6 @@ public class Room implements IRoom {
         return roomNumberInput;
     }
     public static Double inputRoomPrice() {
-        Scanner scanner = new Scanner(System.in); // allows user input to be read
-
         // Checks if user inputted "Double" value for Room "priceInput"
         System.out.println("Enter price per night: ");
         while (true) {
@@ -93,8 +96,6 @@ public class Room implements IRoom {
         return priceInput;
     }
     public static RoomType inputRoomType() {
-        Scanner scanner = new Scanner(System.in); // allows user input to be read
-
         // Takes User Input for Room Type
         System.out.println("Enter room type (1 for single bed, 2 for double bed): ");
         while (!isValid) { // ensures that user inputted "roomTypeInput"
@@ -126,6 +127,54 @@ public class Room implements IRoom {
         isValid = false; // "isValid" was CHANGED TO "true" After "inputRoomNumber()" method FINISHED
 
         return roomTypeInput;
+    }
+
+    // Sorts "roomCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
+    public static void sortRooms() {
+        System.out.println("How would you like to sort reservations (room number, room price, or room type): ");
+        while (true) {
+            try {
+                // Takes User Input for "sortChoice" AS STRING
+                String sortChoice = scanner.nextLine();
+
+                // Ensures user inputs "sortChoice" BEFORE "roomList" is Sorted
+                if (sortChoice.isEmpty()) { sortChoice = scanner.nextLine(); }
+
+                // Takes final "sortChoice" and inputs "sortChoice" into "finalSortChoice" to Prevent "sortChoice" from being corrupted and/or changed & to Prevent Infinite While Loop
+                String finalSortChoice = sortChoice;
+
+                // Sorts "roomCollection" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
+                ReservationService.roomCollection.sort(Comparator.comparing(iRoom -> {
+                    // Checks if User chose "Customer First Name", "Customer Last Name", "Room Number", "Room Type", "Room Price", "Check-in Date", or "Check-out Date"
+                    switch (finalSortChoice) {
+                        case "room number":
+                            obtainRoomInfo = iRoom.getRoomNumber(); // obtains "roomNumber"
+                            break;
+                        case "room type":
+                            RoomType roomTypeAnswer = iRoom.getRoomType(); // obtains "roomType"
+                            if (roomTypeAnswer.equals(RoomType.SINGLE)) {
+                                obtainRoomInfo = "1";
+                            } else {
+                                obtainRoomInfo = "2";
+                            }
+                            break;
+                        case "room price":
+                            obtainRoomInfo = String.valueOf(iRoom.getRoomPrice()); // obtains "roomPrice"
+                            ReservationService.roomCollection.sort(Comparator.comparingDouble(IRoom::getRoomPrice));
+                            break;
+                        default:
+                            throw new RuntimeException("Choice must be either Room Number, Room Price, or Room Type");
+                    }
+                    String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
+                    int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
+                    int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
+                    return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
+                }));
+                break;
+            } catch (Exception e) {
+                System.out.println("Please enter Room Number, Room Type, or Room Price: ");
+            }
+        }
     }
 
     @Override

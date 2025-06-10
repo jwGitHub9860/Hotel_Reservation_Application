@@ -60,15 +60,6 @@ public class AdminResource {
                 addRoomRepeat = inputYOrN(); // calls "inputYOrN()" method to take User Input
             }
         }
-
-        // Sorts "roomList" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
-        rooms.sort(Comparator.comparing(iRoom -> {
-            String string = iRoom.getRoomNumber(); // obtains "roomNumber"
-            String[] roomRoomNumbers = string.split("\\."); // "\\." - match the character
-            int firstRoomNumber = Integer.parseInt(roomRoomNumbers[0]); // obtains 1st Room Number
-            int secondRoomNumber = roomRoomNumbers.length > 1 ? Integer.parseInt(roomRoomNumbers[1]) : 0; // finds which Room Number is greater
-            return firstRoomNumber * 1000 + secondRoomNumber; // returns "roomNumber1" and "roomNumber2" in Ascending Order
-        }));
     }
 
     public static Collection<IRoom> getAllRooms() { return ReservationService.roomCollection; }

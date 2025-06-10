@@ -29,6 +29,8 @@ codeFinatic. “Parseexception Java.” Edited by Jops, _Stack Overflow_, 20 Apr
 
 “Collections.Sort() in Java with Examples.” _GeeksforGeeks_, GeeksforGeeks, 4 Jan. 2025, www.geeksforgeeks.org/collections-sort-java-examples/. Accessed 30 May 2025.
 
+“Compare Dates in Java.” _GeeksforGeeks_, GeeksforGeeks, 12 Dec. 2022, www.geeksforgeeks.org/compare-dates-in-java/. Accessed 10 Jun. 2025.
+
 “Decimalformat toPattern() Method in Java.” GeeksforGeeks, GeeksforGeeks, 1 Apr. 2019, www.geeksforgeeks.org/decimalformat-topattern-method-in-java/. Accessed 27 May 2025.
 
 Dominik. “Java Regular Expression Removing Everything but Numbers from String.” Edited by DaMainBoss, _Stack Overflow_, 30 July 2011, stackoverflow.com/questions/6883579/java-regular-expression-removing-everything-but-numbers-from-string/6883591. Accessed 6 Jun. 2025.

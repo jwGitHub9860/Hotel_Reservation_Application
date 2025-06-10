@@ -167,6 +167,7 @@ public class Room implements IRoom {
                         default:
                             throw new RuntimeException("Choice must be either Room Number, Room Price, or Room Type");
                     }
+                    return null;
                 }));
                 break;
             } catch (Exception e) {

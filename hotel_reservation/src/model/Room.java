@@ -176,6 +176,7 @@ public class Room implements IRoom {
             }
         }
     }
+    private static void sortRoomNumberAndRoomType() {}
 
     @Override
     public String toString(){ return "Room Number is " + roomNumber + ", " + roomType + " bed, Room Price is $" + String.format("%.2f", price); }

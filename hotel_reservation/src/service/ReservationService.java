@@ -45,6 +45,8 @@ public class ReservationService {
             if (room.getRoomNumber().equals(reservation.getRoom().getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "reservationCollection"
                 if ((checkInDate.after(reservation.getCheckInDate()) || checkInDate.equals(reservation.getCheckInDate())) && (checkOutDate.before(reservation.getCheckOutDate()) || checkOutDate.equals(reservation.getCheckOutDate()))) { // Checks if "checkInDate" in Reservation is AFTER or EQUAL TO "checkInDate" & if "checkOutDate" in Reservation is BEFORE or EQUAL TO "checkOutDate" in "reservationCollection"
                     throw new IllegalArgumentException("Room cannot be reserved");
+                } else if (checkInDate.before(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate())) { // Checks if "checkInDate" in Reservation is BEFORE "checkInDate" & if "checkOutDate" in Reservation is AFTER "checkOutDate" in "reservationCollection"
+                    throw new IllegalArgumentException("Room cannot be reserved");
                 }
             }
         }

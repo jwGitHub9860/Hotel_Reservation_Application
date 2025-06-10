@@ -165,10 +165,6 @@ public class Room implements IRoom {
                         default:
                             throw new RuntimeException("Choice must be either Room Number, Room Price, or Room Type");
                     }
-                    String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
-                    int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
-                    int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
-                    return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
                 }));
                 break;
             } catch (Exception e) {
@@ -176,7 +172,14 @@ public class Room implements IRoom {
             }
         }
     }
-    private static void sortRoomNumberAndRoomType() {}
+
+    // Second Part that Sorts "roomCollection" By Room Number or Room Type
+    private static void sortRoomNumberAndRoomType() {
+        String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
+        int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
+        int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
+        return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
+    }
 
     @Override
     public String toString(){ return "Room Number is " + roomNumber + ", " + roomType + " bed, Room Price is $" + String.format("%.2f", price); }

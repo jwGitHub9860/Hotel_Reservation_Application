@@ -89,10 +89,10 @@ public class AdminMenu {
                         runAdmin = false;
                         System.out.println("\n");
                     } else {
-                        System.out.println("Please enter an integer between 1 and 6");
+                        throw new IllegalArgumentException("Input must be an integer between 1 and 6"); // must throw "IllegalArgumentException" TO PREVENT INFINITE WHILE LOOP
                     }
                 } catch (Exception e) { // if user does NOT ENTER A NUMBER
-                    System.out.println("\nPlease enter a number");
+                    System.out.println("Please enter an integer between 1 and 6: ");
                     scanner.next(); // uses & Deletes invalid input; Prevents Infinite While Loop
                 }
             }

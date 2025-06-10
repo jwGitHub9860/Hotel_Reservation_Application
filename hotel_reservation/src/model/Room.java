@@ -165,8 +165,6 @@ public class Room implements IRoom {
                                     obtainRoomInfo = "2";
                                 }
                                 break;
-                            case "room price": // prevents "IllegalArgumentException" from being thrown
-                                break;
                             default:
                                 throw new IllegalArgumentException("Choice must be either Room Number, Room Price, or Room Type");
                         }

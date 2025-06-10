@@ -4,6 +4,7 @@ import api.HotelResource;
 import service.ReservationService;
 
 import java.text.SimpleDateFormat;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -90,6 +91,34 @@ public class Customer {
 
         // Calls "createACustomer()" method
         HotelResource.createACustomer(email, firstName, lastName);
+    }
+
+    // Sorts "customerCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
+    public static void sortCustomers() {
+        System.out.println("How would you like to sort customers (first name, last name, or email): ");
+        while (true) {
+            try {
+                // Takes User Input for "sortChoice" AS STRING
+                String sortChoice = scanner.nextLine();
+
+                // Checks if User chose "First Name", "Last Name", or "Email"
+                if (sortChoice.equals("first name")) {
+                    // Sorts "customerCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                    ReservationService.customerCollection.sort(Comparator.comparing(Customer::getFirstName));
+                } else if (sortChoice.equals("last name")) {
+                    // Sorts "customerCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                    ReservationService.customerCollection.sort(Comparator.comparing(Customer::getLastName));
+                } else if (sortChoice.equals("email")) {
+                    // Sorts "customerCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                    ReservationService.customerCollection.sort(Comparator.comparing(Customer::getEmail));
+                } else {
+                    throw new RuntimeException("Choice must be either First Name, Last Name, or Email");
+                }
+                break;
+            } catch (Exception e) {
+                System.out.println("Please enter First Name, Last Name, or Email: ");
+            }
+        }
     }
 
     @Override

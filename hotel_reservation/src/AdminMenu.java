@@ -1,11 +1,8 @@
 import api.AdminResource;
 import model.*;
-import service.CustomerService;
 import service.ReservationService;
 
-import java.text.DecimalFormat;
 import java.util.Collection;
-import java.util.List;
 import java.util.Scanner;
 
 public class AdminMenu {

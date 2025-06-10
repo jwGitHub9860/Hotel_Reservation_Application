@@ -3,9 +3,7 @@ package model;
 import api.HotelResource;
 import service.ReservationService;
 
-import java.text.SimpleDateFormat;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Customer {

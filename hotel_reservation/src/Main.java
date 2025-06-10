@@ -3,13 +3,8 @@ import api.HotelResource;
 import model.Customer;
 import model.IRoom;
 import model.Reservation;
-import service.CustomerService;
 import service.ReservationService;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Scanner;

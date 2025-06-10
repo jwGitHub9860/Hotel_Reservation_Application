@@ -69,8 +69,8 @@ public class ReservationService {
     }
 
     public static void printAllReservation() {
-        // Sorts "reservationCollection" by Last Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-        ReservationService.reservationCollection.sort((reservation1, reservation2) -> reservation1.getCustomer().getLastName().compareTo(reservation2.getCustomer().getLastName()));
+        // Sorts "reservationCollection" by User's Choice
+        Reservation.sortReservations();
         
         // Display reservation information inside "reservationCollection"
         for (Reservation reservation : reservationCollection) {

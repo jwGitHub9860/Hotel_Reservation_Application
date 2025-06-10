@@ -15,9 +15,6 @@ public class CustomerService {
 
         // Sorts "customerCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
         ReservationService.customerCollection.sort((person1, person2) -> person1.getFirstName().compareTo(person2.getFirstName()));
-
-        // Separates "lastName" User Input & Main Menu on Console
-        System.out.println("\n");
     }
 
     public static Customer getCustomer(String customerEmail) {

@@ -69,9 +69,6 @@ public class Main {
                             }
                         }
 
-                        // Separates "checkOutDate" User Input & Rooms Available to be Reserved on Console
-                        System.out.println("\n");
-
                         // Display all Rooms Available to be Reserved
                         Collection<IRoom> roomSearch = HotelResource.findARoom(checkInDate, checkOutDate); // calls "findARoom()" method
                         if (!roomSearch.isEmpty()) { // indicates if No Rooms are Available
@@ -121,9 +118,6 @@ public class Main {
 
                                                     // Adds "customerReservation" to "reservationCollection"
                                                     ReservationService.reservationCollection.add(customerReservation);
-
-                                                    // Sorts "reservationCollection" by Last Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                                                    ReservationService.reservationCollection.sort((reservation1, reservation2) -> reservation1.getCustomer().getLastName().compareTo(reservation2.getCustomer().getLastName()));
 
                                                     break;
                                                 } catch (Exception e) { // if Room is Already Reserved OR does Not exist

@@ -129,10 +129,10 @@ public class Reservation {
                     // Sorts "reservationCollection" by Room Price in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
                     ReservationService.reservationCollection.sort((reservation1, reservation2) -> reservation1.getRoom().getRoomPrice().compareTo(reservation2.getRoom().getRoomPrice()));
                 } else if (sortChoice.equals("check-in date")) {
-                    // Sorts "reservationCollection" by Check-In in Ascending Order              will it work?        & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                    // Sorts "reservationCollection" by Check-In "Dates" in Ascending Order
                     ReservationService.reservationCollection.sort((reservation1, reservation2) -> reservation1.getCheckInDate().compareTo(reservation2.getCheckInDate()));
                 } else if (sortChoice.equals("check-out date")) {
-                    // Sorts "reservationCollection" by Check-In in Ascending Order              will it work?        & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                    // Sorts "reservationCollection" by Check-Out "Dates" in Ascending Order
                     ReservationService.reservationCollection.sort(Comparator.comparing(Reservation::getCheckOutDate));
                 } else {
                     throw new RuntimeException("Choice must be either Customer First Name, Customer Last Name, Room Number, Room Type, Room Price, Check-in Date, or Check-out Date");

@@ -146,11 +146,12 @@ public class Room implements IRoom {
                 // Takes final "sortChoice" and inputs "sortChoice" into "finalSortChoice" to Prevent "sortChoice" from being corrupted and/or changed & to Prevent Infinite While Loop
                 String finalSortChoice = sortChoice;
 
-                if (finalSortChoice.equals("room price")) {}
+                // Checks if User chose "Room Price"
+                if (finalSortChoice.equals("room price")) { ReservationService.roomCollection.sort(Comparator.comparingDouble(IRoom::getRoomPrice)); } // sorts "roomCollection" by "price"
 
                 // Sorts "roomCollection" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
                 ReservationService.roomCollection.sort(Comparator.comparing(iRoom -> {
-                    // Checks if User chose "Customer First Name", "Customer Last Name", "Room Number", "Room Type", "Room Price", "Check-in Date", or "Check-out Date"
+                    // Checks if User chose "Room Number", "Room Type", or "Room Price"
                     switch (finalSortChoice) {
                         case "room number":
                             obtainRoomInfo = iRoom.getRoomNumber(); // obtains "roomNumber"
@@ -163,12 +164,10 @@ public class Room implements IRoom {
                                 obtainRoomInfo = "2";
                             }
                             break;
-                        case "room price":
-                            obtainRoomInfo = String.valueOf(iRoom.getRoomPrice()); // obtains "roomPrice"
-                            ReservationService.roomCollection.sort(Comparator.comparingDouble(IRoom::getRoomPrice));
+                        case "room price": // prevents "IllegalArgumentException" from being thrown
                             break;
                         default:
-                            throw new RuntimeException("Choice must be either Room Number, Room Price, or Room Type");
+                            throw new IllegalArgumentException("Choice must be either Room Number, Room Price, or Room Type");
                     }
                     hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
                     firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number

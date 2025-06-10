@@ -150,9 +150,9 @@ public class Room implements IRoom {
                 if (finalSortChoice.equals("room price")) {
                     ReservationService.roomCollection.sort(Comparator.comparingDouble(IRoom::getRoomPrice)); // sorts "roomCollection" by "price"
                 } else {
-                    // Sorts "roomCollection" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
+                    // Sorts "roomCollection" by Room Numbers OR Room Types & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
                     ReservationService.roomCollection.sort(Comparator.comparing(iRoom -> {
-                        // Checks if User chose "Room Number", "Room Type", or "Room Price"
+                        // Checks if User chose "Room Number" or "Room Type"
                         switch (finalSortChoice) {
                             case "room number":
                                 obtainRoomInfo = iRoom.getRoomNumber(); // obtains "roomNumber"

@@ -174,7 +174,7 @@ public class Room implements IRoom {
     }
 
     // Second Part that Sorts "roomCollection" By Room Number or Room Type
-    private static void sortRoomNumberAndRoomType() {
+    private static int sortRoomNumberAndRoomType() {
         String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
         int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
         int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater

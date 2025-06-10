@@ -107,35 +107,45 @@ public class Reservation {
                 String sortChoice = scanner.nextLine();
 
                 // Checks if User chose "Customer First Name", "Customer Last Name", "Room Number", "Room Type", "Room Price", "Check-in Date", or "Check-out Date"
-                if (sortChoice.equals("customer first name") || sortChoice.equals("first name")) {
-                    // Sorts "reservationCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                    ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> reservation.getCustomer().getFirstName()));
-                } else if (sortChoice.equals("customer last name") || sortChoice.equals("last name")) {
-                    // Sorts "reservationCollection" by Last Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                    ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> reservation.getCustomer().getLastName()));
-                } else if (sortChoice.equals("room number")) {
-                    // Sorts "reservationCollection" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
-                    ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> {
-                        String string = reservation.getRoom().getRoomNumber(); // obtains "roomNumber"
-                        String[] roomRoomNumbers = string.split("\\."); // "\\." - match the character
-                        int firstRoomNumber = Integer.parseInt(roomRoomNumbers[0]); // obtains 1st Room Number
-                        int secondRoomNumber = roomRoomNumbers.length > 1 ? Integer.parseInt(roomRoomNumbers[1]) : 0; // finds which Room Number is greater
-                        return firstRoomNumber * 1000 + secondRoomNumber; // returns "roomNumber1" and "roomNumber2" in Ascending Order
-                    }));
-                } else if (sortChoice.equals("room type")) {
-                    // Sorts "reservationCollection" by Room Type in NUMERIC ORDER (1 -> SINGLE, 2 -> DOUBLE), In ASCENDING ORDER
-                    ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> reservation.getRoom().getRoomType()));
-                } else if (sortChoice.equals("room price")) {
-                    // Sorts "reservationCollection" by Room Price in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                    ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> reservation.getRoom().getRoomPrice()));
-                } else if (sortChoice.equals("check-in date")) {
-                    // Sorts "reservationCollection" by Check-In "Dates" in Ascending Order
-                    ReservationService.reservationCollection.sort(Comparator.comparing(Reservation::getCheckInDate));
-                } else if (sortChoice.equals("check-out date")) {
-                    // Sorts "reservationCollection" by Check-Out "Dates" in Ascending Order
-                    ReservationService.reservationCollection.sort(Comparator.comparing(Reservation::getCheckOutDate));
-                } else {
-                    throw new RuntimeException("Choice must be either Customer First Name, Customer Last Name, Room Number, Room Type, Room Price, Check-in Date, or Check-out Date");
+                switch (sortChoice) {
+                    case "customer first name":
+                    case "first name":
+                        // Sorts "reservationCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                        ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> reservation.getCustomer().getFirstName()));
+                        break;
+                    case "customer last name":
+                    case "last name":
+                        // Sorts "reservationCollection" by Last Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                        ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> reservation.getCustomer().getLastName()));
+                        break;
+                    case "room number":
+                        // Sorts "reservationCollection" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
+                        ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> {
+                            String string = reservation.getRoom().getRoomNumber(); // obtains "roomNumber"
+                            String[] roomRoomNumbers = string.split("\\."); // "\\." - match the character
+                            int firstRoomNumber = Integer.parseInt(roomRoomNumbers[0]); // obtains 1st Room Number
+                            int secondRoomNumber = roomRoomNumbers.length > 1 ? Integer.parseInt(roomRoomNumbers[1]) : 0; // finds which Room Number is greater
+                            return firstRoomNumber * 1000 + secondRoomNumber; // returns "roomNumber1" and "roomNumber2" in Ascending Order
+                        }));
+                        break;
+                    case "room type":
+                        // Sorts "reservationCollection" by Room Type in NUMERIC ORDER (1 -> SINGLE, 2 -> DOUBLE), In ASCENDING ORDER
+                        ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> reservation.getRoom().getRoomType()));
+                        break;
+                    case "room price":
+                        // Sorts "reservationCollection" by Room Price in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                        ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> reservation.getRoom().getRoomPrice()));
+                        break;
+                    case "check-in date":
+                        // Sorts "reservationCollection" by Check-In "Dates" in Ascending Order
+                        ReservationService.reservationCollection.sort(Comparator.comparing(Reservation::getCheckInDate));
+                        break;
+                    case "check-out date":
+                        // Sorts "reservationCollection" by Check-Out "Dates" in Ascending Order
+                        ReservationService.reservationCollection.sort(Comparator.comparing(Reservation::getCheckOutDate));
+                        break;
+                    default:
+                        throw new RuntimeException("Choice must be either Customer First Name, Customer Last Name, Room Number, Room Type, Room Price, Check-in Date, or Check-out Date");
                 }
                 break;
             } catch (Exception e) {

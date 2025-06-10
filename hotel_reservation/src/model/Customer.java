@@ -102,17 +102,21 @@ public class Customer {
                 String sortChoice = scanner.nextLine();
 
                 // Checks if User chose "First Name", "Last Name", or "Email"
-                if (sortChoice.equals("first name")) {
-                    // Sorts "customerCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                    ReservationService.customerCollection.sort(Comparator.comparing(Customer::getFirstName));
-                } else if (sortChoice.equals("last name")) {
-                    // Sorts "customerCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                    ReservationService.customerCollection.sort(Comparator.comparing(Customer::getLastName));
-                } else if (sortChoice.equals("email")) {
-                    // Sorts "customerCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                    ReservationService.customerCollection.sort(Comparator.comparing(Customer::getEmail));
-                } else {
-                    throw new RuntimeException("Choice must be either First Name, Last Name, or Email");
+                switch (sortChoice) {
+                    case "first name":
+                        // Sorts "customerCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                        ReservationService.customerCollection.sort(Comparator.comparing(Customer::getFirstName));
+                        break;
+                    case "last name":
+                        // Sorts "customerCollection" by Last Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                        ReservationService.customerCollection.sort(Comparator.comparing(Customer::getLastName));
+                        break;
+                    case "email":
+                        // Sorts "customerCollection" by Emails in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                        ReservationService.customerCollection.sort(Comparator.comparing(Customer::getEmail));
+                        break;
+                    default:
+                        throw new RuntimeException("Choice must be either First Name, Last Name, or Email");
                 }
                 break;
             } catch (Exception e) {

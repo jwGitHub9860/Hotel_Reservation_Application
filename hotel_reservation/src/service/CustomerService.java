@@ -12,8 +12,6 @@ public class CustomerService {
 
         // Adds "customer" to "customerCollection"
         ReservationService.customerCollection.add(customer);
-
-        Customer.sortCustomers();
     }
 
     public static Customer getCustomer(String customerEmail) {

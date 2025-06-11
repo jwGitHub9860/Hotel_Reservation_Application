@@ -78,7 +78,7 @@ public class CustomerService {
 
     public static Collection<Customer> getAllCustomers() {
         // Calls "sortCustomers()" method from "Customer.java" to sort "customerList"
-        Customer.sortCustomers();
+        sortCustomers();
 
         return ReservationService.customerCollection;
     }

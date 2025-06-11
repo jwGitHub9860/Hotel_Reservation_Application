@@ -11,7 +11,7 @@ public class CustomerService {
     final static Scanner scanner = new Scanner(System.in);
 
     // Sorts "customerCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
-    public static void sortCustomers() {
+    private static void sortCustomers() {
         System.out.println("How would you like to sort customers (first name, last name, or email): ");
         while (true) {
             try {

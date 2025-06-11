@@ -35,9 +35,6 @@ public class AdminMenu {
                         // Calls "getAllCustomers()" method from "AdminResource.java"
                         Collection<Customer> customerList = AdminResource.getAllCustomers();
 
-                        // Calls "sortCustomers()" method from "Customer.java" to sort "customerList"
-                        Customer.sortCustomers();
-
                         // Display customer information inside "customerList" collection
                         for (Customer customer : customerList) {
                             System.out.println(customer);

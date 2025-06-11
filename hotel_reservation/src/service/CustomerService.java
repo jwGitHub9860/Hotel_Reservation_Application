@@ -39,5 +39,10 @@ public class CustomerService {
         return null;
     }
 
-    public static Collection<Customer> getAllCustomers() { return ReservationService.customerCollection; }
+    public static Collection<Customer> getAllCustomers() {
+        // Calls "sortCustomers()" method from "Customer.java" to sort "customerList"
+        Customer.sortCustomers();
+
+        return ReservationService.customerCollection;
+    }
 }

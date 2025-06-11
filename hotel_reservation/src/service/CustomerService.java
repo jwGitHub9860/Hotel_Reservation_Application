@@ -3,8 +3,41 @@ package service;
 import model.Customer;
 
 import java.util.Collection;
+import java.util.Comparator;
 
 public class CustomerService {
+    // Sorts "customerCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
+    public static void sortCustomers() {
+        System.out.println("How would you like to sort customers (first name, last name, or email): ");
+        while (true) {
+            try {
+                // Takes User Input for "sortChoice" AS STRING
+                String sortChoice = scanner.nextLine();
+
+                // Checks if User chose "First Name", "Last Name", or "Email"
+                switch (sortChoice) {
+                    case "first name":
+                        // Sorts "customerCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                        ReservationService.customerCollection.sort(Comparator.comparing(Customer::getFirstName));
+                        break;
+                    case "last name":
+                        // Sorts "customerCollection" by Last Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                        ReservationService.customerCollection.sort(Comparator.comparing(Customer::getLastName));
+                        break;
+                    case "email":
+                        // Sorts "customerCollection" by Emails in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
+                        ReservationService.customerCollection.sort(Comparator.comparing(Customer::getEmail));
+                        break;
+                    default:
+                        throw new RuntimeException("Choice must be either First Name, Last Name, or Email");
+                }
+                break;
+            } catch (Exception e) {
+                System.out.println("Please enter First Name, Last Name, or Email: ");
+            }
+        }
+    }
+
     public static void addCustomer(String email, String firstName, String lastName) {
         // Calls "Customer" constructor to obtain WHOLE Customer Information
         Customer customer = new Customer(firstName, lastName, email);

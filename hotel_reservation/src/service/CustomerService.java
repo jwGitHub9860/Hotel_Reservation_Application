@@ -4,8 +4,12 @@ import model.Customer;
 
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.Scanner;
 
 public class CustomerService {
+    // Allows User Input to be Read in ALL Methods WITHIN "CustomerService" class
+    final static Scanner scanner = new Scanner(System.in);
+
     // Sorts "customerCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
     public static void sortCustomers() {
         System.out.println("How would you like to sort customers (first name, last name, or email): ");

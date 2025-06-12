@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Room implements IRoom {
     final private String roomNumber;
-    final private Double price;
+    protected Double price; // MUST BE "protected" to allow "FreeRoom.java" access to it, Using "final private" will CAUSE ERROR
     final private RoomType roomType; // Enum declaration variable
     private static boolean isValid = false;
 

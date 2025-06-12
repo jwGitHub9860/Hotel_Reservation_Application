@@ -181,6 +181,9 @@ public class Room implements IRoom {
         }
     }
 
+    // Creates Instance of "Room" class
+    public static synchronized Room getInstance(String roomNumber, Double price, RoomType roomType) {}
+
     @Override
     public String toString(){ return "Room Number is " + roomNumber + ", " + roomType + " bed, Room Price is $" + String.format("%.2f", price); }
 }

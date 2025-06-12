@@ -131,7 +131,7 @@ public class ReservationService {
 
     public static void printAllReservation() {
         // Sorts "reservationCollection" by User's Choice
-        Reservation.sortReservations();
+        sortReservations();
         
         // Display reservation information inside "reservationCollection"
         for (Reservation reservation : reservationCollection) {

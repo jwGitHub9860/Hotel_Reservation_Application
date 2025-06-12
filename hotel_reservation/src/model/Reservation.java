@@ -20,7 +20,7 @@ public class Reservation {
     final static Scanner scanner = new Scanner(System.in);
 
     // Constructor
-    public Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
+    private Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) { // MUST BE "private" TO IMPLEMENT SINGLETON PATTERN
         this.customer = customer;
         this.room = room;
         this.checkInDate = checkInDate;

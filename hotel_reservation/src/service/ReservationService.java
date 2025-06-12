@@ -19,7 +19,7 @@ public class ReservationService {
     public static List<Reservation> reservationCollection = new LinkedList<>();
 
     // Sorts "reservationCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
-    public static void sortReservations() {
+    private static void sortReservations() {
         System.out.println("How would you like to sort reservations (customer first name, customer last name, room number, room type, room price, check-in date, or check-out date): ");
         while (true) {
             try {

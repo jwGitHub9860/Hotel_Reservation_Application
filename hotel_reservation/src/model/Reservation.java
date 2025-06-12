@@ -98,6 +98,12 @@ public class Reservation {
         return true;
     }
 
+    // Creates "Reservation" constructor to Create & Return WHOLE "Reservation"
+    public static synchronized Reservation getInstance(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
+        // calls "Reservation" constructor to Create & Return WHOLE "Reservation"
+        singleInstance = new Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate);
+    }
+
     @Override
     public String toString() { return "Reservation:\nCustomer: " + customer.getFirstName() + " " + customer.getLastName() + "\nRoom: " + room.getRoomNumber() + " - " + room.getRoomType() + " bed\nPrice: $" + room.getRoomPrice() + " price per night\nCheck-In Date: " + checkInDate + "\nCheck-Out Date: " + checkOutDate; }
 }

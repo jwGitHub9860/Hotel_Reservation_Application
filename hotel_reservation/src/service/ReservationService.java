@@ -109,8 +109,8 @@ public class ReservationService {
                 }
             }
         }
-        // calls "Reservation" constructor to Create & Return WHOLE "Reservation"
-        return new Reservation(customer, room, checkInDate, checkOutDate);
+        // Calls "getInstance()" method from "Reservation.java" to Create & Return WHOLE "Reservation"
+        return Reservation.getInstance(customer, room, checkInDate, checkOutDate);
     }
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) { return roomCollection; }

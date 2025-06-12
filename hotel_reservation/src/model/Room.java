@@ -36,9 +36,9 @@ public class Room implements IRoom {
     }
 
     // Room Method Definitions
-    public String getRoomNumber() { return roomNumber; }
-    public Double getRoomPrice() { return price; }
-    public RoomType getRoomType() { return roomType; }
+    final public String getRoomNumber() { return roomNumber; }
+    final public Double getRoomPrice() { return price; }
+    final public RoomType getRoomType() { return roomType; }
     public boolean isFree() { return true; }
 
     // Takes User Input for Room Information

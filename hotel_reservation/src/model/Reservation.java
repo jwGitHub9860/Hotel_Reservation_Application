@@ -28,10 +28,10 @@ public class Reservation {
     }
 
     // Reservation Method Definitions
-    public Customer getCustomer() { return customer; }
-    public IRoom getRoom() { return room; }
-    public Date getCheckInDate() { return checkInDate; }
-    public Date getCheckOutDate() { return checkOutDate; }
+    final public Customer getCustomer() { return customer; }
+    final public IRoom getRoom() { return room; }
+    final public Date getCheckInDate() { return checkInDate; }
+    final public Date getCheckOutDate() { return checkOutDate; }
 
     // Takes User Input for Reservation Information
     public static String inputCheckInAndCheckOutDates() {

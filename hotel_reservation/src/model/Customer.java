@@ -21,9 +21,9 @@ public class Customer {
     }
 
     // Customer Method Definitions
-    public String getFirstName() { return firstName; }
-    public String getLastName() { return lastName; }
-    public String getEmail() { return email; }
+    final public String getFirstName() { return firstName; }
+    final public String getLastName() { return lastName; }
+    final public String getEmail() { return email; }
 
     // Takes User Input for Customer Information
     public static String inputEmail() {

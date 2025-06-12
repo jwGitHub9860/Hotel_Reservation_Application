@@ -13,7 +13,7 @@ public class Customer {
     final static Scanner scanner = new Scanner(System.in);
 
     // Constructor
-    public Customer(String firstName, String lastName, String email) { // Checks if email format is correct
+    private Customer(String firstName, String lastName, String email) { // Checks if email format is correct
         // Defines "firstName", "lastName", "email", and "nonExistentEmail" in "toString()" function
         this.firstName = firstName; // set current "firstName" to "firstName"
         this.lastName = lastName; // set current "lastName" to "lastName"

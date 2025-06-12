@@ -8,10 +8,10 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Reservation {
-    Customer customer;
-    IRoom room;
-    Date checkInDate;
-    Date checkOutDate;
+    private Customer customer;
+    private IRoom room;
+    private Date checkInDate;
+    private Date checkOutDate;
 
     // Allows user to input "Date" as input
     final public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");

@@ -109,6 +109,11 @@ public class ReservationService {
                 } else if (checkInDate.equals(reservation.getCheckInDate()) && checkOutDate.equals(reservation.getCheckOutDate())) { // Checks if "checkInDate" in Reservation is EQUAL TO "checkInDate" & if "checkOutDate" in Reservation is EQUAL TO "checkOutDate" in "reservationCollection"
                     throw new IllegalArgumentException("Room cannot have two reservations with same check-in and check-out dates");
                 }*/
+                if (!(checkInDate.before(reservation.getCheckInDate()) && (checkOutDate.before(reservation.getCheckOutDate())))) { // Checks if "checkInDate" in Reservation is NOT BEFORE "checkInDate" & if "checkOutDate" in Reservation is NOT BEFORE "checkOutDate" in "reservationCollection"
+                    throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
+                } else if (!(checkInDate.after(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate()))) { // Checks if "checkInDate" in Reservation is NOT AFTER "checkInDate" & if "checkOutDate" in Reservation is NOT AFTER "checkOutDate" in "reservationCollection"
+                    throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
+                }
             }
         }
         // calls "Reservation" constructor to Create & Return WHOLE "Reservation"

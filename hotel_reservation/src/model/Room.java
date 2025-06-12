@@ -182,7 +182,10 @@ public class Room implements IRoom {
     }
 
     // Creates Instance of "Room" class
-    public static synchronized Room getInstance(String roomNumber, Double price, RoomType roomType) {}
+    public static synchronized Room getInstance(String roomNumber, Double price, RoomType roomType) {
+        // Calls "Room" constructor to Create & Return WHOLE "Room"
+        return new Room(roomNumber, price, roomType); // allows access to "IRoom" interface
+    }
 
     @Override
     public String toString(){ return "Room Number is " + roomNumber + ", " + roomType + " bed, Room Price is $" + String.format("%.2f", price); }

@@ -56,8 +56,8 @@ public class AdminMenu {
                         AdminResource.addRoom(ReservationService.roomCollection); // calls "addRoom()" method from "AdminResource.java"
                     } else if (adminUserInput == 5) {
                         // Tests if "Customer" constructor works
-                        //Customer customerTest = new Customer("firstName", "lastName", "email"); // calls "Customer" constructor
-                        //System.out.println(customerTest); // calls "toString()" override method from "Customer.java"
+                        /*Customer customerTest = new Customer("firstName", "lastName", "email"); // calls "Customer" constructor
+                        System.out.println(customerTest); // calls "toString()" override method from "Customer.java"*/
 
                         // FIRST Test if "FreeRoom" constructor works
                         FreeRoom freeRoom = new FreeRoom("100", 0.0, RoomType.DOUBLE); // calls "FreeRoom" constructor
@@ -74,8 +74,8 @@ public class AdminMenu {
                             System.out.println(room); // calls "toString()" override method from "FreeRoom.java"
                         } else {
                             // Calls "Room" constructor
-                            IRoom room = new Room(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
-                            System.out.println(room); // calls "toString()" override method from "Room.java"
+                            /*IRoom room = new Room(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
+                            System.out.println(room); // calls "toString()" override method from "Room.java"*/
                         }
 
                         // Tests if "getCustomer()" method from "AdminResource.java" works

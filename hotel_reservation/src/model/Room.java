@@ -8,9 +8,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Room implements IRoom {
-    String roomNumber;
-    Double price;
-    RoomType roomType; // Enum declaration variable
+    private String roomNumber;
+    private Double price;
+    private RoomType roomType; // Enum declaration variable
     private static boolean isValid = false;
 
     // Variables for Methods that Take User Input for Room Information

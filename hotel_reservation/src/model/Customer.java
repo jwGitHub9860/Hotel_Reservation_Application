@@ -13,7 +13,7 @@ public class Customer {
     final static Scanner scanner = new Scanner(System.in);
 
     // Constructor
-    private Customer(String firstName, String lastName, String email) { // Checks if email format is correct
+    private Customer(String firstName, String lastName, String email) { // MUST BE "private" TO IMPLEMENT SINGLETON PATTERN
         // Defines "firstName", "lastName", "email", and "nonExistentEmail" in "toString()" function
         this.firstName = firstName; // set current "firstName" to "firstName"
         this.lastName = lastName; // set current "lastName" to "lastName"
@@ -25,7 +25,7 @@ public class Customer {
     final public String getLastName() { return lastName; }
     final public String getEmail() { return email; }
 
-    // Takes User Input for Customer Information
+    // Checks if Email Format is Correct
     public static String inputEmail() {
         // Takes User Input for Email
         while (true) { // ensures that user inputted "emailInput"
@@ -71,6 +71,8 @@ public class Customer {
             }
         }
     }
+
+    // Takes User Input for Customer Information
     public static void inputAccountInformation() {
         // Obtains User Input for "email" for "HotelResource" constructor & "createACustomer()" method
         System.out.println("Enter email (format: name@domain.com): ");

@@ -101,7 +101,7 @@ public class Reservation {
     // Creates "Reservation" constructor to Create & Return WHOLE "Reservation"
     public static synchronized Reservation getInstance(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
         // calls "Reservation" constructor to Create & Return WHOLE "Reservation"
-        singleInstance = new Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate);
+        singleInstance = new Reservation(customer, room, checkInDate, checkOutDate);
     }
 
     @Override

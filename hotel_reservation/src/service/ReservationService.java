@@ -5,7 +5,10 @@ import model.*;
 import java.util.*;
 
 public class ReservationService {
-    // Collections to store & retrieve reservations
+    // Allows User Input to be Read in ALL Methods WITHIN "ReservationService" class
+    final static Scanner scanner = new Scanner(System.in);
+
+    // Customer Collection
     public static List<Customer> customerCollection = new ArrayList<>();
 
     // Room Collections

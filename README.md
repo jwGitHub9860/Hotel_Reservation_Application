@@ -17,6 +17,8 @@ _None_
 
 Abba, Ihechikara. “Java Enum – Enumeration in Java Example.” _freeCodeCamp.Org_, freeCodeCamp.org, 25 Mar. 2022, www.freecodecamp.org/news/java-enum-enumeration-in-java-example/. Accessed 22 May 2025.
 
+Agarwal, Harsh. “Encapsulation in Java.” _GeeksforGeeks_, 17 May 2025, www.geeksforgeeks.org/encapsulation-in-java/. Accessed 11 Jun. 2025.
+
 Armas, Jadiel de. “What Does It Mean for a Collection to Be Final in Java? - Stack Overflow.” Stack Overflow, 22 Oct. 2014, stackoverflow.com/questions/26500423/what-does-it-mean-for-a-collection-to-be-final-in-java. Accessed 26 May 2025.
 
 “Array vs Arraylist in Java.” _GeeksforGeeks_, GeeksforGeeks, 24 Mar. 2025, www.geeksforgeeks.org/array-vs-arraylist-in-java/. Accessed 27 May 2025.

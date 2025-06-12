@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class Customer {
-    final String firstName, lastName, email;
+    final private String firstName, lastName, email;
 
     // Allows User Input to be Read in ALL Methods WITHIN "Customer" class
     final static Scanner scanner = new Scanner(System.in);

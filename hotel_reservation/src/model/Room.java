@@ -28,7 +28,7 @@ public class Room implements IRoom {
     final static Scanner scanner = new Scanner(System.in);
 
     // Constructor
-    private Room(String roomNumber, Double price, RoomType roomType) { // MUST BE "private" TO IMPLEMENT SINGLETON PATTERN
+    Room(String roomNumber, Double price, RoomType roomType) { // MUST BE "package-private" TO IMPLEMENT SINGLETON PATTERN & ALLOW "FreeRoom.java" ACCESS TO "Room" CONSTRUCTOR
         // Sets "roomNumber", "price", "roomType" to CURRENT "roomNumber", "price", "roomType"
         this.roomNumber = roomNumber;
         this.price = price;

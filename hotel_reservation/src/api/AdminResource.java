@@ -49,7 +49,7 @@ public class AdminResource {
                 addRoomRepeat = inputYOrN(); // calls "inputYOrN()" method to take User Input
             } else {
                 // Calls "Room" constructor
-                IRoom room = new Room(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
+                IRoom room = Room.getInstance(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
 
                 // Calls "addRoom()" method from SERVICE file
                 ReservationService.addRoom(room);

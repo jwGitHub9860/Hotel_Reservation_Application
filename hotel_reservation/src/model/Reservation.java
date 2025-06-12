@@ -98,10 +98,10 @@ public class Reservation {
         return true;
     }
 
-    // Creates "Reservation" constructor to Create & Return WHOLE "Reservation"
+    // Creates Instance of "Reservation" class
     public static synchronized Reservation getInstance(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
-        // calls "Reservation" constructor to Create & Return WHOLE "Reservation"
-        singleInstance = new Reservation(customer, room, checkInDate, checkOutDate);
+        // Calls "Reservation" constructor to Create & Return WHOLE "Reservation"
+        return new Reservation(customer, room, checkInDate, checkOutDate);
     }
 
     @Override

@@ -91,6 +91,9 @@ public class Customer {
         HotelResource.createACustomer(email, firstName, lastName);
     }
 
+    // Create Instance of "Customer" class
+    public static synchronized Customer getInstance(String firstName, String lastName, String email) {}
+
     @Override
     public String toString() {
         return "Customer First Name: " + firstName + ", Last Name: " + lastName + ", Email: " + email;

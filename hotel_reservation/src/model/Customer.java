@@ -92,7 +92,10 @@ public class Customer {
     }
 
     // Create Instance of "Customer" class
-    public static synchronized Customer getInstance(String firstName, String lastName, String email) {}
+    public static synchronized Customer getInstance(String firstName, String lastName, String email) {
+        // Calls "Customer" constructor to obtain WHOLE Customer Information
+        return new Customer(firstName, lastName, email);
+    }
 
     @Override
     public String toString() {

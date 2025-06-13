@@ -48,8 +48,8 @@ public class AdminResource {
                 System.out.println("Would you like to add another room (y/n): ");
                 addRoomRepeat = inputYOrN(); // calls "inputYOrN()" method to take User Input
             } else {
-                // Calls "Room" constructor
-                IRoom room = new Room(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
+                // Calls "getInstance()" method from "Room.java" to Create WHOLE "Room"
+                IRoom room = Room.getInstance(roomNumberUserInput, roomPriceUserInput, roomTypeUserInput); // allows access to "IRoom" interface
 
                 // Calls "addRoom()" method from SERVICE file
                 ReservationService.addRoom(room);

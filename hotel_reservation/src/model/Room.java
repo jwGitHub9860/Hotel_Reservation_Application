@@ -8,9 +8,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Room implements IRoom {
-    String roomNumber;
-    Double price;
-    RoomType roomType; // Enum declaration variable
+    final private String roomNumber;
+    protected Double price; // MUST BE "protected" to allow "FreeRoom.java" access to it, Using "final private" will CAUSE ERROR
+    final private RoomType roomType; // Enum declaration variable
     private static boolean isValid = false;
 
     // Variables for Methods that Take User Input for Room Information
@@ -28,7 +28,7 @@ public class Room implements IRoom {
     final static Scanner scanner = new Scanner(System.in);
 
     // Constructor
-    public Room(String roomNumber, Double price, RoomType roomType) {
+    Room(String roomNumber, Double price, RoomType roomType) { // MUST BE "package-private" TO IMPLEMENT SINGLETON PATTERN & ALLOW "FreeRoom.java" ACCESS TO "Room" CONSTRUCTOR
         // Sets "roomNumber", "price", "roomType" to CURRENT "roomNumber", "price", "roomType"
         this.roomNumber = roomNumber;
         this.price = price;
@@ -36,9 +36,9 @@ public class Room implements IRoom {
     }
 
     // Room Method Definitions
-    public String getRoomNumber() { return roomNumber; }
-    public Double getRoomPrice() { return price; }
-    public RoomType getRoomType() { return roomType; }
+    final public String getRoomNumber() { return roomNumber; }
+    final public Double getRoomPrice() { return price; }
+    final public RoomType getRoomType() { return roomType; }
     public boolean isFree() { return true; }
 
     // Takes User Input for Room Information
@@ -179,6 +179,12 @@ public class Room implements IRoom {
                 System.out.println("Please enter Room Number, Room Type, or Room Price: ");
             }
         }
+    }
+
+    // Creates Instance of "Room" class
+    public static synchronized Room getInstance(String roomNumber, Double price, RoomType roomType) {
+        // Calls "Room" constructor to Create & Return WHOLE "Room"
+        return new Room(roomNumber, price, roomType); // allows access to "IRoom" interface
     }
 
     @Override

@@ -7,13 +7,13 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class Customer {
-    String firstName, lastName, email, nonExistentEmail;
+    final private String firstName, lastName, email;
 
     // Allows User Input to be Read in ALL Methods WITHIN "Customer" class
     final static Scanner scanner = new Scanner(System.in);
 
     // Constructor
-    public Customer(String firstName, String lastName, String email) { // Checks if email format is correct
+    private Customer(String firstName, String lastName, String email) { // MUST BE "private" TO IMPLEMENT SINGLETON PATTERN
         // Defines "firstName", "lastName", "email", and "nonExistentEmail" in "toString()" function
         this.firstName = firstName; // set current "firstName" to "firstName"
         this.lastName = lastName; // set current "lastName" to "lastName"
@@ -21,11 +21,11 @@ public class Customer {
     }
 
     // Customer Method Definitions
-    public String getFirstName() { return firstName; }
-    public String getLastName() { return lastName; }
-    public String getEmail() { return email; }
+    final public String getFirstName() { return firstName; }
+    final public String getLastName() { return lastName; }
+    final public String getEmail() { return email; }
 
-    // Takes User Input for Customer Information
+    // Checks if Email Format is Correct
     public static String inputEmail() {
         // Takes User Input for Email
         while (true) { // ensures that user inputted "emailInput"
@@ -71,6 +71,8 @@ public class Customer {
             }
         }
     }
+
+    // Takes User Input for Customer Information
     public static void inputAccountInformation() {
         // Obtains User Input for "email" for "HotelResource" constructor & "createACustomer()" method
         System.out.println("Enter email (format: name@domain.com): ");
@@ -91,36 +93,10 @@ public class Customer {
         HotelResource.createACustomer(email, firstName, lastName);
     }
 
-    // Sorts "customerCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
-    public static void sortCustomers() {
-        System.out.println("How would you like to sort customers (first name, last name, or email): ");
-        while (true) {
-            try {
-                // Takes User Input for "sortChoice" AS STRING
-                String sortChoice = scanner.nextLine();
-
-                // Checks if User chose "First Name", "Last Name", or "Email"
-                switch (sortChoice) {
-                    case "first name":
-                        // Sorts "customerCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                        ReservationService.customerCollection.sort(Comparator.comparing(Customer::getFirstName));
-                        break;
-                    case "last name":
-                        // Sorts "customerCollection" by Last Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                        ReservationService.customerCollection.sort(Comparator.comparing(Customer::getLastName));
-                        break;
-                    case "email":
-                        // Sorts "customerCollection" by Emails in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                        ReservationService.customerCollection.sort(Comparator.comparing(Customer::getEmail));
-                        break;
-                    default:
-                        throw new RuntimeException("Choice must be either First Name, Last Name, or Email");
-                }
-                break;
-            } catch (Exception e) {
-                System.out.println("Please enter First Name, Last Name, or Email: ");
-            }
-        }
+    // Create Instance of "Customer" class
+    public static synchronized Customer getInstance(String firstName, String lastName, String email) {
+        // Calls "Customer" constructor to obtain WHOLE Customer Information
+        return new Customer(firstName, lastName, email);
     }
 
     @Override

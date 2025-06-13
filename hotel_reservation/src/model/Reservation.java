@@ -8,10 +8,10 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Reservation {
-    Customer customer;
-    IRoom room;
-    Date checkInDate;
-    Date checkOutDate;
+    final private Customer customer;
+    final private IRoom room;
+    final private Date checkInDate;
+    final private Date checkOutDate;
 
     // Allows user to input "Date" as input
     final public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
@@ -20,7 +20,7 @@ public class Reservation {
     final static Scanner scanner = new Scanner(System.in);
 
     // Constructor
-    public Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
+    private Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) { // MUST BE "private" TO IMPLEMENT SINGLETON PATTERN
         this.customer = customer;
         this.room = room;
         this.checkInDate = checkInDate;
@@ -28,10 +28,10 @@ public class Reservation {
     }
 
     // Reservation Method Definitions
-    public Customer getCustomer() { return customer; }
-    public IRoom getRoom() { return room; }
-    public Date getCheckInDate() { return checkInDate; }
-    public Date getCheckOutDate() { return checkOutDate; }
+    final public Customer getCustomer() { return customer; }
+    final public IRoom getRoom() { return room; }
+    final public Date getCheckInDate() { return checkInDate; }
+    final public Date getCheckOutDate() { return checkOutDate; }
 
     // Takes User Input for Reservation Information
     public static String inputCheckInAndCheckOutDates() {
@@ -98,60 +98,10 @@ public class Reservation {
         return true;
     }
 
-    // Sorts "reservationCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
-    public static void sortReservations() {
-        System.out.println("How would you like to sort reservations (customer first name, customer last name, room number, room type, room price, check-in date, or check-out date): ");
-        while (true) {
-            try {
-                // Takes User Input for "sortChoice" AS STRING
-                String sortChoice = scanner.nextLine();
-
-                // Checks if User chose "Customer First Name", "Customer Last Name", "Room Number", "Room Type", "Room Price", "Check-in Date", or "Check-out Date"
-                switch (sortChoice) {
-                    case "customer first name":
-                    case "first name":
-                        // Sorts "reservationCollection" by First Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                        ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> reservation.getCustomer().getFirstName()));
-                        break;
-                    case "customer last name":
-                    case "last name":
-                        // Sorts "reservationCollection" by Last Names in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                        ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> reservation.getCustomer().getLastName()));
-                        break;
-                    case "room number":
-                        // Sorts "reservationCollection" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
-                        ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> {
-                            String string = reservation.getRoom().getRoomNumber(); // obtains "roomNumber"
-                            String[] roomRoomNumbers = string.split("\\."); // "\\." - match the character
-                            int firstRoomNumber = Integer.parseInt(roomRoomNumbers[0]); // obtains 1st Room Number
-                            int secondRoomNumber = roomRoomNumbers.length > 1 ? Integer.parseInt(roomRoomNumbers[1]) : 0; // finds which Room Number is greater
-                            return firstRoomNumber * 1000 + secondRoomNumber; // returns "roomNumber1" and "roomNumber2" in Ascending Order
-                        }));
-                        break;
-                    case "room type":
-                        // Sorts "reservationCollection" by Room Type in NUMERIC ORDER (1 -> SINGLE, 2 -> DOUBLE), In ASCENDING ORDER
-                        ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> reservation.getRoom().getRoomType()));
-                        break;
-                    case "room price":
-                        // Sorts "reservationCollection" by Room Price in Alphabetical Order & ONLY WORKS FOR "STRING WORDS", organizes String Numbers by FIRST DIGIT in Number
-                        ReservationService.reservationCollection.sort(Comparator.comparing(reservation -> reservation.getRoom().getRoomPrice()));
-                        break;
-                    case "check-in date":
-                        // Sorts "reservationCollection" by Check-In "Dates" in Ascending Order
-                        ReservationService.reservationCollection.sort(Comparator.comparing(Reservation::getCheckInDate));
-                        break;
-                    case "check-out date":
-                        // Sorts "reservationCollection" by Check-Out "Dates" in Ascending Order
-                        ReservationService.reservationCollection.sort(Comparator.comparing(Reservation::getCheckOutDate));
-                        break;
-                    default:
-                        throw new RuntimeException("Choice must be either Customer First Name, Customer Last Name, Room Number, Room Type, Room Price, Check-in Date, or Check-out Date");
-                }
-                break;
-            } catch (Exception e) {
-                System.out.println("Please enter Customer First Name, Customer Last Name, Room Number, Room Type, Room Price, Check-in Date, or Check-out Date: ");
-            }
-        }
+    // Creates Instance of "Reservation" class
+    public static synchronized Reservation getInstance(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
+        // Calls "Reservation" constructor to Create & Return WHOLE "Reservation"
+        return new Reservation(customer, room, checkInDate, checkOutDate);
     }
 
     @Override

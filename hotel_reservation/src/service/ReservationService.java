@@ -144,8 +144,8 @@ public class ReservationService {
                     }
                 }
             }
-            return availableRoomCollection;
         }
+        return availableRoomCollection;
     }
 
     public static Collection<Reservation> getCustomersReservation(Customer customer) {

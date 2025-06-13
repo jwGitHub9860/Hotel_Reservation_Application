@@ -14,7 +14,6 @@ public class ReservationService {
     // Room Collections
     public static List<IRoom> roomCollection = new ArrayList<>();
     public static Collection<String> roomNumberCollection = new HashSet<String>(); // holds ONLY Room Numbers of rooms created
-    public static List<IRoom> availableRoomCollection = new ArrayList<>(); // holds ONLY Rooms Available for Reservation
 
     // Reservation Collection
     public static List<Reservation> reservationCollection = new LinkedList<>();
@@ -115,6 +114,8 @@ public class ReservationService {
     }
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) {
+        // Holds ONLY Rooms Available for Reservation
+        public static List<IRoom> availableRoomCollection = new ArrayList<>(); // initializes "availableRoomCollection" back to "null"
         // Returns "roomCollection" if No Reservations are Made Yet
         if (reservationCollection.isEmpty()) {
             return roomCollection;

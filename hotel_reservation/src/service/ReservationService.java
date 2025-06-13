@@ -14,6 +14,7 @@ public class ReservationService {
     // Room Collections
     public static List<IRoom> roomCollection = new ArrayList<>();
     public static Collection<String> roomNumberCollection = new HashSet<String>(); // holds ONLY Room Numbers of rooms created
+    public static List<IRoom> availableRoomCollection = new ArrayList<>(); // holds ONLY Rooms Available for Reservation
 
     // Reservation Collection
     public static List<Reservation> reservationCollection = new LinkedList<>();

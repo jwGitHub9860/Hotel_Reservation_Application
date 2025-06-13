@@ -130,7 +130,7 @@ public class ReservationService {
             availableRoomCollection.addAll(roomCollection);
         } else {
             // Checks if Room is Already Reserved
-            for (IRoom hotelRoom : roomCollection) {
+            for (IRoom hotelRoom : availableRoomCollection) {
                 for (Reservation reservation : reservationCollection) {
                     // Indicates if Room is Available & Adds Room to "availableRoomCollection" if Room IS Available
                     if (reservation.getRoom().getRoomNumber().equals(hotelRoom.getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "roomCollection"

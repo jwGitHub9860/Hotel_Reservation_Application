@@ -67,6 +67,8 @@ Ignorant Coder. “Differences between Java ArrayList and LinkedList Collections
 
 JEAN, Ebillson GRAND. “What Does It Mean to Provide a Static Reference in the Context of a Java Program?” _Stack Overflow_, 27 June 2022, stackoverflow.com/questions/72779198/what-does-it-mean-to-provide-a-static-reference-in-the-context-of-a-java-program. Accessed 23 May 2025.
 
+kartik. “Singleton Method Design Pattern in Java.” _GeeksforGeeks_, 17 Apr. 2025, www.geeksforgeeks.org/singleton-class-java/. Accessed 11 Jun. 2025.
+
 kvdevika. “What Happens If the User Enters an Invalid Input While Using the Scanner Class in Java?” _Sarthaks eConnect_, 24 Apr. 2023, www.sarthaks.com/3492807/what-happens-if-the-user-enters-an-invalid-input-while-using-the-scanner-class-in-java. Accessed 30 May 2025.
 
 “List Addall() Method in Java with Examples.” _GeeksforGeeks_, GeeksforGeeks, 2 Jan. 2019, www.geeksforgeeks.org/list-addall-method-in-java-with-examples/. Accessed 1 Jun. 2025.
@@ -88,6 +90,8 @@ sdellysse. “When to Use LinkedList over ArrayList in Java?” Edited by Simeon
 “Types of Exception in Java with Examples.” _GeeksforGeeks_, GeeksforGeeks, 11 Sept. 2023, www.geeksforgeeks.org/types-of-exception-in-java-with-examples/. Accessed 26 May 2025.
 
 “Udacity Git Commit Message Style Guide.” _Udacity Nanodegree Style Guide_, udacity.github.io/git-styleguide/. Accessed 22 May 2025.
+
+W, Matt. “Creating a Singleton Object in Java.” Edited by ROMANIA_engineer, _Stack Overflow_, 1 May 2016, stackoverflow.com/questions/36966349/creating-a-singleton-object-in-java. 11 Jun. 2025.
 
 “W3schools.Com.” _W3Schools Online Web Tutorials_, www.w3schools.com/java/java_class_attributes.asp. Accessed 26 May 2025. 
 

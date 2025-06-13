@@ -130,17 +130,17 @@ public class ReservationService {
             availableRoomCollection.addAll(roomCollection);
         } else {
             // Checks if Room is Already Reserved
-            for (IRoom hotelRoom : availableRoomCollection) {
+            for (IRoom availableRoom : availableRoomCollection) {
                 for (Reservation reservation : reservationCollection) {
                     // Indicates if Room is Available & Adds Room to "availableRoomCollection" if Room IS Available
-                    if (reservation.getRoom().getRoomNumber().equals(hotelRoom.getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "roomCollection"
+                    if (reservation.getRoom().getRoomNumber().equals(availableRoom.getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "roomCollection"
                         if (checkInDate.before(reservation.getCheckInDate()) && (checkOutDate.before(reservation.getCheckOutDate()))) { // Checks if "checkInDate" in Reservation is BEFORE "checkInDate" & if "checkOutDate" in Reservation is BEFORE "checkOutDate" in "reservationCollection"
-                            availableRoomCollection.add(hotelRoom);
+                            availableRoomCollection.add(availableRoom);
                         } else if (checkInDate.after(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate())) { // Checks if "checkInDate" in Reservation is AFTER "checkInDate" & if "checkOutDate" in Reservation is AFTER "checkOutDate" in "reservationCollection"
-                            availableRoomCollection.add(hotelRoom);
+                            availableRoomCollection.add(availableRoom);
                         }
                     } else { // if "roomNumber" is NOT in "reservationCollection"
-                        availableRoomCollection.add(hotelRoom);
+                        availableRoomCollection.add(availableRoom);
                     }
                 }
             }

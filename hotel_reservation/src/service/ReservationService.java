@@ -14,6 +14,7 @@ public class ReservationService {
     // Room Collections
     public static List<IRoom> roomCollection = new ArrayList<>();
     public static Collection<String> roomNumberCollection = new HashSet<String>(); // holds ONLY Room Numbers of rooms created
+    public static List<IRoom> availableRoomCollection = new ArrayList<>(); // holds ONLY Rooms Available for Reservation
 
     // Reservation Collection
     public static List<Reservation> reservationCollection = new LinkedList<>();
@@ -102,11 +103,11 @@ public class ReservationService {
         for (Reservation reservation : reservationCollection) {
             // Indicates if Room is Available Or Not & Throws Exception if Room is NOT Available
             if (room.getRoomNumber().equals(reservation.getRoom().getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "reservationCollection"
-                if (!(checkInDate.before(reservation.getCheckInDate()) && (checkOutDate.before(reservation.getCheckOutDate())))) { // Checks if "checkInDate" in Reservation is NOT BEFORE "checkInDate" & if "checkOutDate" in Reservation is NOT BEFORE "checkOutDate" in "reservationCollection"
+                /*if (!(checkInDate.before(reservation.getCheckInDate()) && (checkOutDate.before(reservation.getCheckOutDate())))) { // Checks if "checkInDate" in Reservation is NOT BEFORE "checkInDate" & if "checkOutDate" in Reservation is NOT BEFORE "checkOutDate" in "reservationCollection"
                     throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
                 } else if (!(checkInDate.after(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate()))) { // Checks if "checkInDate" in Reservation is NOT AFTER "checkInDate" & if "checkOutDate" in Reservation is NOT AFTER "checkOutDate" in "reservationCollection"
                     throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
-                }
+                }*/
             }
         }
         // Calls "getInstance()" method from "Reservation.java" to Create & Return WHOLE "Reservation"
@@ -114,8 +115,6 @@ public class ReservationService {
     }
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) {
-        // Holds ONLY Rooms Available for Reservation
-        public static List<IRoom> availableRoomCollection = new ArrayList<>(); // initializes "availableRoomCollection" back to "null"
         // Returns "roomCollection" if No Reservations are Made Yet
         if (reservationCollection.isEmpty()) {
             return roomCollection;

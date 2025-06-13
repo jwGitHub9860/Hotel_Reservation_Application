@@ -108,6 +108,15 @@ public class ReservationService {
                 } else if (!(checkInDate.after(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate()))) { // Checks if "checkInDate" in Reservation is NOT AFTER "checkInDate" & if "checkOutDate" in Reservation is NOT AFTER "checkOutDate" in "reservationCollection"
                     throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
                 }*/
+                if (!checkInDate.after(reservation.getCheckInDate())) {
+                    if (!checkInDate.after(reservation.getCheckOutDate())) {
+                        throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
+                    }
+                } else if (!checkOutDate.before(reservation.getCheckOutDate())) {
+                    if (!checkInDate.before(reservation.getCheckInDate())) {
+                        throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
+                    }
+                }
             }
         }
         // Calls "getInstance()" method from "Reservation.java" to Create & Return WHOLE "Reservation"

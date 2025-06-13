@@ -17,6 +17,8 @@ _None_
 
 Abba, Ihechikara. “Java Enum – Enumeration in Java Example.” _freeCodeCamp.Org_, freeCodeCamp.org, 25 Mar. 2022, www.freecodecamp.org/news/java-enum-enumeration-in-java-example/. Accessed 22 May 2025.
 
+Agarwal, Harsh. “Encapsulation in Java.” _GeeksforGeeks_, 17 May 2025, www.geeksforgeeks.org/encapsulation-in-java/. Accessed 11 Jun. 2025.
+
 Armas, Jadiel de. “What Does It Mean for a Collection to Be Final in Java? - Stack Overflow.” Stack Overflow, 22 Oct. 2014, stackoverflow.com/questions/26500423/what-does-it-mean-for-a-collection-to-be-final-in-java. Accessed 26 May 2025.
 
 “Array vs Arraylist in Java.” _GeeksforGeeks_, GeeksforGeeks, 24 Mar. 2025, www.geeksforgeeks.org/array-vs-arraylist-in-java/. Accessed 27 May 2025.
@@ -65,6 +67,8 @@ Ignorant Coder. “Differences between Java ArrayList and LinkedList Collections
 
 JEAN, Ebillson GRAND. “What Does It Mean to Provide a Static Reference in the Context of a Java Program?” _Stack Overflow_, 27 June 2022, stackoverflow.com/questions/72779198/what-does-it-mean-to-provide-a-static-reference-in-the-context-of-a-java-program. Accessed 23 May 2025.
 
+kartik. “Singleton Method Design Pattern in Java.” _GeeksforGeeks_, 17 Apr. 2025, www.geeksforgeeks.org/singleton-class-java/. Accessed 11 Jun. 2025.
+
 kvdevika. “What Happens If the User Enters an Invalid Input While Using the Scanner Class in Java?” _Sarthaks eConnect_, 24 Apr. 2023, www.sarthaks.com/3492807/what-happens-if-the-user-enters-an-invalid-input-while-using-the-scanner-class-in-java. Accessed 30 May 2025.
 
 “List Addall() Method in Java with Examples.” _GeeksforGeeks_, GeeksforGeeks, 2 Jan. 2019, www.geeksforgeeks.org/list-addall-method-in-java-with-examples/. Accessed 1 Jun. 2025.
@@ -87,7 +91,11 @@ sdellysse. “When to Use LinkedList over ArrayList in Java?” Edited by Simeon
 
 “Udacity Git Commit Message Style Guide.” _Udacity Nanodegree Style Guide_, udacity.github.io/git-styleguide/. Accessed 22 May 2025.
 
+W, Matt. “Creating a Singleton Object in Java.” Edited by ROMANIA_engineer, _Stack Overflow_, 1 May 2016, stackoverflow.com/questions/36966349/creating-a-singleton-object-in-java. 11 Jun. 2025.
+
 “W3schools.Com.” _W3Schools Online Web Tutorials_, www.w3schools.com/java/java_class_attributes.asp. Accessed 26 May 2025. 
+
+“W3schools.Com.” _W3Schools Online Web Tutorials_, www.w3schools.com/java/java_encapsulation.asp. Accessed 11 June 2025. 
 
 “W3schools.Com.” _W3Schools Online Web Tutorials_, www.w3schools.com/java/ref_string_endswith.asp. Accessed 6 June 2025. 
 

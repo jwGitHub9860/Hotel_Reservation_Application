@@ -14,7 +14,6 @@ public class ReservationService {
     // Room Collections
     public static List<IRoom> roomCollection = new ArrayList<>();
     public static Collection<String> roomNumberCollection = new HashSet<String>(); // holds ONLY Room Numbers of rooms created
-    public static List<IRoom> availableRoomCollection = new ArrayList<>(); // holds ONLY Rooms Available for Reservation
 
     // Reservation Collection
     public static List<Reservation> reservationCollection = new LinkedList<>();
@@ -114,29 +113,7 @@ public class ReservationService {
         return Reservation.getInstance(customer, room, checkInDate, checkOutDate);
     }
 
-    public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) {
-        // Returns "roomCollection" if No Reservations are Made Yet
-        if (reservationCollection.isEmpty()) {
-            return roomCollection;
-        } else {
-            // Checks if Room is Already Reserved
-            for (IRoom hotelRoom : roomCollection) {
-                for (Reservation reservation : reservationCollection) {
-                    // Indicates if Room is Available & Adds Room to "availableRoomCollection" if Room IS Available
-                    if (reservation.getRoom().getRoomNumber().equals(hotelRoom.getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "roomCollection"
-                        if (checkInDate.before(reservation.getCheckInDate()) && (checkOutDate.before(reservation.getCheckOutDate()))) { // Checks if "checkInDate" in Reservation is BEFORE "checkInDate" & if "checkOutDate" in Reservation is BEFORE "checkOutDate" in "reservationCollection"
-                            availableRoomCollection.add(hotelRoom);
-                        } else if (checkInDate.after(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate())) { // Checks if "checkInDate" in Reservation is AFTER "checkInDate" & if "checkOutDate" in Reservation is AFTER "checkOutDate" in "reservationCollection"
-                            availableRoomCollection.add(hotelRoom);
-                        }
-                    } else { // if "roomNumber" is NOT in "reservationCollection"
-                        availableRoomCollection.add(hotelRoom);
-                    }
-                }
-            }
-            return availableRoomCollection;
-        }
-    }
+    public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) { return roomCollection; }
 
     public static Collection<Reservation> getCustomersReservation(Customer customer) {
         // holds ONLY Reservations of "customer"

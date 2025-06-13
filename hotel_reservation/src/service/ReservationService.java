@@ -115,18 +115,23 @@ public class ReservationService {
     }
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) {
-        // Checks if Room is Already Reserved
-        for (Reservation reservation : reservationCollection) {
-            // Indicates if Room is Available & Adds Room to "availableRoomCollection" if Room IS Available
-            if (reservation.getRoom().getRoomNumber().equals(reservation.getRoom().getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "reservationCollection"
-                if (checkInDate.before(reservation.getCheckInDate()) && (checkOutDate.before(reservation.getCheckOutDate()))) { // Checks if "checkInDate" in Reservation is BEFORE "checkInDate" & if "checkOutDate" in Reservation is BEFORE "checkOutDate" in "reservationCollection"
-                    availableRoomCollection.add(reservation.getRoom());
-                } else if (checkInDate.after(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate())) { // Checks if "checkInDate" in Reservation is AFTER "checkInDate" & if "checkOutDate" in Reservation is AFTER "checkOutDate" in "reservationCollection"
-                    availableRoomCollection.add(reservation.getRoom());
+        // Returns "roomCollection" if No Reservations are Made Yet
+        if (reservationCollection.isEmpty()) {
+            return roomCollection;
+        } else {
+            // Checks if Room is Already Reserved
+            for (Reservation reservation : reservationCollection) {
+                // Indicates if Room is Available & Adds Room to "availableRoomCollection" if Room IS Available
+                if (reservation.getRoom().getRoomNumber().equals(reservation.getRoom().getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "reservationCollection"
+                    if (checkInDate.before(reservation.getCheckInDate()) && (checkOutDate.before(reservation.getCheckOutDate()))) { // Checks if "checkInDate" in Reservation is BEFORE "checkInDate" & if "checkOutDate" in Reservation is BEFORE "checkOutDate" in "reservationCollection"
+                        availableRoomCollection.add(reservation.getRoom());
+                    } else if (checkInDate.after(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate())) { // Checks if "checkInDate" in Reservation is AFTER "checkInDate" & if "checkOutDate" in Reservation is AFTER "checkOutDate" in "reservationCollection"
+                        availableRoomCollection.add(reservation.getRoom());
+                    }
                 }
             }
+            return availableRoomCollection;
         }
-        return availableRoomCollection;
     }
 
     public static Collection<Reservation> getCustomersReservation(Customer customer) {

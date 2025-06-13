@@ -124,9 +124,10 @@ public class ReservationService {
     }
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) {
-        // Returns "roomCollection" if No Reservations are Made Yet
+        // Returns ALL Room Inside "roomCollection" if No Reservations are Made Yet
         if (reservationCollection.isEmpty()) {
-            return roomCollection;
+            // Adds ALL Rooms Inside "roomCollection" to "availableRoomCollection"
+            availableRoomCollection.addAll(roomCollection);
         } else {
             // Checks if Room is Already Reserved
             for (IRoom hotelRoom : roomCollection) {

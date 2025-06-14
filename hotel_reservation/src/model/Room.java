@@ -5,6 +5,7 @@ import service.ReservationService;
 import java.text.DecimalFormat;
 import java.util.Comparator;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Room implements IRoom {
@@ -133,7 +134,7 @@ public class Room implements IRoom {
     }
 
     // Sorts "roomCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
-    public static void sortRooms() {
+    public static void sortRooms(List<IRoom> chosenRoomCollection) {
         System.out.println("How would you like to sort reservations (room number, room price, or room type): ");
         while (true) {
             try {

@@ -5,7 +5,6 @@ import service.ReservationService;
 import java.text.DecimalFormat;
 import java.util.Comparator;
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class Room implements IRoom {
@@ -133,8 +132,8 @@ public class Room implements IRoom {
         return roomTypeInput;
     }
 
-    // Sorts "chosenRoomCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
-    public static void sortRooms(List<IRoom> chosenRoomCollection) {
+    // Sorts "roomCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
+    public static void sortRooms() {
         System.out.println("How would you like to sort reservations (room number, room price, or room type): ");
         while (true) {
             try {
@@ -149,10 +148,10 @@ public class Room implements IRoom {
 
                 // Checks if User chose "Room Price"
                 if (finalSortChoice.equals("room price")) {
-                    chosenRoomCollection.sort(Comparator.comparingDouble(IRoom::getRoomPrice)); // sorts "chosenRoomCollection" by "price"
+                    ReservationService.roomCollection.sort(Comparator.comparingDouble(IRoom::getRoomPrice)); // sorts "roomCollection" by "price"
                 } else {
-                    // Sorts "chosenRoomCollection" by Room Numbers OR Room Types & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
-                    chosenRoomCollection.sort(Comparator.comparing(iRoom -> {
+                    // Sorts "roomCollection" by Room Numbers OR Room Types & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
+                    ReservationService.roomCollection.sort(Comparator.comparing(iRoom -> {
                         // Checks if User chose "Room Number" or "Room Type"
                         switch (finalSortChoice) {
                             case "room number":

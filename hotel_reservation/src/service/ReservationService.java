@@ -75,6 +75,18 @@ public class ReservationService {
         }
     }
 
+    // Sorts "availableRoomCollection" by Room Numbers
+    private static void sortAvailableRoomCollection() {
+        // Sorts "availableRoomCollection" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
+        availableRoomCollection.sort(Comparator.comparing(iRoom -> {
+            String obtainRoomInfo = iRoom.getRoomNumber(); // obtains "roomNumber"
+            String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
+            int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
+            int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
+            return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
+        }));
+    }
+
     public static void addRoom(IRoom room) { roomCollection.add(room); } // adds "roomNumber", "price", and "roomType" to "roomList"
 
     public static IRoom getARoom(String roomId) {
@@ -186,15 +198,12 @@ public class ReservationService {
                 }
             }
         } catch (ConcurrentModificationException e) { // "ConcurrentModificationException" is UNAVOIDABLE
-            // Sorts "availableRoomCollection" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
-            availableRoomCollection.sort(Comparator.comparing(iRoom -> {
-                String obtainRoomInfo = iRoom.getRoomNumber(); // obtains "roomNumber"
-                String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
-                int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
-                int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
-                return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
-            }));
+            // Calls "sortAvailableRoomCollection()" method to Sort "availableRoomCollection"
+            sortAvailableRoomCollection();
         }
+
+        // Calls "sortAvailableRoomCollection()" method to Sort "availableRoomCollection"
+        sortAvailableRoomCollection();
 
         return availableRoomCollection;
     }

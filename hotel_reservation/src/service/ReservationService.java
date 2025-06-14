@@ -143,56 +143,58 @@ public class ReservationService {
     }
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) {
-        // Clears ALL Rooms Inside "availableRoomCollection"
-        availableRoomCollection.clear();
+        try {
+            // Clears ALL Rooms Inside "availableRoomCollection"
+            availableRoomCollection.clear();
 
-        // Adds ALL Rooms Inside "roomCollection" to "availableRoomCollection"
-        availableRoomCollection.addAll(roomCollection);
+            // Adds ALL Rooms Inside "roomCollection" to "availableRoomCollection"
+            availableRoomCollection.addAll(roomCollection);
 
-        // Checks if "reservationCollection" is Empty
-        if (!reservationCollection.isEmpty()) {
-            // Finds what Rooms are Available for Reservation
-            for (IRoom availableRoom : availableRoomCollection) {
-                for (Reservation reservation : reservationCollection) {
-                    // Indicates if Room is Available & Removes Room from "availableRoomCollection" if Room is NOT Available
-                    if (reservation.getRoom().getRoomNumber().equals(availableRoom.getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "roomCollection"
-                        // Checks if "checkInDate" Input is AFTER "checkInDate" in "reservationCollection" & BEFORE "checkOutDate" in "reservationCollection", because "checkOutDate" Can Only Be LATER THAN "checkInDate"
-                        if (checkInDate.after(reservation.getCheckInDate()) && (checkInDate.before(reservation.getCheckOutDate()))) { // Ex.1: Reservation1: 1/5/2020-3/8/2020, Reservation2: 2/2/2020-2/20/2020, Ex.1.1: Reservation1: 1/5/2020-3/8/2020, Reservation2: 2/2/2020-4/20/2020 (INSIDE or Somewhat Inside)
-                            availableRoomCollection.remove(availableRoom);
-                        }
-                        // Checks if "checkInDate" Input is BEFORE "checkInDate" in "reservationCollection" & AFTER "checkOutDate" in "reservationCollection"
-                        else if (checkInDate.before(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate())) { // Ex.2: Reservation1: 2/5/2020-2/8/2020, Reservation2: 1/2/2020-4/20/2020 (OUTSIDE)
-                            availableRoomCollection.remove(availableRoom);
-                        }
-                        // Checks if "checkInDate" Input is EQUAL TO "checkOutDate" in Reservation, because "checkOutDate" Can Only Be LATER THAN "checkInDate"
-                        else if (checkInDate.equals(reservation.getCheckOutDate())) { // Ex.3: Reservation1: 1/2/2020-1/4/2020, Reservation2: 1/1/2020-1/2/2020 (LEFT)
-                            availableRoomCollection.remove(availableRoom);
-                        }
-                        // Checks if "checkInDate" Input is EQUAL TO "checkInDate" in Reservation, because "checkOutDate" Can Only Be LATER THAN "checkInDate"
-                        else if (checkInDate.equals(reservation.getCheckInDate())) { // Ex.4: Reservation1: 1/2/2020-1/4/2020, Reservation2: 1/2/2020-1/2/2020 (EQUAL "checkInDate")
-                            availableRoomCollection.remove(availableRoom);
-                        }
-                        // Checks if "checkOutDate" Input is EQUAL TO "checkInDate" in Reservation
-                        else if (checkOutDate.equals(reservation.getCheckInDate())) { // Ex.5: Reservation1: 2/1/2020-2/8/2020, Reservation2: 2/8/2020-2/10/2020 (RIGHT)
-                            availableRoomCollection.remove(availableRoom);
-                        }
-                        // Checks if "checkOutDate" Input is EQUAL TO "checkOutDate" in Reservation
-                        else if (checkOutDate.equals(reservation.getCheckOutDate())) { // Ex.5: Reservation1: 2/8/2020-2/9/2020, Reservation2: 2/1/2020-2/9/2020 (EQUAL "checkOutDate")
-                            availableRoomCollection.remove(availableRoom);
+            // Checks if "reservationCollection" is Empty
+            if (!reservationCollection.isEmpty()) {
+                // Finds what Rooms are Available for Reservation
+                for (IRoom availableRoom : availableRoomCollection) {
+                    for (Reservation reservation : reservationCollection) {
+                        // Indicates if Room is Available & Removes Room from "availableRoomCollection" if Room is NOT Available
+                        if (reservation.getRoom().getRoomNumber().equals(availableRoom.getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "roomCollection"
+                            // Checks if "checkInDate" Input is AFTER "checkInDate" in "reservationCollection" & BEFORE "checkOutDate" in "reservationCollection", because "checkOutDate" Can Only Be LATER THAN "checkInDate"
+                            if (checkInDate.after(reservation.getCheckInDate()) && (checkInDate.before(reservation.getCheckOutDate()))) { // Ex.1: Reservation1: 1/5/2020-3/8/2020, Reservation2: 2/2/2020-2/20/2020, Ex.1.1: Reservation1: 1/5/2020-3/8/2020, Reservation2: 2/2/2020-4/20/2020 (INSIDE or Somewhat Inside)
+                                availableRoomCollection.remove(availableRoom);
+                            }
+                            // Checks if "checkInDate" Input is BEFORE "checkInDate" in "reservationCollection" & AFTER "checkOutDate" in "reservationCollection"
+                            else if (checkInDate.before(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate())) { // Ex.2: Reservation1: 2/5/2020-2/8/2020, Reservation2: 1/2/2020-4/20/2020 (OUTSIDE)
+                                availableRoomCollection.remove(availableRoom);
+                            }
+                            // Checks if "checkInDate" Input is EQUAL TO "checkOutDate" in Reservation, because "checkOutDate" Can Only Be LATER THAN "checkInDate"
+                            else if (checkInDate.equals(reservation.getCheckOutDate())) { // Ex.3: Reservation1: 1/2/2020-1/4/2020, Reservation2: 1/1/2020-1/2/2020 (LEFT)
+                                availableRoomCollection.remove(availableRoom);
+                            }
+                            // Checks if "checkInDate" Input is EQUAL TO "checkInDate" in Reservation, because "checkOutDate" Can Only Be LATER THAN "checkInDate"
+                            else if (checkInDate.equals(reservation.getCheckInDate())) { // Ex.4: Reservation1: 1/2/2020-1/4/2020, Reservation2: 1/2/2020-1/2/2020 (EQUAL "checkInDate")
+                                availableRoomCollection.remove(availableRoom);
+                            }
+                            // Checks if "checkOutDate" Input is EQUAL TO "checkInDate" in Reservation
+                            else if (checkOutDate.equals(reservation.getCheckInDate())) { // Ex.5: Reservation1: 2/1/2020-2/8/2020, Reservation2: 2/8/2020-2/10/2020 (RIGHT)
+                                availableRoomCollection.remove(availableRoom);
+                            }
+                            // Checks if "checkOutDate" Input is EQUAL TO "checkOutDate" in Reservation
+                            else if (checkOutDate.equals(reservation.getCheckOutDate())) { // Ex.5: Reservation1: 2/8/2020-2/9/2020, Reservation2: 2/1/2020-2/9/2020 (EQUAL "checkOutDate")
+                                availableRoomCollection.remove(availableRoom);
+                            }
                         }
                     }
                 }
             }
+        } catch (ConcurrentModificationException e) { // "ConcurrentModificationException" is UNAVOIDABLE
+            // Sorts "availableRoomCollection" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
+            availableRoomCollection.sort(Comparator.comparing(iRoom -> {
+                String obtainRoomInfo = iRoom.getRoomNumber(); // obtains "roomNumber"
+                String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
+                int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
+                int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
+                return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
+            }));
         }
-
-        // Sorts "availableRoomCollection" by Room Numbers & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
-        availableRoomCollection.sort(Comparator.comparing(iRoom -> {
-            String obtainRoomInfo = iRoom.getRoomNumber(); // obtains "roomNumber"
-            String[] hotelRoom = obtainRoomInfo.split("\\."); // "\\." - match the character
-            int firstHotelRoom = Integer.parseInt(hotelRoom[0]); // obtains 1st Room Number
-            int secondHotelRoom = hotelRoom.length > 1 ? Integer.parseInt(hotelRoom[1]) : 0; // finds which Room Number is greater
-            return firstHotelRoom * 1000 + secondHotelRoom; // returns "roomNumber1" and "roomNumber2" in Ascending Order
-        }));
 
         return availableRoomCollection;
     }

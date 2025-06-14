@@ -1,9 +1,7 @@
 package model;
 
 import api.HotelResource;
-import service.ReservationService;
 
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class Customer {

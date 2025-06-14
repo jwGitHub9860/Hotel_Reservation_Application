@@ -99,6 +99,9 @@ public class ReservationService {
     }
 
     public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
+        // Initializes "roomFound" to Indicate if "room" was Found Inside "availableRoomCollection"
+        boolean roomFound = false;
+
         // Checks if Room is Already Reserved
         /*for (Reservation reservation : reservationCollection) {
             // Indicates if Room is Available Or Not & Throws Exception if Room is NOT Available
@@ -125,9 +128,14 @@ public class ReservationService {
 
         for (IRoom availableRoom : availableRoomCollection) {
             // Checks if Room Number of "room" is NOT inside "availableRoomCollection"
-            if (!(room.getRoomNumber().equals(availableRoom.getRoomNumber()))) {
-                throw new IllegalArgumentException("Room must be an available room");
+            if (room.getRoomNumber().equals(availableRoom.getRoomNumber())) {
+                roomFound = true;
             }
+        }
+
+        // Throws Exception if "room" was NOT inside "availableRoomCollection"
+        if (!roomFound) {
+            throw new IllegalArgumentException("Room must be an available room");
         }
 
         // Calls "getInstance()" method from "Reservation.java" to Create & Return WHOLE "Reservation"

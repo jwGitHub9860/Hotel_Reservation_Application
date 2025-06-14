@@ -124,6 +124,9 @@ public class ReservationService {
     }
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) {
+        // Clears ALL Rooms Inside "availableRoomCollection"
+        availableRoomCollection.clear();
+
         // Adds ALL Rooms Inside "roomCollection" to "availableRoomCollection"
         availableRoomCollection.addAll(roomCollection);
 

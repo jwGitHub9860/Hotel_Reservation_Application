@@ -132,15 +132,24 @@ public class ReservationService {
             // Checks if Room is Already Reserved
             for (IRoom availableRoom : availableRoomCollection) {
                 for (Reservation reservation : reservationCollection) {
-                    // Indicates if Room is Available & Adds Room to "availableRoomCollection" if Room IS Available
+                    // Indicates if Room is Available & Removes Room from "availableRoomCollection" if Room is NOT Available
                     if (reservation.getRoom().getRoomNumber().equals(availableRoom.getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "roomCollection"
-                        if (checkInDate.before(reservation.getCheckInDate()) && (checkOutDate.before(reservation.getCheckOutDate()))) { // Checks if "checkInDate" in Reservation is BEFORE "checkInDate" & if "checkOutDate" in Reservation is BEFORE "checkOutDate" in "reservationCollection"
-                            availableRoomCollection.add(availableRoom);
-                        } else if (checkInDate.after(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate())) { // Checks if "checkInDate" in Reservation is AFTER "checkInDate" & if "checkOutDate" in Reservation is AFTER "checkOutDate" in "reservationCollection"
-                            availableRoomCollection.add(availableRoom);
+                        // Checks if "checkInDate" in Reservation is AFTER "checkInDate" & BEFORE "checkOutDate" in "reservationCollection", because "checkOutDate" Can Only Be LATER THAN "checkInDate"
+                        if (checkInDate.after(reservation.getCheckInDate()) && (checkInDate.before(reservation.getCheckOutDate()))) { // Ex.1: Reservation1: 1/5/2020-3/8/2020, Reservation2: 2/2/2020-2/20/2020, Ex.1.1: Reservation1: 1/5/2020-3/8/2020, Reservation2: 2/2/2020-4/20/2020 (INSIDE or Somewhat Inside)
+                            availableRoomCollection.remove(availableRoom);
                         }
-                    } else { // if "roomNumber" is NOT in "reservationCollection"
-                        availableRoomCollection.add(availableRoom);
+                        // Checks if "checkInDate" in Reservation is BEFORE "checkInDate" & if "checkOutDate" in Reservation is AFTER "checkOutDate" in "reservationCollection"
+                        else if (checkInDate.before(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate())) { // Ex.2: Reservation1: 2/5/2020-2/8/2020, Reservation2: 1/2/2020-4/20/2020 (OUTSIDE)
+                            availableRoomCollection.remove(availableRoom);
+                        }
+                        // Checks if "checkInDate" in Reservation is EQUAL TO "checkOutDate"
+                        else if (checkInDate.equals(reservation.getCheckOutDate())) { // Ex.3: Reservation1: 1/2/2020-1/4/2020, Reservation2: 1/1/2020-1/2/2020 (LEFT)
+                            availableRoomCollection.remove(availableRoom);
+                        }
+                        // Checks if "checkOutDate" in Reservation is EQUAL TO "checkOutDate"
+                        else if (checkOutDate.equals(reservation.getCheckInDate())) { // Ex.4: Reservation1: 2/1/2020-2/8/2020, Reservation2: 2/8/2020-2/10/2020 (RIGHT)
+                            availableRoomCollection.remove(availableRoom);
+                        }
                     }
                 }
             }

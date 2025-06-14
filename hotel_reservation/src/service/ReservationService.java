@@ -115,29 +115,6 @@ public class ReservationService {
         boolean roomFound = false;
 
         // Checks if Room is Already Reserved
-        /*for (Reservation reservation : reservationCollection) {
-            // Indicates if Room is Available Or Not & Throws Exception if Room is NOT Available
-            if (room.getRoomNumber().equals(reservation.getRoom().getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "reservationCollection"
-                // TEST 1
-                if (!(checkInDate.before(reservation.getCheckInDate()) && (checkOutDate.before(reservation.getCheckOutDate())))) { // Checks if "checkInDate" in Reservation is NOT BEFORE "checkInDate" & if "checkOutDate" in Reservation is NOT BEFORE "checkOutDate" in "reservationCollection"
-                    throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
-                } else if (!(checkInDate.after(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate()))) { // Checks if "checkInDate" in Reservation is NOT AFTER "checkInDate" & if "checkOutDate" in Reservation is NOT AFTER "checkOutDate" in "reservationCollection"
-                    throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
-                }
-
-                // TEST 2
-                if (!checkInDate.after(reservation.getCheckInDate())) {
-                    if (!checkInDate.after(reservation.getCheckOutDate())) {
-                        throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
-                    }
-                } else if (!checkOutDate.before(reservation.getCheckOutDate())) {
-                    if (!checkInDate.before(reservation.getCheckInDate())) {
-                        throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
-                    }
-                }
-            }
-        }*/
-
         for (IRoom availableRoom : availableRoomCollection) {
             // Checks if Room Number of "room" is NOT inside "availableRoomCollection"
             if (room.getRoomNumber().equals(availableRoom.getRoomNumber())) {

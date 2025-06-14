@@ -100,14 +100,17 @@ public class ReservationService {
 
     public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
         // Checks if Room is Already Reserved
-        for (Reservation reservation : reservationCollection) {
+        /*for (Reservation reservation : reservationCollection) {
             // Indicates if Room is Available Or Not & Throws Exception if Room is NOT Available
             if (room.getRoomNumber().equals(reservation.getRoom().getRoomNumber())) { // Checks if "roomNumber" in Reservation Matches "roomNumber" in "reservationCollection"
-                /*if (!(checkInDate.before(reservation.getCheckInDate()) && (checkOutDate.before(reservation.getCheckOutDate())))) { // Checks if "checkInDate" in Reservation is NOT BEFORE "checkInDate" & if "checkOutDate" in Reservation is NOT BEFORE "checkOutDate" in "reservationCollection"
+                // TEST 1
+                if (!(checkInDate.before(reservation.getCheckInDate()) && (checkOutDate.before(reservation.getCheckOutDate())))) { // Checks if "checkInDate" in Reservation is NOT BEFORE "checkInDate" & if "checkOutDate" in Reservation is NOT BEFORE "checkOutDate" in "reservationCollection"
                     throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
                 } else if (!(checkInDate.after(reservation.getCheckInDate()) && checkOutDate.after(reservation.getCheckOutDate()))) { // Checks if "checkInDate" in Reservation is NOT AFTER "checkInDate" & if "checkOutDate" in Reservation is NOT AFTER "checkOutDate" in "reservationCollection"
                     throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
-                }*/
+                }
+
+                // TEST 2
                 if (!checkInDate.after(reservation.getCheckInDate())) {
                     if (!checkInDate.after(reservation.getCheckOutDate())) {
                         throw new IllegalArgumentException("Room cannot have two reservations with check-in and check-out dates that overlap");
@@ -118,7 +121,7 @@ public class ReservationService {
                     }
                 }
             }
-        }
+        }*/
         // Calls "getInstance()" method from "Reservation.java" to Create & Return WHOLE "Reservation"
         return Reservation.getInstance(customer, room, checkInDate, checkOutDate);
     }

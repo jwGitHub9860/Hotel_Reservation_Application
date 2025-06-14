@@ -176,6 +176,10 @@ public class ReservationService {
                         else if (checkOutDate.equals(reservation.getCheckInDate())) { // Ex.5: Reservation1: 2/1/2020-2/8/2020, Reservation2: 2/8/2020-2/10/2020 (RIGHT)
                             availableRoomCollection.remove(availableRoom);
                         }
+                        // Checks if "checkOutDate" Input is EQUAL TO "checkOutDate" in Reservation
+                        else if (checkOutDate.equals(reservation.getCheckOutDate())) { // Ex.5: Reservation1: 2/8/2020-2/9/2020, Reservation2: 2/1/2020-2/9/2020 (EQUAL "checkOutDate")
+                            availableRoomCollection.remove(availableRoom);
+                        }
                     }
                 }
             }

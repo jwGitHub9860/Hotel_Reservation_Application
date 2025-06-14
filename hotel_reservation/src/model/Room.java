@@ -133,7 +133,7 @@ public class Room implements IRoom {
         return roomTypeInput;
     }
 
-    // Sorts "roomCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
+    // Sorts "chosenRoomCollection" by USER'S CHOICE, organizes String Numbers by FIRST DIGIT in Number
     public static void sortRooms(List<IRoom> chosenRoomCollection) {
         System.out.println("How would you like to sort reservations (room number, room price, or room type): ");
         while (true) {
@@ -149,10 +149,10 @@ public class Room implements IRoom {
 
                 // Checks if User chose "Room Price"
                 if (finalSortChoice.equals("room price")) {
-                    ReservationService.roomCollection.sort(Comparator.comparingDouble(IRoom::getRoomPrice)); // sorts "roomCollection" by "price"
+                    chosenRoomCollection.sort(Comparator.comparingDouble(IRoom::getRoomPrice)); // sorts "chosenRoomCollection" by "price"
                 } else {
-                    // Sorts "roomCollection" by Room Numbers OR Room Types & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
-                    ReservationService.roomCollection.sort(Comparator.comparing(iRoom -> {
+                    // Sorts "chosenRoomCollection" by Room Numbers OR Room Types & ONLY WORKS FOR "STRING NUMBERS", organizes String Numbers by WHOLE NUMBER
+                    chosenRoomCollection.sort(Comparator.comparing(iRoom -> {
                         // Checks if User chose "Room Number" or "Room Type"
                         switch (finalSortChoice) {
                             case "room number":

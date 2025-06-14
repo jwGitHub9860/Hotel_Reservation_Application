@@ -122,6 +122,14 @@ public class ReservationService {
                 }
             }
         }*/
+
+        for (IRoom availableRoom : availableRoomCollection) {
+            // Checks if Room Number of "room" is NOT inside "availableRoomCollection"
+            if (!(room.getRoomNumber().equals(availableRoom.getRoomNumber()))) {
+                throw new IllegalArgumentException("Room must be an available room");
+            }
+        }
+
         // Calls "getInstance()" method from "Reservation.java" to Create & Return WHOLE "Reservation"
         return Reservation.getInstance(customer, room, checkInDate, checkOutDate);
     }

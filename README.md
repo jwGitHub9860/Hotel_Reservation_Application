@@ -49,6 +49,8 @@ HaakonFlaar. “How to Use ‘Throws Illegalargumentexception’ in Method Decla
 
 "How to Find the First and Last Character of a String in Java.” _GeeksforGeeks_, 13 Dec. 2022, www.geeksforgeeks.org/how-to-find-the-first-and-last-character-of-a-string-in-java/. Accessed 23 May 2025.
 
+“How to Remove an Element from Arraylist in Java?” _GeeksforGeeks_, GeeksforGeeks, 4 Jan. 2025, www.geeksforgeeks.org/java/remove-element-arraylist-java/. Accessed 13 Jun. 2025.
+
 “How to Sort an Arraylist of Objects by Property in Java?” _GeeksforGeeks_, GeeksforGeeks, 23 Nov. 2022, www.geeksforgeeks.org/how-to-sort-an-arraylist-of-objects-by-property-in-java/. Accessed 3 Jun. 2025.
 
 “How to Validate Date Input from User in Specific Formats in Java?” _GeeksforGeeks_, GeeksforGeeks, 15 Feb. 2024, www.geeksforgeeks.org/validate-a-date-input-from-a-user-to-ensure-in-a-specific-format-in-java/. Accessed 2 Jun. 2025.
@@ -84,6 +86,8 @@ Pierce, Doug. “How to Catch Multiple Exceptions in Java.” _Rollbar_, 12 Aug.
 Rajesh. “Round a Double to 2 Decimal Places [duplicate].” Edited by Ryanyuyu, _Stack Overflow_, 11 May 2010, stackoverflow.com/questions/2808535/round-a-double-to-2-decimal-places. Accessed 27 May 2025.
 
 Rana, Laxman. “Removing Time from a Date Object?” Edited by Rangi Lin, Stack Overflow, 22 Mar. 2012, stackoverflow.com/questions/9816459/removing-time-from-a-date-object. Accessed 5 Jun. 2025.
+
+“Remove All Elements from the Arraylist in Java.” _GeeksforGeeks_, GeeksforGeeks, 11 Dec. 2018, www.geeksforgeeks.org/java/remove-all-elements-from-the-arraylist-in-java/. Accessed 13 Jun. 2025.
 
 sdellysse. “When to Use LinkedList over ArrayList in Java?” Edited by Simeon Leyzerzon, _Stack Overflow_, 27 Nov. 2008, stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java. Accessed 24 May 2025.
 
